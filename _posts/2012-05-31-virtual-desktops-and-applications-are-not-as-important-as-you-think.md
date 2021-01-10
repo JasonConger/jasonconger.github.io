@@ -8,6 +8,7 @@ layout: post
 guid: http://www.jasonconger.com/?p=1080
 permalink: /2012/05/31/virtual-desktops-and-applications-are-not-as-important-as-you-think/
 image: wp-content/uploads/2012/05/binary.gif
+featured: true
 categories:
   - General
 tags:
@@ -16,7 +17,6 @@ tags:
   - Cloud
   - Virtual Desktop
 ---
-<a href="http://www.jasonconger.com/wp-content/uploads/2012/05/binary.gif"><img class="alignleft size-full wp-image-1081" alt="binary" src="http://www.jasonconger.com/wp-content/uploads/2012/05/binary.gif" width="100" height="100" /></a>
 
 We spend a lot of time optimizing how we deliver desktops and applications. But, the future will trivialize these things as the focus shifts the focus to data and the data moves to the cloud.  It is happening now in the consumer market and the trend will infiltrate the enterprise as BYOD continues to become more prevalent.
 <h1>Applications are useless without data</h1>
