@@ -12,6 +12,7 @@ categories:
   - General
 tags:
   - Splunk
+featured: true
 ---
 I am very happy to announce that I have officially joined the team at <a title="Splunk" href="http://www.splunk.com" target="_blank">Splunk </a>as a Solutions Architect.  As many of you may already know, my website is a place where I share a few articles and a lot of open-source code.  Most of the code I have distributed from this website is mainly focused on giving you insight into what is going on in your Citrix environments (Web Interface for Resource Manager, Web Interface Access Control Center, Configuration Logging, <a title="Project Raley" href="http://www.jasonconger.com/raley" target="_blank">Project Raley</a>, etc.)  Although I get ideas for these projects from the community and my own professional experiences, all of the code has been developed on my own personal time as a hobby and community contribution.
 <h2>Turning a Hobby and a Passion into a Job</h2>
