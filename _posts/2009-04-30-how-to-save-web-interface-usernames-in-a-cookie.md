@@ -141,4 +141,4 @@ The &lt;input… tag above is the field where you fill in your username in login
 
 If you want to implement this in your environment and do not feel like copying and pasting all this code, you can download the modified files below:
 
-<img src="{{site.baseurl}}/assets/images/zip_small.gif" alt="download" align="absBottom" /> <a href="http://www.jasonconger.com/downloads/2009/5/WI51_Cookie_Mod.zip">Modification for Web Interface 5.1</a>
+<img src="/assets/images/zip_small.gif" alt="download" align="absBottom" /> <a href="http://www.jasonconger.com/downloads/2009/5/WI51_Cookie_Mod.zip">Modification for Web Interface 5.1</a>
