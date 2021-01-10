@@ -13,3 +13,28 @@
 	"syntax",
     "starsnonscss"
 ;
+
+.wp-block-image {
+	text-align: center;
+
+	figcaption {
+		color: var(--global--color-primary);
+		font-size: var(--global--font-size-xs);
+		line-height: var(--global--line-height-body);
+		margin-top: calc(0.5 * var(--global--spacing-unit));
+		margin-bottom: var(--global--spacing-unit);
+		text-align: center;
+	}
+
+	.alignright {
+		margin-left: var(--global--spacing-horizontal);
+	}
+
+	.alignleft {
+		margin-right: var(--global--spacing-horizontal);
+	}
+
+	a:focus img {
+		outline-offset: 2px;
+	}
+}
