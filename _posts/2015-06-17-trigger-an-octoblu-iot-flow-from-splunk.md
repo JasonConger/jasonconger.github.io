@@ -7,7 +7,7 @@ excerpt: Octoblu does some incredible stuff with physical things driven by softw
 layout: post
 guid: http://www.jasonconger.com/?p=1610
 permalink: /2015/06/17/trigger-an-octoblu-iot-flow-from-splunk/
-image: /wp-content/uploads/2015/06/octoblu.png
+image: wp-content/uploads/2015/06/octoblu.png
 categories:
   - Splunk
 tags:
