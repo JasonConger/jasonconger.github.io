@@ -2,7 +2,7 @@
 id: 133
 title: About Jason Conger
 date: 2011-02-26T09:48:48-06:00
-author: Jason Conger
+author: jason
 layout: page
 guid: http://www.jasonconger.com/wordpress/?page_id=133
 permalink: /about

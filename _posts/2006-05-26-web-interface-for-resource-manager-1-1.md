@@ -1,0 +1,23 @@
+---
+id: 44
+title: Web Interface for Resource Manager 1.1
+date: 2006-05-26T09:16:00-05:00
+author: jason
+excerpt: 'Got Citrix Resource Manager?  Try out Web Interface for Resource Manager! Web Interface for Resource Manager is an ASP.NET 2.0 web application that contains several SQL queries to display useful information contained in the Citrix Resource Manager Summary Database.'
+layout: post
+guid: /post/Web-Interface-for-Resource-Manager-11.aspx
+permalink: /2006/05/26/web-interface-for-resource-manager-1-1/
+categories:
+  - Resouce Manager
+tags:
+  - Download
+  - Resource Manager
+  - WIRM
+---
+<p><img style="float: right; padding-left: 15px" src="http://www.jasonconger.com/images/articleImages/WIRM/software_box.gif" alt="" /> version 1.1<br /><br />Got Citrix Resource Manager? &nbsp;Try out Web Interface for Resource Manager!<br /><br />Web Interface for Resource Manager is an ASP.NET 2.0 web application that contains several SQL queries to display useful information contained in the Citrix Resource Manager Summary Database.&nbsp; Web Interface for Resource Manager displays this information in a drill-down graphical and tabular manner.<br /><br />What's new in version 1.1?</p>
+<ul>
+<li><strong>New application filter on the calendar</strong>. You can now filter the calendar page by application, displaying the number of times an individual application has been launched! </li>
+<li><strong>User level reporting</strong>. You can now view a list of every user that has ever accessed your farm and drill down to get session details. </li>
+<li><strong>Application graph choice</strong>. You now have a choice between viewing your top applications via a pie graph or a column chart. </li>
+</ul>
+<p><img src="http://www.jasonconger.com/images/zip_small.gif" alt="" align="absBottom" /> <a href="http://www.jasonconger.com/downloads/JasonConger.com_WIRMv11.zip">Web Interface for Resource Manager version 1.1</a> (for Presentation Server 3.0 and above) <br /><br /><img src="http://www.jasonconger.com/images/zip_small.gif" alt="" align="absBottom" /> <a href="http://www.jasonconger.com/downloads/JasonConger.com_WIRM_XP.zip">Web Interface for Resource Manager XP version 1.1</a> (for MetaFrame XPe FR3) <br /><br /><br /><strong>Screen Shots of Web Interface for Resource Manager</strong><br /><br />Usage Calendar (displays number of unique user sessions per day)<br /><img src="http://www.jasonconger.com/images/articleImages/WIRM/usageCalendar_small.gif" alt="" /><br /><img src="http://www.jasonconger.com/images/magnify.gif" alt="" width="20" height="20" align="absBottom" /> <a class="enlarge" href="http://www.jasonconger.com/images/articleImages/WIRM/usageCalendar_large.gif" target="_blank">Click to enlarge</a> <br /><br /><br />Bar Chart of sessions started on a particular day<br /><img src="http://www.jasonconger.com/images/articleImages/WIRM/dayDetail_small.gif" alt="" /><br /><img src="http://www.jasonconger.com/images/magnify.gif" alt="" width="20" height="20" align="absBottom" /> <a class="enlarge" href="http://www.jasonconger.com/images/articleImages/WIRM/dayDetail_large.gif" target="_blank">Click to enlarge</a> <br /><br /><br />Session Details<br /><img src="http://www.jasonconger.com/images/articleImages/WIRM/sessionDetail_small.gif" alt="" /><br /><img src="http://www.jasonconger.com/images/magnify.gif" alt="" width="20" height="20" align="absBottom" /> <a class="enlarge" href="http://www.jasonconger.com/images/articleImages/WIRM/sessionDetail_large.gif" target="_blank">Click to enlarge</a> <br /><br /><br />Application Usage<br /><img src="http://www.jasonconger.com/images/articleImages/WIRM/applicationUsage_small.gif" alt="" /><br /><img src="http://www.jasonconger.com/images/magnify.gif" alt="" width="20" height="20" align="absBottom" /> <a class="enlarge" href="http://www.jasonconger.com/images/articleImages/WIRM/applicationUsage_large.gif" target="_blank">Click to enlarge</a> <br /><br /><br />User Activity Report<br /><img src="http://www.jasonconger.com/images/articleImages/WIRM/userReport_small.gif" alt="" /><br /><img src="http://www.jasonconger.com/images/magnify.gif" alt="" width="20" height="20" align="absBottom" /> <a class="enlarge" href="http://www.jasonconger.com/images/articleImages/WIRM/userReport_large.gif" target="_blank">Click to enlarge</a> <br /><br /><br />Please note that this project is a work in progress.&nbsp; There are several other ideas that are in the works to add to the functionality of this web application.&nbsp; If you have ideas for further functionality, please let me know in the comments section below.</p>

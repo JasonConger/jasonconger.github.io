@@ -16,7 +16,6 @@ tags:
   - Configuration Logging
   - PowerShell
 ---
-
 Here is a quick tip for you. I had a need to get the Citrix Configuration Log, so I dropped into PowerShell and ran Get-CtxConfigurationLogReport. That is all good and well, but you do not get all the old and new values of the changed properties. However, converting this output to JSON will do just what I want. Plus, converting to JSON is better for me anyway as I want to push this stuff over to <a href="http://www.jasonconger.com/post/tag/splunk/" target="_blank">Splunk</a> to do some analytics. Here is what you need to do:
 <h1>Step 1 – Create your UDL file to connect to the database</h1>
 <pre class="brush: PowerShell;">Add-Content C:\conflog.udl –Value $null; Start-Process C:\conflog.udl</pre>
