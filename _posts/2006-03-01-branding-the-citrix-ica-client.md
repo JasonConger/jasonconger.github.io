@@ -74,8 +74,10 @@ So, how do you stop this seemingly regression from happening? Move on to step 4.
 
 <span class="heading" style="font-size: 14px; font-weight: bold;">
 Step 4: Replace statuiUI.dll on the Server.
-</span><span class="heading" style="font-size: 14px; font-weight: bold;">
-</span>The “replacement” dialog box for the server piece of the launch process is located at system_drive:\Program Files\Citrix\System32\resource\en\statuiUI.dll. Simply make a backup of this file and replace it with the statuiUI.dll file created in step 3.
+</span>
+
+
+The “replacement” dialog box for the server piece of the launch process is located at system_drive:\Program Files\Citrix\System32\resource\en\statuiUI.dll. Simply make a backup of this file and replace it with the statuiUI.dll file created in step 3.
 
 Note: this file may be locked if other people are logged in to the server.
 
@@ -84,5 +86,3 @@ Now, try launching an application again and you will notice that the branding st
 Another file that is fun to play with is the login screen for the PN Agent. That resource is C:\Program Files\Citrix\ICA Client\resource\en\pnagenUI.dll. Have fun!
 
 <img style="border: 0px initial initial;" src="http://www.jasonconger.com/images/articleImages/BrandingICA/pnaBefore.gif" alt="" /><img style="border: 0px initial initial;" src="http://www.jasonconger.com/images/articleImages/BrandingICA/pnaAfter.gif" alt="" />
-
-</span>
