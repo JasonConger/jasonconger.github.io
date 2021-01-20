@@ -30,8 +30,8 @@ Now, we need to point our farm to the <a href="http://www.jasonconger.com/post/D
 The screen shot above is pretty self-explanatory, but here are a couple of tips:
 <ul>
 	<li>Even though there is a drop down next to the “Server name” box, the discovery does not always work.&nbsp; I suggest just typing in the database server name or IP address.</li>
-	<li>Be sure to specify server\instance if you are not using the default database instance.</li>
-	<li>If using Windows integrated security, type domain\username in the “User name” field</li>
+	<li>Be sure to specify server&#92;instance if you are not using the default database instance.</li>
+	<li>If using Windows integrated security, type domain&#92;username in the “User name” field</li>
 	<li>Keep in mind that the username and password is saved in the data store.&nbsp; So, be sure that the password does not expire, or remember to change this when the password does expire.</li>
 	<li>Discovery does not work well with the database name on the next step either.&nbsp; Again, you will most likely have to type in the database name.</li>
 </ul>

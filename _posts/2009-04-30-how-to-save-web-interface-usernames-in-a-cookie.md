@@ -96,8 +96,8 @@ First, we need to get an AccessToken (see line 10 above). In the Web Interface o
 After we get the AccessToken, we can test to see if this is an anonymous user or not (an anonymous user would have a GuestToken) on lines 12-23 above. If the token is not a GuestToken, then we know we have an authenticated user. There are currently 3 methods you can use to get the user details from the AccessToken:
 <ol>
 	<li>getAccountIdentity() – gets an AccountIdentiy object.</li>
-	<li>getShortUserName() – returns the username as a string. Example – if your user identity was domain\jasonco, getShortUserName() returns "jasonco".</li>
-	<li>getUserIdentity() – returns the entire logon identity as a string. Example: <em>domain\username</em> or <em>user@domain</em> (if using UPN). I chose getUserIdentity() in the code above.</li>
+	<li>getShortUserName() – returns the username as a string. Example – if your user identity was domain&#92;jasonco, getShortUserName() returns "jasonco".</li>
+	<li>getUserIdentity() – returns the entire logon identity as a string. Example: <em>domain&#92;username</em> or <em>user@domain</em> (if using UPN). I chose getUserIdentity() in the code above.</li>
 </ol>
 The rest of the code is pretty straight forward – it just creates or updates the cookie named WI_username. You could actually name this cookie anything you wanted.
 
