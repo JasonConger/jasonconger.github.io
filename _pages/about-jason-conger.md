@@ -12,10 +12,10 @@ comments: false
 <img src="https://i1.wp.com/jasonconger.com/wp-content/uploads/2020/02/Splunk_0944.jpg?fit=840%2C840" alt="" class="rounded-circle" width="166" height="166"/>
 
 
-Jason Conger is a data and web nerd. In fact, this website started out with&nbsp;<a href="http://www.jasonconger.com/post/using-microsoft-visio-to-reverse-engineer-a-database/">showing you how to reverse engineer a SQL database</a>. Shortly after, the open-source project&nbsp;<a href="http://www.jasonconger.com/tags#wirm/">Web Interface for Resource Manager</a>&nbsp;was released. Over the years, there have been articles that have shown you how to&nbsp;<a href="http://www.jasonconger.com/tags#web-interface/">modify Web Interface</a>, create and modify&nbsp;<a href="http://www.jasonconger.com/tags#mobility/">mobile applications</a>, some random thoughts, and even a little&nbsp;<a href="http://www.jasonconger.com/tags#iot/">IoT</a>.
+Jason Conger is a data and web nerd. In fact, this website started out with <a href="http://www.jasonconger.com/post/using-microsoft-visio-to-reverse-engineer-a-database/">showing you how to reverse engineer a SQL database</a>. Shortly after, the open-source project <a href="http://www.jasonconger.com/tags#wirm">Web Interface for Resource Manager</a> was released. Over the years, there have been articles that have shown you how to <a href="http://www.jasonconger.com/tags#web-interface">modify Web Interface</a>, create and modify <a href="http://www.jasonconger.com/tags#mobility">mobile applications</a>, some random thoughts, and even a little <a href="http://www.jasonconger.com/tags#iot">IoT</a>.
 
 
-Today, Jason works as a Solutions Architect at&nbsp;<a rel="noreferrer noopener" href="http://www.splunk.com/" target="_blank">Splunk</a>. In his free time he focuses on giving back to the community by developing open-source tools, public speaking, and technical writing.
+Today, Jason works as a Solutions Architect at <a rel="noreferrer noopener" href="http://www.splunk.com/" target="_blank">Splunk</a>. In his free time he focuses on giving back to the community by developing open-source tools, public speaking, and technical writing.
 
 
 # Most Recent Speaking Engagements:
