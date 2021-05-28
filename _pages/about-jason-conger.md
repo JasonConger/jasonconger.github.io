@@ -22,11 +22,17 @@ Today, Jason works as a Solutions Architect at <a rel="noreferrer noopener" href
 
 I enjoy speaking on a multitude of technology topics. Here are some of my most recent speaking engagements:
 
+## 2021
+
+* <a href="https://carahevents.carahsoft.com/Event/Details/219228-pr">Splunk Enterprise Transformation with Azure - virtual</a>
 
 ## 2020
 
-* <a href="https://www.opencompute.org/summit/global-summit">2020 OCP Global Summit</a>
+* <a href="https://www.opencompute.org/summit/global-summit">2020 OCP Global Summit - virtual</a>
     * Delivering Telemetry @scale with Intel and Splunk
+
+* Splunk .conf20 - virtual
+    * <a href="https://conf.splunk.com/watch/conf-online.html?search=1188c#/">Debugging Splunk Apps, Add-ons, and Configurations using Visual Studio Code</a>
 
 ## 2019
 
