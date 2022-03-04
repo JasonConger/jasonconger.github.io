@@ -6,7 +6,6 @@ author: jason
 excerpt: UPDATED (now includes 4.2 template). There are several resources out there explaining how to customize or brand Citrix Web Interface. The easiest method I’ve found by far is to modify the layout.ascx user control. Using the technique outlined in this article, you can quickly give your Web Interface site a brand new look and feel.
 layout: post
 guid: /post/Super-Easy-Customization-of-Citrix-Web-Interface-4x.aspx
-permalink: /2006/05/04/super-easy-customization-of-citrix-web-interface-4-x/
 categories:
   - Web Interface
 tags:

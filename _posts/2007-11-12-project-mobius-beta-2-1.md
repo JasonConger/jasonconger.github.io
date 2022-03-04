@@ -6,7 +6,6 @@ author: jason
 excerpt: Migrating or maintaining multiple Citrix farms? Project Mobius is a Microsoft Windows application that allows you to drag and drop published applications and/or folders from one Citrix Presentation Server farm to one or more separate Citrix Presentation Server farms.
 layout: post
 guid: /post/Project-Mobius-Beta-21.aspx
-permalink: /2007/11/12/project-mobius-beta-2-1/
 categories:
   - MFCOM
 tags:

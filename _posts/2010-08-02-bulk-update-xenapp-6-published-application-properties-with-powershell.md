@@ -6,7 +6,6 @@ author: jason
 excerpt: 'There are times when you need to update a property on multiple XenApp published applications.  If you only have a few applications to update, this can be done via the management console.  However, if you have more than a few applications to update, then PowerShell is the way to go.  In this post, I will show you how to use PowerShell to update published application properties on multiple applications at the same time.'
 layout: post
 guid: /post/Bulk-Update-XenApp-6-Published-Application-Properties-with-PowerShell.aspx
-permalink: /2010/08/02/bulk-update-xenapp-6-published-application-properties-with-powershell/
 image: wp-content/uploads/2010/08/PowerShell.png
 categories:
   - Citrix XenApp

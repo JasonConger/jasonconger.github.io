@@ -6,7 +6,6 @@ author: jason
 excerpt: Microsoft Visio drawing of the Citrix Resource Manager Summary Database.
 layout: post
 guid: /post/Visio-Diagram-of-the-Citrix-Resource-Manager-Summary-Database.aspx
-permalink: /2006/03/01/visio-diagram-of-the-citrix-resource-manager-summary-database/
 categories:
   - Citrix XenApp
   - Resouce Manager

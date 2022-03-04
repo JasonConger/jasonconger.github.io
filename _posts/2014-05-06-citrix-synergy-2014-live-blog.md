@@ -6,7 +6,6 @@ author: jason
 excerpt: 'Citrix Synergy is back in Anaheim, California this year and I will be live-blogging the keynote.  You can watch the keynote live at <a href="http://www.citrixsynergy.com/" target="_blank">CitrixSynergy.com</a> as well.  I am sure there will be a focus on <a href="http://www.jasonconger.com/post/tag/mobility/">mobility</a>, but with the release of XenDesktop and XenApp 7.5, I am excited to see Citrix getting back to the future (again).'
 layout: post
 guid: http://www.jasonconger.com/?p=1300
-permalink: /2014/05/06/citrix-synergy-2014-live-blog/
 image: wp-content/uploads/2011/05/Citrix-Synergy-Thumb.png
 categories:
   - Citrix

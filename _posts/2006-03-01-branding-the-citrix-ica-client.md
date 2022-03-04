@@ -6,7 +6,6 @@ author: jason
 excerpt: Using the techniques described in this article, it is possible to put your own custom logos on the Citrix ICA client during application launch.
 layout: post
 guid: /post/Branding-the-Citrix-ICA-Client.aspx
-permalink: /2006/03/01/branding-the-citrix-ica-client/
 categories:
   - Citrix XenApp
 tags:

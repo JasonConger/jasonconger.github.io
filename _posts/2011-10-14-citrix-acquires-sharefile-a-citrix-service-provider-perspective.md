@@ -6,7 +6,6 @@ author: jason
 excerpt: 'Citrix Systems recently completed the acquisition of a company called ShareFile.  In this post, I take the perspective of a Citrix Service Provider (CSP) and dream up some ways that ShareFile could be used to add value to CSP subscribers.'
 layout: post
 guid: http://www.jasonconger.com/?p=725
-permalink: /2011/10/14/citrix-acquires-sharefile-a-citrix-service-provider-perspective/
 image: wp-content/uploads/2011/02/Citrix.png
 categories:
   - Citrix

@@ -6,7 +6,6 @@ author: jason
 excerpt: 'Exporting and Importing published applications in Citrix XenApp used to be a tedious process.  Now, thanks to XenApp PowerShell Cmdlets, this process is much easier and more flexible.  No uber scripting skills needed.'
 layout: post
 guid: http://www.jasonconger.com/?p=498
-permalink: /2011/06/13/export-and-import-citrix-xenapp-6-published-applications-using-powershell/
 image: wp-content/uploads/2010/08/PowerShell.png
 categories:
   - Citrix

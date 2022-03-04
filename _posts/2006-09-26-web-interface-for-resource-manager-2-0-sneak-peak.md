@@ -6,7 +6,6 @@ author: jason
 excerpt: 'I have been pretty busy lately preparing for <a href="http://www.briforum.com/europe/2006/" target="_blank">BriForum Europe</a>        and have not had a lot of time to work on the site.&nbsp; But, I am close        to releasing Web Interface for Resource Manger version 2.0 and&nbsp; I wanted to give you a "sneak peak" at the new features in version 2.0.'
 layout: post
 guid: /post/Web-Interface-for-Resource-Manager-20-sneak-peak.aspx
-permalink: /2006/09/26/web-interface-for-resource-manager-2-0-sneak-peak/
 categories:
   - Resouce Manager
 tags:

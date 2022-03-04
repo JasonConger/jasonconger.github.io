@@ -1,15 +1,11 @@
 ---
-id: 133
 title: About Jason Conger
-date: 2011-02-26T09:48:48-06:00
-author: jason
 layout: page
-guid: http://www.jasonconger.com/wordpress/?page_id=133
 permalink: /about-jason-conger
 comments: false
 ---
 
-<img src="https://i1.wp.com/jasonconger.com/wp-content/uploads/2020/02/Splunk_0944.jpg?fit=840%2C840" alt="" class="rounded-circle" width="166" height="166"/>
+<img src="/assets/img/jasonconger.jpeg" alt="" class="rounded-circle" width="166" height="166"/>
 
 
 Jason Conger is a data and web nerd. In fact, this website started out with <a href="http://www.jasonconger.com/post/using-microsoft-visio-to-reverse-engineer-a-database/">showing you how to reverse engineer a SQL database</a>. Shortly after, the open-source project <a href="http://www.jasonconger.com/tags#wirm">Web Interface for Resource Manager</a> was released. Over the years, there have been articles that have shown you how to <a href="http://www.jasonconger.com/tags#web-interface">modify Web Interface</a>, create and modify <a href="http://www.jasonconger.com/tags#mobility">mobile applications</a>, some random thoughts, and even a little <a href="http://www.jasonconger.com/tags#iot">IoT</a>.

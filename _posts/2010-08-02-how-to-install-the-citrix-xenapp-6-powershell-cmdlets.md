@@ -6,7 +6,6 @@ author: jason
 excerpt: PowerShell is the new API for Citrix XenApp starting with version 6. Whether you want to write interactive applications or work with your XenApp farm via command line, you first need to set up the XenApp 6 PowerShell SDK. This post will step you through setting up the Citrix XenApp 6 PowerShell SDK in your environment.
 layout: post
 guid: /post/How-to-Install-the-Citrix-XenApp-6-PowerShell-Cmdlets.aspx
-permalink: /2010/08/02/how-to-install-the-citrix-xenapp-6-powershell-cmdlets/
 image: wp-content/uploads/2010/08/PowerShell.png
 categories:
   - Citrix XenApp

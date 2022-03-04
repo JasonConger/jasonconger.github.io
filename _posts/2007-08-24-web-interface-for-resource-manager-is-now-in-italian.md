@@ -6,7 +6,6 @@ author: jason
 excerpt: 'The latest version of Web Interface for Resource Manager is now available in Italian (other languages supported are English, Dutch, French, and German).  Web Interface for Resource Manager is an ASP.NET 2.0 web application that contains several SQL queries to display useful information contained in the Citrix Resource Manager Summary Database.'
 layout: post
 guid: /post/Web-Interface-for-Resource-Manager-is-now-in-Italian.aspx
-permalink: /2007/08/24/web-interface-for-resource-manager-is-now-in-italian/
 categories:
   - Resouce Manager
 tags:

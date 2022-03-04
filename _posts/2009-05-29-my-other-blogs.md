@@ -6,7 +6,6 @@ author: jason
 excerpt: 'When I first started this site, it was my goal to write technical articles and have a platform to distribute custom written software.  I think I have kept true to that, but that makes for sparse updates.  What you may or may not know is that I do contribute to 2 other blogs out there on a more regular basis'
 layout: post
 guid: /post/My-other-Blogs.aspx
-permalink: /2009/05/29/my-other-blogs/
 image: wp-content/uploads/2009/05/blog_icon.jpg
 categories:
   - General

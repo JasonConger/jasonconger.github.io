@@ -6,7 +6,6 @@ author: jason
 excerpt: 'Have you ever wanted to get the username and password from an authenticated user in Citrix Web Interface?  This article tells you exactly how to do just that.'
 layout: post
 guid: /post/How-to-get-the-Username-AND-Password-of-a-user-in-Citrix-Web-Interface-40.aspx
-permalink: /2006/03/10/how-to-get-the-username-and-password-of-a-user-in-citrix-web-interface-4-0/
 categories:
   - Web Interface
 tags:

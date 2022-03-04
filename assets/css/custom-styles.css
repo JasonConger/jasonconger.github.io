@@ -1,0 +1,172 @@
+div[role=main] {
+  min-height: 300px;
+}
+
+/* 92 */
+@media (min-width:576px) {
+  .card-columns.listfeaturedtag {
+      -webkit-column-count: 2;
+      -moz-column-count: 2;
+      column-count: 2;
+  }
+}
+
+/* 107 */
+.listfeaturedtag {
+  border: 1px solid rgba(0, 0, 0, .125);
+  border-radius: .25rem;
+  transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+}
+
+/* 113 */
+.listfeaturedtag .wrapthumbnail {
+  height: 290px;
+  flex: 0 0 auto;
+  height: 100%;
+}
+
+/* 124 */
+.listfeaturedtag .card,
+.card-footer {
+    border: 0;
+}
+
+/* 129 */
+.listfeaturedtag .thumbnail {
+  background-size: cover;
+  height: 100%;
+  display: block;
+  background-position: 38% 22% !important;
+  background-origin: border-box !important;
+  border-top-left-radius: .25rem;
+  border-bottom-left-radius: .25rem;
+}
+
+/* 139 */
+.listfeaturedtag .card-block {
+  padding-left: 0;
+}
+
+/* 143 */
+.listfeaturedtag h2.card-title,
+.listrecent h2.card-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+/* 150 */
+.listfeaturedtag h4.card-text,
+.listrecent h4.card-text {
+    color: rgba(0, 0, 0, .44);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    font-weight: 400;
+}
+
+/* 158 */
+.featured-box-img-cover {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+}
+
+/* 165 */
+@media (max-width:991px) {
+  .featured-box-img-cover {
+      height: auto;
+      width: 100%;
+  }
+}
+
+/* 351 */
+.featured-image {
+  display: block;
+  margin-bottom: 1.5rem;
+}
+
+/* 398 */
+@media (max-width:999px) {
+  .featured-box-img-cover {
+      height: 359px;
+  }
+
+  .jumbotron.fortags {
+      margin-bottom: 0 !Important;
+  }
+
+  .jumbotron {
+      margin-bottom: 0;
+      border-radius: 0;
+  }
+
+  .listfeaturedtag .card {
+      height: auto;
+  }
+
+  .listfeaturedtag .wrapfooter {
+      position: relative;
+      margin-top: 30px;
+  }
+
+  .listfeaturedtag .card-block {
+      padding: 20px;
+  }
+
+
+}
+
+/* 770 */
+@media (min-width:768px) {
+  .jumbotron.fortags {
+      margin-bottom: -50px;
+      margin-top: 3rem;
+      padding: 0;
+      height: 350px;
+      border-radius: 0;
+      background-image: url(../images/jumbotron.jpg);
+      background-size: cover;
+  }
+
+  .jumbotron.fortags .col-md-4 {
+      background: rgba(0, 0, 0, 0.75);
+      color: #fff;
+  }
+
+  .jumbotron.fortags .row {
+      margin: 0;
+  }
+}
+
+/* 791 */
+.jumbotron.fortags {
+  margin-top: 3rem;
+  padding: 0;
+  border-radius: 0;
+  background-image: url(../images/jumbotron.jpg);
+  background-size: cover;
+}
+
+/* 799 */
+.jumbotron.fortags a {
+  padding: 5px 10px 7px;
+  background: #222;
+  border-radius: 30px;
+  color: #fff;
+  font-weight: 500;
+  text-transform: lowercase;
+  font-size: 0.8rem;
+  display: inline-block;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+/* 810 */
+.layout-page .jumbotron.fortags {
+  display: none;
+}
+
+/* 847 */
+.card .img-fluid {
+  width: 100%;
+}

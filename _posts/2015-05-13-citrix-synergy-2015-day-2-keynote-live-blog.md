@@ -5,7 +5,6 @@ date: 2015-05-13T01:00:04-05:00
 author: jason
 layout: post
 guid: http://www.jasonconger.com/?p=1592
-permalink: /2015/05/13/citrix-synergy-2015-day-2-keynote-live-blog/
 image: wp-content/uploads/2011/05/Citrix-Synergy-Thumb.png
 categories:
   - Citrix

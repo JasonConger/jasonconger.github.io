@@ -6,7 +6,6 @@ author: jason
 excerpt: 'Your end users expect mobile access to enterprise resources now.  Unfortunately, our traditional remote access methods do not lend themselves easily to mobile form factors.  So, we are left with the choice to use 3rd party apps, "mobilize" existing apps, or build our own.  This article will address one of the players aimed at helping you build your own mobile apps with less effort.'
 layout: post
 guid: http://www.jasonconger.com/?p=1207
-permalink: /2013/08/08/introduction-to-phonegap/
 image: wp-content/uploads/2013/08/phonegap-1.png
 categories:
   - Mobility

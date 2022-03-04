@@ -6,7 +6,6 @@ author: jason
 excerpt: MFCOM Script to List Applications Only in Specified Folders
 layout: post
 guid: /post/MFCOM-Script-to-List-Applications-Only-in-Specified-Folders.aspx
-permalink: /2006/08/28/mfcom-script-to-list-applications-only-in-specified-folders/
 categories:
   - MFCOM
 tags:

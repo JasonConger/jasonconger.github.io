@@ -6,7 +6,6 @@ author: jason
 excerpt: 'This is the second part of the IoT workspace demo.  This time, we will use proximity to kick off an Octoblu workflow without an iBeacon - mainly because this was a last minute add to the demo ;-)'
 layout: post
 guid: http://www.jasonconger.com/?p=1648
-permalink: /2015/06/29/using-proximity-to-start-an-octoblu-workflow/
 image: wp-content/uploads/2015/06/octoblu.png
 categories:
   - IoT

@@ -6,7 +6,6 @@ author: jason
 excerpt: 'Check out the new features coming in Web Interface for Citrix Resource Manager.  Web Interface for Citrix Resource Manager will be easier to configure, easier to read, and will be available to a entire new audience.'
 layout: post
 guid: /post/Web-Interface-for-Resource-Manager-version-21-is-coming-soon.aspx
-permalink: /2006/11/07/web-interface-for-resource-manager-version-2-1-is-coming-soon/
 categories:
   - Resouce Manager
 tags:

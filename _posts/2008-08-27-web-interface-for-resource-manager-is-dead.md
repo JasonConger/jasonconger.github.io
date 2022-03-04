@@ -6,7 +6,6 @@ author: jason
 excerpt: 'I have gotten several comments (online and offline) and emails asking about future developments surrounding Web Interface for Resource Manager.  Well, Web Interface for Resource Manager as you know today is officially dead.  There are actually several reasons for this.  Read on for more information...'
 layout: post
 guid: /post/Web-Interface-for-Resource-Manager-is-Dead.aspx
-permalink: /2008/08/27/web-interface-for-resource-manager-is-dead/
 image: wp-content/uploads/2008/08/WIRM_RIP.jpg
 categories:
   - Resouce Manager

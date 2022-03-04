@@ -6,7 +6,6 @@ author: jason
 excerpt: 'There are times when you need to migrate all or part of your Citrix XenApp 6 folder structure from one farm to another, or just back up a XenApp 6 folder structure.  This post will show you how to accomplish this using PowerShell.'
 layout: post
 guid: http://www.jasonconger.com/?p=413
-permalink: /2011/05/31/migrate-citrix-xenapp-6-folder-structure-using-powershell/
 image: wp-content/uploads/2010/08/PowerShell.png
 categories:
   - Citrix

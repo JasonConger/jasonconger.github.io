@@ -6,7 +6,6 @@ author: jason
 excerpt: Two of my most popular posts ("Super Easy Customization of Citrix Web Interface 4.x" and the "Citrix Web Interface SharePoint Look and Feel Template" download) have been updated to include support for Citrix Web Interface 4.6.
 layout: post
 guid: /post/Template-updates-for-Citrix-Web-Interface-46.aspx
-permalink: /2008/05/07/template-updates-for-citrix-web-interface-4-6/
 categories:
   - Web Interface
 tags:

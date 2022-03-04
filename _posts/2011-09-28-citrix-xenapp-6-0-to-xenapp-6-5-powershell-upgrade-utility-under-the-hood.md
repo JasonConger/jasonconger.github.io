@@ -6,7 +6,6 @@ author: jason
 excerpt: 'Citrix recently released XenApp 6.5.  However, there is not a way to do an in-place upgrade from XenApp 6.0 to XenApp 6.5.  This means that the Citrix administrator will have to uninstall XenApp 6.0 components and install XenApp 6.5 components.  Citrix released a PowerShell utility to help in this process, and in this post I break that utility down into a Visio flowchart to you can understand what is going on behind the scenes.'
 layout: post
 guid: http://www.jasonconger.com/?p=702
-permalink: /2011/09/28/citrix-xenapp-6-0-to-xenapp-6-5-powershell-upgrade-utility-under-the-hood/
 image: wp-content/uploads/2010/08/PowerShell.png
 categories:
   - Citrix XenApp

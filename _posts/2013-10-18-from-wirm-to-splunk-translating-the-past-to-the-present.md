@@ -5,13 +5,13 @@ date: 2013-10-18T08:00:17-05:00
 author: jason
 layout: post
 guid: http://www.jasonconger.com/?p=1255
-permalink: /2013/10/18/from-wirm-to-splunk-translating-the-past-to-the-present/
 image: wp-content/uploads/2012/01/splunk.jpg
 categories:
   - Splunk
 tags:
   - Splunk
   - WIRM
+
 ---
 I get to do a lot of cool things at <a href="http://www.splunk.com" target="_blank">Splunk</a>.  One of the things I have been wanting to do is incorporate the visualizations I built a long time ago for <a href="http://www.jasonconger.com/?s=wirm">Web Interface for Resource Manger</a> in Splunk applications.  All of those past visualizations were built using Microsoft ASP.NET and Flash.  So, I have had to use alternate methods to accomplish what I want.
 

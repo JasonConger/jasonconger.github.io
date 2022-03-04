@@ -5,7 +5,6 @@ date: 2013-10-11T14:11:20-05:00
 author: jason
 layout: post
 guid: http://www.jasonconger.com/?p=1242
-permalink: /2013/10/11/using-powershell-to-retrieve-citrix-monitor-data-via-odata/
 image: wp-content/uploads/2013/10/OData.jpeg
 categories:
   - Citrix

@@ -6,7 +6,6 @@ author: jason
 excerpt: 'This is the second part in a series on Citrix XenApp Configuration Logging.  When Citrix XenApp Configuration Logging is enabled, all changes are written to a back end database.  In this part, we will look at the details of how to create the database, logins, and users.'
 layout: post
 guid: /post/Digging-in-to-Citrix-Configuration-Logging-Setting-up-the-Database.aspx
-permalink: /2009/07/29/digging-in-to-citrix-configuration-logging-setting-up-the-database/
 image: wp-content/uploads/2009/09/Citrix-XenApp.png
 categories:
   - Citrix XenApp

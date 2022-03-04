@@ -6,7 +6,6 @@ author: jason
 excerpt: In this post, we will go over the installation steps of the Citrix XenApp 6.5 Mobile Application SDK, explorer what is added to the XenApp 6.5 server during installation, and compile one of the samples given in the SDK.
 layout: post
 guid: http://www.jasonconger.com/?p=817
-permalink: /2012/02/06/installing-and-using-the-citrix-xenapp-6-5-mobile-application-sdk/
 image: wp-content/uploads/2011/02/Citrix.png
 categories:
   - Citrix XenApp

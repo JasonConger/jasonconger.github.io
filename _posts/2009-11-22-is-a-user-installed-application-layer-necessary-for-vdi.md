@@ -6,7 +6,6 @@ author: jason
 excerpt: 'Layering is an emerging concept for VDI.  In this article, I will draw some parallels with VDI layering and Service Oriented Architecture (SOA) to look at ways of solving the difficult User Installed Applications layer.'
 layout: post
 guid: /post/Is-a-User-Installed-Application-Layer-Necessary-for-VDI.aspx
-permalink: /2009/11/22/is-a-user-installed-application-layer-necessary-for-vdi/
 image: wp-content/uploads/2009/11/VDI.png
 categories:
   - VDI

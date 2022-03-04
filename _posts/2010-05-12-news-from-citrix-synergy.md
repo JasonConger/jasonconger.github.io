@@ -6,7 +6,6 @@ author: jason
 excerpt: "I'm blogging the Citrix Synergy keynote in real time.  I'll be adding to things that strike me as interesting to this post as announcements are made."
 layout: post
 guid: /post/News-from-Citrix-Synergy.aspx
-permalink: /2010/05/12/news-from-citrix-synergy/
 image: wp-content/uploads/2010/05/citrix-synergy1.png
 categories:
   - General

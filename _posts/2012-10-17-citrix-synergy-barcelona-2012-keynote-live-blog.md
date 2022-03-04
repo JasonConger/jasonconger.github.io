@@ -6,7 +6,6 @@ author: jason
 excerpt: 'Citrix Synergy has returned to Barcelona, Spain.  That means that I will be live blogging the keynote again this year.'
 layout: post
 guid: http://www.jasonconger.com/?p=1090
-permalink: /2012/10/17/citrix-synergy-barcelona-2012-keynote-live-blog/
 image: wp-content/uploads/2011/05/Citrix-Synergy-Thumb.png
 categories:
   - Citrix

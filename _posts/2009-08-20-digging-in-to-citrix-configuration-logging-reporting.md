@@ -6,7 +6,6 @@ author: jason
 excerpt: 'This is the fourth part in a series on Citrix XenApp Configuration Logging.  This part will foucus on out of the box reporting tool.  In a later article, we will look at custom reporting.'
 layout: post
 guid: /post/Digging-in-to-Citrix-Configuration-Logging-Reporting.aspx
-permalink: /2009/08/20/digging-in-to-citrix-configuration-logging-reporting/
 image: wp-content/uploads/2009/09/Citrix-XenApp.png
 categories:
   - Citrix XenApp

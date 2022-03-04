@@ -6,7 +6,6 @@ author: jason
 excerpt: "What happens when you need to make mass changes to APPSRV.INI?  Use this script to make changes to your user's APPSRV.INI file via login script.  The script adds or modifies .INI file key/value pairs and sections."
 layout: post
 guid: /post/Script-to-Manipulate-APPSRVINI.aspx
-permalink: /2008/01/06/script-to-manipulate-appsrv-ini/
 categories:
   - Citrix XenApp
 tags:

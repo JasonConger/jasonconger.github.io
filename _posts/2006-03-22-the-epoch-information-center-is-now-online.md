@@ -6,7 +6,6 @@ author: jason
 excerpt: 'Use the Epoch Information Center to get epoch offsets from Date/Time values, or get Date/Time values from an epoch offset.  This information is useful for things like manipulating the Terminal Server shadow registry.'
 layout: post
 guid: /post/The-Epoch-Information-Center-is-now-online.aspx
-permalink: /2006/03/22/the-epoch-information-center-is-now-online/
 categories:
   - General
 tags:

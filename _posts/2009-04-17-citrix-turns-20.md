@@ -6,7 +6,6 @@ author: jason
 excerpt: 'Citrix turns 20 today.  In this post, I will tell you how I got introduced to Citrix several years ago.'
 layout: post
 guid: /post/Citrix-turns-20.aspx
-permalink: /2009/04/17/citrix-turns-20/
 image: wp-content/uploads/2009/04/Citrix_20th_Anniversary.gif
 categories:
   - General

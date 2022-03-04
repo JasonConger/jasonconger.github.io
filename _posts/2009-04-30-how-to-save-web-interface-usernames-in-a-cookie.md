@@ -6,7 +6,6 @@ author: jason
 excerpt: 'In the article titled “How to Enable AutoComplete for Web Interface Logon”, I explained how to enable the AutoComplete functionality of web browsers in order to save usernames and/or passwords for Citrix Web Interface.  As the article explained, there are a lot of moving parts to the solution such as web browser settings, Protected Storage, JavaScript workarounds, etc.  In this article, I will explain how to accomplish something similar by using cookies to remember the last username entered for Web Interface.'
 layout: post
 guid: /post/How-to-Save-Web-Interface-Usernames-in-a-Cookie.aspx
-permalink: /2009/04/30/how-to-save-web-interface-usernames-in-a-cookie/
 image: wp-content/uploads/2009/04/Web-Interface.png
 categories:
   - Web Interface

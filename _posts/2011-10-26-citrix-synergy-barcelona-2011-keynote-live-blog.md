@@ -6,7 +6,6 @@ author: jason
 excerpt: "Citrix Synergy 2011 is going on now in Barcelona.  I'll be live blogging the event here.  Expect to see more information about recent Citrix acquisitions."
 layout: post
 guid: http://www.jasonconger.com/?p=757
-permalink: /2011/10/26/citrix-synergy-barcelona-2011-keynote-live-blog/
 image: wp-content/uploads/2011/05/Citrix-Synergy-Thumb.png
 categories:
   - Citrix

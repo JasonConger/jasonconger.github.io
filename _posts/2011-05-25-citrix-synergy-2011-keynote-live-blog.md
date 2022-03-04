@@ -6,7 +6,6 @@ author: jason
 excerpt: "Citrix Synergy 2011 is going on now.  I'll be live blogging the event."
 layout: post
 guid: http://www.jasonconger.com/?p=419
-permalink: /2011/05/25/citrix-synergy-2011-keynote-live-blog/
 image: wp-content/uploads/2011/05/Citrix-Synergy-Thumb.png
 categories:
   - Citrix

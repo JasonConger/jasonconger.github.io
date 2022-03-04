@@ -6,7 +6,6 @@ author: jason
 excerpt: 'We spend a lot of time optimizing how we deliver desktops and applications. But, the future will trivialize these things as the focus shifts the focus to data and the data moves to the cloud.  It is happening now in the consumer market and the trend will infiltrate the enterprise as BYOD continues to become more prevalent.'
 layout: post
 guid: http://www.jasonconger.com/?p=1080
-permalink: /2012/05/31/virtual-desktops-and-applications-are-not-as-important-as-you-think/
 image: wp-content/uploads/2012/05/binary.gif
 featured: true
 categories:

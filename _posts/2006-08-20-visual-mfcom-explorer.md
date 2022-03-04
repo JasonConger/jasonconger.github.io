@@ -6,7 +6,6 @@ author: jason
 excerpt: 'Have you ever wanted to delve into the intricacies of MFCOM?  Using this web application, you can browse the various MFCOM properties using the Citrix Presentation Server Console as your guide.'
 layout: post
 guid: /post/Visual-MFCOM-Explorer.aspx
-permalink: /2006/08/20/visual-mfcom-explorer/
 categories:
   - MFCOM
 tags:

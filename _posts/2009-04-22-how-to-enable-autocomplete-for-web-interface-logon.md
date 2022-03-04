@@ -6,7 +6,6 @@ author: jason
 excerpt: 'The logon page for Citrix Web Interface explicitly disables the web browser functionality of saving form data.  But, what if you want to let your users save their username (especially if they have a particularly long UPN)?  This article will show you how to re-enable this functionality for both Web Interface 4.x and 5.x.'
 layout: post
 guid: /post/How-to-Enable-AutoComplete-for-Web-Interface-Logon.aspx
-permalink: /2009/04/22/how-to-enable-autocomplete-for-web-interface-logon/
 image: wp-content/uploads/2009/04/Web-Interface.png
 categories:
   - Web Interface

@@ -6,7 +6,6 @@ author: jason
 excerpt: 'This is the third part in a series on Citrix XenApp Configuration Logging.  This part will show you how to configure your Citrix XenApp farm for Configuration Logging, what all the settings mean, what happens when you configure your farm for logging, what happens when things go wrong, and more.'
 layout: post
 guid: /post/Digging-in-to-Citrix-Configuration-Logging-Setting-up-the-Citrix-XenApp-farm-for-Configuration-Logging.aspx
-permalink: /2009/08/10/digging-in-to-citrix-configuration-logging-setting-up-the-citrix-xenapp-farm-for-configuration-logging/
 image: wp-content/uploads/2009/09/Citrix-XenApp.png
 categories:
   - Citrix XenApp

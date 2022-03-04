@@ -6,7 +6,6 @@ author: jason
 excerpt: 'In XenApp 6, MFCOM is out and PowerShell is in.  This post is the first in a series to help you understand how to develop appliations that utilize the Citrix XenApp 6 PowerShell SDK and Microsoft C#.'
 layout: post
 guid: /post/Getting-Started-with-the-Citrix-XenApp-PowerShell-SDK-and-C.aspx
-permalink: /2010/06/26/getting-started-with-the-citrix-xenapp-powershell-sdk-and-c/
 image: wp-content/uploads/2010/08/PowerShell.png
 categories:
   - Citrix XenApp

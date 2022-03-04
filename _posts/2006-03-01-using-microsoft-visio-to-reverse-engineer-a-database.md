@@ -6,7 +6,6 @@ author: jason
 excerpt: This article steps you through using Microsoft Visio’s Reverse Engineer feature to reverse engineer relational databases like Citrix’s Resource Manager Summary Database.
 layout: post
 guid: /post/Using-Microsoft-Visio-to-Reverse-Engineer-a-Database.aspx
-permalink: /2006/03/01/using-microsoft-visio-to-reverse-engineer-a-database/
 categories:
   - Citrix XenApp
   - Resouce Manager

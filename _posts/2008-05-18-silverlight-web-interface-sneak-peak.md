@@ -6,7 +6,6 @@ author: jason
 excerpt: 'What do you get when you combine Citrix Web Interface, Microsoft Silverlight, and AJAX?  You get my latest Web Interface modification.  Read on to find out more…'
 layout: post
 guid: /post/Silverlight-Web-Interface-Sneak-Peak.aspx
-permalink: /2008/05/18/silverlight-web-interface-sneak-peak/
 categories:
   - Web Interface
 tags:

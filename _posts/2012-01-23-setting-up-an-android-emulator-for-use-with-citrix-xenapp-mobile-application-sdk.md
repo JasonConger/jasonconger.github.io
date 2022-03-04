@@ -6,7 +6,6 @@ author: jason
 excerpt: 'One of the coolest SDKs I’ve seen come out in quite a while is the Citrix XenApp 6.5 Mobile Application SDK.  As of this writing, only the Android version of the Citrix Receiver is supported so I will show you how to set up an Android emulator with the Citrix Receiver for testing purposes.'
 layout: post
 guid: http://www.jasonconger.com/?p=800
-permalink: /2012/01/23/setting-up-an-android-emulator-for-use-with-citrix-xenapp-mobile-application-sdk/
 image: wp-content/uploads/2012/01/Android.png
 categories:
   - Citrix

@@ -7,7 +7,6 @@ excerpt: |
   It's time for Citrix Synergy 2012.  I'll be live blogging the keynote again this year. I'm looking forward to hearing about some of the Cloud/multi-tenant announcements and <a href="http://www.jasonconger.com/post/tag/mobility/" title="mobility">mobility</a> improvements.
 layout: post
 guid: http://www.jasonconger.com/?p=1016
-permalink: /2012/05/09/citrix-synergy-2012-live-blog/
 image: wp-content/uploads/2011/05/Citrix-Synergy-Thumb.png
 categories:
   - Citrix

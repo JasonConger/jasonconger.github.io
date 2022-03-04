@@ -6,7 +6,6 @@ author: jason
 excerpt: Octoblu does some incredible stuff with physical things driven by software. Steve Greenberg and I did a demo during Geek Speak Tonight at Citrix Synergy triggering physical devices via a Splunk search. This article goes into some of the Splunk details.
 layout: post
 guid: http://www.jasonconger.com/?p=1610
-permalink: /2015/06/17/trigger-an-octoblu-iot-flow-from-splunk/
 image: wp-content/uploads/2015/06/octoblu.png
 categories:
   - Splunk

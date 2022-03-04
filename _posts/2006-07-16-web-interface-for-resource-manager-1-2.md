@@ -6,7 +6,6 @@ author: jason
 excerpt: 'Got Citrix Resource Manager?  Try out Web Interface for Resource Manager! Web Interface for Resource Manager is an ASP.NET 2.0 web application that contains several SQL queries to display useful information contained in the Citrix Resource Manager Summary Database.'
 layout: post
 guid: /post/Web-Interface-for-Resource-Manager-12.aspx
-permalink: /2006/07/16/web-interface-for-resource-manager-1-2/
 categories:
   - Resouce Manager
 tags:

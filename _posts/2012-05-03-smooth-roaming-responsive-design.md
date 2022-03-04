@@ -6,7 +6,6 @@ author: jason
 excerpt: 'In this post, we look at adding session reconnection event handling to our responsive design prototype using the Citrix XenApp Mobile Application SDK.  <a href="http://www.jasonconger.com/enterprise-application-responsive-design-prototype">Be sure to check out the video of the prototype</a>.'
 layout: post
 guid: http://www.jasonconger.com/?p=998
-permalink: /2012/05/03/smooth-roaming-responsive-design/
 image: wp-content/uploads/2012/04/Responsive-Design-Icon.png
 categories:
   - Citrix XenApp

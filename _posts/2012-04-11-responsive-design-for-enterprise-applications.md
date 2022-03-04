@@ -6,7 +6,6 @@ author: jason
 excerpt: 'Responsive Design that web developers use can now be applied to Enterprise Applications thanks to the Citrix Mobile SDK.  This post will give you a glimpse of what is possible to get your wheels turning.'
 layout: post
 guid: http://www.jasonconger.com/?p=881
-permalink: /2012/04/11/responsive-design-for-enterprise-applications/
 image: wp-content/uploads/2012/04/Responsive-Design-Icon.png
 categories:
   - Citrix XenApp

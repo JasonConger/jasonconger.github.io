@@ -6,7 +6,6 @@ author: jason
 excerpt: "MFCOM has been the de facto standard for programmatically interfacing with Citrix XenApp. Whether you wanted to write a simple script or develop an application that interfaced with XenApp, MFCOM was the answer. Now, Citrix is committed to building their management architecture on PowerShell--not just for XenApp, but for all Citrix products. That's great news for standardization across platforms and aligning with Microsoft on using PowerShell for management architectures. Now, the question is how do you take what you know about MFCOM and translate that to PowerShell?"
 layout: post
 guid: /post/MFCOM-to-PowerShell-How-to-Make-the-Transition.aspx
-permalink: /2010/06/08/mfcom-to-powershell-how-to-make-the-transition/
 image: wp-content/uploads/2010/08/PowerShell.png
 categories:
   - Citrix XenApp

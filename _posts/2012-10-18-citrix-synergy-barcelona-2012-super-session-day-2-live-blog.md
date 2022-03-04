@@ -6,7 +6,6 @@ author: jason
 excerpt: 'It is day 2 of Citrix Synergy Barcelona and it is time for the Super Session (a.k.a. day 2 keynote).  Keep up on the action with this live blog.'
 layout: post
 guid: http://www.jasonconger.com/?p=1124
-permalink: /2012/10/18/citrix-synergy-barcelona-2012-super-session-day-2-live-blog/
 image: wp-content/uploads/2011/05/Citrix-Synergy-Thumb.png
 categories:
   - Citrix

@@ -6,7 +6,6 @@ author: jason
 excerpt: 'Mobility is so ubiquitous that it is almost not even a separate thing anymore.  I have had some experience building mobile apps and wanted to ponder some self-proclaimed theorems which are outlined in this article.'
 layout: post
 guid: http://www.jasonconger.com/?p=1515
-permalink: /2014/10/31/mobile-application-development-theorems/
 image: wp-content/uploads/2014/10/mobile-dev.jpg
 categories:
   - Mobility

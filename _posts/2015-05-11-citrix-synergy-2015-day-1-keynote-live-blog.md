@@ -6,7 +6,6 @@ author: jason
 excerpt: 'Here we are again at Citrix Synergy.  I will be live blogging the keynote here.  Content will scroll up as I post it.  Also, you can follow me on Twitter (@JasonConger) for updates.'
 layout: post
 guid: http://www.jasonconger.com/?p=1563
-permalink: /2015/05/11/citrix-synergy-2015-day-1-keynote-live-blog/
 image: wp-content/uploads/2011/05/Citrix-Synergy-Thumb.png
 categories:
   - Citrix
