@@ -6,7 +6,7 @@ author: jason
 excerpt: 'With the new year comes a new direction for me - I have officially joined Splunk as a Solutions Architect.'
 layout: post
 guid: http://www.jasonconger.com/?p=792
-image: wp-content/uploads/2012/01/splunk.jpg
+image: assets/img/2012/01/17/splunk.png
 categories:
   - General
 tags:
