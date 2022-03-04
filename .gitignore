@@ -1,7 +1,12 @@
 _site
 .DS_Store
 *.swp
+*.gemspec
 .sass-cache
 *~
 .jekyll-cache
 Gemfile.lock
+_config.yml.bak
+theme.md
+/_posts/_splunk
+/_posts/_examples
