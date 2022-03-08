@@ -14,6 +14,14 @@
 
   <div class="collapse navbar-collapse" id="main-navbar">
     <ul class="navbar-nav ml-auto">
+      {% if site.post_search %}
+        <li class="nav-item">
+          <a class="nav-link" id="nav-search-link" href="#" title="Search">
+            <span id="nav-search-icon" class="fa fa-search"></span>
+            <span id="nav-search-text">Search</span>
+          </a>
+        </li>
+      {%- endif -%}
       <li class="nav-item">
         <a class="nav-link" href="/about-jason-conger">About</a>
       </li>
@@ -26,14 +34,6 @@
       <li class="nav-item">
           <a target="_blank" class="nav-link" href="https://github.com/JasonConger"><i class="fab fa-github fa-lg"></i> GitHub Projects</a>
       </li>
-      {% if site.post_search %}
-        <li class="nav-item">
-          <a class="nav-link" id="nav-search-link" href="#" title="Search">
-            <span id="nav-search-icon" class="fa fa-search"></span>
-            <span id="nav-search-text">Search</span>
-          </a>
-        </li>
-      {%- endif -%}
     </ul>
   </div>
 
