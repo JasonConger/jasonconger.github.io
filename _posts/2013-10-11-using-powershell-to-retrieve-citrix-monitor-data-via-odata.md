@@ -18,17 +18,16 @@ Starting with XenDesktop 7, Citrix stores the data the Desktop Director displays
 
 To start out, let's take a look at the Citrix Monitor Service schema (click to enlarge):
 
-&nbsp;
-<p style="text-align: center;"><a href="http://jasonconger.com/wp-content/uploads/2013/10/MonitorDataSchema.png" target="_blank"><img class="aligncenter  wp-image-1243" alt="MonitorDataSchema" src="http://jasonconger.com/wp-content/uploads/2013/10/MonitorDataSchema-1024x940.png" width="600" height="550" /></a></p>
-<p style="text-align: left;">Suppose we want to get all sessions as well as the all the connection/disconnections to the session.  The following URL will return the data we want in XML format.</p>
+<a href="http://jasonconger.com/wp-content/uploads/2013/10/MonitorDataSchema.png" target="_blank"><img class="aligncenter  wp-image-1243" alt="MonitorDataSchema" src="http://jasonconger.com/wp-content/uploads/2013/10/MonitorDataSchema-1024x940.png" width="600" height="550" /></a>
 
-<p>
+Suppose we want to get all sessions as well as the all the connection/disconnections to the session.  The following URL will return the data we want in XML format.
+
 http://localhost/Citrix/Monitor/Odata/v1/Data/Sessions
-</p>
 
 <p style="text-align: left;">The trick to get this working with PowerShell is to transform all this information into a nice hierarchical structure.  In the example code below, we use the <code>Invoke-ODataTransform</code> function to do this.</p>
 
-<pre class="brush: PowerShell;">function Global:Invoke-ODataTransform ($records) {
+```powershell
+function Global:Invoke-ODataTransform ($records) {
 
     $propertyNames = ($records | Select -First 1).content.properties |
         Get-Member -MemberType Properties |
@@ -66,4 +65,5 @@ foreach($connection in $connections)
     }
 
     Write-Host $output
-}</pre>
+}
+```
