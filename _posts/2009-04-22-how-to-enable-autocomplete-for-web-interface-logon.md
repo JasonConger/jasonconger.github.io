@@ -15,21 +15,18 @@ tags:
 ---
 The logon page for Citrix Web Interface explicitly disables the web browser functionality of saving form data. But, what if you want to let your users save their username (especially if they have a particularly long UPN)? This article will show you how to enable AutoComplete functionality for both Web Interface 4.x and 5.x.
 
-<span style="color: #ff0000;">Disclaimer – I would highly recommend only implementing this solution in a secure internal environment. You do not want your usernames or passwords floating around out there in the public.</span>
-
-<strong> </strong>
+{: .box-warning}
+Disclaimer – I would highly recommend only implementing this solution in a secure internal environment. You do not want your usernames or passwords floating around out there in the public.
 
 <a href="http://www.jasonconger.com/images/articleImages/WI-AutoComplete.gif"><img style="display: inline; border-width: 0px;" title="Citrix Web Interface AutoComplete" src="http://www.jasonconger.com/images/articleImages/WI-AutoComplete_thumb.gif" border="0" alt="Citrix Web Interface AutoComplete" width="471" height="214" /></a>
 
-<strong> </strong>
+## How Web Interface disables AutoComplete
 
-<strong> </strong>
-
-<strong>How Web Interface disables AutoComplete</strong>
 Web Interface hasn’t always disabled the AutoComplete functionality of web browsers.  I actually think it is wise Citrix did start disabling AutoComplete by default because a lot of Web Interface sites are external-facing and AutoComplete can be a bad thing in an external scenario. The way Web Interface disables AutoComplete is by adding a property to the <code>&lt;form&gt;</code> tag in the HTML.  Simply adding autocomplete=”off” will disable AutoComplete for all <code>&lt;input&gt;</code> elements within the <code>&lt;form&gt;</code>. If you look at the rendered WI login page’s HTML, you will see <code>&lt;form… autocomplete=”off”&gt;</code>.
 
 
-<strong>Enabling AutoComplete for Web Interface 4.x</strong>
+## Enabling AutoComplete for Web Interface 4.x
+
 Enabling AutoComplete for Web Interface 4.x is actually quite simple.  All you really need to do is get rid of the autocomplete=”off” property in the <code>&lt;form&gt;</code> tag.  To do this:
 
 Modify loginView.ascx
@@ -47,7 +44,7 @@ Change this: <code>&lt;input type='password'… </code>
 To this: <code>&lt;input autocomplete="off" type='password'… </code>
 
 
-<strong>Enabling AutoComplete for Web Interface 5.x</strong>
+## Enabling AutoComplete for Web Interface 5.x
 Enabling AutoComplete for web Interface 5.x is the same as enabling AutoComplete in Web Interface 4.x with one exception.  Web Interface 5.x does not use a <code>&lt;input type=”submit” /&gt;</code> button to submit form data.  Instead, Web Interface 5.x uses JavaScript to submit the form data.  This causes an issue with AutoComplete because AutoComplete only commits data to Protected Storage via a <code>&lt;input type=”submit” /&gt;</code> button.  So, to get around this <span style="text-decoration: line-through;">bug</span> “feature”, we need to do some trickery.
 
 Since AutoComplete only works with <code>&lt;input type=”submit” /&gt;</code> buttons, we need to add one of these buttons to our login page.  We do not actually want to see this button since it is just there to facilitate the AutoComplete functionality, so we set the display style on the submit button to none (<code>&lt;input type=”submit” style=”display: none” /&gt;</code>)
@@ -73,7 +70,8 @@ This is our hidden fake submit button that will trigger AutoComplete to save the
 <em>Step 3</em> – Modify login.js
 
 Change this:
-<pre><code>function submitForm() {
+~~~
+function submitForm() {
     if (!isSubmitted) {
         changeLoginBtnColor(false);
 
@@ -89,9 +87,11 @@ Change this:
         document.forms[0].submit();
     }
 }
-</code></pre>
+~~~
+
 To this:
-<pre><code>function submitForm() {
+~~~
+function submitForm() {
     if (!isSubmitted) {
         changeLoginBtnColor(false);
 
@@ -115,14 +115,10 @@ To this:
         return false;</span>
     }
 }
+~~~
 
-</code></pre>
 The highlighted code basically tells the JavaScript submit function to “virtually click” the hidden submit button we added to loginMainForm.inc.
 Again, if you want to disable passwords from being saved, add autocomplete=”off” to all the <code>&lt;input type=’password’ … /&gt;</code> fields in loginMainForm.inc.
-
-<strong> </strong>
-
-<strong> </strong>
 
 <strong>Other factors of using AutoComplete</strong>
 In order for AutoComplete to save form data, the feature needs to be turned on in your web browser.  For Internet Explorer, this can be found by going to Tools -&gt; Internet Options -&gt; Content tab.
