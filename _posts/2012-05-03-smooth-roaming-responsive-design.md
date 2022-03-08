@@ -22,9 +22,8 @@ In the previous version, the responsive design code only kicked in on session in
 
 Here's the bit of code to take care of it (if you don't care about the code and just want to skip to the download, just <a title="Responsive Design Prototype" href="http://www.jasonconger.com/enterprise-application-responsive-design-prototype">follow this link</a>):
 
-&nbsp;
 
-<pre class="brush: csharp">
+```c#
 [DllImport("WtsApi32.dll")]
 private static extern bool WTSRegisterSessionNotification(IntPtr hWnd, [MarshalAs(UnmanagedType.U4)]int dwFlags);
 
@@ -77,10 +76,8 @@ protected override void WndProc(ref Message m)
     }
     base.WndProc(ref m);
 }
-</pre>
+```
 
-&nbsp;
-<h2>Try It Out Yourself</h2>
+## Try It Out Yourself
+
 Want to try it out yourself?  I have made the program and the source available so you can beat it up and come up with some more ideas.  You can <a title="Responsive Design Prototype" href="http://www.jasonconger.com/enterprise-application-responsive-design-prototype">download it here</a>.
-
-&nbsp;
