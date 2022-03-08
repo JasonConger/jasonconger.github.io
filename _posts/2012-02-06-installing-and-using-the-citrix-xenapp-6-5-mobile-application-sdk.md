@@ -44,8 +44,15 @@ So, the <a title="Citrix XenApp 6.5 Mobile Application SDK Requirements" href="h
 I'm using Visual Studio for the examples.  It appears that Visual Studio Express (free) will work as well, but I haven't tested that myself.
 
 Anyway, the documentation that comes with the SDK is pretty comprehensive so I'm not going to rehash it here.  Since I will be showing you some of the examples using .Net, I do want to point out that you will need to run one of the following commands on your development machine in order for things to work:
-<pre class="brush: PowerShell; gutter: false">Regsvr32 cmpcom.dll</pre>
-<pre class="brush: PowerShell; gutter: false">Regsvr32 cmpcom64.dll</pre>
+
+```
+Regsvr32 cmpcom.dll
+```
+
+```
+Regsvr32 cmpcom64.dll
+```
+
 Notice that there is a 32 bit or a 64 bit DLL register. So again, not sure why Windows 7 64bit is a requirement for development. Anyway, make sure you run the appropriate command above as administrator, otherwise you may receive an error stating "<span style="color: #ff0000;">The module was loaded but the call to DllRegisterServer failed with error code 0x80070005</span>" (which is a permissions error).
 <h2>Compiling Examples</h2>
 The final part of this article will focus on compiling and using the examples that come with the SDK.  The one I'm going to point out here is the picker example.  This example uses the native device's UI to display a list of options.  The example is actually a console application that has no graphics, so it is actually using the local device's display mechanisms rather than trying to do some trickery on the XenApp server side.  So, here we go...
