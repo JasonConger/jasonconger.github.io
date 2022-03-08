@@ -32,7 +32,9 @@ So, you try this and it fixes the issue for the user. What do you do now? Manual
 
 <span class="postHeading">The Solution</span>
 Script the change sounds good to me, but how do you do that? That is where this article comes in. I mentioned I had a script to manipulate APPSRV.INI in the comments of <a href="http://www.jasonconger.com/Deploying-a-Pre-Configured-Citrix-Client-using-Active-Directory.aspx">this article</a>. I have received many emails requesting the script. So, I decided to "spruce up" the script a little by adding more comments and logging and then share it. The script is written in such a way that you can add or modify any key/value pair to any section in APPSRV.INI (or any .INI file for that matter). Just modify the following section of the script to suit your needs:
-<pre><code>'**********************************************************
+
+~~~
+'**********************************************************
 ' Add/modify key/value pairs
 ' modINISection takes 3 parameters:
 '    Section name
@@ -41,12 +43,15 @@ Script the change sounds good to me, but how do you do that? That is where this 
 '**********************************************************
 modINISection "WFClient", "SSOnUserSetting", "On"
 modINISection "WFClient", "EnableSSOnThruICAFile", "On"
-</code></pre>
+~~~
+
 The above example shows how to implement the solution to the delimma discussed earlier.
 
 Here is another useful one to add that addresses clipboard issues:
 
-<code>modINISection "WFClient", "CbChainInterval", "2000" </code>
+~~~
+modINISection "WFClient", "CbChainInterval", "2000"
+~~~
 
 From the Citrix Client 9.100 Readme <a href="http://support.citrix.com/article/CTX107650" target="_blank">http://support.citrix.com/article/CTX107650</a>
 <div class="quote">"This fix introduces support for a mechanism to check at periodic intervals the client's ability to receive clipboard change notifications. If the mechanism finds the client to be unable to receive such notifications, the client will attempt to register itself to receive future notifications. To enable this functionality, you must modify users' appsrv.ini files as follows: 1. Open the appsrv.ini file located in the user profile directory using a text editor. 2. In the WFClient section, locate or add the entry: CbChainInterval=&lt;value&gt;, where value is the interval, in milliseconds, at which checks are to be performed. Supported values range from 0 to 2,000, inclusive."</div>
