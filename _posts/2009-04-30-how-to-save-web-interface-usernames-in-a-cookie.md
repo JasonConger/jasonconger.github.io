@@ -38,10 +38,11 @@ Modify <em>applistView.ascx</em>
 
 Find the following text (around line 10):
 
-&lt;!--#include file="../serverscripts/include.aspxf"--&gt;
+<!--#include file="../serverscripts/include.aspxf"-->
 
 Paste the following right after this line
-<pre class="brush: c-sharp;">
+
+```c#
 <%
 
 //----------------------------------------------------------------
@@ -87,7 +88,8 @@ Response.Cookies.Add(userCookie);
 //----------------------------------------------------------------
 
 %>
-</pre>
+```
+
 Code explanation:
 
 First, we need to get an AccessToken (see line 10 above). In the Web Interface object model, an AccessToken “…encapsulates information that may be used for authorization and authentication when a Subject requires access to a resource.” What that means in layman's terms is an AcessToken basically holds your username, password, domain, identity, etc. (you can actually use the PasswordBasedToken Interface to get the password of a user if you wanted to as described in <a href="http://www.jasonconger.com/post/How-to-get-the-Username-AND-Password-of-a-user-in-Citrix-Web-Interface-40.aspx">this article</a>).
@@ -109,13 +111,14 @@ Here is the code:
 Modify <em>loginMainForm.inc</em>
 
 Find the following text (around line 106):
-<pre class="brush: xml">&lt;td colspan="2"&gt;
-    &lt;input type='text' name='&lt;%=Constants.ID_USER%&gt;' id='&lt;%=Constants.ID_USER%&gt;'
-        class='loginEntries&lt;%=viewControl.getExplicitDisabled()?" loginEntriesDisabled":""%&gt;'
-        maxlength='&lt;%=Constants.LOGIN_ENTRY_MAX_LENGTH%&gt;' &lt;%=viewControl.getExplicitDisabledStr()%&gt;
-        tabindex='&lt;%=Constants.TAB_INDEX_FORM%&gt;'</pre>
+```xml
+<td colspan="2">
+    <input type='text' name='<%=Constants.ID_USER%>' id='<%=Constants.ID_USER%>'
+        class='loginEntries<%=viewControl.getExplicitDisabled()?" loginEntriesDisabled":""%>'
+        maxlength='<%=Constants.LOGIN_ENTRY_MAX_LENGTH%>' <%=viewControl.getExplicitDisabledStr()%>
+        tabindex='<%=Constants.TAB_INDEX_FORM%>'</pre>
 Paste the following right after this text:
-<pre class="brush: c-sharp">&lt;%
+<pre class="brush: c-sharp"><%
 //----------------------------------------------------------------
 //       WI mod
 //----------------------------------------------------------------
@@ -124,19 +127,21 @@ HttpCookie userCookie = Request.Cookies.Get("WI_username");
 
 if(userCookie != null)
 {
-%&gt;
-    value='&lt;%=userCookie.Value %&gt;'
-&lt;%
+%>
+    value='<%=userCookie.Value %>'
+<%
 
 }
 
 //----------------------------------------------------------------
 //       End WI mod
 //----------------------------------------------------------------
-%&gt;</pre>
+%>
+```
+
 Code explanation:
 
-The &lt;input… tag above is the field where you fill in your username in loginMainForm.inc. The code inserted above sets the value of the input tag to whatever was stored in the WI_username cookie (if there was anything stored in the cookie at all).
+The <input… tag above is the field where you fill in your username in loginMainForm.inc. The code inserted above sets the value of the input tag to whatever was stored in the WI_username cookie (if there was anything stored in the cookie at all).
 
 If you want to implement this in your environment and do not feel like copying and pasting all this code, you can download the modified files below:
 
