@@ -20,7 +20,6 @@ One of the coolest SDKs I’ve seen come out in quite a while is the <a title="C
 
 As of this writing, only the Android version of the Citrix Receiver is supported (iOS is on the way).  Since I do not own any Android devices and I was anxious to get started, I had to set up an emulator and install the Citrix Receiver to get going with the SDK.  Here is how I did it.
 
-&nbsp;
 <h2>Install the Android SDK</h2>
 Go to the Android SDK download page (<a title="Android SDK" href="http://developer.android.com/sdk/index.html" target="_blank">http://developer.android.com/sdk/index.html</a>) and pick the correct installer for your platform. I’m using Windows, so I chose the .exe installer file.  After you run this .exe, you still do not have the emulator.  The reason for this is the Android SDK archive initially contains only the basic SDK tools. It does not contain an Android platform or any third-party libraries. You must install the Platform-tools and at least one version of the Android platform using the SDK Manager.
 
@@ -30,19 +29,17 @@ I installed the Android SDK Platform-tools and all options for Android 4.0.3.
 
 After the install completes, be sure to add <strong>%ProgramFiles%\Android\android-sdk\platform-tools</strong> to your PATH environment variable.  This will be handy later for installing the Citrix Receiver.
 
-&nbsp;
 <h2>Create an Android Virtual Device</h2>
 After the installs complete, you can launch Android Virtual Device Manager (AVD Manager). This can be found in the Windows start menu under Android SDK Tools \ AVD Manager. AVD Manager is used to create various virtual devices running the Android OS.
 
-<a href="http://www.jasonconger.com/wp-content/uploads/2012/01/2.png"><img class="aligncenter size-medium wp-image-803" title="Android Virtual Device for XenApp 6.5 Mobile Appliction SDK" src="http://www.jasonconger.com/wp-content/uploads/2012/01/2-189x300.png" alt="Android Virtual Device for XenApp 6.5 Mobile Appliction SDK" width="189" height="300" /></a>
+<a href="http://www.jasonconger.com/wp-content/uploads/2012/01/2.png"><img class="aligncenter size-medium wp-image-803" title="Android Virtual Device for XenApp 6.5 Mobile Appliction SDK" src="http://www.jasonconger.com/wp-content/uploads/2012/01/2-190x300.png" alt="Android Virtual Device for XenApp 6.5 Mobile Appliction SDK" width="189" height="300" /></a>
+
 As you can see, I created an Android 4.0.3 device with 100 MiB of local storage. The more storage you add to your AVD, the longer it will take to boot. Since this AVD is only being used for XenApp 6.5 testing, I only allocated 100 MiB. The first boot of your AVD will take a little longer than subsequent boots.
 
-&nbsp;
 <h2>Download the Citrix Receiver for Android</h2>
 Now that we have a functioning Android emulator, we need to get the Citrix Receiver installed. The first thing we need to do is download the .apk (Android Package) file. Normally, I would just go to <a title="Download Citrix Receiver" href="http://www.citrix.com/receiver" target="_blank">http://www.citrix.com/receiver</a> and choose “Android”. But, as of this writing, when you do that, you are redirected to the Android Marketplace. Unfortunately, Android Marketplace does not work on the Android Emulator. So, here is what you can do instead:
 Go to <a href="http://www.citrix.com/downloads" target="_blank">http://www.citrix.com/downloads</a> and choose “Receiver for Android” from the drop down list. From there, you can select the Android client and download the .apk.
 
-&nbsp;
 <h2>Install the Citrix Receiver for Android</h2>
 Ok, so now we have a functioning Android emulator and the Citrix Receiver downloaded. The final step is to install the Citrix Receiver onto the emulator. Here’s how:
 <ol>
@@ -50,11 +47,10 @@ Ok, so now we have a functioning Android emulator and the Citrix Receiver downlo
 	<li>Open a command prompt and change the directory to %ProgramFiles%\Android\android-sdk\tools</li>
 	<li>With the AVD you created running, execute the following command:</li>
 </ol>
-<pre class="brush: PowerShell;">adb install &lt;name of Citrix Receiver&gt;.apk</pre>
-<a href="http://www.jasonconger.com/wp-content/uploads/2012/01/21.png"><img class="aligncenter size-medium wp-image-805" title="Citrix Receiver for Android" src="http://www.jasonconger.com/wp-content/uploads/2012/01/21-300x275.png" alt="Citrix Receiver for Android" width="300" height="275" /></a>
+```
+adb install <name of Citrix Receiver>.apk
+```
 
-&nbsp;
+<a href="http://www.jasonconger.com/wp-content/uploads/2012/01/21.png"><img class="aligncenter size-medium wp-image-805" title="Citrix Receiver for Android" src="http://www.jasonconger.com/wp-content/uploads/2012/01/21-300x276.png" alt="Citrix Receiver for Android" width="300" height="275" /></a>
 
 You now have a fully functional Citrix Receiver running on an Android emulator.  My next post shows you <a title="Installing and Using the Citrix XenApp 6.5 Mobile Application SDK" href="http://www.jasonconger.com/post/installing-and-using-the-citrix-xenapp-6-5-mobile-application-sdk/">how to set up a development environment to utilize the Mobile Application SDK and compile some of the examples</a>.
-
-&nbsp;
