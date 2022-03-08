@@ -41,7 +41,6 @@ Find the following text (around line 10):
 <!--#include file="../serverscripts/include.aspxf"-->
 
 Paste the following right after this line
-
 ```c#
 <%
 
@@ -118,7 +117,9 @@ Find the following text (around line 106):
         maxlength='<%=Constants.LOGIN_ENTRY_MAX_LENGTH%>' <%=viewControl.getExplicitDisabledStr()%>
         tabindex='<%=Constants.TAB_INDEX_FORM%>'</pre>
 Paste the following right after this text:
-<pre class="brush: c-sharp"><%
+
+```c#
+<%
 //----------------------------------------------------------------
 //       WI mod
 //----------------------------------------------------------------
