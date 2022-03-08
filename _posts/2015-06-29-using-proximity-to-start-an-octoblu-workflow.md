@@ -25,13 +25,13 @@ My first thought was to write some code to accomplish starting an Octoblu workfl
 As you can see in the screenshot above, there is a slider that lets me choose the signal strength.  The green bar you see above the slider is my actual signal strength.  So, I would walk around to see what my actual strength was and set the slider appropriately.
 <h1>AppleScript Kicks off the Flow</h1>
 So now that we have have the bluetooth strength thing worked out, all we need is a script to kick off the Octoblu flow.  Recall from my <a href="http://www.jasonconger.com/post/trigger-an-octoblu-iot-flow-from-splunk/">previous post</a> that all triggers in Octoblu have a HTTP POST URL.  I just used this URL and curl to work the magic.  Here is the script:
-<pre>  say "eye oh tee, work space. activated"
-  set theURL to "[your trigger URL]"
-  do shell script "curl -X POST " &amp; quoted form of theURL</pre>
+
+~~~
+say "eye oh tee, work space. activated"
+set theURL to "[your trigger URL]"
+do shell script "curl -X POST " &amp; quoted form of theURL
+~~~
+
 The first line is a quasi-phonetic pronunciation for "IoT Workspace Activated".  That is about as close as I could get using AppleScript.  The next two lines actually kick off the Octoblu IoT workspace in a green state.
 <h1>Conclusion</h1>
 So, there you have it.  That is pretty much the complete IoT Workspace demo from my side of the desk.  Octoblu is a lot of fun and I'm experimenting with other ways of using this software for business, home automation, and just plain fun (like Legos).  Go experiment yourself and have fun!
-
-&nbsp;
-
-&nbsp;
