@@ -6,7 +6,19 @@
 title: JasonConger.com
 
 # Your name to show in the footer
-author: Jason Conger
+author:
+  name: Jason Conter
+  twitter: JasonConger
+  image: /assets/img/jasonconger.jpeg
+twitter:
+  username: JasonConger
+  card: summary_large_image
+social:
+  name: Jason Conger
+  links:
+    - https://twitter.com/JasonConger
+    - https://www.linkedin.com/in/JasonConger
+    - https://github.com/JasonConger
 
 # Authors
 authors:
