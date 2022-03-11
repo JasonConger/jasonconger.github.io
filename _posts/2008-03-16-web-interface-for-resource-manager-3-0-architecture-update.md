@@ -2,7 +2,7 @@
 id: 25
 title: Web Interface for Resource Manager 3.0 Architecture Update
 date: 2008-03-16T10:47:00-05:00
-author: jason
+author: JasonConger
 excerpt: When the Web Interface for Resource Manger Roadmap was posted, I mentioned that Web Interface for Citrix Resource Manager version 3.0 would include a major architectural shift toward a Service Oriented Architecture (SOA). This shift is well underway and the purpose of this post is to share some of the progress as well as some of the nuts and bolts behind the architecture.
 layout: post
 guid: /post/Web-Interface-for-Resource-Manager-30-Architecture-Update.aspx

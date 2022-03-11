@@ -2,7 +2,7 @@
 id: 49
 title: Deploying a Pre-Configured Citrix Client using Active Directory
 date: 2006-03-29T08:55:00-06:00
-author: jason
+author: JasonConger
 excerpt: This article will show you how to create a pre-configured Citrix Client and leverage Active Directory to deploy the client as well as overcome some of the idiosyncrasies found in the Citrix Client packager.
 layout: post
 guid: /post/Deploying-a-Pre-Configured-Citrix-Client-using-Active-Directory.aspx

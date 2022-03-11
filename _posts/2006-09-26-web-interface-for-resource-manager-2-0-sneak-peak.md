@@ -2,7 +2,7 @@
 id: 39
 title: 'Web Interface for Resource Manager 2.0 &quot;sneak peak&quot;'
 date: 2006-09-26T09:39:00-05:00
-author: jason
+author: JasonConger
 excerpt: 'I have been pretty busy lately preparing for <a href="http://www.briforum.com/europe/2006/" target="_blank">BriForum Europe</a>        and have not had a lot of time to work on the site.&nbsp; But, I am close        to releasing Web Interface for Resource Manger version 2.0 and&nbsp; I wanted to give you a "sneak peak" at the new features in version 2.0.'
 layout: post
 guid: /post/Web-Interface-for-Resource-Manager-20-sneak-peak.aspx

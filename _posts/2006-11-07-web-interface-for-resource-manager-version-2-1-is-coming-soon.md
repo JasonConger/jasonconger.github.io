@@ -2,7 +2,7 @@
 id: 37
 title: Web Interface for Resource Manager version 2.1 is coming soon
 date: 2006-11-07T09:49:00-06:00
-author: jason
+author: JasonConger
 excerpt: 'Check out the new features coming in Web Interface for Citrix Resource Manager.  Web Interface for Citrix Resource Manager will be easier to configure, easier to read, and will be available to a entire new audience.'
 layout: post
 guid: /post/Web-Interface-for-Resource-Manager-version-21-is-coming-soon.aspx

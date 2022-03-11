@@ -2,7 +2,7 @@
 id: 40
 title: MFCOM Script to List Applications Only in Specified Folders
 date: 2006-08-28T09:27:00-05:00
-author: jason
+author: JasonConger
 excerpt: MFCOM Script to List Applications Only in Specified Folders
 layout: post
 guid: /post/MFCOM-Script-to-List-Applications-Only-in-Specified-Folders.aspx

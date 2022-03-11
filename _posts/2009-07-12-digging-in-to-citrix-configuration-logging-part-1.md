@@ -2,7 +2,7 @@
 id: 17
 title: 'Digging in to Citrix Configuration Logging &#8211; Part 1'
 date: 2009-07-12T23:58:00-05:00
-author: jason
+author: JasonConger
 excerpt: 'This is the first part in a series on Citrix XenApp Configuration Logging.  Citrix XenApp Configuration Logging helps keep track of changes made to your server farm.  This feature can tell you what changes were made to your server farm, when they were made, and who made them. Part 1 in this series will further define where changes are logged and how the changes are logged.'
 layout: post
 guid: /post/Digging-in-to-Citrix-Configuration-Logging-Part-1.aspx

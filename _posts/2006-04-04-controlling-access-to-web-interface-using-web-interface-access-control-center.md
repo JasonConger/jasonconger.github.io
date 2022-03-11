@@ -2,7 +2,7 @@
 id: 47
 title: Controlling Access to Web Interface using Web Interface Access Control Center
 date: 2006-04-04T09:05:00-05:00
-author: jason
+author: JasonConger
 excerpt: 'This article describes the features in the new Web Interface Access Control Center.  Using the Web Interface Access Control Center you can limit access to Citrix Web Interface/Secure Gateway as well as view usage statistics.'
 layout: post
 guid: /post/Controlling-Access-to-Web-Interface-using-Web-Interface-Access-Control-Center.aspx

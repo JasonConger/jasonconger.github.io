@@ -2,7 +2,7 @@
 id: 1090
 title: Citrix Synergy Barcelona 2012 Keynote Live Blog
 date: 2012-10-17T01:10:17-05:00
-author: jason
+author: JasonConger
 excerpt: 'Citrix Synergy has returned to Barcelona, Spain.  That means that I will be live blogging the keynote again this year.'
 layout: post
 guid: http://www.jasonconger.com/?p=1090

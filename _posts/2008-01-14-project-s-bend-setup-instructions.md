@@ -2,7 +2,7 @@
 id: 27
 title: Project S-Bend Setup Instructions
 date: 2008-01-14T10:40:00-06:00
-author: jason
+author: JasonConger
 excerpt: Project S-Bend sends alerts when changes happen on your Citrix Presentation Server 4.5 farm.
 layout: post
 guid: /post/Project-S-Bend-Setup-Instructions.aspx

@@ -2,7 +2,7 @@
 id: 1242
 title: Using PowerShell to Retrieve Citrix Monitor Data via OData
 date: 2013-10-11T14:11:20-05:00
-author: jason
+author: JasonConger
 layout: post
 guid: http://www.jasonconger.com/?p=1242
 image: wp-content/uploads/2013/10/OData.jpeg

@@ -2,7 +2,7 @@
 id: 46
 title: 'Citrix Web Interface &quot;SharePoint Look and Feel&quot; Template'
 date: 2006-04-19T09:10:00-05:00
-author: jason
+author: JasonConger
 excerpt: Download a template that makes Citrix Web Interface look and feel like Microsoft Office SharePoint Portal Server 2003.
 layout: post
 guid: /post/Citrix-Web-Interface-SharePoint-Look-and-Feel-Template.aspx

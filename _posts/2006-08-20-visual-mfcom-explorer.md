@@ -2,7 +2,7 @@
 id: 41
 title: Visual MFCOM Explorer
 date: 2006-08-20T09:24:00-05:00
-author: jason
+author: JasonConger
 excerpt: 'Have you ever wanted to delve into the intricacies of MFCOM?  Using this web application, you can browse the various MFCOM properties using the Citrix Presentation Server Console as your guide.'
 layout: post
 guid: /post/Visual-MFCOM-Explorer.aspx

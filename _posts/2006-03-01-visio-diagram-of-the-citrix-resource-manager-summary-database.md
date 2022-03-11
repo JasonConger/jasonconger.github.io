@@ -2,7 +2,7 @@
 id: 52
 title: Visio Diagram of the Citrix Resource Manager Summary Database
 date: 2006-03-01T08:17:00-06:00
-author: jason
+author: JasonConger
 excerpt: Microsoft Visio drawing of the Citrix Resource Manager Summary Database.
 layout: post
 guid: /post/Visio-Diagram-of-the-Citrix-Resource-Manager-Summary-Database.aspx

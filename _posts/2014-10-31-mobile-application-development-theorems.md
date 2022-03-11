@@ -2,7 +2,7 @@
 id: 1515
 title: Mobile Application Development Theorems
 date: 2014-10-31T09:00:07-05:00
-author: jason
+author: JasonConger
 excerpt: 'Mobility is so ubiquitous that it is almost not even a separate thing anymore.  I have had some experience building mobile apps and wanted to ponder some self-proclaimed theorems which are outlined in this article.'
 layout: post
 guid: http://www.jasonconger.com/?p=1515

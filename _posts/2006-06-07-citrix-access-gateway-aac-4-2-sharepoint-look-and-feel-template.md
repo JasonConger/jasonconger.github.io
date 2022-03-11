@@ -2,7 +2,7 @@
 id: 43
 title: 'Citrix Access Gateway AAC 4.2 &quot;SharePoint Look and Feel&quot; Template'
 date: 2006-06-07T09:20:00-05:00
-author: jason
+author: JasonConger
 excerpt: This download will help you change your ordinary Citrix Access Gateway with Advanced Access Control Logon Point into a SharePoint looking Logon Point.
 layout: post
 guid: /post/Citrix-Access-Gateway-AAC-42-SharePoint-Look-and-Feel-Template.aspx

@@ -2,7 +2,7 @@
 id: 14
 title: 'Digging in to Citrix Configuration Logging: Reporting'
 date: 2009-08-20T19:54:00-05:00
-author: jason
+author: JasonConger
 excerpt: 'This is the fourth part in a series on Citrix XenApp Configuration Logging.  This part will foucus on out of the box reporting tool.  In a later article, we will look at custom reporting.'
 layout: post
 guid: /post/Digging-in-to-Citrix-Configuration-Logging-Reporting.aspx

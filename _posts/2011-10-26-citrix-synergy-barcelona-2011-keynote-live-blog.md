@@ -2,7 +2,7 @@
 id: 757
 title: Citrix Synergy Barcelona 2011 Keynote Live Blog
 date: 2011-10-26T02:22:23-05:00
-author: jason
+author: JasonConger
 excerpt: "Citrix Synergy 2011 is going on now in Barcelona.  I'll be live blogging the event here.  Expect to see more information about recent Citrix acquisitions."
 layout: post
 guid: http://www.jasonconger.com/?p=757

@@ -2,7 +2,7 @@
 id: 21
 title: Citrix turns 20
 date: 2009-04-17T15:46:00-05:00
-author: jason
+author: JasonConger
 excerpt: 'Citrix turns 20 today.  In this post, I will tell you how I got introduced to Citrix several years ago.'
 layout: post
 guid: /post/Citrix-turns-20.aspx

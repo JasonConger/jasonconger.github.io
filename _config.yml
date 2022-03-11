@@ -5,9 +5,8 @@
 # Name of website
 title: JasonConger.com
 
-# Your name to show in the footer
 author:
-  name: Jason Conter
+  name: Jason Conger
   twitter: JasonConger
   image: /assets/img/jasonconger.jpeg
 twitter:
@@ -22,7 +21,7 @@ social:
 
 # Authors
 authors:
-  jason:
+  JasonConger:
     name: Jason Conger
     display_name: Jason Conger
     gravatar: 405de84ebc6885c27b89c0fc35d222eb

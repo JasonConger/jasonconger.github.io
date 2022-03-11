@@ -2,7 +2,7 @@
 id: 1153
 title: Citrix Synergy 2013 Live Blog
 date: 2013-05-21T05:30:25-05:00
-author: jason
+author: JasonConger
 excerpt: "Citrix Synergy is in Anaheim, California this year.  With the recent release of Excalibur, it will be interesting to see what is revealed during the keynote.  I'll be live-blogging the keynote this year.  Check it out here or on Twitter @JasonConger."
 layout: post
 guid: http://www.jasonconger.com/?p=1153

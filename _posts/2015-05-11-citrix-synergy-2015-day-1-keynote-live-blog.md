@@ -2,7 +2,7 @@
 id: 1563
 title: Citrix Synergy 2015 Day 1 Keynote Live Blog
 date: 2015-05-11T23:35:45-05:00
-author: jason
+author: JasonConger
 excerpt: 'Here we are again at Citrix Synergy.  I will be live blogging the keynote here.  Content will scroll up as I post it.  Also, you can follow me on Twitter (@JasonConger) for updates.'
 layout: post
 guid: http://www.jasonconger.com/?p=1563

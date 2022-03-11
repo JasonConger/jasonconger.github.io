@@ -2,7 +2,7 @@
 id: 1704
 title: Use PowerShell to get the Citrix Configuration Log as well as Old and New Property Values
 date: 2015-10-15T11:00:59-05:00
-author: jason
+author: JasonConger
 excerpt: This is a quick tip to show you how to get the Citrix Configuration Log, plus all the old and new property values, and convert this all to JSON.
 layout: post
 guid: http://www.jasonconger.com/?p=1704

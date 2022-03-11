@@ -2,7 +2,7 @@
 id: 50
 title: The Epoch Information Center is now online
 date: 2006-03-22T08:33:00-06:00
-author: jason
+author: JasonConger
 excerpt: 'Use the Epoch Information Center to get epoch offsets from Date/Time values, or get Date/Time values from an epoch offset.  This information is useful for things like manipulating the Terminal Server shadow registry.'
 layout: post
 guid: /post/The-Epoch-Information-Center-is-now-online.aspx

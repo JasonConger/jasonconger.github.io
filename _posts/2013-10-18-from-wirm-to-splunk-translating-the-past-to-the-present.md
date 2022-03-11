@@ -2,7 +2,7 @@
 id: 1255
 title: 'From WIRM to Splunk &#8211; Translating the Past to the Present'
 date: 2013-10-18T08:00:17-05:00
-author: jason
+author: JasonConger
 layout: post
 guid: http://www.jasonconger.com/?p=1255
 image: wp-content/uploads/2012/01/splunk.jpg

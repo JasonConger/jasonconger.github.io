@@ -2,7 +2,7 @@
 id: 5
 title: Citrix Acquires Cloud Control Panel Company EMS Cortex
 date: 2011-02-22T09:00:00-06:00
-author: jason
+author: JasonConger
 excerpt: Citrix acquired EMS Cortex – a cloud control panel company. This web-based control panel allows for provisioning of a multitude of resources including Microsoft Exchange, Citrix XenApp, Microsoft SharePoint, DNS, SQL, Hyper-V, and more.
 layout: post
 guid: /post/Citrix-Acquires-Cloud-Control-Panel-Company-EMS-Cortex.aspx

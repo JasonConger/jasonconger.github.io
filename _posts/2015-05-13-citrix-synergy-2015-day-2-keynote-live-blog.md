@@ -2,7 +2,7 @@
 id: 1592
 title: Citrix Synergy 2015 Day 2 Keynote Live Blog
 date: 2015-05-13T01:00:04-05:00
-author: jason
+author: JasonConger
 layout: post
 guid: http://www.jasonconger.com/?p=1592
 image: wp-content/uploads/2011/05/Citrix-Synergy-Thumb.png

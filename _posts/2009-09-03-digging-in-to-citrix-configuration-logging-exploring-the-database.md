@@ -2,7 +2,7 @@
 id: 13
 title: 'Digging in to Citrix Configuration Logging: Exploring the Database'
 date: 2009-09-03T07:57:00-05:00
-author: jason
+author: JasonConger
 excerpt: 'This is the fifth part in a series on Citrix XenApp Configuration Logging.  This part will focus on the database schema, the information contained in the database, and how to decode certain parts of the data.'
 layout: post
 guid: /post/Digging-in-to-Citrix-Configuration-Logging-Exploring-the-Database.aspx

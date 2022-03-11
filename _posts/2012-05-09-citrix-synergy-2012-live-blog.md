@@ -2,7 +2,7 @@
 id: 1016
 title: Citrix Synergy 2012 Live Blog
 date: 2012-05-09T11:16:26-05:00
-author: jason
+author: JasonConger
 excerpt: |
   It's time for Citrix Synergy 2012.  I'll be live blogging the keynote again this year. I'm looking forward to hearing about some of the Cloud/multi-tenant announcements and <a href="http://www.jasonconger.com/post/tag/mobility/" title="mobility">mobility</a> improvements.
 layout: post

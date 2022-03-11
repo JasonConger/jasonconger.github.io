@@ -2,7 +2,7 @@
 id: 1124
 title: Citrix Synergy Barcelona 2012 Super Session (day 2) Live Blog
 date: 2012-10-18T03:05:56-05:00
-author: jason
+author: JasonConger
 excerpt: 'It is day 2 of Citrix Synergy Barcelona and it is time for the Super Session (a.k.a. day 2 keynote).  Keep up on the action with this live blog.'
 layout: post
 guid: http://www.jasonconger.com/?p=1124

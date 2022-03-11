@@ -2,7 +2,7 @@
 id: 29
 title: Web Interface for Resource Manager Roadmap
 date: 2007-12-10T10:37:00-06:00
-author: jason
+author: JasonConger
 excerpt: 'Web Interface for Citrix Resource Manager has been steadily growing since it was first released back in April 2006.  Find out where this project is heading in this roadmap and what it will take to get there.'
 layout: post
 guid: /post/Web-Interface-for-Resource-Manager-Roadmap.aspx

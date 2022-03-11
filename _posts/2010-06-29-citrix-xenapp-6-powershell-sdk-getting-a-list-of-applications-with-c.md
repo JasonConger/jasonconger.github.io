@@ -2,7 +2,7 @@
 id: 8
 title: 'Citrix XenApp 6 PowerShell SDK: Getting a List of Applications with C#'
 date: 2010-06-29T09:33:00-05:00
-author: jason
+author: JasonConger
 excerpt: 'This post will show you how to use the Citrix XenApp 6 PowerShell SDK to obtain a list of applications from your XenApp 6 farm.  We’ll look at how to do this with using the PowerShell Runspace and how to do this using the Citrix XenApp 6 wrapper assembly.'
 layout: post
 guid: /post/Citrix-XenApp-6-PowerShell-SDK-Getting-a-List-of-Applications.aspx

@@ -2,7 +2,7 @@
 id: 1648
 title: Using Proximity to Start an Octoblu Workflow
 date: 2015-06-29T11:00:33-05:00
-author: jason
+author: JasonConger
 excerpt: 'This is the second part of the IoT workspace demo.  This time, we will use proximity to kick off an Octoblu workflow without an iBeacon - mainly because this was a last minute add to the demo ;-)'
 layout: post
 guid: http://www.jasonconger.com/?p=1648

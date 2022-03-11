@@ -2,7 +2,7 @@
 id: 31
 title: Web Interface for Resource Manager is now in Spanish
 date: 2007-11-07T10:33:00-06:00
-author: jason
+author: JasonConger
 excerpt: 'The latest version of Web Interface for Resource Manager is now available in Spanish (other languages supported are English, Dutch, French, German, and Italian).  Web Interface for Resource Manager is an ASP.NET 2.0 web application that contains several SQL queries to display useful information contained in the Citrix Resource Manager Summary Database.'
 layout: post
 guid: /post/Web-Interface-for-Resource-Manager-is-now-in-Spanish.aspx

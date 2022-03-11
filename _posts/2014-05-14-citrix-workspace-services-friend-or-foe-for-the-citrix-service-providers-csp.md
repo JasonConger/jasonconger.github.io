@@ -2,7 +2,7 @@
 id: 1324
 title: 'Citrix Workspace Services &#8211; Friend or Foe for the Citrix Service Providers (CSP)?'
 date: 2014-05-14T08:21:00-05:00
-author: jason
+author: JasonConger
 excerpt: 'At Citrix Synergy this year, the "one more thing" at the end of the keynote was a new offering called Citrix Workspace Services.  There was immediate debate on Twitter as to how this impacts certain market segments.  This article covers ways in which Citrix Workspace Services could help or hinder the Citrix Service Provider Market.'
 layout: post
 guid: http://www.jasonconger.com/?p=1324

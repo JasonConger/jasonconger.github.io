@@ -2,7 +2,7 @@
 id: 26
 title: Get email alerts for your Citrix PS 4.5 Farm with Project S-Bend
 date: 2008-01-15T10:42:00-06:00
-author: jason
+author: JasonConger
 excerpt: Project S-Bend fills the gap in Citrix Presentation Server 4.5 Configuration Logging by alerting you via email when changes happen in your farm.
 layout: post
 guid: /post/Get-email-alerts-for-your-Citrix-PS-45-Farm-with-Project-S-Bend.aspx

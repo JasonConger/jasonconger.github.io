@@ -2,7 +2,7 @@
 id: 792
 title: 'It is official.  I have joined Splunk!'
 date: 2012-01-17T14:27:02-06:00
-author: jason
+author: JasonConger
 excerpt: 'With the new year comes a new direction for me - I have officially joined Splunk as a Solutions Architect.'
 layout: post
 guid: http://www.jasonconger.com/?p=792

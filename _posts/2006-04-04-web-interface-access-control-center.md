@@ -2,7 +2,7 @@
 id: 48
 title: Web Interface Access Control Center
 date: 2006-04-04T09:03:00-05:00
-author: jason
+author: JasonConger
 excerpt: 'Have you ever had a need to allow only a subset of your users access to Citrix Web Interface or Secure Gateway?  The Web Interface Access Control Center does that and a lot more.'
 layout: post
 guid: /post/Web-Interface-Access-Control-Center.aspx

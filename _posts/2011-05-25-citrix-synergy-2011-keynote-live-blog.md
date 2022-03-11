@@ -2,7 +2,7 @@
 id: 419
 title: Citrix Synergy 2011 Keynote Live Blog
 date: 2011-05-25T11:15:07-05:00
-author: jason
+author: JasonConger
 excerpt: "Citrix Synergy 2011 is going on now.  I'll be live blogging the event."
 layout: post
 guid: http://www.jasonconger.com/?p=419

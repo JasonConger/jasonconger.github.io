@@ -2,7 +2,7 @@
 id: 11
 title: News from Citrix Synergy
 date: 2010-05-12T11:25:00-05:00
-author: jason
+author: JasonConger
 excerpt: "I'm blogging the Citrix Synergy keynote in real time.  I'll be adding to things that strike me as interesting to this post as announcements are made."
 layout: post
 guid: /post/News-from-Citrix-Synergy.aspx

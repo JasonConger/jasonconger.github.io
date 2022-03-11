@@ -2,7 +2,7 @@
 id: 22
 title: Web Interface for Resource Manager is Dead
 date: 2008-08-27T10:53:00-05:00
-author: jason
+author: JasonConger
 excerpt: 'I have gotten several comments (online and offline) and emails asking about future developments surrounding Web Interface for Resource Manager.  Well, Web Interface for Resource Manager as you know today is officially dead.  There are actually several reasons for this.  Read on for more information...'
 layout: post
 guid: /post/Web-Interface-for-Resource-Manager-is-Dead.aspx
