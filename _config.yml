@@ -5,10 +5,6 @@
 # Name of website
 title: JasonConger.com
 
-author:
-  name: Jason Conger
-  twitter: JasonConger
-  image: /assets/img/jasonconger.jpeg
 twitter:
   username: JasonConger
   card: summary_large_image
@@ -258,5 +254,7 @@ plugins:
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-seo-tag
+
+seo: "jekyll-seo-tag"
 
 # Based on Beautiful Jekyll / Dean Attali
