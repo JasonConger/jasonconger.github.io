@@ -1,5 +1,19 @@
 {% assign date_format = site.date_format | default: "%B %-d, %Y" %}
 {% assign author = site.authors[post.author] %}
+{%- capture thumbnail -%}
+    {% if post.thumbnail-img %}
+    {{ post.thumbnail-img }}
+    {% elsif post.cover-img %}
+    {% if post.cover-img.first %}
+        {{ post.cover-img[0].first.first }}
+    {% else %}
+        {{ post.cover-img }}
+    {% endif %}
+    {% elsif post.image %}
+    {{ post.image }}
+    {% endif %}
+{% endcapture %}
+{% assign thumbnail=thumbnail | strip %}
 <div class="col-md-6 mb-30px">
     <div class="listfeaturedtag h-100">
         <div class="row h-100">
@@ -7,11 +21,7 @@
                 <div class="h-100">
                     <div class="wrapthumbnail">
                         <a href="{{ site.baseurl }}{{ post.url }}">
-                            {% if site.lazyimages == "enabled" %}
-                            <img class="featured-box-img-cover lazyimg"  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII=" data-src="{% if post.image contains "://" %}{{ post.image }}{% else %}{{ site.baseurl }}/{{ post.image }}{% endif %}">
-                            {% else %}
-                            <img class="featured-box-img-cover" src="{% if post.image contains "://" %}{{ post.image }}{% else %}{{ site.baseurl }}/{{ post.image }}{% endif %}">
-                            {% endif %}
+                            <img class="featured-box-img-cover" src="{{ thumbnail | absolute_url }}">
                         </a>
                     </div>
                 </div>
