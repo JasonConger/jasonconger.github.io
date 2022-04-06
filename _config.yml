@@ -100,7 +100,7 @@ share-links-active:
 #url-pretty: "JasonConger.com"
 
 # Excerpt word length - Truncate the excerpt of each post on the feed page to the specified number of words
-excerpt_length: 50
+excerpt_length: 100
 
 # Whether or not to show an excerpt for every blog post in the feed page
 feed_show_excerpt: true
@@ -114,7 +114,7 @@ post_search: true
 # The keywords to associate with your website, for SEO purposes
 keywords: "conger,splunk,citrix,microsoft,azure"
 
-# --- Colours / background image --- #
+# --- Colors / background image --- #
 
 # Personalize the colours in your website. Colour values can be any valid CSS colour
 
