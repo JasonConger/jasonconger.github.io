@@ -2,6 +2,23 @@ div[role=main] {
   min-height: 300px;
 }
 
+/* 66 */
+.section-title h2 {
+  border-bottom: 1px solid rgba(0, 0, 0, .125);
+  margin-bottom: 25px;
+  font-weight: 700;
+  font-size: 1.4rem;
+  margin-bottom: 27px;
+}
+
+/* 74 */
+.section-title span {
+  border-bottom: 1px solid rgba(0, 0, 0, .44);
+  display: inline-block;
+  padding-bottom: 20px;
+  margin-bottom: -1px;
+}
+
 /* 92 */
 @media (min-width:576px) {
   .card-columns.listfeaturedtag {
