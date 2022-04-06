@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Goodbye Wordpress - Hello GitHub Pages
+title: Goodbye WordPress - Hello GitHub Pages
 subtitle: Why I moved my blog to GitHub Pages
 cover-img: /assets/img/2022/04/github-pages-banner.webp
 thumbnail-img: /assets/img/2022/04/github-octocat.jpg
@@ -9,7 +9,7 @@ categories:
  - General
  - PowerShell
 tags:
- - Wordpress
+ - WordPress
  - GitHub
 author: JasonConger
 excerpt: Is GitHub Pages better than WordPress? Maybe. For me, GitHub Pages seems to have everything I need, so I moved my blog there, and I'm not looking back. Here's the story as to why I made that move.
