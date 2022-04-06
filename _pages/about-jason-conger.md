@@ -21,6 +21,8 @@ I enjoy speaking on a multitude of technology topics. Here are some of my most r
 ## 2021
 
 * <a href="https://carahevents.carahsoft.com/Event/Details/219228-pr">Splunk Enterprise Transformation with Azure - virtual</a>
+* Splunk .conf21 - virtual
+    * <a href="https://conf.splunk.com/watch/conf-online.html?search=dev1147c#/">Secrets From the Developer Kitchen - Develop On Splunk Like a Pro With UCC, Visual Studio Code and Git</a>
 
 ## 2020
 
