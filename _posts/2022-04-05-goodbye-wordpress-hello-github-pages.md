@@ -2,9 +2,9 @@
 layout: post
 title: Goodbye WordPress - Hello GitHub Pages
 subtitle: Why I moved my blog to GitHub Pages
-cover-img: /assets/img/2022/04/github-pages-banner.webp
+cover-img: /assets/img/2022/04/github-pages-banner.jpg
 thumbnail-img: /assets/img/2022/04/github-octocat.jpg
-share-img: /assets/img/2022/04/github-pages-banner.webp
+share-img: /assets/img/2022/04/github-pages-banner.jpg
 categories:
  - General
  - PowerShell
