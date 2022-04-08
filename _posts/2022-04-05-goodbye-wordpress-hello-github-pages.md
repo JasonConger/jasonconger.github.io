@@ -12,6 +12,7 @@ tags:
  - WordPress
  - GitHub
 author: JasonConger
+readtime: true
 excerpt: Is GitHub Pages better than WordPress? Maybe. For me, GitHub Pages seems to have everything I need, so I moved my blog there, and I'm not looking back. Here's the story as to why I made that move.
 featured: true
 ---
