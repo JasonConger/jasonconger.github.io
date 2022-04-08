@@ -2,6 +2,14 @@ div[role=main] {
   min-height: 300px;
 }
 
+.overlay {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.65);
+}
+
 /* 66 */
 .section-title h2 {
   border-bottom: 1px solid rgba(0, 0, 0, .125);
