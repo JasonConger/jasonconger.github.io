@@ -20,11 +20,11 @@ I enjoy speaking on a multitude of technology topics. Here are some of my most r
 
 ## 2021
 
-* Carahsoft Webinar with Splunk and Microsoft
-    * <a href="https://carahevents.carahsoft.com/Event/Details/219228-pr" target="_blank">Splunk Enterprise Transformation with Azure</a>
+* [Carahsoft](https://carahsoft.com/){:target="_blank"} Webinar with Splunk and Microsoft
+    * [Splunk Enterprise Transformation with Azure](https://carahevents.carahsoft.com/Event/Details/219228-pr){:target="_blank"}
 
 * Splunk .conf21 - virtual
-    * <a href="https://conf.splunk.com/watch/conf-online.html?search=dev1147c#/">Secrets From the Developer Kitchen - Develop On Splunk Like a Pro With UCC, Visual Studio Code and Git</a>
+    * [Secrets From the Developer Kitchen - Develop On Splunk Like a Pro With UCC, Visual Studio Code and Git](https://conf.splunk.com/watch/conf-online.html?search=dev1147c#/){:target="_blank"}
 
 ## 2020
 
