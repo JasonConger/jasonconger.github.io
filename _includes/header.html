@@ -91,6 +91,12 @@
             {% if page.readtime %}
               {% include readtime.html %}
             {% endif %}
+            {% if site.disqus %}
+              <span class="post-meta">
+                <span class="d-none d-md-inline middot">&middot;</span>
+                <i class="fa-regular fa-comments"></i> <a href="{{ site.baseurl }}{{ post.url }}#disqus_thread">Comments</a>
+              </span>
+              {% endif %}
           {% endif %}
         </div>
       </div>
