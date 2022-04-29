@@ -5,7 +5,6 @@ date: 2006-03-01T08:17:00-06:00
 author: JasonConger
 excerpt: Microsoft Visio drawing of the Citrix Resource Manager Summary Database.
 layout: post
-guid: /post/Visio-Diagram-of-the-Citrix-Resource-Manager-Summary-Database.aspx
 categories:
   - Citrix XenApp
   - Resouce Manager
@@ -16,12 +15,12 @@ tags:
   - Visio
   - XenApp
 ---
-Using the techniques explained in <a title="Using Microsoft Visio to Reverse Engineer a Database" href="http://www.jasonconger.com/wordpress/post/using-microsoft-visio-to-reverse-engineer-a-database/">this article</a>, I created the following graphical representations of the Citrix Resource Manager Summary Database.
+Using the techniques explained in [this article]({% post_url 2006-03-01-using-microsoft-visio-to-reverse-engineer-a-database %}), I created the following graphical representations of the Citrix Resource Manager Summary Database.
 <table border="0">
 <tbody>
 <tr>
 <td valign="middle"><img src="http://www.jasonconger.com/images/visio.gif" alt="" /></td>
-<td valign="middle"><a title="Microsoft Visio Drawing of the Citrix Resource Manager Summary Database" href="http://www.jasonconger.com/wordpress/wp-content/uploads/2006/03/JasonConger.com-Resource-Manager-Summary-Database.zip">Microsoft Visio Drawing of the Citrix Resource Manager Summary Database</a><a href="http://www.jasonconger.com/downloads/2009/4/JasonConger.com - Resource Manager Summary Database.vsd"></a></td>
+<td valign="middle"><a title="Microsoft Visio Drawing of the Citrix Resource Manager Summary Database" href="http://www.jasonconger.com/wp-content/uploads/2006/03/JasonConger.com-Resource-Manager-Summary-Database.zip">Microsoft Visio Drawing of the Citrix Resource Manager Summary Database</a><a href="http://www.jasonconger.com/downloads/2009/4/JasonConger.com - Resource Manager Summary Database.vsd"></a></td>
 </tr>
 <tr>
 <td colspan="2" valign="middle">Don't have Microsoft Visio? No problem, just download a picture of the drawing here:</td>
