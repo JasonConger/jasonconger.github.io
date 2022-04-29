@@ -5,7 +5,6 @@ date: 2009-09-03T07:57:00-05:00
 author: JasonConger
 excerpt: 'This is the fifth part in a series on Citrix XenApp Configuration Logging.  This part will focus on the database schema, the information contained in the database, and how to decode certain parts of the data.'
 layout: post
-guid: /post/Digging-in-to-Citrix-Configuration-Logging-Exploring-the-Database.aspx
 image: wp-content/uploads/2009/09/Citrix-XenApp.png
 categories:
   - Citrix XenApp
@@ -17,13 +16,16 @@ tags:
   - XenApp
   - XML
 ---
-This is the fifth part in the Citrix Configuration Logging Series. In <a href="http://www.jasonconger.com/post/Digging-in-to-Citrix-Configuration-Logging-Part-1.aspx">part 1</a>, we discussed what Citrix Configuration Logging was.  In <a href="http://www.jasonconger.com/post/Digging-in-to-Citrix-Configuration-Logging-Setting-up-the-Database.aspx">part 2</a>, we discussed how to prepare the database to log configuration changes. In <a href="http://www.jasonconger.com/post/Digging-in-to-Citrix-Configuration-Logging-Setting-up-the-Citrix-XenApp-farm-for-Configuration-Logging.aspx">part 3</a>, we discussed how to set up the Citrix XenApp farm for Configuration Logging, in <a href="http://www.jasonconger.com/post/Digging-in-to-Citrix-Configuration-Logging-Reporting.aspx">part 4</a>, we looked at the “out of the box” reporting tools. In this part, we will look at the back end database schema.
+This is the fifth part in the Citrix Configuration Logging Series. In [part 1]({% post_url 2009-07-12-digging-in-to-citrix-configuration-logging-part-1 %}), we discussed what Citrix Configuration Logging was.  In [part 2]({% post_url 2009-07-29-digging-in-to-citrix-configuration-logging-setting-up-the-database %}), we discussed how to prepare the database to log configuration changes. In [part 3]({% post_url 2009-08-10-digging-in-to-citrix-configuration-logging-setting-up-the-citrix-xenapp-farm-for-configuration-logging %}), we discussed how to set up the Citrix XenApp farm for Configuration Logging, in [part 4]({% post_url 2009-08-20-digging-in-to-citrix-configuration-logging-reporting %}), we looked at the "out of the box" reporting tools. In this part, we will look at the back end database schema.
+
 <h2>Schema on the Surface</h2>
 Here is what the database schema looks like on the surface.
 
-<a href="file:///C:/Users/Jason%20Conger/AppData/Local/Temp/WindowsLiveWriter1286139640/supfiles29671B56/ConfigLogSchema3.png" target="_blank"><img style="display: block; float: none; margin-left: auto; margin-right: auto; border: 0px;" title="ConfigLogSchema_thumb1" src="http://www.jasonconger.com/images/articleImages/ConfigLogSchema_thumb1.png" alt="ConfigLogSchema_thumb1" width="400" height="385" border="0" /></a>
+<a href="http://www.jasonconger.com/images/articleImages/ConfigLogSchema.png" target="_blank"><img style="display: block; float: none; margin-left: auto; margin-right: auto; border: 0px;" title="ConfigLogSchema_thumb1" src="http://www.jasonconger.com/images/articleImages/ConfigLogSchema_thumb1.png" alt="ConfigLogSchema_thumb1" width="400" height="385" border="0" /></a>
 
-Just 3 tables – looks pretty easy…  But, if you look at some of the data in those tables, things become less obvious.  Let’s break each table down:
+Just 3 tables – looks pretty easy...  But, if you look at some of the data in those tables, things become less obvious.  Let's break each table down:
+
+<p>
 <table class="stats" border="1">
 <tbody>
 <tr>
@@ -87,6 +89,9 @@ Just 3 tables – looks pretty easy…  But, if you look at some of the data in
 </tr>
 </tbody>
 </table>
+</p>
+
+<p>
 <table class="stats" border="1">
 <tbody>
 <tr>
@@ -163,6 +168,9 @@ Just 3 tables – looks pretty easy…  But, if you look at some of the data in
 </tr>
 </tbody>
 </table>
+</p>
+
+<p>
 <table class="stats" border="1">
 <tbody>
 <tr>
@@ -218,32 +226,42 @@ Just 3 tables – looks pretty easy…  But, if you look at some of the data in
 </tr>
 </tbody>
 </table>
-&nbsp;
+</p>
+
 <h2>Identifying Changes</h2>
 As stated above, the PropertyList field in the CtxLog_AdminTask_Object table is a XML field.  This field maps out the before and after values of each property of an object after a change.  Here is an excerpt of what a PropertyList field looks like:
-<pre class="brush: xml;">&lt;?xml version="1.0"?&gt;
-&lt;propertylist&gt;
+
+~~~xml
+<?xml version="1.0"?>
+<propertylist>
   . . .
-  &lt;property nameresid="290042"&gt;
-    &lt;valuelist original="0"&gt;
-      &lt;value&gt;
-        &lt;valstr&gt;Notepad - test&lt;/valstr&gt;
-      &lt;/value&gt;
-    &lt;/valuelist&gt;
-    &lt;valuelist original="1"&gt;
-      &lt;value&gt;
-        &lt;valstr&gt;Notepad&lt;/valstr&gt;
-      &lt;/value&gt;
-    &lt;/valuelist&gt;
-    . . .</pre>
-Notice that each property has a value where original=”0” or original=”1”.   If the two values are different, that is a change.  Original=”1” is the before value and original=”0” is the after value (that seems backwards to me).  So, from the excerpt above, we can see that “Notepad” was renamed to “Notepad – test”.
+  <property nameresid="290042">
+    <valuelist original="0">
+      <value>
+        <valstr>Notepad - test</valstr>
+      </value>
+    </valuelist>
+    <valuelist original="1">
+      <value>
+        <valstr>Notepad</valstr>
+      </value>
+    </valuelist>
+    . . .
+~~~
+
+Notice that each property has a value where original="0" or original="1".   If the two values are different, that is a change.  Original="1" is the before value and original="0" is the after value (that seems backwards to me).  So, from the excerpt above, we can see that "Notepad" was renamed to "Notepad – test".
+
 <h2>Resource IDs</h2>
-Several of the fields have “ResID” somewhere in their name.  This is short for Resource ID.  The values in these fields are numeric and correspond to a language specific <a href="http://msdn.microsoft.com/en-us/library/aa380599(VS.85).aspx" target="_blank">Resource File</a>.  For instance, the nameresid in the excerpt above is 290042.  This maps to “Display Name” in the en-US resource file; however, 290042 maps to “Anzeigename” in the de-DE resource file.  The resource file(s) used to decode the numbers can be found on the computer running the AMC at:
+Several of the fields have "ResID" somewhere in their name.  This is short for Resource ID.  The values in these fields are numeric and correspond to a language specific <a href="http://msdn.microsoft.com/en-us/library/aa380599(VS.85).aspx" target="_blank">Resource File</a>.  For instance, the nameresid in the excerpt above is 290042.  This maps to "Display Name" in the en-US resource file; however, 290042 maps to "Anzeigename" in the de-DE resource file.  The resource file(s) used to decode the numbers can be found on the computer running the AMC at:
 
+~~~
 %ProgramFiles%\Common Files\Citrix\Access Management Console – Report Center\Reports\ConfigurationLoggingReport
+~~~
 
-The English resources are located in ConfigurationLoggingReport.dll.  Other localized languages can be found in a subdirectory of the path given above.  For instance, the German language resources would be in:
+The English resources are located in `ConfigurationLoggingReport.dll`.  Other localized languages can be found in a subdirectory of the path given above.  For instance, the German language resources would be in:
 
-&lt;above path&gt;\de\ConfigurationLoggingReport.resources.dll
+~~~
+<above path>\de\ConfigurationLoggingReport.resources.dll
+~~~
 
-This concludes our “behind the scenes” look at the database schema.  Now that we know exactly what information is stored in the database and how to decipher the data, we will look at how to do some custom reporting in the final post in this series.
+This concludes our "behind the scenes" look at the database schema.  Now that we know exactly what information is stored in the database and how to decipher the data, we will look at how to do some custom reporting in the final post in this series.
