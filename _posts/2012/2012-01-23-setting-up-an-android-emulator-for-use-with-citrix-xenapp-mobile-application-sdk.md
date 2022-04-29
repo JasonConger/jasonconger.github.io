@@ -53,4 +53,4 @@ adb install <name of Citrix Receiver>.apk
 
 <a href="http://www.jasonconger.com/wp-content/uploads/2012/01/21.png"><img class="aligncenter size-medium wp-image-805" title="Citrix Receiver for Android" src="http://www.jasonconger.com/wp-content/uploads/2012/01/21-300x276.png" alt="Citrix Receiver for Android" width="300" height="275" /></a>
 
-You now have a fully functional Citrix Receiver running on an Android emulator.  My next post shows you <a title="Installing and Using the Citrix XenApp 6.5 Mobile Application SDK" href="http://www.jasonconger.com/post/installing-and-using-the-citrix-xenapp-6-5-mobile-application-sdk/">how to set up a development environment to utilize the Mobile Application SDK and compile some of the examples</a>.
+You now have a fully functional Citrix Receiver running on an Android emulator.  My next post shows you [how to set up a development environment to utilize the Mobile Application SDK and compile some of the examples]({% post_url 2012-02-06-installing-and-using-the-citrix-xenapp-6-5-mobile-application-sdk %}).
