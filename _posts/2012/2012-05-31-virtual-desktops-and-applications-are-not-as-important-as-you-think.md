@@ -7,6 +7,7 @@ cover-img: /assets/img/2012/05/desktop.jpeg
 thumbnail-img: /wp-content/uploads/2012/05/binary.gif
 share-img: /assets/img/2012/05/desktop.jpeg
 featured: true
+readtime: true
 categories:
   - General
 tags:
