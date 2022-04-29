@@ -5,7 +5,6 @@ date: 2009-08-20T19:54:00-05:00
 author: JasonConger
 excerpt: 'This is the fourth part in a series on Citrix XenApp Configuration Logging.  This part will foucus on out of the box reporting tool.  In a later article, we will look at custom reporting.'
 layout: post
-guid: /post/Digging-in-to-Citrix-Configuration-Logging-Reporting.aspx
 image: wp-content/uploads/2009/09/Citrix-XenApp.png
 categories:
   - Citrix XenApp
@@ -15,7 +14,7 @@ tags:
   - Database
   - XenApp SQL
 ---
-This is the fourth part in the Citrix Configuration Logging Series. In <a href="http://www.jasonconger.com/post/Digging-in-to-Citrix-Configuration-Logging-Part-1.aspx">part 1</a>, we discussed what Citrix Configuration Logging was.  In <a href="http://www.jasonconger.com/post/Digging-in-to-Citrix-Configuration-Logging-Setting-up-the-Database.aspx">part 2</a>, we discussed how to prepare the database to log configuration changes. In <a href="http://www.jasonconger.com/post/Digging-in-to-Citrix-Configuration-Logging-Setting-up-the-Citrix-XenApp-farm-for-Configuration-Logging.aspx">part 3</a>, we discussed how to set up the Citrix XenApp farm for Configuration Logging. In this part, we will look at the out of the box reporting tools (in a later article, we will look at custom reporting).
+This is the fourth part in the Citrix Configuration Logging Series. In [part 1]({% post_url 2009-07-12-digging-in-to-citrix-configuration-logging-part-1 %}), we discussed what Citrix Configuration Logging was.  In [part 2]({% post_url 2009-07-29-digging-in-to-citrix-configuration-logging-setting-up-the-database %}), we discussed how to prepare the database to log configuration changes. In [part 3]({% post_url 2009-08-10-digging-in-to-citrix-configuration-logging-setting-up-the-citrix-xenapp-farm-for-configuration-logging %}), we discussed how to set up the Citrix XenApp farm for Configuration Logging. In this part, we will look at the out of the box reporting tools (in a later article, we will look at custom reporting).
 <h2>Citrix Report Center</h2>
 Report Center is part of the Citrix Access Management Console.  Report Center allows you to create, schedule, and distribute various types of canned reports.  One of the types of reports available is the, you guessed it, “Configuration Logging Report”.  There are several other reports available as well including, but not limited to:
 <ul>
@@ -35,7 +34,9 @@ Before you can run any report in the Access Management Console, you have to crea
 
 When you choose to store a report for later viewing, the report is stored in your user profile (actually, all report specification options as well as the report specification itself is stored in the user profile).  The bad thing about this is all this stuff is stored in your <strong>local profile</strong> by default in the following path:
 
+~~~
 %USERPROFILE%\Local Settings\Application Data\Citrix\ReportCenter\
+~~~
 
 If you are using roaming profiles, these reports/specifications will get wiped out when you log off (since Local Settings do not roam).  However, there is an option to store reports in your roaming profile.  This setting is located in the middle column of the AMC when you select the Report Center node.
 
@@ -52,6 +53,7 @@ Clicking “Schedule report” brings up a wizard that looks a lot like Windows 
 To view a report, you first need to run a job.  You can run a job by right-clicking on a report specification and selecting “Run report now”.  Scheduled reports create jobs as well.  Once a job completes, you can view the report from the “Jobs” section of Report Center.  Reports can be generated in HTML format or CSV format.  The default format of a report is specified in the report specification; however, you can view any report in either format via the AMC.
 
 <a href="http://www.jasonconger.com/images/articleImages/ReportJob_1.png" target="_blank"><img style="display: block; float: none; margin-left: auto; margin-right: auto; border: 0px;" title="ReportJob" src="http://www.jasonconger.com/images/articleImages/ReportJob_thumb_1.png" border="0" alt="ReportJob" width="402" height="279" /></a>
+
 <h2>Modifying the Report Layout</h2>
 There isn’t much to discuss about the CSV format, but I do want to show you a few things about the HTML format.  By default, the HTML format report looks pretty ugly.
 
@@ -61,7 +63,9 @@ There are a few things we can do to make this report look better.  To better und
 
 The raw data behind a report is XML.  A command line utility called <strong>genrep.exe</strong> is responsible for going out to the data source and generating the XML in the form of a dataset.  Once the data has been retrieved, a XML style sheet transformation (XSLT) is applied to produce the resulting HTML.  The XSLT files are stored in:
 
+~~~
 %ProgramFiles%\Common Files\Citrix\Access Management Console – Report Center\Reports\ConfigurationLoggingReport
+~~~
 
 There are some common and language specific transforms here.  The simplest way to style the report is to modify <strong>ConfigurationLoggingReportHTML.xslt</strong>.  Here is a screen shot of a report generated with a modified transform:
 
