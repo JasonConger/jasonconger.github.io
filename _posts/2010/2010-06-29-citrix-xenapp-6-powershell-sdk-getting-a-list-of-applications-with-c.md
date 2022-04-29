@@ -3,9 +3,8 @@ id: 8
 title: 'Citrix XenApp 6 PowerShell SDK: Getting a List of Applications with C#'
 date: 2010-06-29T09:33:00-05:00
 author: JasonConger
-excerpt: 'This post will show you how to use the Citrix XenApp 6 PowerShell SDK to obtain a list of applications from your XenApp 6 farm.  We’ll look at how to do this with using the PowerShell Runspace and how to do this using the Citrix XenApp 6 wrapper assembly.'
+excerpt: This post will show you how to use the Citrix XenApp 6 PowerShell SDK to obtain a list of applications from your XenApp 6 farm.  We'll look at how to do this with using the PowerShell Runspace and how to do this using the Citrix XenApp 6 wrapper assembly.
 layout: post
-guid: /post/Citrix-XenApp-6-PowerShell-SDK-Getting-a-List-of-Applications.aspx
 image: wp-content/uploads/2010/08/PowerShell.png
 categories:
   - Citrix XenApp
@@ -18,10 +17,11 @@ tags:
 ---
 This post will show you how to use the Citrix XenApp 6 PowerShell SDK to obtain a list of applications from your XenApp 6 farm.  We’ll look at how to do this with using the PowerShell Runspace and how to do this using the Citrix XenApp 6 wrapper assembly.  The examples used in this post will be using an ASP.NET website, but the code can be reused in a Windows application, Console application, web service, etc.
 
-<img style="display: inline; margin-left: 0px; margin-right: 0px; border-width: 0px;" title="Note" src="http://www.jasonconger.com/images/articleImages/Note.png" border="0" alt="Note" width="16" height="16" /> Note: Be sure to read the <a href="http://www.jasonconger.com/post/Getting-Started-with-the-Citrix-XenApp-PowerShell-SDK-and-C.aspx">getting started post</a> for information about adding the correct references to your project.
+<img style="display: inline; margin-left: 0px; margin-right: 0px; border-width: 0px;" title="Note" src="http://www.jasonconger.com/images/articleImages/Note.png" border="0" alt="Note" width="16" height="16" /> Note: Be sure to read the [getting started post]({% post_url 2010-06-26-getting-started-with-the-citrix-xenapp-powershell-sdk-and-c %}) for information about adding the correct references to your project.
 <h2>Using the PowerShell Runspace</h2>
 I added a Web Form to my project named RunSpaceFactory.aspx.  Here is what it looks like:
-<pre class="brush: c-sharp;">
+
+~~~c#
 using System.Management.Automation;
 using System.Management.Automation.Runspaces;
 
@@ -54,7 +54,9 @@ namespace WebApplication1
             rs.Close();
         }
     }
-}</pre>
+}
+~~~
+
 <span style="text-decoration: underline;">Lines 10 – 14</span> are standard PowerShell things you would do to work with PowerShell in any C# application.
 
 <span style="text-decoration: underline;">Line 17</span> adds the Citrix PowerShell SnapIn to the Runspace so we can execute the Citrix commands.
@@ -68,7 +70,9 @@ When using the Citrix XenApp 6 wrapper assembly, you first need to add reference
 <a href="http://www.jasonconger.com/images/articleImages/AddXenApp6Reference.png" target="_blank"><img style="display: block; float: none; margin-left: auto; margin-right: auto; border-width: 0px;" title="AddXenApp6Reference" src="http://www.jasonconger.com/images/articleImages/AddXenApp6Reference_thumb.png" border="0" alt="AddXenApp6Reference" width="482" height="408" /></a>
 
 After adding the references, here is the code to accomplish the same task from above:
-<pre class="brush: c-sharp;">using System.Management.Automation;
+
+~~~c#
+using System.Management.Automation;
 using System.Management.Automation.Runspaces;
 
 using Citrix.Management.Automation;
@@ -93,7 +97,9 @@ namespace WebApplication1
             }
         }
     }
-}</pre>
+}
+~~~
+
 As you can see, there is quite a bit less code here.
 
 <span style="text-decoration: underline;">Line 14</span> sets up all your Runspace stuff and adds the appropriate command.
