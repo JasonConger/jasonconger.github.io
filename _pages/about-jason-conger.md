@@ -18,6 +18,15 @@ Today, Jason works as a Solutions Architect at <a rel="noreferrer noopener" href
 
 I enjoy speaking on a multitude of technology topics. Here are some of my most recent speaking engagements:
 
+## 2022
+
+* Splunk .conf22
+    * Debug Deep Dive: Using Visual Studio Code to Debug Splunk Code Wherever It Runs
+    * Using an IDE for Splunk Development and Debugging
+* Splunk Global Partner Summit
+    * Beyond Add-on Builder (AoB)
+    * Navigating the Clouds with Splunk
+
 ## 2021
 
 * [Carahsoft](https://carahsoft.com/){:target="_blank"} Webinar with Splunk and Microsoft
