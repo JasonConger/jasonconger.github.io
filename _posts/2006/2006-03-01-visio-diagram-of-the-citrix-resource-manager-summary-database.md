@@ -15,7 +15,7 @@ tags:
   - Visio
   - XenApp
 ---
-Using the techniques explained in [this article]({% post_url 2006-03-01-using-microsoft-visio-to-reverse-engineer-a-database %}), I created the following graphical representations of the Citrix Resource Manager Summary Database.
+Using the techniques explained in [this article]({% post_url /2006/2006-03-01-using-microsoft-visio-to-reverse-engineer-a-database %}), I created the following graphical representations of the Citrix Resource Manager Summary Database.
 <table border="0">
 <tbody>
 <tr>

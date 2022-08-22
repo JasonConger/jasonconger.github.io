@@ -15,7 +15,7 @@ tags:
   - SQL
   - XenApp
 ---
-In [part 1]({% post_url 2009-07-12-digging-in-to-citrix-configuration-logging-part-1 %}) of the Digging in to Citrix Configuration Logging series, we looked at what XenApp configuration logging was and how it worked. Now, we are going to focus on how to set up the Citrix XenApp configuration logging database.
+In [part 1]({% post_url /2009/2009-07-12-digging-in-to-citrix-configuration-logging-part-1 %}) of the Digging in to Citrix Configuration Logging series, we looked at what XenApp configuration logging was and how it worked. Now, we are going to focus on how to set up the Citrix XenApp configuration logging database.
 
 All Citrix XenApp farm changes are written to a back end database. The back end database can be:
 <ul>

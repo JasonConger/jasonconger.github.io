@@ -16,7 +16,7 @@ tags:
   - PowerShell
   - XenApp
 ---
-At <a href="http://www.briforum.com/" target="_blank">BriForum 2010</a>, <a href="http://bsonposh.com/" target="_blank">Brandon Shell</a> and I presented a session on [how to make the transition from MFCOM to PowerShell]({% post_url 2010-06-08-mfcom-to-powershell-how-to-make-the-transition %}). At the end of the session, I presented several examples on how to use the XenApp PowerShell SDK in C#. I wanted to share some of the details on those examples in a few blog posts. This first blog post will detail what is needed to get started developing applications that leverage the Citrix XenApp 6 PowerShell SDK.
+At <a href="http://www.briforum.com/" target="_blank">BriForum 2010</a>, <a href="http://bsonposh.com/" target="_blank">Brandon Shell</a> and I presented a session on [how to make the transition from MFCOM to PowerShell]({% post_url /2010/2010-06-08-mfcom-to-powershell-how-to-make-the-transition %}). At the end of the session, I presented several examples on how to use the XenApp PowerShell SDK in C#. I wanted to share some of the details on those examples in a few blog posts. This first blog post will detail what is needed to get started developing applications that leverage the Citrix XenApp 6 PowerShell SDK.
 
 <h2>What you need</h2>
 To get started, you need to set up a development environment. You really only need two things:

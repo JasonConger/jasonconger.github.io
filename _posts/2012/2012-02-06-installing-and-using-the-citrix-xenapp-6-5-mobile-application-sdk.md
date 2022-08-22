@@ -16,7 +16,7 @@ tags:
   - SDK
   - XenApp
 ---
-Now that we have [setting up an Android emulator]({% post_url 2012-01-23-setting-up-an-android-emulator-for-use-with-citrix-xenapp-mobile-application-sdk %}) out of the way, let's take a look at installing the Citrix XenApp 6.5 Mobile Application SDK and what the install does to a XenApp 6.5 server.
+Now that we have [setting up an Android emulator]({% post_url /2012/2012-01-23-setting-up-an-android-emulator-for-use-with-citrix-xenapp-mobile-application-sdk %}) out of the way, let's take a look at installing the Citrix XenApp 6.5 Mobile Application SDK and what the install does to a XenApp 6.5 server.
 
 There are 2 parts that you need in order to develop applications that utilize mobile capabilities on a XenApp 6.5 server:
 <ol>
@@ -64,7 +64,7 @@ The final part of this article will focus on compiling and using the examples th
 1. This will create an executable in `\Program Files (x86)\Citrix\MobilitySDK\samples\native\Win32\Debug\showpicker.exe`
 1. Copy this `showpicker.exe` to your XenApp 6.5 server (I copied mine to `\Program Files (x86)\Mobility\picker\showpicker.exe`)
 1. Publish the application via Citrix AppCenter
-1. Launch the published application using an Android device (or [emulator]({% post_url 2012-01-23-setting-up-an-android-emulator-for-use-with-citrix-xenapp-mobile-application-sdk %}) ) with the latest Citrix Receiver installed.
+1. Launch the published application using an Android device (or [emulator]({% post_url /2012/2012-01-23-setting-up-an-android-emulator-for-use-with-citrix-xenapp-mobile-application-sdk %}) ) with the latest Citrix Receiver installed.
 
 
 NOTE: You may receive an error message that states "<span style="color: #ff0000;">The program can't start because MSVCR100D.dll is missing from your computer...</span>"  Here's why - the solution was built in debug mode.  Thus, debug DLL's (notice the "D" in the DLL name) need to be on the XenApp 6.5 server.  Here is what you can do:

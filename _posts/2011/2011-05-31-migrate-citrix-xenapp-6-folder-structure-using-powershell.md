@@ -15,7 +15,7 @@ tags:
 ---
 There are times when you want to migrate a folder structure from one Citrix XenApp 6 farm to another.  For instance, if you maintain separate test, quality assurance, and production farms and need to migrate folders and applications between the farms.  Fortunately, this is super easy in XenApp 6 using PowerShell.
 
-<img src="http://www.jasonconger.com/images/articleImages/Note.png" alt="note" /> Note: before you get started, be sure to check out [this post on how to install the Citrix XenApp 6 PowerShell Cmdlets]]({% post_url 2010-08-02-how-to-install-the-citrix-xenapp-6-powershell-cmdlets %}).
+<img src="http://www.jasonconger.com/images/articleImages/Note.png" alt="note" /> Note: before you get started, be sure to check out [this post on how to install the Citrix XenApp 6 PowerShell Cmdlets]]({% post_url /2010/2010-08-02-how-to-install-the-citrix-xenapp-6-powershell-cmdlets %}).
 
 <h2>Export Specified Folders</h2>
 You can export your entire folder structure, or just certain parts of it.  In the example below, I will export only the "Testing" folder (see the screen shot below).
@@ -59,4 +59,4 @@ Here are the results:
 <img class="aligncenter size-full wp-image-493" title="XenApp 6 QA Folder" src="http://www.jasonconger.com/wp-content/uploads/2011/05/XenApp-6-QA-Folder.jpg" alt="" width="204" height="259" />
 
 <h2>Next Steps</h2>
-So all this folder structure stuff is fine, but wouldn't it be nice to import some apps into those folders? Of course it would. Here is how to [export and import XenApp 6 published applications using PowerShell]({% post_url 2011-06-13-export-and-import-citrix-xenapp-6-published-applications-using-powershell %}).
+So all this folder structure stuff is fine, but wouldn't it be nice to import some apps into those folders? Of course it would. Here is how to [export and import XenApp 6 published applications using PowerShell]({% post_url /2011/2011-06-13-export-and-import-citrix-xenapp-6-published-applications-using-powershell %}).

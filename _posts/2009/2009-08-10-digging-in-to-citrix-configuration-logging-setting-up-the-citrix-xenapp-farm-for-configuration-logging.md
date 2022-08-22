@@ -16,14 +16,14 @@ tags:
   - SQL
   - XenApp
 ---
-This is the third part in the Citrix Configuration Logging Series. In [part 1]({% post_url 2009-07-12-digging-in-to-citrix-configuration-logging-part-1 %}), we discussed what Citrix Configuration Logging was. In [part 2]({% post_url 2009-07-29-digging-in-to-citrix-configuration-logging-setting-up-the-database %}), we discussed how to prepare the database to log configuration changes. In this part, we will discuss how to set up the Citrix XenApp farm to use the database and what happens under the covers when we do this.
+This is the third part in the Citrix Configuration Logging Series. In [part 1]({% post_url /2009/2009-07-12-digging-in-to-citrix-configuration-logging-part-1 %}), we discussed what Citrix Configuration Logging was. In [part 2]({% post_url /2009/2009-07-29-digging-in-to-citrix-configuration-logging-setting-up-the-database %}), we discussed how to prepare the database to log configuration changes. In this part, we will discuss how to set up the Citrix XenApp farm to use the database and what happens under the covers when we do this.
 
 <h2>Configuring the Citrix XenApp Farm to use the Database</h2>
 You use the Access Management Console to configure the XenApp farm for Configuration Logging. Configuration Logging is a farm setting, so once you open the Access Management Console, simply right-click your farm name and select “Properties”. Select “Configuration Logging” from the Farm-wide properties.
 
 <a href="http://www.jasonconger.com/images/articleImages/ConfigLoggingFarm_1.png" target="_blank"><img style="display: block; float: none; margin-left: auto; margin-right: auto; border-width: 0px;" title="ConfigLoggingFarm" src="http://www.jasonconger.com/images/articleImages/ConfigLoggingFarm_thumb_1.png" border="0" alt="ConfigLoggingFarm" width="582" height="456" /></a>
 
-Now, we need to point our farm to the [database we created before]({% post_url 2009-07-29-digging-in-to-citrix-configuration-logging-setting-up-the-database %}). To do this, click the “Configure Database…” button to start the database configuration wizard.
+Now, we need to point our farm to the [database we created before]({% post_url /2009/2009-07-29-digging-in-to-citrix-configuration-logging-setting-up-the-database %}). To do this, click the “Configure Database…” button to start the database configuration wizard.
 
 <a href="http://www.jasonconger.com/images/articleImages/DBWizardStep1.png" target="_blank"><img style="display: block; float: none; margin-left: auto; margin-right: auto; border-width: 0px;" title="DBWizardStep1" src="http://www.jasonconger.com/images/articleImages/DBWizardStep1_thumb.png" border="0" alt="DBWizardStep1" width="573" height="480" /></a>
 
@@ -60,7 +60,7 @@ Now that we have the farm configured to point to the database, we have some opti
 <a href="http://www.jasonconger.com/images/articleImages/ConfigLoggingFarm_1.png" target="_blank"><img style="display: block; float: none; margin-left: auto; margin-right: auto; border-width: 0px;" title="ConfigLoggingFarm" src="http://www.jasonconger.com/images/articleImages/ConfigLoggingFarm_thumb_1.png" alt="ConfigLoggingFarm" width="582" height="456" /></a>
 
 This is pretty easy, there are only 3 checkboxes:
-* <span style="text-decoration: underline;">Log administrative tasks to logging database</span> – this is what tells the IMA service to use the `CitrixLogServer.dll` hook to log changes explained in [part 1]({% post_url 2009-07-12-digging-in-to-citrix-configuration-logging-part-1 %}).
+* <span style="text-decoration: underline;">Log administrative tasks to logging database</span> – this is what tells the IMA service to use the `CitrixLogServer.dll` hook to log changes explained in [part 1]({% post_url /2009/2009-07-12-digging-in-to-citrix-configuration-logging-part-1 %}).
 * <span style="text-decoration: underline;">Allow changes to the farm when database is disconnected</span> – this is self explanatory.
 * <span style="text-decoration: underline;">Require administrators to enter database credentials before clearing the log</span> - “the log” referred to in this option is all the data in the database. An administrator can clear the log by opening the AMC, right-clicking on the farm name - &gt; All Tasks –&gt; Clear configuration log.
 
@@ -73,7 +73,7 @@ Wow – that error message is actually pretty descriptive!
 Note – even if you do not allow changes to be made to your Citrix XenApp farm when the Configuration Logging database cannot be reached, you can still change which database your farm uses. That means if you are trying to make a change and your database took a dive and it doesn’t look like it will be back up anytime soon, you can always change which database logs the changes and carry on. Of course, changing which database logs changes gets logged &lt;- say that 5 times fast...
 
 <h2>Adjusting Database Permissions</h2>
-As you may recall, [when we created the data base user in part 2]({% post_url 2009-07-29-digging-in-to-citrix-configuration-logging-setting-up-the-database %}), we had to make sure the database user belonged to the <strong>db_owner</strong> role. This is due to the fact when the XenApp farm connects to the database, the schema is checked. If the schema does not exit, it is created – which requires db_owner rights. So, after that first connection, you can dial back the permissions. Here are the minimum operating permissions:
+As you may recall, [when we created the data base user in part 2]({% post_url /2009/2009-07-29-digging-in-to-citrix-configuration-logging-setting-up-the-database %}), we had to make sure the database user belonged to the <strong>db_owner</strong> role. This is due to the fact when the XenApp farm connects to the database, the schema is checked. If the schema does not exit, it is created – which requires db_owner rights. So, after that first connection, you can dial back the permissions. Here are the minimum operating permissions:
 <table class="stats" border="0">
 <tbody>
 <tr>

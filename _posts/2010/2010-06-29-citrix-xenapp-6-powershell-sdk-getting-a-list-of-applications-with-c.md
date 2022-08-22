@@ -17,7 +17,7 @@ tags:
 ---
 This post will show you how to use the Citrix XenApp 6 PowerShell SDK to obtain a list of applications from your XenApp 6 farm.  We’ll look at how to do this with using the PowerShell Runspace and how to do this using the Citrix XenApp 6 wrapper assembly.  The examples used in this post will be using an ASP.NET website, but the code can be reused in a Windows application, Console application, web service, etc.
 
-<img style="display: inline; margin-left: 0px; margin-right: 0px; border-width: 0px;" title="Note" src="http://www.jasonconger.com/images/articleImages/Note.png" border="0" alt="Note" width="16" height="16" /> Note: Be sure to read the [getting started post]({% post_url 2010-06-26-getting-started-with-the-citrix-xenapp-powershell-sdk-and-c %}) for information about adding the correct references to your project.
+<img style="display: inline; margin-left: 0px; margin-right: 0px; border-width: 0px;" title="Note" src="http://www.jasonconger.com/images/articleImages/Note.png" border="0" alt="Note" width="16" height="16" /> Note: Be sure to read the [getting started post]({% post_url /2010/2010-06-26-getting-started-with-the-citrix-xenapp-powershell-sdk-and-c %}) for information about adding the correct references to your project.
 <h2>Using the PowerShell Runspace</h2>
 I added a Web Form to my project named RunSpaceFactory.aspx.  Here is what it looks like:
 

@@ -14,7 +14,7 @@ tags:
   - Web Interface
 ---
 
-In the article titled [Super Easy Customization of Citrix Web Interface 4.x]({% post_url 2006-05-04-super-easy-customization-of-citrix-web-interface-4-x %})
+In the article titled [Super Easy Customization of Citrix Web Interface 4.x]({% post_url /2006/2006-05-04-super-easy-customization-of-citrix-web-interface-4-x %})
 
 I mentioned that I once customized Citrix Web Interface to look like Microsoft SharePoint Portal Server 2003 during a transition time. I have had some requests for the templates I used for that process. So, I have made these customizations available below:
 

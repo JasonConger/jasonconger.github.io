@@ -16,7 +16,7 @@ tags:
   - HTML
   - Web Interface
 ---
-In the article titled "[How to Enable AutoComplete for Web Interface Logon]({% post_url 2009-04-22-how-to-enable-autocomplete-for-web-interface-logon %})", I explained how to enable the AutoComplete functionality of web browsers in order to save usernames and/or passwords for Citrix Web Interface. As the article explained, there are a lot of moving parts to the solution such as web browser settings, Protected Storage, JavaScript workarounds, etc. In this article, I will explain how to accomplish something similar by using cookies to remember the last username entered for Web Interface.
+In the article titled "[How to Enable AutoComplete for Web Interface Logon]({% post_url /2009/2009-04-22-how-to-enable-autocomplete-for-web-interface-logon %})", I explained how to enable the AutoComplete functionality of web browsers in order to save usernames and/or passwords for Citrix Web Interface. As the article explained, there are a lot of moving parts to the solution such as web browser settings, Protected Storage, JavaScript workarounds, etc. In this article, I will explain how to accomplish something similar by using cookies to remember the last username entered for Web Interface.
 
 <strong>How it Works </strong>(if you do not really care how it works, you can just download the modification at the end of this post)
 
@@ -89,7 +89,7 @@ Response.Cookies.Add(userCookie);
 
 Code explanation:
 
-First, we need to get an AccessToken (see line 10 above). In the Web Interface object model, an AccessToken “…encapsulates information that may be used for authorization and authentication when a Subject requires access to a resource.” What that means in layman's terms is an AcessToken basically holds your username, password, domain, identity, etc. (you can actually use the PasswordBasedToken Interface to get the password of a user if you wanted to as described in [this article]({% post_url 2006-03-10-how-to-get-the-username-and-password-of-a-user-in-citrix-web-interface-4-0 %})).
+First, we need to get an AccessToken (see line 10 above). In the Web Interface object model, an AccessToken “…encapsulates information that may be used for authorization and authentication when a Subject requires access to a resource.” What that means in layman's terms is an AcessToken basically holds your username, password, domain, identity, etc. (you can actually use the PasswordBasedToken Interface to get the password of a user if you wanted to as described in [this article]({% post_url /2006/2006-03-10-how-to-get-the-username-and-password-of-a-user-in-citrix-web-interface-4-0 %})).
 
 After we get the AccessToken, we can test to see if this is an anonymous user or not (an anonymous user would have a GuestToken) on lines 12-23 above. If the token is not a GuestToken, then we know we have an authenticated user. There are currently 3 methods you can use to get the user details from the AccessToken:
 <ol>

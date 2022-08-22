@@ -16,7 +16,7 @@ tags:
 ---
 Exporting and importing Citrix XenApp 6 published applications using PowerShell is super easy.  In this article, I will show you how to export all or some of your XenApp 6 published applications into a XML file.  Then, I will show you how to import those applications while overriding certain application properties like Worker Group and Server Names.
 
-<img src="http://www.jasonconger.com/images/articleImages/Note.png" alt="note" /> Note: before you get started, be sure to check out [this post on how to install the Citrix XenApp 6 PowerShell Cmdlets]({% post_url 2010-08-02-how-to-install-the-citrix-xenapp-6-powershell-cmdlets %}).
+<img src="http://www.jasonconger.com/images/articleImages/Note.png" alt="note" /> Note: before you get started, be sure to check out [this post on how to install the Citrix XenApp 6 PowerShell Cmdlets]({% post_url /2010/2010-08-02-how-to-install-the-citrix-xenapp-6-powershell-cmdlets %}).
 
 <h2>Exporting Citrix XenApp 6 Published Applications</h2>
 The first thing we need to do is export some published applications from an existing XenApp 6 farm.  In this example, I will only export applications in a certain folder instead of the entire application inventory.
@@ -56,4 +56,4 @@ At line:1 char:70
     + FullyQualifiedErrorId : ComApp.GetFolderId,Citrix.XenApp.Commands.NewAppCmdlet
 ```
 
-So, check out this [article on migrating a folder structure]({% post_url 2011-05-31-migrate-citrix-xenapp-6-folder-structure-using-powershell %}).
+So, check out this [article on migrating a folder structure]({% post_url /2011/2011-05-31-migrate-citrix-xenapp-6-folder-structure-using-powershell %}).

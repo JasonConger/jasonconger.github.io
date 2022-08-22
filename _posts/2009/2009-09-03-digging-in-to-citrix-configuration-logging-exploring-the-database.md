@@ -16,7 +16,7 @@ tags:
   - XenApp
   - XML
 ---
-This is the fifth part in the Citrix Configuration Logging Series. In [part 1]({% post_url 2009-07-12-digging-in-to-citrix-configuration-logging-part-1 %}), we discussed what Citrix Configuration Logging was.  In [part 2]({% post_url 2009-07-29-digging-in-to-citrix-configuration-logging-setting-up-the-database %}), we discussed how to prepare the database to log configuration changes. In [part 3]({% post_url 2009-08-10-digging-in-to-citrix-configuration-logging-setting-up-the-citrix-xenapp-farm-for-configuration-logging %}), we discussed how to set up the Citrix XenApp farm for Configuration Logging, in [part 4]({% post_url 2009-08-20-digging-in-to-citrix-configuration-logging-reporting %}), we looked at the "out of the box" reporting tools. In this part, we will look at the back end database schema.
+This is the fifth part in the Citrix Configuration Logging Series. In [part 1]({% post_url /2009/2009-07-12-digging-in-to-citrix-configuration-logging-part-1 %}), we discussed what Citrix Configuration Logging was.  In [part 2]({% post_url /2009/2009-07-29-digging-in-to-citrix-configuration-logging-setting-up-the-database %}), we discussed how to prepare the database to log configuration changes. In [part 3]({% post_url /2009/2009-08-10-digging-in-to-citrix-configuration-logging-setting-up-the-citrix-xenapp-farm-for-configuration-logging %}), we discussed how to set up the Citrix XenApp farm for Configuration Logging, in [part 4]({% post_url /2009/2009-08-20-digging-in-to-citrix-configuration-logging-reporting %}), we looked at the "out of the box" reporting tools. In this part, we will look at the back end database schema.
 
 <h2>Schema on the Surface</h2>
 Here is what the database schema looks like on the surface.
