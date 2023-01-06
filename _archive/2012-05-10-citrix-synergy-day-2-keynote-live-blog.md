@@ -12,7 +12,7 @@ tags:
   - Citrix
   - Citrix Synergy
 ---
-It is day 2 of Citrix Synergy 2012 and I'll be live blogging the event. For highlights from yesterday's keynote, [check out this post]({% post_url 2012-05-09-citrix-synergy-2012-live-blog %}).  This keynote should be a bit more demo oriented about current products rather than future-focused.  Stay tuned...<!--more-->
+It is day 2 of Citrix Synergy 2012 and I'll be live blogging the event. For highlights from yesterday's keynote, [check out this post]({% post_url /2012/2012-05-09-citrix-synergy-2012-live-blog %}).  This keynote should be a bit more demo oriented about current products rather than future-focused.  Stay tuned...<!--more-->
 
 <hr />
 
