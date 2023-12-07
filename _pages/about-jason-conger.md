@@ -18,12 +18,20 @@ Today, Jason works as a Solutions Architect at <a rel="noreferrer noopener" href
 
 I enjoy speaking on a multitude of technology topics. Here are some of my most recent speaking engagements:
 
+## 2023
+
+* Splunk .conf23 - Las Vegas, NV
+    * Containerize Your Splunk App Development
+      
+* Google Cloud Customer Community - Austin, TX
+   * [2Gather Austin: Importance of Quality Data—Garbage in, Garbage out](https://events.c2cglobal.com/events/details/c2c-events-austin-presents-2gather-austin-importance-of-quality-data-garbage-in-garbage-out/){:target="_blank"}
+
 ## 2022
 
-* Splunk .conf22
+* Splunk .conf22 - Las Vegas, NV
     * Debug Deep Dive: Using Visual Studio Code to Debug Splunk Code Wherever It Runs
     * Using an IDE for Splunk Development and Debugging
-* Splunk Global Partner Summit
+* Splunk Global Partner Summit - Las Vegas, NV
     * Beyond Add-on Builder (AoB)
     * Navigating the Clouds with Splunk
 
