@@ -49,9 +49,6 @@ round-avatar: false
 # then specify the following parameter
 #title-img: "/assets/img/jcc-512x512.png"
 
-# If you want to have a fontawesome icon in the top-left corner 
-title-icon: "house"
-
 
 # --- Footer social media links --- #
 
@@ -101,12 +98,6 @@ share-links-active:
 
 # Excerpt word length - Truncate the excerpt of each post on the feed page to the specified number of words
 excerpt_length: 75
-
-# Whether or not to show an excerpt for every blog post in the feed page
-feed_show_excerpt: true
-
-# Whether or not to show a list of tags below each post preview in the feed page
-feed_show_tags: true
 
 # Add a search button to the navbar
 post_search: true
