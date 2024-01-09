@@ -26,28 +26,11 @@ authors:
     twitter: https://twitter.com/JasonConger
     description: "I know more of what you should not do than what you should do"
 
-
-# --- List of links in the navigation bar --- #
-
-navbar-links:
-#  About: "about"
-#  Resources:
-#    - Menu Item 1: "https://google.com"
-#    - Menu Item 2: "https://yahoo.com"
-#  Some other page: "https://example.com"
-
 # --- Logo --- #
 
 # Image to show in the navigation bar - works best with a square image
 # Remove this parameter if you don't want an image in the navbar
 avatar: "/assets/img/jcc-128.png"
-
-# By default, the image is cut into a circle. You can disable this behaviour by setting 'round-avatar: false'
-round-avatar: false
-
-# If you want to have an image logo in the top-left corner instead of having the title of the website,
-# then specify the following parameter
-#title-img: "/assets/img/jcc-512x512.png"
 
 
 # --- Footer social media links --- #
@@ -64,37 +47,12 @@ social-network-links:
 #  medium: 
   reddit: JSONConger
   linkedin: JasonConger
-#  xing: 
-#  stackoverflow: 
-#  snapchat: 
-#  instagram: 
-#  spotify: yourname
-#  telephone: 
-#  steam: 
-#  twitch: 
-#  yelp: 
-#  telegram: 
-#  calendly: 
-#  mastodon: instance.url/@username
-#  ORCID: your ORCID ID
-#  google-scholar: your google scholar
 
 # If you want to show a link to an RSS in the footer, add the site description here.
 # If you don't want to show an RSS link, remove the following line.
 rss-description: RSS
 
 # --- General options --- #
-
-# Select which social network share links to show in posts
-share-links-active:
-  twitter: true
-  facebook: false
-  linkedin: true
-  vk: false
-
-# How to display the link to your website in the footer
-# Remove this if you don't want a link in the footer
-#url-pretty: "JasonConger.com"
 
 # Excerpt word length - Truncate the excerpt of each post on the feed page to the specified number of words
 excerpt_length: 75
