@@ -90,50 +90,10 @@
   <meta property="og:type" content="article">
   <meta property="og:article:author" content="{{ site.author }}">
   <meta property="og:article:published_time" content="{{ page.date | date_to_xmlschema }}">
-  {% if site.seo != "jekyll-seo-tag" %}
-  <meta property="og:url" content="{{ page.url | absolute_url }}">
-  {% endif %}
-  {% if site.seo != "jekyll-seo-tag" %}
-  <link rel="canonical" href="{{ page.url | absolute_url }}">
-  {% endif %}
   {% else %}
   <meta property="og:type" content="website">
-  {% if site.seo != "jekyll-seo-tag" %}
-  <meta property="og:url" content="{{ page.url | absolute_url | strip_index }}">
-  {% endif %}
-  {% if site.seo != "jekyll-seo-tag" %}
-  <link rel="canonical" href="{{ page.url | absolute_url | strip_index }}">
-  {% endif %}
   {% endif %}
 
-  {% if site.seo != "jekyll-seo-tag" %}
-  {% if img != "" and img != site.avatar %}
-  <meta name="twitter:card" content="summary_large_image">
-  {% else %}
-  <meta name="twitter:card" content="summary">
-  {% endif %}
-  <meta name="twitter:site" content="@{{ site.social-network-links.twitter }}">
-  <meta name="twitter:creator" content="@{{ site.social-network-links.twitter }}">
-
-  <meta property="twitter:title" content="{{ title }}">
-  <meta property="twitter:description" content="{{ description }}">
-
-  {% if img != "" %}
-  <meta name="twitter:image" content="{{ img | absolute_url }}">
-  {% endif %}
-  {% endif %}
-
-  {% include matomo.html %}
-
-  {% if page.comments and site.staticman.repository and site.staticman.branch %}
-  <link rel="stylesheet" href="{{ "/assets/css/staticman.css" | relative_url }}">
-  {% endif %}
-
-  {% if page.head-extra %}
-    {% for file in page.head-extra %}
-      {% include {{ file }} %}
-    {% endfor %}
-  {% endif %}
 
   {% seo %}
   
