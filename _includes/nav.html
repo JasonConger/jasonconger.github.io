@@ -1,13 +1,6 @@
-<nav class="navbar navbar-expand-xl navbar-light fixed-top navbar-custom {% if page.nav-short %}top-nav-short-permanent{% else %}top-nav-regular{% endif %}">
-
-  {%- if site.title-img -%}
-    <a class="navbar-brand navbar-brand-logo" href="{{ '' | absolute_url }}"><img alt="{{ site.title }} Logo" src="{{ site.title-img | relative_url}}"/></a>
-  {%- elsif site.title-icon -%}
-    <a class="navbar-brand" href="{{ '' | absolute_url }}"><i class="fa-solid fa-{{site.title-icon}}"></i></a>
-  {%- elsif site.title -%}
-    <a class="navbar-brand" href="{{ '' | absolute_url }}">{{ site.title }}</a>
-  {%- endif -%}
-
+<nav class="navbar navbar-expand-xl navbar-light fixed-top navbar-custom top-nav-regular">
+  <a class="navbar-brand" href="{{ '' | absolute_url }}"><i class="fa-solid fa-house"></i></a>
+  
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -37,22 +30,13 @@
     </ul>
   </div>
 
-  {% if site.navbar-extra %}
-    {% for file in site.navbar-extra %}
-      {% include {{ file }} %}
-    {% endfor %}
-  {% endif %}
-
-  {% if site.avatar and page.show-avatar != false %}
-    <div class="avatar-container">
-      <div class="avatar-img-border">
-        <a href="{{ '' | absolute_url }}">
-          <img alt="Navigation bar avatar" class="avatar-img" src="{{ site.avatar | relative_url }}" />
-        </a>
-      </div>
+  <div class="avatar-container">
+    <div class="avatar-img-border">
+      <a href="{{ '' | absolute_url }}">
+        <img alt="JasonConger.com" class="avatar-img" src="{{ '/assets/img/jcc-128.png' | relative_url }}" />
+      </a>
     </div>
-  {% endif %}
-
+  </div>
 </nav>
 
 {% include search.html %}
