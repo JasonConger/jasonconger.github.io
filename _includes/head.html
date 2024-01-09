@@ -49,39 +49,10 @@
   {% include gtm_head.html %}
   {% include google_analytics.html %}
 
-  {% if layout.common-ext-css %}
-    {% for css in layout.common-ext-css %}
-      {% include ext-css.html css=css %}
-    {% endfor %}
-  {% endif %}
-
-  {% if layout.common-css %}
-    {% for css in layout.common-css %}
-      <link rel="stylesheet" href="{{ css | relative_url }}">
-    {% endfor %}
-  {% endif %}
-
-  {% if site.site-css %}
-    {% for css in site.site-css %}
-      <link rel="stylesheet" href="{{ css | relative_url }}">
-    {% endfor %}
-  {% endif %}
-
-  {% if page.ext-css %}
-    {% for css in page.ext-css %}
-      {% include ext-css.html css=css %}
-    {% endfor %}
-  {% endif %}
-  
-  {% if page.css %}
-    {% for css in page.css %}
-      <link rel="stylesheet" href="{{ css | relative_url }}">
-    {% endfor %}
-  {% endif %}
-
-  {% if site.fb_app_id %}
-  <meta property="fb:app_id" content="{{ site.fb_app_id }}">
-  {% endif %}
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800">
+  <link rel="stylesheet" href="/assets/css/beautifuljekyll.css">
+  <link rel="stylesheet" href="/assets/css/custom-styles.css">
 
   {% if site.title %}
   {% if site.seo != "jekyll-seo-tag" %}
