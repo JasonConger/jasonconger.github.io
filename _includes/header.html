@@ -24,7 +24,6 @@
   <div class="overlay">
     <div class="container-md">
       <div class="row">
-        {% comment %}<div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">{% endcomment %}
         <div class="col">
           <div class="{{ include.type }}-heading">
             <h1>{% if page.title %}{{ page.title }}{% else %}<br/>{% endif %}</h1>
@@ -62,12 +61,12 @@
     <span class='img-desc'></span>
   </div>
 </div>
-{% endif %}
+
+{% else %}
 
 <div class="intro-header no-img">
   <div class="container-md">
     <div class="row">
-      {% comment %}<div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">{% endcomment %}
       <div class="col">
         <div class="{{ include.type }}-heading">
           <h1>{% if page.title %}{{ page.title }}{% else %}<br/>{% endif %}</h1>
@@ -96,13 +95,15 @@
                 <span class="d-none d-md-inline middot">&middot;</span>
                 <i class="bi bi-chat-text"></i> <a href="{{ site.baseurl }}{{ post.url }}#disqus_thread">Comments</a>
               </span>
-              {% endif %}
+            {% endif %}
           {% endif %}
         </div>
       </div>
     </div>
   </div>
 </div>
+
+{% endif %}
 </header>
 
 
