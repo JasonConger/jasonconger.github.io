@@ -18,6 +18,12 @@ Today, Jason works as a Solutions Architect at <a rel="noreferrer noopener" href
 
 I enjoy speaking on a multitude of technology topics. Here are some of my most recent speaking engagements:
 
+## 2024
+
+* Splunk .conf24 - Las Vegas, NV
+    * Optimizing Data Ingestion and Security with Splunk Data Manager and Microsoft Cloud Services Add-on
+    * Turbocharge Your Splunk Workflows with New Features in Visual Studio Code
+
 ## 2023
 
 * Splunk .conf23 - Las Vegas, NV
