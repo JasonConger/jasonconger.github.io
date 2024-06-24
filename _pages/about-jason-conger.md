@@ -17,6 +17,7 @@ Today, Jason works as a Solutions Architect at <a rel="noreferrer noopener" href
 <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="eb6c8b7c-024b-49fa-a467-5d5f58f79568" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
 <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="5d4c851e-bb4c-46d5-80b8-11b1d1fcc6b8" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
 <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="cebf3d6a-ce29-4fb5-be1d-3a2868e32d75" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="1f35ca8c-880c-4887-9b73-a143201ccc8a" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
 
 
 # Most Recent Speaking Engagements:
