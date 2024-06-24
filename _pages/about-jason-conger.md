@@ -13,11 +13,12 @@ Jason Conger is a data and web nerd. In fact, this website started out with [sho
 
 Today, Jason works as a Solutions Architect at <a rel="noreferrer noopener" href="http://www.splunk.com/" target="_blank">Splunk</a>. In his free time he focuses on giving back to the community by developing open-source tools, public speaking, and technical writing.
 
-<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="b785af08-60b6-4e61-9cdb-c656f3368094" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
-<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="eb6c8b7c-024b-49fa-a467-5d5f58f79568" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
-<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="5d4c851e-bb4c-46d5-80b8-11b1d1fcc6b8" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
-<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="cebf3d6a-ce29-4fb5-be1d-3a2868e32d75" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
-<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="1f35ca8c-880c-4887-9b73-a143201ccc8a" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+<img src="/assets/img/badges/microsoft-most-valuable-professional-mvp-alumni.png" width="150px" height="150px" class="mx-auto">
+<img src="/assets/img/badges/splunk-enterprise-certified-architect.png" width="150px" height="150px" class="mx-auto">
+<img src="/assets/img/badges/splunk-certified-developer.png" width="150px" height="150px" class="mx-auto">
+<img src="/assets/img/badges/splunk-enterprise-certified-admin.png" width="150px" height="150px" class="mx-auto">
+<img src="/assets/img/badges/splunk-core-certified-power-user.png" width="150px" height="150px" class="mx-auto">
+<img src="/assets/img/badges/splunk-core-certified-user.png" width="150px" height="150px" class="mx-auto">
 
 
 # Most Recent Speaking Engagements:
