@@ -13,12 +13,12 @@ Jason Conger is a data and web nerd. In fact, this website started out with [sho
 
 Today, I work at <a rel="noreferrer noopener" href="http://www.splunk.com/" target="_blank">Splunk</a> in the partner organization leading efforts to expand use cases and integrations.
 
-<img src="/assets/img/badges/microsoft-most-valuable-professional-mvp-alumni.png" width="150px" height="150px" class="mx-auto">
-<img src="/assets/img/badges/splunk-enterprise-certified-architect.png" width="150px" height="150px" class="mx-auto">
+<a href="https://www.credly.com/badges/1f35ca8c-880c-4887-9b73-a143201ccc8a/public_url" target="_blank"><img src="/assets/img/badges/microsoft-most-valuable-professional-mvp-alumni.png" width="150px" height="150px" class="mx-auto"></a>
+<a href="https://www.credly.com/badges/b785af08-60b6-4e61-9cdb-c656f3368094/public_url" target="_blank"><img src="/assets/img/badges/splunk-enterprise-certified-architect.png" width="150px" height="150px" class="mx-auto"></a>
 <img src="/assets/img/badges/splunk-certified-developer.png" width="150px" height="150px" class="mx-auto">
-<img src="/assets/img/badges/splunk-enterprise-certified-admin.png" width="150px" height="150px" class="mx-auto">
-<img src="/assets/img/badges/splunk-core-certified-power-user.png" width="150px" height="150px" class="mx-auto">
-<img src="/assets/img/badges/splunk-core-certified-user.png" width="150px" height="150px" class="mx-auto">
+<a href="https://www.credly.com/badges/eb6c8b7c-024b-49fa-a467-5d5f58f79568/public_url" target="_blank"><img src="/assets/img/badges/splunk-enterprise-certified-admin.png" width="150px" height="150px" class="mx-auto"></a>
+<a href="https://www.credly.com/badges/5d4c851e-bb4c-46d5-80b8-11b1d1fcc6b8/public_url" target="_blank"><img src="/assets/img/badges/splunk-core-certified-power-user.png" width="150px" height="150px" class="mx-auto"></a>
+<a href="https://www.credly.com/badges/cebf3d6a-ce29-4fb5-be1d-3a2868e32d75/public_url" target="_blank"><img src="/assets/img/badges/splunk-core-certified-user.png" width="150px" height="150px" class="mx-auto"></a>
 
 
 # Most Recent Speaking Engagements:
