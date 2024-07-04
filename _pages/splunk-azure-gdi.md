@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: /splunk-azure-gdi
+permalink: /splunk-azure-gdi/
 comments: false
 ---
 
