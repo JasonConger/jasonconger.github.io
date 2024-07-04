@@ -7,6 +7,7 @@ layout: post
 thumbnail-img: /assets/img/2013/11/14/session-details-with-map.png
 share-img: /assets/img/2013/11/14/session-details-with-map.png
 categories:
+  - Splunk
   - Splunk Blog
 tags:
   - Splunk

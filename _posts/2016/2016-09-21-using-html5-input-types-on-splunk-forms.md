@@ -6,6 +6,7 @@ layout: post
 thumbnail-img: /assets/img/2016/09/21/Input-Types-Example-1.jpg
 share-img: /assets/img/2016/09/21/Input-Types-Example-1.jpg
 categories:
+  - Splunk
   - Splunk Blog
 tags:
   - Splunk

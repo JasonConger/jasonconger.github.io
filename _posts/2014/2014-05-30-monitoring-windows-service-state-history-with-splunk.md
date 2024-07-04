@@ -6,6 +6,7 @@ layout: post
 thumbnail-img: /assets/img/2014/05/30/windows-service-state-history.jpg
 share-img: /assets/img/2014/05/30/windows-service-state-history.jpg
 categories:
+  - Splunk
   - Splunk Blog
 tags:
   - Splunk

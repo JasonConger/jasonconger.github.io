@@ -7,6 +7,7 @@ layout: post
 thumbnail-img: /assets/img/2013/10/21/User-Experience-Dashboard.png
 share-img: /assets/img/2013/10/21/User-Experience-Dashboard.png
 categories:
+  - Splunk
   - Splunk Blog
 tags:
   - Splunk, Citrix, XenApp

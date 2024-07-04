@@ -6,6 +6,7 @@ layout: post
 thumbnail-img: /assets/img/2017/02/20/NSG1.jpg
 share-img: /assets/img/2017/02/20/NSG1.jpg
 categories:
+  - Splunk
   - Splunk Blog
 tags:
   - Splunk, Azure

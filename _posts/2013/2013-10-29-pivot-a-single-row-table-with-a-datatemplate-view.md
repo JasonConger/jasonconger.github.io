@@ -6,6 +6,7 @@ layout: post
 thumbnail-img: /assets/img/2013/10/29/DataTemplate-Layout.png
 share-img: /assets/img/2013/10/29/DataTemplate-Layout.png
 categories:
+  - Splunk
   - Splunk Blog
 tags:
   - Splunk

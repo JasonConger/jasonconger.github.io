@@ -6,6 +6,7 @@ layout: post
 thumbnail-img: /assets/img/2014/07/31/RDP-from-Splunk.jpg
 share-img: /assets/img/2014/07/31/RDP-from-Splunk.jpg
 categories:
+  - Splunk
   - Splunk Blog
 tags:
   - Splunk

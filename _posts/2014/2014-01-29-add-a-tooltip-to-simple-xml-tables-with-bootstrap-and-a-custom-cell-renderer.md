@@ -7,6 +7,7 @@ layout: post
 thumbnail-img: /assets/img/2014/01/29/Table-with-Bootstrap-Tooltip.png
 share-img: /assets/img/2014/01/29/Table-with-Bootstrap-Tooltip.png
 categories:
+  - Splunk
   - Splunk Blog
 tags:
   - Splunk

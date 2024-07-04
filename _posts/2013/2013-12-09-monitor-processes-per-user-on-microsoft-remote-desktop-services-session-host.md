@@ -7,6 +7,7 @@ layout: post
 thumbnail-img: /assets/img/2013/12/09/RDSH-process-per-user.png
 share-img: /assets/img/2013/12/09/RDSH-process-per-user.png
 categories:
+  - Splunk
   - Splunk Blog
 tags:
   - Splunk

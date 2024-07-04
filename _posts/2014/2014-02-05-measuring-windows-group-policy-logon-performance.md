@@ -6,6 +6,7 @@ layout: post
 thumbnail-img: /assets/img/2014/02/05/GPO-Logon-Perf.png
 share-img: /assets/img/2014/02/05/GPO-Logon-Perf.png
 categories:
+  - Splunk
   - Splunk Blog
 tags:
   - Splunk

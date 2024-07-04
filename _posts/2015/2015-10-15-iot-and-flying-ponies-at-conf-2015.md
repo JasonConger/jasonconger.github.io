@@ -6,6 +6,7 @@ layout: post
 thumbnail-img: /assets/img/2015/10/15/buttercup_2x_1x.jpg
 share-img: /assets/img/2015/10/15/buttercup_2x_1x.jpg
 categories:
+  - Splunk
   - Splunk Blog
 tags:
   - Splunk

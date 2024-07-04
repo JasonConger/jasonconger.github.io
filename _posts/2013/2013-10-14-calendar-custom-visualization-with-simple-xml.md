@@ -7,6 +7,7 @@ layout: post
 thumbnail-img: /assets/img/2013/10/14/calendar.png
 share-img: /assets/img/2013/10/14/calendar.png
 categories:
+  - Splunk
   - Splunk Blog
 tags:
   - Splunk

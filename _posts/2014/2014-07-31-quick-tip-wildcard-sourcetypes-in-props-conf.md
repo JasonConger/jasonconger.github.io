@@ -4,6 +4,7 @@ author: jason
 excerpt: Here is a quick tip to use wildcards in Splunk props.conf stanzas.
 layout: post
 categories:
+  - Splunk
   - Splunk Blog
 tags:
   - Splunk

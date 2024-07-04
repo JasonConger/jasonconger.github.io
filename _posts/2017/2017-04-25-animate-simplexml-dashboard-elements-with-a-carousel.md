@@ -6,6 +6,7 @@ layout: post
 thumbnail-img: /assets/img/2017/04/25/SimpleXMLAnimation.gif
 share-img: /assets/img/2017/04/25/SimpleXMLAnimation.gif
 categories:
+  - Splunk
   - Splunk Blog
 tags:
   - Splunk, Citrix
