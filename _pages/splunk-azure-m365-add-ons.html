@@ -1,0 +1,926 @@
+---
+layout: page
+permalink: /splunk-azure-m365-add-ons/
+comments: false
+head-extra: head-splunk-azure-m365-add-ons.html
+---
+<div class="container-xxl">
+    <h1 class="display-5">Splunk Add-ons for Microsoft Cloud Data Sources</h1>
+    <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Splunk Add-ons</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul id="add-on-nav" class="list-unstyled ps-0">
+                <li class="mb-1">
+                    <button class="btn btn-toggle-jcc align-items-center rounded collapsed text-left" data-bs-toggle="collapse" data-bs-target="#mscs-collapse" aria-expanded="false" style="text-align:left">
+                        Splunk Add-on for Microsoft Cloud Services
+                    </button>
+                    <div class="collapse" id="mscs-collapse">
+                        <ul class="btn-toggle-jcc-nav list-unstyled fw-normal pb-1 small">
+                            <li><a class="link-dark rounded" href="#mscs-storage"><i class="bi-file-code"></i>Azure Storage Table</a></li>
+                            <li><a class="link-dark rounded" href="#mscs-storage"><i class="bi-file-code"></i>Azure Storage Blob</a></li>
+                            <li><a class="link-dark rounded" href="#mscs-audit"><i class="bi-file-code"></i>Azure Audit</a></li>
+                            <li><a class="link-dark rounded" href="#mscs-resource"><i class="bi-file-code"></i>Azure Resource</a></li>
+                            <li><a class="link-dark rounded" href="#mscs-event-hub"><i class="bi-file-code"></i>Event Hub</a></li>
+                            <li><a class="link-dark rounded" href="#mscs-metrics"><i class="bi-file-code"></i>Metrics</a></li>
+                            <li><a class="link-dark rounded" href="#mscs-kql"><i class="bi-file-code"></i>Azure KQL Log Analytics</a></li>
+                            <li><a class="link-dark rounded" href="#mscs-billing"><i class="bi-file-code"></i>Azure Consumption (Billing)</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn btn-toggle-jcc align-items-center rounded collapsed text-left" data-bs-toggle="collapse" data-bs-target="#azure-collapse" aria-expanded="false" style="text-align:left">
+                        Splunk Add-on for Microsoft Azure
+                    </button>
+                    <div class="collapse" id="azure-collapse">
+                        <ul class="btn-toggle-jcc-nav list-unstyled fw-normal pb-1 small">
+                            <li><a class="link-dark rounded" href="#azure-ad-sign-ins"><i class="bi-file-code"></i>Azure Active Directory Sign-ins</a></li>
+                            <li><a class="link-dark rounded" href="#azure-ad-audit"><i class="bi-file-code"></i>Azure Active Directory Audit</a></li>
+                            <li><a class="link-dark rounded" href="#azure-ad-users"><i class="bi-file-code"></i>Azure Active Directory Users</a></li>
+                            <li><a class="link-dark rounded" href="#azure-ad-groups"><i class="bi-file-code"></i>Azure Active Directory Groups</a></li>
+                            <li><a class="link-dark rounded" href="#azure-ad-devices"><i class="bi-file-code"></i>Azure Active Directory Devices</a></li>
+                            <li><a class="link-dark rounded" href="#azure-ad-risk"><i class="bi-file-code"></i>Azure Active Directory Risk Detection</a></li>
+                            <li><a class="link-dark rounded" href="#azure-security-center"><i class="bi-file-code"></i>Azure Security Center Alerts & Tasks</a></li>
+                            <li><a class="link-dark rounded" href="#azure-resource-graph"><i class="bi-file-code"></i>Azure Resource Graph</a></li>
+                            <li><a class="link-dark rounded" href="#azure-topology-automatic"><i class="bi-file-code"></i>Azure Topology (automatic)</a></li>
+                            <li><a class="link-dark rounded" href="#azure-topology-manual"><i class="bi-file-code"></i>Azure Topology (manual)</a></li>
+                            <li><a class="link-dark rounded" href="#azure-add-member"><i class="bi-file-code"></i>Add member to Microsoft 365 Group (alert action)</a></li>
+                            <li><a class="link-dark rounded" href="#azure-stop-vm"><i class="bi-file-code"></i>Stop Azure VM (alert action)</a></li>
+                            <li><a class="link-dark rounded" href="#azure-dismiss-alert"><i class="bi-file-code"></i>Dismiss Azure Alert (alert action)</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn btn-toggle-jcc align-items-center rounded collapsed text-left" data-bs-toggle="collapse" data-bs-target="#o365-collapse" aria-expanded="false" style="text-align:left">
+                        Splunk Add-on for Microsoft Office 365
+                    </button>
+                    <div class="collapse" id="o365-collapse">
+                        <ul class="btn-toggle-jcc-nav list-unstyled fw-normal pb-1 small">
+                            <li><a class="link-dark rounded" href="#o365-management-activity"><i class="bi-file-code"></i>Management Activity</a></li>
+                            <li><a class="link-dark rounded" href="#o365-service-health"><i class="bi-file-code"></i>Service Health & Communications</a></li>
+                            <li><a class="link-dark rounded" href="#o365-mailbox"><i class="bi-file-code"></i>Mailbox</a></li>
+                            <li><a class="link-dark rounded" href="#o365-o365"><i class="bi-file-code"></i>Office 365</a></li>
+                            <li><a class="link-dark rounded" href="#o365-ondedrive"><i class="bi-file-code"></i>OneDrive</a></li>
+                            <li><a class="link-dark rounded" href="#o365-sharepoint"><i class="bi-file-code"></i>SharePoint</a></li>
+                            <li><a class="link-dark rounded" href="#o365-teams"><i class="bi-file-code"></i>Teams</a></li>
+                            <li><a class="link-dark rounded" href="#o365-yammer"><i class="bi-file-code"></i>Yammer</a></li>
+                            <li><a class="link-dark rounded" href="#o365-audit-logs"><i class="bi-file-code"></i>Audit Logs</a></li>
+                            <li><a class="link-dark rounded" href="#o365-cas"><i class="bi-file-code"></i>Cloud Application Security</a></li>
+                            <li><a class="link-dark rounded" href="#o365-message-trace"><i class="bi-file-code"></i>Message Trace</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn btn-toggle-jcc align-items-center rounded collapsed text-left" data-bs-toggle="collapse" data-bs-target="#email-collapse" aria-expanded="false" style="text-align:left">
+                        Microsoft O365 Email Add-on for Splunk
+                    </button>
+                    <div class="collapse" id="email-collapse">
+                        <ul class="btn-toggle-jcc-nav list-unstyled fw-normal pb-1 small">
+                            <li><a class="link-dark rounded" href="#email-email"><i class="bi-file-code"></i>O365 Email</a></li>
+                            <li><a class="link-dark rounded" href="#email-groups"><i class="bi-file-code"></i>O365 Email Groups</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn btn-toggle-jcc align-items-center rounded collapsed text-left" data-bs-toggle="collapse" data-bs-target="#teams-collapse" aria-expanded="false" style="text-align:left">
+                        Microsoft Teams Add-on for Splunk
+                    </button>
+                    <div class="collapse" id="teams-collapse">
+                        <ul class="btn-toggle-jcc-nav list-unstyled fw-normal pb-1 small">
+                            <li><a class="link-dark rounded" href="#teams-user-report"><i class="bi-file-code"></i>Teams User Report</a></li>
+                            <li><a class="link-dark rounded" href="#teams-subscription"><i class="bi-file-code"></i>Teams Subscription</a></li>
+                            <li><a class="link-dark rounded" href="#teams-call-record"><i class="bi-file-code"></i>Teams Call Record</a></li>
+                            <li><a class="link-dark rounded" href="#teams-webhook"><i class="bi-file-code"></i>Teams Webhook</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn btn-toggle-jcc align-items-center rounded collapsed text-left" data-bs-toggle="collapse" data-bs-target="#security-collapse" aria-expanded="false" style="text-align:left">
+                        Splunk Add-on for Microsoft Security
+                    </button>
+                    <div class="collapse" id="security-collapse">
+                        <ul class="btn-toggle-jcc-nav list-unstyled fw-normal pb-1 small">
+                            <li><a class="link-dark rounded" href="#security-incidents"><i class="bi-file-code"></i>Microsoft 365 Defender Incidents</a></li>
+                            <li><a class="link-dark rounded" href="#security-advanced-hunting"><i class="bi-file-code"></i>Defender Advanced Hunting (action)</a></li>
+                            <li><a class="link-dark rounded" href="#security-update-incident"><i class="bi-file-code"></i>Defender Update Incident (action)</a></li>
+                            <li><a class="link-dark rounded" href="#security-endpoint-alerts"><i class="bi-file-code"></i>Microsoft Defender for Endpoint Alerts</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn btn-toggle-jcc align-items-center rounded collapsed text-left" data-bs-toggle="collapse" data-bs-target="#graph-security-collapse" aria-expanded="false" style="text-align:left">
+                        Microsoft Graph Security API Add-on for Splunk
+                    </button>
+                    <div class="collapse" id="graph-security-collapse">
+                        <ul class="btn-toggle-jcc-nav list-unstyled fw-normal pb-1 small">
+                            <li><a class="link-dark rounded" href="#graph-security-input"><i class="bi-file-code"></i>Microsoft Graph Security</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <table class="table table-bordered table-hover">
+        <thead class="table-light">
+            <tr>
+                <th><button type="button" class="btn btn-outline-primary btn-sm" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling" title="Expand menu"><i class="bi-chevron-double-right"></i></button> Add-on</th>
+                <th>Input/Action</th>
+                <th>API</th>
+                <th>Permissions</th>
+                <th>Role (IAM)</th>
+                <th>Default Sourcetype(s) / Sources</th>
+            </tr>
+        </thead>
+        <tbody class="table-group-divider">
+            <!-- Splunk Add-on for Microsoft Cloud Services -->
+            <!-- #region -->
+            <tr>
+                <td rowspan="7">
+                    <a name="mscs" class="anchor"></a>
+                    <b>Splunk Add-on for Microsoft Cloud Services</b>
+                    <hr />
+                    <ul class="list-unstyled">
+                        <li><a href="https://splunkbase.splunk.com/app/3110/" target="_blank" class="bi-link">Splunkbase</a></li>
+                        <li> <a href="https://docs.splunk.com/Documentation/AddOns/released/MSCloudServices/About" target="_blank" class="bi-journal">Documentation</a></li>
+                    </ul>
+                </td>
+                <td>
+                    <a name="mscs-storage" class="anchor"></a>
+                    <p class="text-nowrap">
+                        Azure Storage Table <br />
+                        Azure Storage Blob
+                    </p>
+                </td>
+                <td> N/A </td>
+                <td>
+                    Access key OR <br />
+                    Shared Access Signature (SAS)
+                    <br /><br />
+                    <button type="button" class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#SASModal"><i class="bi-info-circle"></i> SAS Requirements</button>
+                    <!-- SAS Modal -->
+                    <div class="modal fade" id="SASModal" tabindex="-1" aria-labelledby="SASModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="SASModalLabel"><img src="/assets/img/pages/splunk-azure-m365-add-ons/storage-account.svg" /> Storage Account SAS Requirements Detail</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <h4>Required settings for Shared Access Signature</h4>
+                                    <ul>
+                                        <li>Allowed services: <code>Blob, Table</code></li>
+                                        <li>Allowed resource types: <code>Service, Container, Object</code></li>
+                                        <li>Allowed permissions: <code>Read, List</code></li>
+                                    </ul>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td> N/A </td>
+                <td>
+                    <code>
+                        mscs:storage:blob <br />
+                        mscs:storage:blob:json <br />
+                        mscs:storage:blob:xml <br />
+                        mscs:storage:table
+                    </code>
+                </td>
+            </tr>
+            <tr>
+                <td><a name="mscs-audit" class="anchor"></a> Azure Audit </td>
+                <td> N/A </td>
+                <td> N/A </td>
+                <td> (Subscription) Reader </td>
+                <td> <code>mscs:azure:audit</code> </td>
+            </tr>
+            <tr>
+                <td><a name="mscs-resource" class="anchor"></a> Azure Resource </td>
+                <td> N/A </td>
+                <td> N/A </td>
+                <td> (Subscription) Reader </td>
+                <td>
+                    <code>
+                        mscs:resource:virtualMachine <br />
+                        mscs:resource:networkInterfaceCard <br />
+                        mscs:resource:publicIPAddress <br />
+                        mscs:resource:virtualNetwork <br />
+                        mscs:resource:disk <br />
+                        mscs:resource:image <br />
+                        mscs:resource:snapshot <br />
+                        mscs:resource:resourceGroup <br />
+                        mscs:resource:subscriptions <br />
+                        mscs:resource:securityGroup
+                    </code>
+                </td>
+            </tr>
+            <tr>
+                <td><a name="mscs-event-hub" class="anchor"></a> Event Hub </td>
+                <td> N/A </td>
+                <td> N/A </td>
+                <td> (Event Hub) Azure Event Hubs Data receiver </td>
+                <td>
+                    <code>
+                        mscs:azure:eventhub <br />
+                        azure:monitor:aad <br />
+                        azure:monitor:activity <br />
+                        azure:monitor:resource <br />
+                    </code>
+                    <br />
+                    <button type="button" class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#eventhubModal"><i class="bi-info-circle"></i> Sourcetype detail</button>
+                    <!-- Sourcetype Modal -->
+                    <div class="modal fade" id="eventhubModal" tabindex="-1" aria-labelledby="eventhubModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="eventhubModalLabel"><img src="/assets/img/pages/splunk-azure-m365-add-ons/event-hubs.svg" /> Event Hub Sourcetype Detail</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    The Splunk Add-on for Microsoft Cloud Servies includes pre-trained sourcetypes for certain data sources.
+                                    <p>
+                                    <ul>
+                                        <li style="margin: 10px 0;"><b><code>azure:monitor:aad</code></b> - used for Microsoft Entra ID (Azure Active Directory) events such as sign-in events and Azure AD audit events.</li>
+                                        <li style="margin: 10px 0;"><b><code>azure:monitor:resource</code></b> - used for Azure resources such as Cosmos DB and Azure Data Share.</li>
+                                        <li style="margin: 10px 0;"><b><code>mscs:azure:eventhub</code></b> - used for generic event hub events. This sourcetype does not have any CIM mappings out-of-the-box.</li>
+                                    </ul>
+                                    </p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td><a name="mscs-metrics" class="anchor"></a> Metrics </td>
+                <td> N/A </td>
+                <td></td>
+                <td> (Subscription) Reader </td>
+                <td>
+                    <code>
+                        mscs:metrics <br />
+                        mscs:metrics:events
+                    </code>
+                </td>
+            </tr>
+            <tr>
+                <td><a name="mscs-kql" class="anchor"></a> Azure KQL Log Analytics </td>
+                <td> Log Analytics API </td>
+                <td> (Application) Data.Read - Read Log Analytics data </td>
+                <td> N/A </td>
+                <td>
+                    <code>
+                        mscs:kql <br />
+                        mscs:kql:stats
+                    </code>
+                </td>
+            </tr>
+            <tr>
+                <td><a name="mscs-billing" class="anchor"></a> Azure Consumption (Billing) </td>
+                <td> N/A </td>
+                <td></td>
+                <td> (Subscription) Reader </td>
+                <td>
+                    <code>
+                        mscs:consumption:billing <br />
+                        mscs:consumption:reservation:recommendation
+                    </code>
+                </td>
+            </tr>
+            <!-- endregion -->
+            <tr class="table-dark">
+                <td colspan="6"></td>
+            </tr>
+            <!-- Splunk Add-on for Microsoft Azure -->
+            <!-- #region -->
+            <tr>
+                <td rowspan="13">
+                    <a name="azure-add-on"></a>
+                    <b>Splunk Add-on for Microsoft Azure</b>
+                    <hr />
+                    <ul class="list-unstyled">
+                        <li> <a href="https://splunkbase.splunk.com/app/3757/" target="_blank" class="bi-link">Splunkbase</a></li>
+                        <li> <a href="https://github.com/splunk/splunk-add-on-microsoft-azure/wiki" target="_blank" class="bi-journal text-nowrap">Documentation</a></li>
+                    </ul>
+                </td>
+                <td><a name="azure-ad-sign-ins" class="anchor"></a>
+                    <span style="white-space: nowrap">
+                        Azure Active Directory <sup><a href="#aad-entra-id" class="text-decoration-none" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Azure Active Directory is now Microsoft Entra ID">[1]</a></sup> Sign-ins
+                        <button class="btn btn-sm bi-info-circle" role="button" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-html="true" data-bs-content="The REST API this input uses is subject to throttling limits. Refer to the <a href='https://github.com/splunk/splunk-add-on-microsoft-azure/wiki/Configure-Azure-Active-Directory-inputs-for-the-Splunk-Add-on-for-Microsoft-Azure#throttling-guidance' target='_blank'>throttling guidance</a> for more information."></button>
+                    </span>
+                </td>
+                <td> Microsoft Graph </td>
+                <td>
+                    (Application) AuditLog.Read.All - Read all audit log data <br />
+                    (Application) Directory.Read.All
+                </td>
+                <td> N/A </td>
+                <td>
+                    <code>azure:aad:signin</code>
+                </td>
+            </tr>
+            <tr>
+                <td><a name="azure-ad-audit" class="anchor"></a>
+                    Azure Active Directory <sup><a href="#aad-entra-id" class="text-decoration-none" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Azure Active Directory is now Microsoft Entra ID">[1]</a></sup> Audit
+                    <button class="btn bi-info-circle" role="button" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-html="true" data-bs-content="The REST API this input uses is subject to throttling limits. Refer to the <a href='https://github.com/splunk/splunk-add-on-microsoft-azure/wiki/Configure-Azure-Active-Directory-inputs-for-the-Splunk-Add-on-for-Microsoft-Azure#throttling-guidance' target='_blank'>throttling guidance</a> for more information."></button>
+                </td>
+                <td> Microsoft Graph </td>
+                <td>
+                    (Application) AuditLog.Read.All - Read all audit log data <br />
+                    (Application) Directory.Read.All
+                </td>
+                <td> N/A </td>
+                <td>
+                    <code>azure:aad:audit</code>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a name="azure-ad-users" class="anchor"></a> Azure Active Directory <sup><a href="#aad-entra-id" class="text-decoration-none" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Azure Active Directory is now Microsoft Entra ID">[1]</a></sup> Users
+                </td>
+                <td> Microsoft Graph </td>
+                <td> (Application) User.Read.All - Read all users' full profiles </td>
+                <td> N/A </td>
+                <td><code> azure:aad:user </code></td>
+            </tr>
+            <tr>
+                <td>
+                    <a name="azure-ad-groups" class="anchor"></a> Azure Active Directory <sup><a href="#aad-entra-id" class="text-decoration-none" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Azure Active Directory is now Microsoft Entra ID">[1]</a></sup> Groups
+                </td>
+                <td> Microsoft Graph </td>
+                <td> (Application) Group.Read.All - Read all groups </td>
+                <td> N/A </td>
+                <td><code> azure:aad:group </code></td>
+            </tr>
+            <tr>
+                <td>
+                    <a name="azure-ad-devices" class="anchor"></a> Azure Active Directory <sup><a href="#aad-entra-id" class="text-decoration-none" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Azure Active Directory is now Microsoft Entra ID">[1]</a></sup> Devices
+                </td>
+                <td> Microsoft Graph </td>
+                <td> (Application) Device.Read.All - Read all devices </td>
+                <td> N/A </td>
+                <td><code> azure:aad:device </code></td>
+            </tr>
+            <tr>
+                <td>
+                    <a name="azure-ad-risk" class="anchor"></a> Azure Active Directory <sup><a href="#aad-entra-id" class="text-decoration-none" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Azure Active Directory is now Microsoft Entra ID">[1]</a></sup> Risk Detection
+                </td>
+                <td> Microsoft Graph </td>
+                <td>
+                    (Application) IdentityRiskEvent.Read.All - Read all identity risk event
+                    information <br />
+                    (Application) IdentityRiskyUser.Read.All - Read all identity risk user
+                    information
+                </td>
+                <td> N/A </td>
+                <td>
+                    <code>
+                        azure:aad:identity_protection:risk_detection <br />
+                        azure:aad:identity_protection:risky_user
+                    </code>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a name="azure-ad-security-center" class="anchor"></a> Azure Security Center <sup><a href="#aad-entra-id" class="text-decoration-none" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Azure Security Center is now Microsoft Defender for Cloud">[2]</a></sup> Alerts & Tasks
+                </td>
+                <td> N/A </td>
+                <td> </td>
+                <td> (Subscription) Reader </td>
+                <td>
+                    <code>
+                        azure:securityCenter:alert <br />
+                        azure:securityCenter:task    
+                    </code>
+                </td>
+            </tr>
+            <tr>
+                <td> Azure Resource Graph </td>
+                <td> N/A </td>
+                <td> </td>
+                <td> (Subscription) Reader </td>
+                <td>
+                    <code>
+                        azure:resourcegraph
+                    </code>
+                </td>
+            </tr>
+            <tr>
+                <td><a name="azure-topology-automatic" class="anchor"></a> Azure Topology (automatic) </td>
+                <td> N/A </td>
+                <td> </td>
+                <td> (Subscription) Reader </td>
+                <td>
+                    <code>
+                        azure:topology
+                    </code>
+                </td>
+            </tr>
+            <tr>
+                <td><a name="azure-topology-manual" class="anchor"></a> Azure Topology (manual) </td>
+                <td> N/A </td>
+                <td> </td>
+                <td> (Subscription) Reader </td>
+                <td>
+                    <code>
+                        azure:topology
+                    </code>
+                </td>
+            </tr>
+            <tr>
+                <td><a name="azure-add-member" class="anchor"></a> Add member to Microsoft 365 Group (alert action) </td>
+                <td> Microsoft Graph </td>
+                <td> (Application) GroupMember.ReadWrite.All - Read and write all group memberships </td>
+                <td> N/A </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><a name="azure-stop-vm" class="anchor"></a> Stop Azure VM (alert action) </td>
+                <td> N/A </td>
+                <td> </td>
+                <td> (Subscription) Virtual Machine Contributor </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><a name="azure-dismiss-alert" class="anchor"></a> Dismiss Azure Alert (alert action) </td>
+                <td> N/A </td>
+                <td> </td>
+                <td> (Subscription) Contributor </td>
+                <td></td>
+            </tr>
+            <!-- endregion -->
+            <tr class="table-dark">
+                <td colspan="6"></td>
+            </tr>
+            <!-- Splunk Add-on for Microsoft Office 365 -->
+            <!-- #region -->
+            <tr>
+                <td rowspan="11">
+                    <a name="o365" class="anchor"></a>
+                    <b>Splunk Add-on for Microsoft Office 365</b>
+                    <hr />
+                    <ul class="list-unstyled">
+                        <li> <a href="https://splunkbase.splunk.com/app/4055/" target="_blank" class="bi-link">Splunkbase</a></li>
+                        <li> <a href="https://docs.splunk.com/Documentation/AddOns/released/MSO365/About" target="_blank" class="bi-journal">Documentation</a></li>
+                    </ul>
+                </td>
+                <td>
+                    <a name="o365-management-activity" class="anchor"></a>
+                    Management Activity:
+                    <ul>
+                        <li>Audit.Azure Active Directory</li>
+                        <li>Audit.Exchange</li>
+                        <li>Audit.Share Point</li>
+                        <li>Audit.General</li>
+                        <li>DLP.All</li>
+                    </ul>
+                </td>
+                <td> Office 365 Management APIs </td>
+                <td>
+                    (Application) ActivityFeed.Read <br />
+                    (Application) ActivityFeed.ReadDlp (if collecting DLP data) <br /><br />
+                    (Delegated) ActivityFeed.Read <br />
+                    (Delegated) ActivityFeed.ReadDlp (if collecting DLP data)
+                </td>
+                <td> N/A </td>
+                <td>
+                    <code>
+                        o365:management:activity
+                    </code>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a name="o365-service-health" class="anchor"></a>
+                    Service Health & Communications
+                    <ul>
+                        <li>Service Health</li>
+                        <li>Service Update Messages</li>
+                    </ul>
+                </td>
+                <td>Microsoft Graph</td>
+                <td>
+                    (Application) ServiceHealth.Read.All <br />
+                    (Application) ServiceMessage.Read.All
+                </td>
+                <td>N/A</td>
+                <td>
+                    <code>
+                        o365:service:healthIssue <br />
+                        o365:service:updateMessage
+                    </code>
+                </td>
+            </tr>
+            <tr>
+                <td><a name="o365-mailbox" class="anchor"></a> Mailbox
+                    <ul>
+                        <li>Mailbox Usage Detail</li>
+                        <li>Mailbox Usage Mailbox Counts</li>
+                    </ul>
+                </td>
+                <td> Microsoft Graph </td>
+                <td> (Application) Reports.Read.All </td>
+                <td> N/A </td>
+                <td> <code>sourcetype=o365:graph:api
+                                        source=MailboxUsageMailboxCounts
+                                        source=MailboxUsageDetail</code>
+                </td>
+            </tr>
+            <tr>
+                <td><a name="o365-o365" class="anchor"></a> Office 365
+                    <ul>
+                        <li>Office 365 Groups Activity Detail</li>
+                        <li>Office 365 Services User Counts</li>
+                    </ul>
+                </td>
+                <td> Microsoft Graph </td>
+                <td> (Application) Reports.Read.All </td>
+                <td> N/A </td>
+                <td> <code>sourctype=o365:graph:api
+                                        source=Office365GroupsActivityDetail
+                                        source=Office365ServicesUserCounts</code>
+                </td>
+            </tr>
+            <tr>
+                <td><a name="o365-onedrive" class="anchor"></a> OneDrive
+                    <ul>
+                        <li>One Drive Activity User Counts</li>
+                        <li>One Drive Usage Account Detail</li>
+                        <li>One Drive Usage Storage</li>
+                    </ul>
+                </td>
+                <td> Microsoft Graph </td>
+                <td> (Application) Reports.Read.All </td>
+                <td> N/A </td>
+                <td> <code>sourcetype=o365:graph:api
+                                        source=OneDriveActivityUserCounts
+                                        source=OneDriveUsageAccountDetail
+                                        source=OneDriveUsageStorage</code>
+                </td>
+            </tr>
+            <tr>
+                <td><a name="o365-sharepoint" class="anchor"></a> SharePoint
+                    <ul>
+                        <li>SharePoint Site Usage Detail</li>
+                        <li>SharePoint Site Usage File Counts</li>
+                    </ul>
+                </td>
+                <td> Microsoft Graph </td>
+                <td> (Application) Reports.Read.All </td>
+                <td> N/A </td>
+                <td> <code>sourcetype=o365:graph:api
+                                        source=SharePointSiteUsageDetail
+                                        source=SharePointSiteUsageFileCounts</code>
+                </td>
+            </tr>
+            <tr>
+                <td><a name="o365-teams" class="anchor"></a> Teams
+                    <ul>
+                        <li>Teams User Activity Counts</li>
+                        <li>Teams User Activity User Detail</li>
+                    </ul>
+                </td>
+                <td> Microsoft Graph </td>
+                <td> (Application) Reports.Read.All </td>
+                <td> N/A </td>
+                <td> <code>sourcetype=o365:graph:api
+                                        source=TeamsUserActivityCounts
+                                        source=TeamsUserActivityUserDetail</code>
+                </td>
+            </tr>
+            <tr>
+                <td><a name="o365-yammer" class="anchor"></a> Yammer
+                    <ul>
+                        <li>Yammer Groups Activity Detail</li>
+                        <li>Yammer Groups Activity Group Counts</li>
+                    </ul>
+                </td>
+                <td> Microsoft Graph </td>
+                <td> (Application) Reports.Read.All </td>
+                <td> N/A </td>
+                <td> <code>sourcetype=o365:graph:api
+                                        source=YammerGroupsActivityDetail
+                                        source=YammerGroupsActivityGroupCounts</code>
+                </td>
+            </tr>
+            <tr>
+                <td><a name="o365-audit-logs" class="anchor"></a> Audit Logs
+                    <ul>
+                        <li>Audit Logs.Sign Ins</li>
+                    </ul>
+                </td>
+                <td> Microsoft Graph </td>
+                <td> (Application) AuditLog.Read.All <br />
+                    (Application) Directory.Read.All </td>
+                <td> N/A </td>
+                <td> <code>sourcetype=o365:graph:api
+                                        source=AuditLogs.SignIns</code>
+                </td>
+            </tr>
+            <tr>
+                <td><a name="o365-cas" class="anchor"></a> Cloud Application Security <sup><a href="#3-cas" class="text-decoration-none" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Cloud Application Security is now Microsoft Defender for Cloud Apps">[3]</a></sup>
+                    <ul>
+                        <li>Policies</li>
+                        <li>Alerts</li>
+                        <li>Cloud Discovery</li>
+                        <li>Entities</li>
+                        <li>Files</li>
+                    </ul>
+                    <p class="fw-lighter"><small>Cloud Application Security is now Microsoft Defender for Cloud Apps</small></p>
+                </td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td> <code>o365:cas:api</code>
+                </td>
+            </tr>
+            <tr>
+                <td><a name="o365-message-trace" class="anchor"></a> Message Trace</td>
+                <td>
+                    Office 365 Exchange Online
+                    <button class="btn btn-sm bi-info-circle" role="button" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-html="true" data-bs-content="Choose <b>APIs my organization uses</b> and then search for '<b>Office 365 Exchange Online</b>'"></button>
+                </td>
+                <td> (Application) ReportingWebService.Read.All </td>
+                <td> Global Reader </td>
+                <td> <code>o365:reporting:messagetrace</code>
+                </td>
+            </tr>
+            <!-- endregion -->
+            <tr class="table-dark">
+                <td colspan="6"></td>
+            </tr>
+            <!-- Microsoft O365 Email Add-on for Splunk -->
+            <!-- #region -->
+            <tr>
+                <td rowspan="2">
+                    <a name="email" class="anchor"></a>
+                    <b>Microsoft O365 Email Add-on for Splunk</b>
+                    <hr />
+                    <ul class="list-unstyled">
+                        <li><a href="https://splunkbase.splunk.com/app/5365/" target="_blank" class="bi-link">Splunkbase</a></li>
+                        <li><a href="https://splunkbase.splunk.com/app/5365/" target="_blank" class="bi-journal">Documentation</a></li>
+                    </ul>
+                </td>
+                <td>
+                    <a name="email-email" class="anchor"></a>
+                    O365 Email
+                </td>
+                <td> Microsoft Graph </td>
+                <td>
+                    (Application) Mail.ReadWrite
+                </td>
+                <td> N/A </td>
+                <td>
+                    <code>
+                        ms:o365:email
+                    </code>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a name="email-groups" class="anchor"></a>
+                    O365 Email Groups
+                </td>
+                <td> Microsoft Graph </td>
+                <td>
+                    (Application) Group.Read.All <br />
+                    (Application) GroupMember.Read.All <br />
+                    (Application) Directory.Read.All
+                </td>
+                <td> N/A </td>
+                <td>
+                    <code>
+                        ms:o365:groups
+                    </code>
+                </td>
+            </tr>
+            <!-- endregion -->
+            <tr class="table-dark">
+                <td colspan="6"></td>
+            </tr>
+            <!-- Microsoft Teams Add-on for Splunk -->
+            <!-- #region -->
+            <tr>
+                <td rowspan="4">
+                    <a name="teams" class="anchor"></a>
+                    <b>Microsoft Teams Add-on for Splunk</b>
+                    <hr />
+                    <ul class="list-unstyled">
+                        <li><a href="https://splunkbase.splunk.com/app/4994/" target="_blank" class="bi-link">Splunkbase</a></li>
+                        <li><a href="https://lantern.splunk.com/Data_Descriptors/Microsoft/Getting_started_with_the_Microsoft_Teams_Add-on_for_Splunk" target="_blank" class="bi-journal">Documentation</a></li>
+                    </ul>
+                </td>
+                <td>
+                    <a name="teams-user-report" class="anchor"></a>
+                    Teams User Report
+                </td>
+                <td> Microsoft Graph </td>
+                <td>
+                    (Application) Reports.Read.All <br />
+                    (Delegated) Reports.Read.All
+                </td>
+                <td> N/A </td>
+                <td>
+                    <code>
+                        m365:teams:user:report
+                    </code>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a name="teams-subscription" class="anchor"></a>
+                    Teams Subscription
+                </td>
+                <td> Microsoft Graph </td>
+                <td> (Delegated) Subscriptions.Read.All</td>
+                <td> N/A </td>
+                <td>
+                    <code>
+                        m365:subscription
+                    </code>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a name="teams-call-record" class="anchor"></a>
+                    Teams Call Record
+                </td>
+                <td> Microsoft Graph </td>
+                <td> (Application) CallRecords.Read.All </td>
+                <td> N/A </td>
+                <td>
+                    <code>
+                        m365:teams:callRecord
+                    </code>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a name="teams-webhook" class="anchor"></a>
+                    Teams Webhook
+                </td>
+                <td> N/A </td>
+                <td> N/A </td>
+                <td> N/A </td>
+                <td>
+                    <code>
+                        m365:webhook
+                    </code>
+                </td>
+            </tr>
+            <!-- endregion -->
+            <tr class="table-dark">
+                <td colspan="6"></td>
+            </tr>
+            <!-- Splunk Add-on for Microsoft Security -->
+            <!-- #region -->
+            <tr>
+                <td rowspan="4">
+                    <a name="security" class="anchor"></a>
+                    <b>Splunk Add-on for Microsoft Security</b>
+                    <hr />
+                    <ul class="list-unstyled">
+                        <li><a href="https://splunkbase.splunk.com/app/6207/" target="_blank" class="bi-link">Splunkbase</a></li>
+                        <li><a href="https://docs.splunk.com/Documentation/AddOns/released/MSSecurity/About" target="_blank" class="bi-journal">Documentation</a></li>
+                    </ul>
+                </td>
+                <td>
+                    <a name="security-incidents" class="anchor"></a>
+                    Microsoft 365 Defender Incidents
+                </td>
+                <td> Microsoft Threat Protection </td>
+                <td>
+                    (Application) Incident.Read.All
+                </td>
+                <td> N/A </td>
+                <td>
+                    <code>
+                        m365:defender:incident <br />
+                        m365:defender:incident:alerts
+                    </code>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a name="security-advanced-hunting" class="anchor"></a>
+                    Defender Advanced Hunting (action)
+                </td>
+                <td> Microsoft Threat Protection </td>
+                <td>
+                    (Application) AdvancedHunting.Read.All
+                </td>
+                <td> N/A </td>
+                <td>
+                    <code>
+                        m365:defender:incident:advanced_hunting
+                    </code>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a name="security-update-incident" class="anchor"></a>
+                    Defender Update Incident (action)
+                </td>
+                <td> Microsoft Threat Protection </td>
+                <td>
+                    (Application) Incident.ReadWrite.All
+                </td>
+                <td> N/A </td>
+                <td>
+                    N/A
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a name="security-endpoint-alerts" class="anchor"></a>
+                    Microsoft Defender for Endpoint Alerts
+                </td>
+                <td> WindowsDefenderATP </td>
+                <td>
+                    (Application) Alert.Read.All
+                </td>
+                <td> N/A </td>
+                <td>
+                    <code>
+                        ms:defender:atp:alerts
+                    </code>
+                </td>
+            </tr>
+            <!-- endregion -->
+            <tr class="table-dark">
+                <td colspan="6"></td>
+            </tr>
+            <!-- Microsoft Graph Security API Add-on for Splunk -->
+            <!-- #region -->
+            <tr>
+                <td>
+                    <a name="graph-security" class="anchor"></a>
+                    <b>Microsoft Graph Security API Add-on for Splunk</b>
+                    <hr />
+                    <ul class="list-unstyled">
+                        <li><a href="https://splunkbase.splunk.com/app/4564/" target="_blank" class="bi-link">Splunkbase</a></li>
+                        <li><a href="https://splunkbase.splunk.com/app/4564/" target="_blank" class="bi-journal">Documentation</a></li>
+                    </ul>
+                </td>
+                <td>
+                    <a name="graph-security-input" class="anchor"></a>
+                    Microsoft Graph Security
+                </td>
+                <td> Microsoft Graph </td>
+                <td>
+                    (Application) SecurityEvents.Read.All
+                </td>
+                <td> N/A </td>
+                <td>
+                    <code>
+                        mscs:resource:virtualMachine <br />
+                        mscs:resource:networkInterfaceCard <br />
+                        mscs:resource:publicIPAddress <br />
+                        mscs:resource:virtualNetwork <br />
+                        mscs:resource:disk <br />
+                        mscs:resoure:image <br />
+                        mscs:resoure:snapshot <br />
+                        mscs:resoure:resourceGroup <br />
+                        mscs:resoure:subscriptions <br />
+                        mscs:resoure:securityGroup
+                    </code>
+                </td>
+            </tr>
+            <!-- endregion -->
+            <tr class="table-dark">
+                <td colspan="6"></td>
+            </tr>
+        </tbody>
+    </table>
+    <p class="fw-lighter">
+        <a name="aad-entra-id"></a>
+        [1] Azure Active Directory is now Microsoft Entra ID
+    </p>
+    <p class="fw-lighter">
+        <a name="2-aad-security-center"></a>
+        [2] Azure Security Center is now Microsoft Defender for Cloud
+    </p>
+    <p class="fw-lighter">
+        <a name="3-cas"></a>
+        [3] Cloud Application Security is now Microsoft Defender for Cloud Apps
+    </p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+<script>
+    const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+    const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+</script>
+<script src="https://cdn.jsdelivr.net/npm/intro.js@7.2.0/intro.min.js"></script>
+<script>
+    //introJs().start();
+</script>
