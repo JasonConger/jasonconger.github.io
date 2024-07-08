@@ -94,11 +94,14 @@
   <meta property="og:type" content="website">
   {% endif %}
 
+  {% if page.head-extra %}
+    {% for file in page.head-extra %}
+      {% include {{ file }} %}
+    {% endfor %}
+  {% endif %}
 
   {% seo %}
   
- 
   {% include adsense-auto.html %}
 
- 
 </head>
