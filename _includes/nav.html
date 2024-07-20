@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-xl navbar-light fixed-top navbar-custom top-nav-regular">
-  <a class="navbar-brand" href="{{ '' | absolute_url }}"><i class="bi bi-house-door-fill"></i></a>
+  <a class="navbar-brand" href="{{ '/' | absolute_url }}"><i class="bi bi-house-door-fill"></i></a>
   
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -18,15 +18,6 @@
       <li class="nav-item">
         <a class="nav-link" href="/about-jason-conger">About</a>
       </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
-          Splunk + Microsoft Cloud Resources
-        </a>
-        <div class="dropdown-menu">
-          <a class="dropdown-item" href="https://jasonconger.github.io/splunk-azure-gdi/">Getting Data In (GDI) Sankey Diagram</a>
-          <a class="dropdown-item" href="https://jasonconger.github.io/splunk-azure-m365-add-ons/">Splunk Add-ons for Microsoft Cloud Data Sources Table</a>
-        </div>
-      </li>
       <li class="nav-item">
           <a class="nav-link" href="https://linkedin.com/in/JasonConger" target="_blank"><i class="bi bi-linkedin"></i></a>
       </li>
@@ -39,13 +30,22 @@
       <li class="nav-item">
           <a target="_blank" class="nav-link" href="https://github.com/JasonConger"><i class="bi bi-github"></i> GitHub Projects</a>
       </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+          Splunk + Microsoft Cloud Resources
+        </a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="https://jasonconger.github.io/splunk-azure-gdi/">Getting Data In (GDI) Sankey Diagram</a>
+          <a class="dropdown-item" href="https://jasonconger.github.io/splunk-azure-m365-add-ons/">Splunk Add-ons for Microsoft Cloud Data Sources Table</a>
+        </div>
+      </li>
     </ul>
   </div>
 
   <div class="avatar-container">
     <div class="avatar-img-border">
-      <a href="{{ '' | absolute_url }}">
-        <img alt="JasonConger.com" class="avatar-img" src="{{ '/assets/img/jcc-128.png' | relative_url }}" />
+      <a href="{{ '/' | absolute_url }}">
+        <img alt="JasonConger.com" class="avatar-img" src="{{ site.avatar | relative_url }}" />
       </a>
     </div>
   </div>
