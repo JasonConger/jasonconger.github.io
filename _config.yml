@@ -11,8 +11,9 @@ twitter:
 social:
   name: Jason Conger
   links:
-    - https://twitter.com/JasonConger
     - https://www.linkedin.com/in/JasonConger
+    - https://www.youtube.com/JasonConger
+    - https://twitter.com/JasonConger
     - https://github.com/JasonConger
 
 # Authors
@@ -30,7 +31,8 @@ authors:
 
 # Image to show in the navigation bar - works best with a square image
 # Remove this parameter if you don't want an image in the navbar
-avatar: "/assets/img/jcc-128.png"
+# avatar: "/assets/img/jcc-128.png"
+avatar: "/assets/img/jason_conger.jpeg"
 
 
 # --- General options --- #
