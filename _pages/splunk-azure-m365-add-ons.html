@@ -37,13 +37,15 @@ full-width: true
                     </button>
                     <div class="collapse" id="azure-collapse">
                         <ul class="btn-toggle-jcc-nav list-unstyled fw-normal pb-1 small">
-                            <li><a class="link-dark rounded" href="#azure-ad-sign-ins"><i class="bi-file-code"></i>Azure Active Directory Sign-ins</a></li>
-                            <li><a class="link-dark rounded" href="#azure-ad-audit"><i class="bi-file-code"></i>Azure Active Directory Audit</a></li>
-                            <li><a class="link-dark rounded" href="#azure-ad-users"><i class="bi-file-code"></i>Azure Active Directory Users</a></li>
-                            <li><a class="link-dark rounded" href="#azure-ad-groups"><i class="bi-file-code"></i>Azure Active Directory Groups</a></li>
-                            <li><a class="link-dark rounded" href="#azure-ad-devices"><i class="bi-file-code"></i>Azure Active Directory Devices</a></li>
-                            <li><a class="link-dark rounded" href="#azure-ad-risk"><i class="bi-file-code"></i>Azure Active Directory Risk Detection</a></li>
-                            <li><a class="link-dark rounded" href="#azure-security-center"><i class="bi-file-code"></i>Azure Security Center Alerts & Tasks</a></li>
+                            <li><a class="link-dark rounded" href="#azure-ad-sign-ins"><i class="bi-file-code"></i>Microsoft Entra ID Sign-ins</a></li>
+                            <li><a class="link-dark rounded" href="#azure-ad-audit"><i class="bi-file-code"></i>Microsoft Entra ID Audit</a></li>
+                            <li><a class="link-dark rounded" href="#azure-ad-users"><i class="bi-file-code"></i>Microsoft Entra ID Users</a></li>
+                            <li><a class="link-dark rounded" href="#azure-ad-groups"><i class="bi-file-code"></i>Microsoft Entra ID Groups</a></li>
+                            <li><a class="link-dark rounded" href="#azure-ad-apps"><i class="bi-file-code"></i>Microsoft Entra ID Applications</a></li>
+                            <li><a class="link-dark rounded" href="#azure-ad-devices"><i class="bi-file-code"></i>Microsoft Entra ID Devices</a></li>
+                            <li><a class="link-dark rounded" href="#azure-ad-risk"><i class="bi-file-code"></i>Microsoft Entra ID Risk Detection</a></li>
+                            <li><a class="link-dark rounded" href="#azure-ad-risk"><i class="bi-file-code"></i>Microsoft Graph Security API</a></li>
+                            <li><a class="link-dark rounded" href="#ms-graph-api-alerts"><i class="bi-file-code"></i>Azure Security Center Alerts & Tasks</a></li>
                             <li><a class="link-dark rounded" href="#azure-resource-graph"><i class="bi-file-code"></i>Azure Resource Graph</a></li>
                             <li><a class="link-dark rounded" href="#azure-topology-automatic"><i class="bi-file-code"></i>Azure Topology (automatic)</a></li>
                             <li><a class="link-dark rounded" href="#azure-topology-manual"><i class="bi-file-code"></i>Azure Topology (manual)</a></li>
@@ -314,7 +316,7 @@ full-width: true
                 </td>
                 <td><a name="azure-ad-sign-ins" class="anchor"></a>
                     <span style="white-space: nowrap">
-                        Azure Active Directory <sup><a href="#aad-entra-id" class="text-decoration-none" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Azure Active Directory is now Microsoft Entra ID">[1]</a></sup> Sign-ins
+                        Microsoft Entra ID <sup><a href="#aad-entra-id" class="text-decoration-none" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Azure Active Directory is now Microsoft Entra ID">[1]</a></sup> Sign-ins
                         <button class="btn btn-sm bi-info-circle" role="button" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-html="true" data-bs-content="The REST API this input uses is subject to throttling limits. Refer to the <a href='https://github.com/splunk/splunk-add-on-microsoft-azure/wiki/Configure-Azure-Active-Directory-inputs-for-the-Splunk-Add-on-for-Microsoft-Azure#throttling-guidance' target='_blank'>throttling guidance</a> for more information."></button>
                     </span>
                 </td>
@@ -330,7 +332,7 @@ full-width: true
             </tr>
             <tr>
                 <td><a name="azure-ad-audit" class="anchor"></a>
-                    Azure Active Directory <sup><a href="#aad-entra-id" class="text-decoration-none" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Azure Active Directory is now Microsoft Entra ID">[1]</a></sup> Audit
+                    Microsoft Entra ID <sup><a href="#aad-entra-id" class="text-decoration-none" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Azure Active Directory is now Microsoft Entra ID">[1]</a></sup> Audit
                     <button class="btn bi-info-circle" role="button" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-html="true" data-bs-content="The REST API this input uses is subject to throttling limits. Refer to the <a href='https://github.com/splunk/splunk-add-on-microsoft-azure/wiki/Configure-Azure-Active-Directory-inputs-for-the-Splunk-Add-on-for-Microsoft-Azure#throttling-guidance' target='_blank'>throttling guidance</a> for more information."></button>
                 </td>
                 <td> Microsoft Graph </td>
@@ -345,7 +347,7 @@ full-width: true
             </tr>
             <tr>
                 <td>
-                    <a name="azure-ad-users" class="anchor"></a> Azure Active Directory <sup><a href="#aad-entra-id" class="text-decoration-none" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Azure Active Directory is now Microsoft Entra ID">[1]</a></sup> Users
+                    <a name="azure-ad-users" class="anchor"></a> Microsoft Entra ID <sup><a href="#aad-entra-id" class="text-decoration-none" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Azure Active Directory is now Microsoft Entra ID">[1]</a></sup> Users
                 </td>
                 <td> Microsoft Graph </td>
                 <td> (Application) User.Read.All - Read all users' full profiles </td>
@@ -354,7 +356,7 @@ full-width: true
             </tr>
             <tr>
                 <td>
-                    <a name="azure-ad-groups" class="anchor"></a> Azure Active Directory <sup><a href="#aad-entra-id" class="text-decoration-none" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Azure Active Directory is now Microsoft Entra ID">[1]</a></sup> Groups
+                    <a name="azure-ad-groups" class="anchor"></a> Microsoft Entra ID <sup><a href="#aad-entra-id" class="text-decoration-none" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Azure Active Directory is now Microsoft Entra ID">[1]</a></sup> Groups
                 </td>
                 <td> Microsoft Graph </td>
                 <td> (Application) Group.Read.All - Read all groups </td>
@@ -363,7 +365,16 @@ full-width: true
             </tr>
             <tr>
                 <td>
-                    <a name="azure-ad-devices" class="anchor"></a> Azure Active Directory <sup><a href="#aad-entra-id" class="text-decoration-none" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Azure Active Directory is now Microsoft Entra ID">[1]</a></sup> Devices
+                    <a name="azure-ad-apps" class="anchor"></a> Microsoft Entra ID <sup><a href="#aad-entra-id" class="text-decoration-none" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Azure Active Directory is now Microsoft Entra ID">[1]</a></sup> Applications
+                </td>
+                <td> Microsoft Graph </td>
+                <td> (Application) Application.Read.All - Read all applications </td>
+                <td> N/A </td>
+                <td><code> azure:aad:application </code></td>
+            </tr>
+            <tr>
+                <td>
+                    <a name="azure-ad-devices" class="anchor"></a> Microsoft Entra ID <sup><a href="#aad-entra-id" class="text-decoration-none" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Azure Active Directory is now Microsoft Entra ID">[1]</a></sup> Devices
                 </td>
                 <td> Microsoft Graph </td>
                 <td> (Application) Device.Read.All - Read all devices </td>
@@ -372,7 +383,7 @@ full-width: true
             </tr>
             <tr>
                 <td>
-                    <a name="azure-ad-risk" class="anchor"></a> Azure Active Directory <sup><a href="#aad-entra-id" class="text-decoration-none" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Azure Active Directory is now Microsoft Entra ID">[1]</a></sup> Risk Detection
+                    <a name="azure-ad-risk" class="anchor"></a> Microsoft Entra ID <sup><a href="#aad-entra-id" class="text-decoration-none" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Azure Active Directory is now Microsoft Entra ID">[1]</a></sup> Risk Detection
                 </td>
                 <td> Microsoft Graph </td>
                 <td>
@@ -388,6 +399,15 @@ full-width: true
                         azure:aad:identity_protection:risky_user
                     </code>
                 </td>
+            </tr>
+            <tr>
+                <td>
+                    <a name="ms-graph-api-alerts" class="anchor"></a> Microsoft Graph Security API
+                </td>
+                <td> Microsoft Graph </td>
+                <td> (Application) SecurityEvents.Read.All </td>
+                <td> N/A </td>
+                <td><code> ms:graph:security:alerts </code></td>
             </tr>
             <tr>
                 <td>
