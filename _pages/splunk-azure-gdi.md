@@ -74,9 +74,10 @@ comments: false
             ['AAD Audit','Event Hub', 1],
             // Network Watcher
             ['Network Watcher','Network Security Group Flow Logs', 1],
-            ['Network Watcher','Topology', 1],
+            ['Network Watcher','Topology', 2],
             ['Network Security Group Flow Logs','Storage Blob', 1],
             ['Topology','Splunk Add-on for Microsoft Azure', 1],
+            ['Topology','Splunk Add-on for Microsoft Cloud Services', 1],
             // Storage
             ['Storage Table','Splunk Add-on for Microsoft Cloud Services', 1],
             ['Storage Blob','Splunk Add-on for Microsoft Cloud Services', 5],
