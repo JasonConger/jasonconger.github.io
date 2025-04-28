@@ -92,10 +92,11 @@ full-width: true
                     </button>
                     <div class="collapse" id="teams-collapse">
                         <ul class="btn-toggle-jcc-nav list-unstyled fw-normal pb-1 small">
+                            <li><a class="link-dark rounded" href="#teams-call-record-new"><i class="bi-file-code"></i>Teams Call Record (New)</a></li>
                             <li><a class="link-dark rounded" href="#teams-user-report"><i class="bi-file-code"></i>Teams User Report</a></li>
-                            <li><a class="link-dark rounded" href="#teams-subscription"><i class="bi-file-code"></i>Teams Subscription</a></li>
-                            <li><a class="link-dark rounded" href="#teams-call-record"><i class="bi-file-code"></i>Teams Call Record</a></li>
-                            <li><a class="link-dark rounded" href="#teams-webhook"><i class="bi-file-code"></i>Teams Webhook</a></li>
+                            <li><a class="link-dark rounded" href="#teams-subscription"><i class="bi-file-code"></i>Teams Subscription (Deprecated)</a></li>
+                            <li><a class="link-dark rounded" href="#teams-call-record"><i class="bi-file-code"></i>Teams Call Record (Deprecated)</a></li>
+                            <li><a class="link-dark rounded" href="#teams-webhook"><i class="bi-file-code"></i>Teams Webhook (Deprecated)</a></li>
                         </ul>
                     </div>
                 </li>
@@ -732,15 +733,30 @@ full-width: true
             <!-- Microsoft Teams Add-on for Splunk -->
             <!-- #region -->
             <tr>
-                <td rowspan="4">
+                <td rowspan="5">
                     <a name="teams" class="anchor"></a>
                     <b>Microsoft Teams Add-on for Splunk</b>
                     <hr />
                     <ul class="list-unstyled">
                         <li><a href="https://splunkbase.splunk.com/app/4994/" target="_blank" class="bi-link">Splunkbase</a></li>
+                        <li><a href="https://youtu.be/XpQFBSB39k4" target="_blank" class="bi-youtube">Video Walkthrough</a></li>
                         <li><a href="https://lantern.splunk.com/Data_Descriptors/Microsoft/Getting_started_with_the_Microsoft_Teams_Add-on_for_Splunk" target="_blank" class="bi-journal">Documentation</a></li>
                     </ul>
                 </td>
+
+                <td>
+                    <a name="teams-call-record-new" class="anchor"></a>
+                    Teams Call Record (New)
+                </td>
+                <td> Microsoft Graph </td>
+                <td> (Application) CallRecords.Read.All </td>
+                <td> N/A </td>
+                <td>
+                    <code>
+                        m365:teams:callRecord
+                    </code>
+                </td>
+            </tr>
                 <td>
                     <a name="teams-user-report" class="anchor"></a>
                     Teams User Report
@@ -756,11 +772,12 @@ full-width: true
                         m365:teams:user:report
                     </code>
                 </td>
+            <tr>
             </tr>
             <tr>
                 <td>
                     <a name="teams-subscription" class="anchor"></a>
-                    Teams Subscription
+                    Teams Subscription (Deprecated)
                 </td>
                 <td> Microsoft Graph </td>
                 <td> (Delegated) Subscriptions.Read.All</td>
@@ -774,7 +791,7 @@ full-width: true
             <tr>
                 <td>
                     <a name="teams-call-record" class="anchor"></a>
-                    Teams Call Record
+                    Teams Call Record (Deprecated)
                 </td>
                 <td> Microsoft Graph </td>
                 <td> (Application) CallRecords.Read.All </td>
@@ -788,7 +805,7 @@ full-width: true
             <tr>
                 <td>
                     <a name="teams-webhook" class="anchor"></a>
-                    Teams Webhook
+                    Teams Webhook (Deprecated)
                 </td>
                 <td> N/A </td>
                 <td> N/A </td>
@@ -904,16 +921,7 @@ full-width: true
                 <td> N/A </td>
                 <td>
                     <code>
-                        mscs:resource:virtualMachine <br />
-                        mscs:resource:networkInterfaceCard <br />
-                        mscs:resource:publicIPAddress <br />
-                        mscs:resource:virtualNetwork <br />
-                        mscs:resource:disk <br />
-                        mscs:resoure:image <br />
-                        mscs:resoure:snapshot <br />
-                        mscs:resoure:resourceGroup <br />
-                        mscs:resoure:subscriptions <br />
-                        mscs:resoure:securityGroup
+                        GraphSecurityAlert
                     </code>
                 </td>
             </tr>
