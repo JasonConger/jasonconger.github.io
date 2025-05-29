@@ -23,11 +23,27 @@ Today, I work at <a rel="noreferrer noopener" href="http://www.splunk.com/" targ
 
 I enjoy speaking on a multitude of technology topics. Here are some of my most recent speaking engagements:
 
+## 2025
+* Microsoft Tech Connect - Seattle, WA
+   * Splunk Unified Security and Observability - now on Azure
+* Splunk Tech Summit - Las Vegas, NV
+   * Leveraging Hyperscalers, Splunk, and GenAI: Meeting Customers Where They Are
+* Microsoft Build - Seattle, WA
+   *  A new era of AI for digital resilience with Splunk on Azure
+* Cisco Live US - San Diego, CA
+   * Building on, and extending the Splunk Platform
+* Splunk .conf25 - Boston, MA
+   *  The Complete Guide to Splunking Microsoft Cloud Data Data (Now with Cisco Also)
+
 ## 2024
 
 * Splunk .conf24 - Las Vegas, NV
     * Optimizing Data Ingestion and Security with Splunk Data Manager and Microsoft Cloud Services Add-on
     * Turbocharge Your Splunk Workflows with New Features in Visual Studio Code
+ * Cisco Partner Summit - Los Angeles, CA
+    * Stronger Together - The Power of Cisco, Splunk, and Partners
+ * Microsoft Ignite - Chicago, IL
+    * Unleash Unified Security and Observability with Splunk on Azure
 
 ## 2023
 
