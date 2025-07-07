@@ -74,7 +74,7 @@ comments: false
             ['Entra ID Applications','Splunk Add-on for Microsoft Azure', 1],
             ['Entra ID Applications','Splunk Add-on for Microsoft Office 365', 1],
             ['AAD Risk Detection','Splunk Add-on for Microsoft Azure', 1],
-            ['AAD Sign-ins','Event Hub', 1],
+            ['Entra ID Sign-ins','Event Hub', 1],
             ['AAD Audit','Splunk Add-on for Microsoft Azure', 1],
             ['AAD Audit','Splunk Data Manager (cloud only)', 1],
             ['AAD Audit','Event Hub', 1],
