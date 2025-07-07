@@ -57,13 +57,14 @@ comments: false
             ['Billing Details','Splunk Add-on for Microsoft Cloud Services', 1],
             ['Reservation Recommendations','Splunk Add-on for Microsoft Azure', 1],
             ['Reservation Recommendations','Splunk Add-on for Microsoft Cloud Services', 1],
-            // Azure AD
-            ['Azure Active Directory / Entra ID','AAD Users', 1],
+            // Entra ID
+            ['Azure Active Directory / Entra ID','Entra ID Users', 2],
             ['Azure Active Directory / Entra ID','AAD Sign-ins', 3],
             ['Azure Active Directory / Entra ID','AAD Audit', 3],
             ['Azure Active Directory / Entra ID','AAD Devices', 1],
             ['Azure Active Directory / Entra ID','AAD Risk Detection', 1],
-            ['AAD Users','Splunk Add-on for Microsoft Azure', 1],
+            ['Entra ID Users','Splunk Add-on for Microsoft Azure', 1],
+            ['Entra ID Users','Splunk Add-on for Microsoft Office 365', 1],
             ['AAD Sign-ins','Splunk Add-on for Microsoft Azure', 1],
             ['AAD Sign-ins','Splunk Data Manager (cloud only)', 1],
             ['AAD Devices','Splunk Add-on for Microsoft Azure', 1],
