@@ -258,9 +258,6 @@ full-width: true
             <tr>
                 <td>
                     <a name="mscs-metrics" class="anchor"></a> Metrics 
-                    <div class="alert alert-info" role="alert">
-                        This input has been migrated to the supported <a href="https://splunkbase.splunk.com/app/3110" target="_blank">Splunk Add-on for Microsoft Cloud Services</a>.
-                    </div>
                 </td>
                 <td> N/A </td>
                 <td></td>
@@ -697,6 +694,32 @@ full-width: true
                 <td> (Application) ReportingWebService.Read.All </td>
                 <td> Global Reader </td>
                 <td> <code>o365:reporting:messagetrace</code>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a name="o365-entraid-metadata" class="anchor"></a> Microsoft Entra ID Metadata
+                    <ul>
+                        <li>Users</li>
+                        <li>Groups</li>
+                        <li>Applications</li>
+                        <li>Devices</li>
+                    </ul>
+                </td>
+                <td>Microsoft Graph</td>
+                <td>
+                    <ul>
+                        <li>
+                            (Application) User.Read.All - Read all users' full profiles 
+                            <button class="btn btn-sm bi-info-circle" role="button" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-html="true" data-bs-content="The sourcetype is configurable in the add-on. It is recommended to set the sourcetype according to the type. For example, set the sourcetype to azure:aad:user for the Users Entra ID input."></button>
+                        </li>
+                        <li>(Application) Group.Read.All - Read all groups </li>
+                        <li>(Application) Application.Read.All </li>
+                        <li>(Application) Device.Read.All - Read all devices </li>
+                    </ul>
+                </td>
+                <td> N/A </td>
+                <td> <code>o365:metadata</code>
                 </td>
             </tr>
             <!-- endregion -->
