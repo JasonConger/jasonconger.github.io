@@ -29,11 +29,13 @@ I enjoy speaking on a multitude of technology topics. Here are some of my most r
 * Splunk Tech Summit - Las Vegas, NV
    * Leveraging Hyperscalers, Splunk, and GenAI: Meeting Customers Where They Are
 * Microsoft Build - Seattle, WA
-   *  A new era of AI for digital resilience with Splunk on Azure
+   * A new era of AI for digital resilience with Splunk on Azure
 * Cisco Live US - San Diego, CA
    * Building on, and extending the Splunk Platform
 * Splunk .conf25 - Boston, MA
-   *  The Complete Guide to Splunking Microsoft Cloud Data Data (Now with Cisco Also)
+   * The Complete Guide to Splunking Microsoft Cloud Data Data (Now with Cisco Also)
+* Cisco Partner Summit - San Diego, CA
+   * Beyond Uptime: Digital Resilience with Cisco and Splunk 
 
 ## 2024
 
