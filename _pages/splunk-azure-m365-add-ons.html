@@ -195,7 +195,23 @@ full-width: true
                 <td> <code>mscs:azure:audit</code> </td>
             </tr>
             <tr>
-                <td><a name="mscs-resource" class="anchor"></a> Azure Resource </td>
+                <td><a name="mscs-resource" class="anchor"></a> 
+                    Azure Resource
+                    <ul>
+                        <li>Disk Data</li>
+                        <li>Image Data</li>
+                        <li>Network Interface Card</li>
+                        <li>Public IP Address</li>
+                        <li>Resource Graph</li>
+                        <li>Resource Groups</li>
+                        <li>Security Groups</li>
+                        <li>Snapshot Data</li>
+                        <li>Subscriptions</li>
+                        <li>Topology</li>
+                        <li>Virtual Machine</li>
+                        <li>Virtual Network</li>
+                    </ul>
+                </td>
                 <td> N/A </td>
                 <td> N/A </td>
                 <td> (Subscription) Reader </td>
@@ -219,7 +235,7 @@ full-width: true
             <tr>
                 <td><a name="mscs-event-hub" class="anchor"></a> Event Hub </td>
                 <td> N/A </td>
-                <td> N/A </td>
+                <td> No API permissions are needed, but the Azure AD app registration needs to be assigned to the "Azure Event Hubs Data receiver" role on the Event Hub namespace </td>
                 <td> (Event Hub) Azure Event Hubs Data receiver </td>
                 <td>
                     <code>
@@ -305,6 +321,11 @@ full-width: true
                     <a name="azure-add-on"></a>
                     <b>Splunk Add-on for Microsoft Azure</b>
                     <hr />
+                    <div class="alert alert-info" role="alert">
+                        <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Warning:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+  <div> The inputs in this add-on have migrated to other Splunk-supported add-ons.  <a href="https://splunk.github.io/splunk-add-on-for-microsoft-cloud-services/Migrationguide/" target="blank">More information can be found here.</a>
+                    </div>
+                    
                     <ul class="list-unstyled">
                         <li> <a href="https://splunkbase.splunk.com/app/3757/" target="_blank" class="bi-link">Splunkbase</a></li>
                         <li> <a href="https://github.com/splunk/splunk-add-on-microsoft-azure/wiki" target="_blank" class="bi-journal text-nowrap">Documentation</a></li>
@@ -411,6 +432,9 @@ full-width: true
             <tr>
                 <td>
                     <a name="ms-graph-api-alerts" class="anchor"></a> Microsoft Graph Security API
+                    <div class="alert alert-info" role="alert">
+                        This input has been migrated to the supported <a href="https://splunkbase.splunk.com/app/6207" target="_blank">Splunk Add-on for Microsoft Security</a>.
+                    </div>
                 </td>
                 <td> Microsoft Graph </td>
                 <td> (Application) SecurityEvents.Read.All </td>
@@ -480,21 +504,37 @@ full-width: true
                 </td>
             </tr>
             <tr>
-                <td><a name="azure-add-member" class="anchor"></a> Add member to Microsoft 365 Group (alert action) </td>
+                <td>
+                    <a name="azure-add-member" class="anchor"></a> Add member to Microsoft 365 Group (alert action) 
+                    <div class="alert alert-info" role="alert">
+                        This input has been migrated to the supported <a href="https://splunkbase.splunk.com/app/4055" target="_blank">Splunk Add-on for Microsoft Office 365</a>.
+                    </div>
+                </td>
                 <td> Microsoft Graph </td>
                 <td> (Application) GroupMember.ReadWrite.All - Read and write all group memberships </td>
                 <td> N/A </td>
                 <td></td>
             </tr>
             <tr>
-                <td><a name="azure-stop-vm" class="anchor"></a> Stop Azure VM (alert action) </td>
+                <td>
+                    <a name="azure-stop-vm" class="anchor"></a> Stop Azure VM (alert action) 
+                    <div class="alert alert-info" role="alert">
+                        This input has been migrated to the supported <a href="https://splunkbase.splunk.com/app/3110" target="_blank">Splunk Add-on for Microsoft Cloud Services</a>.
+                    </div>
+                
+                </td>
                 <td> N/A </td>
                 <td> </td>
                 <td> (Subscription) Virtual Machine Contributor </td>
                 <td></td>
             </tr>
             <tr>
-                <td><a name="azure-dismiss-alert" class="anchor"></a> Dismiss Azure Alert (alert action) </td>
+                <td>
+                    <a name="azure-dismiss-alert" class="anchor"></a> Dismiss Azure Alert (alert action) 
+                    <div class="alert alert-info" role="alert">
+                        This input has been migrated to the supported <a href="https://splunkbase.splunk.com/app/6207" target="_blank">Splunk Add-on for Microsoft Security</a>.
+                    </div>
+                </td>
                 <td> N/A </td>
                 <td> </td>
                 <td> (Subscription) Contributor </td>
