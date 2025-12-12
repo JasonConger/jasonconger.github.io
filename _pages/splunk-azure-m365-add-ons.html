@@ -65,7 +65,7 @@ full-width: true
                             <li><a class="link-dark rounded" href="#o365-service-health"><i class="bi-file-code"></i>Service Health & Communications</a></li>
                             <li><a class="link-dark rounded" href="#o365-mailbox"><i class="bi-file-code"></i>Mailbox</a></li>
                             <li><a class="link-dark rounded" href="#o365-o365"><i class="bi-file-code"></i>Office 365</a></li>
-                            <li><a class="link-dark rounded" href="#o365-ondedrive"><i class="bi-file-code"></i>OneDrive</a></li>
+                            <li><a class="link-dark rounded" href="#o365-onedrive"><i class="bi-file-code"></i>OneDrive</a></li>
                             <li><a class="link-dark rounded" href="#o365-sharepoint"><i class="bi-file-code"></i>SharePoint</a></li>
                             <li><a class="link-dark rounded" href="#o365-teams"><i class="bi-file-code"></i>Teams</a></li>
                             <li><a class="link-dark rounded" href="#o365-yammer"><i class="bi-file-code"></i>Yammer</a></li>
@@ -457,6 +457,7 @@ full-width: true
             </tr>
             <tr>
                 <td> 
+                    <a name="azure-resource-graph" class="anchor"></a>
                     Azure Resource Graph 
                     <div class="alert alert-info" role="alert">
                         This input has been migrated to the supported <a href="https://splunkbase.splunk.com/app/3110" target="_blank">Splunk Add-on for Microsoft Cloud Services</a> as part of the "Azure Resource" input.
@@ -739,7 +740,7 @@ full-width: true
                     <button class="btn btn-sm bi-info-circle" role="button" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-html="true" data-bs-content="Choose <b>APIs my organization uses</b> and then search for '<b>Office 365 Exchange Online</b>'"></button>
                 </td>
                 <td> (Application) ReportingWebService.Read.All </td>
-                <td> Global Reader </td>
+                <td> Global Reader or Security Reader</td>
                 <td> <code>o365:reporting:messagetrace</code>
                 </td>
             </tr>
@@ -915,7 +916,7 @@ full-width: true
             <!-- Splunk Add-on for Microsoft Security -->
             <!-- #region -->
             <tr>
-                <td rowspan="4">
+                <td rowspan="8">
                     <a name="security" class="anchor"></a>
                     <b>Splunk Add-on for Microsoft Security</b>
                     <hr />
@@ -983,6 +984,79 @@ full-width: true
                 <td>
                     <code>
                         ms:defender:atp:alerts
+                    </code>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a name="security-simulations" class="anchor"></a>
+                    Microsoft Defender Simulations
+                </td>
+                <td> Microsoft Graph </td>
+                <td>
+                    (Application) AttackSimulation.Read.All
+                </td>
+                <td> N/A </td>
+                <td>
+                    <code>
+                        ms:defender:simulations
+                    </code>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a name="security-eventhub" class="anchor"></a>
+                    Microsoft Defender Event Hub
+                </td>
+                <td> N/A </td>
+                <td>
+                    Microsoft Entra ID account with Role "Azure Event Hubs Data Receiver"
+                </td>
+                <td> N/A </td>
+                <td>
+                    <code>
+                        ms:defender:eventhub
+                    </code>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a name="security-threatintel" class="anchor"></a>
+                    Microsoft Defender Threat Intelligence Datasets
+                </td>
+                <td> Microsoft Graph </td>
+                <td>
+                    (Application) ThreatIntelligence.Read.All
+                </td>
+                <td> N/A </td>
+                <td>
+                    <code>
+                        ms:defender:ti:articles <br/>
+                        ms:defender:ti:article_indicators <br/>
+                        ms:defender:ti:certificates <br/>
+                        ms:defender:ti:components <br/>
+                        ms:defender:ti:cookies <br/>
+                        ms:defender:ti:hostpairs <br/>
+                        ms:defender:ti:passivedns <br/>
+                        ms:defender:ti:subdomains <br/>
+                        ms:defender:ti:trackers <br/>
+                        ms:defender:ti:whois
+                    </code>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a name="security-machines" class="anchor"></a>
+                    Microsoft Defender Machines
+                </td>
+                <td>  </td>
+                <td>
+                    
+                </td>
+                <td> N/A </td>
+                <td>
+                    <code>
+                        
                     </code>
                 </td>
             </tr>
