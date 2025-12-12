@@ -321,7 +321,7 @@ full-width: true
                     <a name="azure-add-on"></a>
                     <b>Splunk Add-on for Microsoft Azure</b>
                     <hr />
-                    <div class="alert alert-info" role="alert">
+                    <div class="alert alert-warn" role="alert">
                         <i class="bi bi-exclamation-triangle-fill"></i>
                         The inputs in this add-on have migrated to other Splunk-supported add-ons.  <a href="https://splunk.github.io/splunk-add-on-for-microsoft-cloud-services/Migrationguide/" target="blank">More information can be found here.</a>
                     </div>
@@ -698,8 +698,15 @@ full-width: true
             <tr>
                 <td><a name="o365-audit-logs" class="anchor"></a> Audit Logs
                     <ul>
-                        <li>Audit Logs.Sign Ins</li>
+                        <li>
+                            Audit Logs.Sign Ins
+                        </li>
                     </ul>
+
+                    <span style="white-space: nowrap">
+                        Microsoft Entra ID <sup><a href="#aad-entra-id" class="text-decoration-none" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Azure Active Directory is now Microsoft Entra ID">[1]</a></sup> Sign-ins
+                        <button class="btn btn-sm bi-info-circle" role="button" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-html="true" data-bs-content="The REST API this input uses is subject to throttling limits. Refer to the <a href='https://github.com/splunk/splunk-add-on-microsoft-azure/wiki/Configure-Azure-Active-Directory-inputs-for-the-Splunk-Add-on-for-Microsoft-Azure#throttling-guidance' target='_blank'>throttling guidance</a> for more information."></button>
+                    </span>
                 </td>
                 <td> Microsoft Graph </td>
                 <td> (Application) AuditLog.Read.All <br />
