@@ -9,7 +9,7 @@ comments: false
 I am a data and web nerd. In fact, this website started out with [showing you how to reverse engineer a SQL database]({% post_url /2006/2006-03-01-using-microsoft-visio-to-reverse-engineer-a-database %}). Shortly after, the open-source project <a href="http://jasonconger.com/tags/#WIRM">Web Interface for Resource Manager</a> was released. Over the years, there have been articles that have shown you how to <a href="http://jasonconger.com/tags/#Web%20Interface">modify Web Interface</a>, create and modify <a href="http://www.jasonconger.com/tags#mobility">mobile applications</a>, some random thoughts, and even a little <a href="http://jasonconger.com/tags/#IoT">IoT</a>.
 
 
-Today, I work at <a rel="noreferrer noopener" href="http://www.splunk.com/" target="_blank">Splunk</a> in the partner organization leading efforts to expand use cases and integrations.
+Today, I work at <a rel="noreferrer noopener" href="http://www.splunk.com/" target="_blank">Splunk (a Cisco company)</a> as the Partner Field CTO leading efforts to drive and evangelize partner innovation.
 
 <a href="https://www.credly.com/badges/1f35ca8c-880c-4887-9b73-a143201ccc8a/public_url" target="_blank"><img src="/assets/img/badges/microsoft-most-valuable-professional-mvp-alumni.png" width="150px" height="150px" class="mx-auto"></a>
 <a href="https://www.credly.com/badges/b785af08-60b6-4e61-9cdb-c656f3368094/public_url" target="_blank"><img src="/assets/img/badges/splunk-enterprise-certified-architect.png" width="150px" height="150px" class="mx-auto"></a>
@@ -22,6 +22,12 @@ Today, I work at <a rel="noreferrer noopener" href="http://www.splunk.com/" targ
 # Most Recent Speaking Engagements:
 
 I enjoy speaking on a multitude of technology topics. Here are some of my most recent speaking engagements:
+
+## 2026
+* Cisco Live EMEA - Amsterdam, NL
+   * Cisco and Splunk Digital Resilience with Al and for Al
+   * Empowering Security Operations with Splunk and AWS: The Future of Agentic SOCs
+   * Maximizing Cloud Transparency: Leveraging Splunk for End-to-End Visibility in Multi-Cloud and Hybrid Environments
 
 ## 2025
 * Microsoft Tech Connect - Seattle, WA
