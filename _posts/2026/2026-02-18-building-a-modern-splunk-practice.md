@@ -19,7 +19,7 @@ video-duration: "3:46"
 thumbnail-img: https://i.ytimg.com/vi/L1i6lgfaTgs/hqdefault.jpg
 share-img: https://i.ytimg.com/vi/L1i6lgfaTgs/hqdefault.jpg
 excerpt: "One message is clear for both traditional Cisco partners and traditional Splunk partners - it is time to build a modern Splunk practice. But, what does that mean exactly? Well, I recently had an opportunity to catch up with Amit Harjani to go over just that. It is a three pillar approach including people, process,…"
-featured: true
+featured: false
 ---
 One message is clear for both traditional Cisco partners and traditional Splunk partners - it is time to build a modern Splunk practice.  But, what does that mean exactly?  Well, I recently had an opportunity to catch up with Amit Harjani to go over just that.  It is a three pillar approach including people, process, and business value.  In the video below, Amit briefly touches on all these points as well as giving some direction on where to learn more.
 
