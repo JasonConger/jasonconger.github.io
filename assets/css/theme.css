@@ -136,8 +136,8 @@ img { border-radius: var(--radius-sm); }
 .navbar-custom .nav-item.dropdown .dropdown-menu .dropdown-item {
   color: var(--ink-soft);
 }
-/* floating avatar stays centred; nav links (incl. social icons) sit to its
-   left, search + the dropdown to its right (see _includes/nav.html) */
+/* floating avatar stays centred; About/Videos sit to its left, search + the
+   dropdown to its right (see _includes/nav.html) */
 .navbar-custom .avatar-container .avatar-img-border { box-shadow: var(--shadow); }
 .navbar-custom.top-nav-short .avatar-container,
 .navbar-custom.top-nav-expanded .avatar-container {
@@ -150,15 +150,40 @@ img { border-radius: var(--radius-sm); }
   .navbar-custom.top-nav-regular .navbar-nav-left { margin-left: 0.5rem; }
 }
 
-/* social icons in the left nav group: tighter spacing, icon-sized */
-.navbar-custom .nav-item.nav-social { display: flex; align-items: center; }
-.navbar-custom .nav-item.nav-social .nav-link { font-size: 1.05rem; padding-left: 0.4rem; padding-right: 0.4rem; }
-.navbar-custom .nav-item.nav-social:first-of-type .nav-link { padding-left: 0.9rem; }
-@media (max-width: 1199px) {
-  /* in the collapsed menu, lay the icons out in a row rather than stacked */
-  .navbar-custom .navbar-nav-left { flex-direction: row; flex-wrap: wrap; align-items: center; }
-  .navbar-custom .nav-item.nav-social .nav-link { padding: 0.5rem 0.6rem; }
+/* --- social icon row (home hero + About page) ----------------------- */
+
+.social-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  margin-top: 1rem;
 }
+.social-row a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.4rem;
+  height: 2.4rem;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  color: var(--ink-soft);
+  font-size: 1.15rem;
+  background: var(--bg);
+  transition: color 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
+}
+.social-row a:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  text-decoration: none;
+  transform: translateY(-2px);
+}
+
+/* --- footer social row -------------------------------------------- */
+
+.footer-links { padding-left: 0; margin-bottom: 0.75rem; }
+.footer-links .list-inline-item { margin: 0 0.55rem; }
+.footer-links a { color: var(--ink-soft); font-size: 1.15rem; }
+.footer-links a:hover { color: var(--accent); }
 
 /* --- intro / headers -------------------------------------------------- */
 

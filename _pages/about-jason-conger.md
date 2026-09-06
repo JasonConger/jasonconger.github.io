@@ -11,6 +11,10 @@ I am a data and web nerd. In fact, this website started out with [showing you ho
 
 Today, I work at <a rel="noreferrer noopener" href="http://www.splunk.com/" target="_blank">Splunk</a> in the partner organization leading efforts to expand use cases and integrations.
 
+## Elsewhere
+
+{% include social-row.html %}
+
 <a href="https://www.credly.com/badges/1f35ca8c-880c-4887-9b73-a143201ccc8a/public_url" target="_blank"><img src="/assets/img/badges/microsoft-most-valuable-professional-mvp-alumni.png" width="150px" height="150px" class="mx-auto"></a>
 <a href="https://www.credly.com/badges/b785af08-60b6-4e61-9cdb-c656f3368094/public_url" target="_blank"><img src="/assets/img/badges/splunk-enterprise-certified-architect.png" width="150px" height="150px" class="mx-auto"></a>
 <img src="/assets/img/badges/splunk-certified-developer.png" width="150px" height="150px" class="mx-auto">

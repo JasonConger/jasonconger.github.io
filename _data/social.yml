@@ -1,0 +1,16 @@
+# Social links. Rendered in the footer, the home hero, and the About page.
+# Add a platform by adding one entry. `icon` is a Bootstrap Icons name
+# (https://icons.getbootstrap.com/ — e.g. instagram, tiktok, mastodon, bluesky,
+# threads, facebook) rendered as `bi-<icon>`.
+- name: LinkedIn
+  icon: linkedin
+  url: https://www.linkedin.com/in/JasonConger
+- name: YouTube
+  icon: youtube
+  url: https://www.youtube.com/@JasonConger
+- name: GitHub
+  icon: github
+  url: https://github.com/JasonConger
+- name: X
+  icon: twitter-x
+  url: https://twitter.com/JasonConger

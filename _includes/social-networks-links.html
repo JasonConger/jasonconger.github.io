@@ -1,45 +1,19 @@
+{% comment %}
+Footer social row. Platforms come from _data/social.yml; RSS is always shown.
+{% endcomment %}
 <ul class="list-inline text-center footer-links">
-
   <li class="list-inline-item">
     <a href="{{ '/feed.xml' | relative_url }}" title="RSS">
       <i class="bi bi-rss"></i>
       <span class="sr-only">RSS</span>
     </a>
   </li>
-
+  {% for item in site.data.social %}
   <li class="list-inline-item">
-    <a href="https://github.com/JasonConger" title="GitHub">
-      <i class="bi bi-github"></i>
-      <span class="sr-only">GitHub</span>
-   </a>
+    <a href="{{ item.url }}" title="{{ item.name }}" target="_blank" rel="noopener">
+      <i class="bi bi-{{ item.icon }}"></i>
+      <span class="sr-only">{{ item.name }}</span>
+    </a>
   </li>
-
-  <li class="list-inline-item">
-    <a href="https://twitter.com/JasonConger" title="Twitter">
-      <i class="bi bi-twitter-x"></i>
-      <span class="sr-only">Twitter</span>
-   </a>
-  </li>
-
-  <li class="list-inline-item">
-    <a href="https://reddit.com/u/JSONConger" title="Reddit">
-      <i class="bi bi-reddit"></i>
-      <span class="sr-only">Reddit</span>
-   </a>
-  </li>
-
-  <li class="list-inline-item">
-    <a href="https://linkedin.com/in/JasonConger" title="LinkedIn">
-      <i class="bi bi-linkedin"></i>
-      <span class="sr-only">LinkedIn</span>
-   </a>
-  </li>
-
-  <li class="list-inline-item">
-    <a href="https://www.youtube.com/@JasonConger" title="YouTube">
-      <i class="bi bi-youtube"></i>
-      <span class="sr-only">YouTube</span>
-   </a>
-  </li>
-
+  {% endfor %}
 </ul>
