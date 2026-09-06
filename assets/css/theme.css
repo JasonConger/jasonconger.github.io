@@ -127,13 +127,11 @@ img { border-radius: var(--radius-sm); }
 .navbar-custom .nav-item.dropdown .dropdown-menu .dropdown-item {
   color: var(--ink-soft);
 }
-/* floating avatar: on desktop move it beside the brand (left) so it never
-   collides with the right-aligned nav links (the extra "Videos" item made the
-   stock centred position tight). Mobile keeps the stock centred placement. */
+/* floating avatar stays centred; About/Videos sit left of it, the search +
+   social links stay right of it (see _includes/nav.html) */
 .navbar-custom .avatar-container .avatar-img-border { box-shadow: var(--shadow); }
 @media (min-width: 1200px) {
-  .navbar-custom.top-nav-regular .avatar-container { left: 5.25rem; }
-  .navbar-custom.top-nav-regular .avatar-container .avatar-img-border { margin-left: 0; }
+  .navbar-custom.top-nav-regular .navbar-nav-left { margin-left: 0.5rem; }
 }
 
 /* --- intro / headers -------------------------------------------------- */
