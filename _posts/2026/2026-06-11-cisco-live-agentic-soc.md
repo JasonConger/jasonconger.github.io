@@ -20,7 +20,7 @@ video-duration: "8:42"
 thumbnail-img: https://i.ytimg.com/vi/cFi43yfcI8g/hqdefault.jpg
 share-img: https://i.ytimg.com/vi/cFi43yfcI8g/hqdefault.jpg
 excerpt: "Interview with Dan Christiansen (CISSP) about running a live SOC on the Cisco Live show floor network, using Splunk Enterprise Security, Attack Analyzer, and the Triage Agent to automate tier-1 detection and investigation."
-featured: false
+featured: true
 ---
 Interview with Dan Christiansen (CISSP) about running a live SOC on the Cisco Live show floor network, using Splunk Enterprise Security, Attack Analyzer, and the Triage Agent to automate tier-1 detection and investigation.
 
