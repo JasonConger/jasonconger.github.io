@@ -17,7 +17,7 @@ video-duration: "2:22"
 thumbnail-img: https://i.ytimg.com/vi/O-ceWAX6rG0/hqdefault.jpg
 share-img: https://i.ytimg.com/vi/O-ceWAX6rG0/hqdefault.jpg
 excerpt: "Cisco AI Defense discovers enterprise AI usage, detects risks, and protects against runtime threats with guardrails. While at RSAC, I had a chance to chat with Julia Guenther about Cisco AI Defense and how it does model red teaming, discovers AI assets, and provides protection. There are hundreds of tests for validation that feed seamlessly…"
-featured: true
+featured: false
 ---
 Cisco AI Defense discovers enterprise AI usage, detects risks, and protects against runtime threats with guardrails.  While at RSAC, I had a chance to chat with Julia Guenther about Cisco AI Defense and how it does model red teaming, discovers AI assets, and provides protection.  There are hundreds of tests for validation that feed seamlessly into Splunk for expanded correlation providing speed and efficiency for your organization.
 
