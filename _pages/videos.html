@@ -1,0 +1,41 @@
+---
+layout: base
+title: Videos
+subtitle: Talks, demos, and interviews from the YouTube channel
+permalink: /videos/
+---
+
+{% include header.html type="page" %}
+
+<main class="container-md">
+  <div class="row"><div class="col">
+
+    <p>
+      Every video from
+      <a href="https://www.youtube.com/@JasonConger" target="_blank" rel="noopener">youtube.com/@JasonConger</a>,
+      with a full transcript on each post.
+    </p>
+
+    {% assign vids = site.categories.Videos %}
+    <div class="videos-grid">
+      {% for post in vids %}
+      <div class="video-card">
+        <a href="{{ post.url | relative_url }}">
+          <span class="thumb" style="background-image:url('{{ post.thumbnail-img | default: post.share-img }}')">
+            {% if post.video-duration and post.video-duration != "" %}<span class="dur">{{ post.video-duration }}</span>{% endif %}
+          </span>
+          <span class="meta">
+            <h3>{{ post.title }}</h3>
+            <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
+          </span>
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+
+    {% if vids.size == 0 %}
+    <p><em>No video posts published yet.</em></p>
+    {% endif %}
+
+  </div></div>
+</main>

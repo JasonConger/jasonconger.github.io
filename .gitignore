@@ -12,3 +12,5 @@ _config.yml.bak
 theme.md
 /_posts/2020-02-2*
 /_drafts
+Gemfile.hidden
+.jekyll-metadata

@@ -1,0 +1,78 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+# new-post — scaffold a new blog post or draft.
+#
+# Usage:
+#   bin/new-post "My Post Title" [options]
+#
+#   --subtitle TEXT      Post subtitle
+#   --tags a,b,c         Comma-separated tags
+#   --category NAME      Category (repeatable; default: General)
+#   --date YYYY-MM-DD    Post date (default: today)
+#   --draft             Write to _drafts/ instead of _posts/<year>/
+#   -h, --help
+
+require "optparse"
+require "date"
+require "fileutils"
+
+Encoding.default_external = Encoding::UTF_8
+Encoding.default_internal = Encoding::UTF_8
+
+ROOT = File.expand_path("..", __dir__)
+
+opts = { subtitle: "", tags: [], categories: [], date: Date.today, draft: false }
+
+OptionParser.new do |o|
+  o.banner = 'Usage: bin/new-post "Title" [options]'
+  o.on("--subtitle TEXT") { |v| opts[:subtitle] = v }
+  o.on("--tags LIST")     { |v| opts[:tags] = v.split(",").map(&:strip).reject(&:empty?) }
+  o.on("--category NAME")  { |v| opts[:categories] << v }
+  o.on("--date DATE")     { |v| opts[:date] = Date.parse(v) }
+  o.on("--draft")         { opts[:draft] = true }
+  o.on("-h", "--help")    { puts o; exit }
+end.parse!
+
+title = ARGV.shift or abort 'Need a title: bin/new-post "My Title"'
+opts[:categories] = ["General"] if opts[:categories].empty?
+
+def slugify(str)
+  str.downcase.gsub(/[^a-z0-9]+/, "-").gsub(/\A-|-\z/, "")
+end
+
+def yq(str)
+  %("#{str.to_s.gsub('"', '\\"')}")
+end
+
+slug = slugify(title)
+date = opts[:date]
+filename = "#{date.strftime('%Y-%m-%d')}-#{slug}.md"
+
+dir = opts[:draft] ? File.join(ROOT, "_drafts") : File.join(ROOT, "_posts", date.strftime("%Y"))
+FileUtils.mkdir_p(dir)
+path = File.join(dir, filename)
+abort "Already exists: #{path}" if File.exist?(path)
+
+front = <<~FM
+  ---
+  layout: post
+  title: #{yq(title)}
+  subtitle: #{yq(opts[:subtitle])}
+  date: #{date.strftime('%Y-%m-%d')}
+  categories:
+  #{opts[:categories].map { |c| " - #{yq(c)}" }.join("\n")}
+  tags:
+  #{(opts[:tags].empty? ? ['TODO'] : opts[:tags]).map { |t| " - #{yq(t)}" }.join("\n")}
+  author: JasonConger
+  readtime: true
+  excerpt: ""
+  featured: false
+  ---
+
+  Write your post here.
+FM
+
+File.write(path, front)
+puts "Created #{path.sub(ROOT + '/', '')}"
+puts "Preview: bin/serve"

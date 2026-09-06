@@ -1,0 +1,17 @@
+{% comment %}
+Responsive 16:9 YouTube embed.
+Usage: {% include youtube.html id="VIDEO_ID" title="Optional title" %}
+Falls back to page.video-id when no id is passed.
+{% endcomment %}
+{% assign yt_id = include.id | default: page.video-id %}
+{% if yt_id %}
+<div class="video-embed">
+  <iframe src="https://www.youtube-nocookie.com/embed/{{ yt_id }}"
+          title="{{ include.title | default: page.title | escape }}"
+          frameborder="0"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen></iframe>
+</div>
+{% endif %}
