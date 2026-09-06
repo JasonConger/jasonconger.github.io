@@ -1,7 +1,7 @@
 ---
 title: About Jason Conger
 layout: page
-permalink: /about-jason-conger
+permalink: /about-jason-conger/
 comments: false
 ---
 
