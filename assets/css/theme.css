@@ -108,6 +108,15 @@ img { border-radius: var(--radius-sm); }
   border-bottom: 1px solid var(--border);
   box-shadow: none;
 }
+/* collapsed mobile menu: opaque panel so page content doesn't show through */
+@media (max-width: 1199px) {
+  .navbar-custom .navbar-collapse {
+    background: var(--bg);
+    margin: 0 -1rem;
+    padding: 0.5rem 1rem 1rem;
+    border-bottom: 1px solid var(--border);
+  }
+}
 .navbar-custom .navbar-brand,
 .navbar-custom .navbar-nav .nav-link {
   color: var(--ink-soft) !important;
@@ -127,40 +136,9 @@ img { border-radius: var(--radius-sm); }
 .navbar-custom .nav-item.dropdown .dropdown-menu .dropdown-item {
   color: var(--ink-soft);
 }
-/* floating avatar stays centred; About/Videos sit left of it, search + the
-   dropdown stay right of it (see _includes/nav.html) */
+/* floating avatar stays centred; nav links (incl. social icons) sit to its
+   left, search + the dropdown to its right (see _includes/nav.html) */
 .navbar-custom .avatar-container .avatar-img-border { box-shadow: var(--shadow); }
-@media (min-width: 1200px) {
-  .navbar-custom.top-nav-regular .navbar-nav-left { margin-left: 0.5rem; }
-}
-
-/* floating social-icon cluster, centred just below the avatar; fades away on
-   scroll and hides with the mobile menu, exactly like the avatar */
-.navbar-custom .avatar-social {
-  position: absolute;
-  left: 50%;
-  top: 100%;
-  transform: translateX(-50%);
-  margin-top: 1.9rem;
-  display: flex;
-  gap: 0.85rem;
-  padding: 0.3rem 0.7rem;
-  border-radius: 999px;
-  background: var(--bg);
-  border: 1px solid var(--border);
-  box-shadow: var(--shadow);
-  transition: opacity 0.5s ease-in-out, visibility 0s;
-  z-index: 1;
-}
-.navbar-custom .avatar-social a {
-  color: var(--ink-soft);
-  font-size: 1.05rem;
-  line-height: 1;
-  display: inline-flex;
-}
-.navbar-custom .avatar-social a:hover { color: var(--accent); }
-.navbar-custom.top-nav-short .avatar-social,
-.navbar-custom.top-nav-expanded .avatar-social,
 .navbar-custom.top-nav-short .avatar-container,
 .navbar-custom.top-nav-expanded .avatar-container {
   opacity: 0 !important;
@@ -169,7 +147,17 @@ img { border-radius: var(--radius-sm); }
   transition: visibility linear 0.5s, opacity 0.5s ease-in-out;
 }
 @media (min-width: 1200px) {
-  .navbar-custom.top-nav-regular .avatar-social { margin-top: 3.4rem; }
+  .navbar-custom.top-nav-regular .navbar-nav-left { margin-left: 0.5rem; }
+}
+
+/* social icons in the left nav group: tighter spacing, icon-sized */
+.navbar-custom .nav-item.nav-social { display: flex; align-items: center; }
+.navbar-custom .nav-item.nav-social .nav-link { font-size: 1.05rem; padding-left: 0.4rem; padding-right: 0.4rem; }
+.navbar-custom .nav-item.nav-social:first-of-type .nav-link { padding-left: 0.9rem; }
+@media (max-width: 1199px) {
+  /* in the collapsed menu, lay the icons out in a row rather than stacked */
+  .navbar-custom .navbar-nav-left { flex-direction: row; flex-wrap: wrap; align-items: center; }
+  .navbar-custom .nav-item.nav-social .nav-link { padding: 0.5rem 0.6rem; }
 }
 
 /* --- intro / headers -------------------------------------------------- */
@@ -177,7 +165,7 @@ img { border-radius: var(--radius-sm); }
 .intro-header.no-img {
   background: var(--bg-soft);
   border-bottom: 1px solid var(--border);
-  padding: 8.5rem 0 2.25rem;   /* top pad clears the navbar + floating avatar/social */
+  padding: 7rem 0 2.25rem;   /* top pad clears the fixed navbar + floating avatar */
   margin: 0 0 2.5rem;
 }
 .intro-header.no-img .page-heading h1,
@@ -202,7 +190,7 @@ img { border-radius: var(--radius-sm); }
 /* --- home hero -------------------------------------------------------- */
 
 .home-hero {
-  padding: 8.5rem 0 2rem;   /* top pad clears the navbar + floating avatar/social */
+  padding: 7rem 0 2rem;   /* top pad clears the fixed navbar + floating avatar */
   border-bottom: 1px solid var(--border);
   margin-bottom: 2.5rem;
   background: var(--bg-soft);
