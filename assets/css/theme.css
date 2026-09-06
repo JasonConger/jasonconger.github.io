@@ -149,6 +149,11 @@ img { border-radius: var(--radius-sm); }
 @media (min-width: 1200px) {
   .navbar-custom.top-nav-regular .navbar-nav-left { margin-left: 0.5rem; }
 }
+/* the single YouTube icon kept next to the Videos link */
+.navbar-custom .nav-item.nav-social .nav-link { font-size: 1.1rem; }
+@media (min-width: 1200px) {
+  .navbar-custom .nav-item.nav-social .nav-link { padding-left: 0.45rem; padding-right: 0.45rem; }
+}
 
 /* --- social icon row (home hero + About page) ----------------------- */
 

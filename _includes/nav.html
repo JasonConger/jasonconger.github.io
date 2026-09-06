@@ -13,6 +13,12 @@
       <li class="nav-item">
         <a class="nav-link" href="/videos/">Videos</a>
       </li>
+      {% assign yt = site.data.social | where: "name", "YouTube" | first %}
+      {% if yt %}
+      <li class="nav-item nav-social">
+        <a class="nav-link" href="{{ yt.url }}" target="_blank" rel="noopener" title="YouTube channel" aria-label="YouTube channel"><i class="bi bi-youtube"></i></a>
+      </li>
+      {% endif %}
     </ul>
 
     <ul class="navbar-nav ml-auto navbar-nav-right">
