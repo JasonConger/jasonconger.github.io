@@ -1,0 +1,225 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+# videos-to-posts
+# ---------------
+# Generate one draft blog post per YouTube video from the cleaned transcripts
+# kept in the "second brain" repo (raw/yt-*.md). Reads only; never modifies the
+# transcript source. Idempotent: skips videos that already have a post/draft.
+#
+# Usage:
+#   bin/videos-to-posts [options]
+#
+#   --source DIR   Directory of yt-*.md transcripts
+#                  (default: ~/Documents/second-brain/raw)
+#   --out DIR      Output directory for drafts (default: _drafts)
+#   --limit N      Only process the first N transcripts
+#   --only STR     Only process transcripts whose id or slug contains STR
+#   --force        Regenerate even if a post/draft already exists (overwrites the draft)
+#   --dry-run      Print what would be created; write nothing
+#   -h, --help
+
+require "optparse"
+require "date"
+require "fileutils"
+
+Encoding.default_external = Encoding::UTF_8
+Encoding.default_internal = Encoding::UTF_8
+
+ROOT = File.expand_path("..", __dir__)
+
+options = {
+  source: File.expand_path("~/Documents/second-brain/raw"),
+  out: File.join(ROOT, "_drafts"),
+  limit: nil,
+  only: nil,
+  force: false,
+  dry_run: false,
+}
+
+OptionParser.new do |o|
+  o.banner = "Usage: bin/videos-to-posts [options]"
+  o.on("--source DIR") { |v| options[:source] = File.expand_path(v) }
+  o.on("--out DIR")     { |v| options[:out] = File.expand_path(v) }
+  o.on("--limit N", Integer) { |v| options[:limit] = v }
+  o.on("--only STR")   { |v| options[:only] = v }
+  o.on("--force")      { options[:force] = true }
+  o.on("--dry-run")    { options[:dry_run] = true }
+  o.on("-h", "--help") { puts o; exit }
+end.parse!
+
+# --- helpers ---------------------------------------------------------------
+
+# Minimal front-matter splitter. Returns [raw_yaml_string, body_string].
+def split_front_matter(text)
+  if text =~ /\A---\s*\n(.*?\n)---\s*\n?(.*)\z/m
+    [$1, $2]
+  else
+    ["", text]
+  end
+end
+
+# Pull a scalar value for a top-level key out of a front-matter block without
+# needing a YAML parser (keeps this stdlib-only and tolerant of the transcript
+# format, which uses quoted strings and nested lists).
+def fm_value(yaml, key)
+  yaml.each_line do |line|
+    if line =~ /\A#{Regexp.escape(key)}:\s*(.+?)\s*\z/
+      val = $1.strip
+      val = val[1..-2] if val.start_with?('"') && val.end_with?('"')
+      val = val[1..-2] if val.start_with?("'") && val.end_with?("'")
+      return val
+    end
+  end
+  nil
+end
+
+def video_id_from(url)
+  return nil unless url
+  case url
+  when /[?&]v=([A-Za-z0-9_-]{6,})/ then $1
+  when %r{youtu\.be/([A-Za-z0-9_-]{6,})} then $1
+  when %r{/embed/([A-Za-z0-9_-]{6,})} then $1
+  end
+end
+
+TAG_RULES = {
+  "Splunk"        => /\bsplunk\b/i,
+  "Cisco"         => /\bcisco\b/i,
+  "Microsoft"     => /\bmicrosoft\b/i,
+  "Azure"         => /\bazure\b/i,
+  "Microsoft 365" => /\b(microsoft 365|office 365|m365|o365)\b/i,
+  "Security"      => /\b(security|threat|siem|soc|attack|vulnerab)/i,
+  "AI"            => /\b(ai|artificial intelligence|llm|agentic|genai|machine learning)\b/i,
+  "Observability" => /\b(observability|otel|opentelemetry|o11y|monitoring)\b/i,
+  "Citrix"        => /\b(citrix|xenapp|xendesktop)\b/i,
+  "IoT"           => /\b(iot|internet of things|edge hub|sensor)\b/i,
+  "Partner"       => /\bpartner/i,
+  "Dashboards"    => /\bdashboard/i,
+  ".conf"         => /\b(\.conf|dot ?conf)\b/i,
+  "Cisco Live"    => /\bcisco live\b/i,
+  "Interview"     => /\binterview\b/i,
+}.freeze
+
+def derive_tags(*text)
+  haystack = text.join(" ")
+  tags = TAG_RULES.select { |_, re| haystack =~ re }.keys
+  tags.empty? ? ["Video"] : tags
+end
+
+def yaml_quote(str)
+  %("#{str.to_s.gsub('\\', '\\\\\\\\').gsub('"', '\\"')}")
+end
+
+def first_words(str, n)
+  words = str.to_s.split(/\s+/)
+  clipped = words.first(n).join(" ")
+  words.length > n ? "#{clipped}…" : clipped
+end
+
+# --- collect existing video ids -----------------------------------------------
+
+existing_ids = {}
+Dir.glob(File.join(ROOT, "_posts", "**", "*.{md,markdown,html}")).each do |f|
+  content = File.read(f)
+  content.scan(%r{(?:video-id:\s*|youtube(?:-nocookie)?\.com/(?:embed/|watch\?v=)|youtu\.be/)([A-Za-z0-9_-]{6,})}).flatten.each do |id|
+    existing_ids[id] = f
+  end
+end
+draft_ids = {}
+Dir.glob(File.join(options[:out], "*.{md,markdown}")).each do |f|
+  id = fm_value(split_front_matter(File.read(f))[0], "video-id")
+  draft_ids[id] = f if id
+end
+
+# --- process transcripts -----------------------------------------------------
+
+sources = Dir.glob(File.join(options[:source], "yt-*.md")).sort
+abort "No transcripts found in #{options[:source]}" if sources.empty?
+sources.select! { |f| File.basename(f).include?(options[:only]) } if options[:only]
+sources = sources.first(options[:limit]) if options[:limit]
+
+FileUtils.mkdir_p(options[:out]) unless options[:dry_run]
+
+created = 0
+skipped_have = 0
+skipped_noid = 0
+
+sources.each do |path|
+  yaml, body = split_front_matter(File.read(path))
+  title = fm_value(yaml, "title") || File.basename(path, ".md").sub(/\Ayt-/, "").tr("-", " ")
+  vid   = video_id_from(fm_value(yaml, "source"))
+  unless vid
+    warn "  ?  no video id: #{File.basename(path)}"
+    skipped_noid += 1
+    next
+  end
+
+  if !options[:force] && (existing_ids[vid] || draft_ids[vid])
+    where = existing_ids[vid] || draft_ids[vid]
+    puts "  =  skip #{vid} (already in #{where.sub(ROOT + '/', '')})"
+    skipped_have += 1
+    next
+  end
+
+  slug = File.basename(path, ".md").sub(/\Ayt-/, "")
+  published = fm_value(yaml, "published")
+  date = begin
+    Date.parse(published.to_s)
+  rescue ArgumentError, TypeError
+    Date.today
+  end
+  description = fm_value(yaml, "description").to_s.strip
+  duration = fm_value(yaml, "duration").to_s.strip
+  transcript = body.strip
+
+  tags = derive_tags(title, description, transcript[0, 2000])
+  excerpt = description.empty? ? "Video: #{title}" : first_words(description, 55)
+
+  out_name = "#{date.strftime('%Y-%m-%d')}-#{slug}.md"
+  out_path = File.join(options[:out], out_name)
+
+  front = <<~FM
+    ---
+    layout: post
+    title: #{yaml_quote(title)}
+    subtitle: ""
+    date: #{date.strftime('%Y-%m-%d')}
+    categories:
+     - Videos
+    tags:
+    #{tags.map { |t| " - #{yaml_quote(t)}" }.join("\n")}
+    author: JasonConger
+    readtime: true
+    video-id: #{vid}
+    video-duration: #{yaml_quote(duration)}
+    thumbnail-img: https://i.ytimg.com/vi/#{vid}/hqdefault.jpg
+    share-img: https://i.ytimg.com/vi/#{vid}/hqdefault.jpg
+    excerpt: #{yaml_quote(excerpt)}
+    featured: false
+    ---
+  FM
+
+  intro = description.empty? ? "" : "#{description}\n\n"
+  post_body = +front
+  post_body << "\n" << intro
+  post_body << %({% include youtube.html id="#{vid}" %}\n\n)
+  post_body << "## Transcript\n\n"
+  post_body << "*Auto-generated captions, lightly cleaned. Speakers are not separately labeled.*\n\n"
+  # drop the transcript's own leading bracketed caveat line if present
+  cleaned = transcript.sub(/\A\[[^\]]*\]\s*\n+/, "")
+  post_body << cleaned << "\n"
+
+  if options[:dry_run]
+    puts "  +  would create #{out_name}  [tags: #{tags.join(', ')}]"
+  else
+    File.write(out_path, post_body)
+    puts "  +  #{out_name}  [tags: #{tags.join(', ')}]"
+  end
+  draft_ids[vid] = out_path
+  created += 1
+end
+
+puts
+puts "created: #{created}   skipped (already have): #{skipped_have}   skipped (no id): #{skipped_noid}"
+puts "drafts written to #{options[:out].sub(ROOT + '/', '')}/  — review, then: bin/publish-draft _drafts/<file>.md" if created > 0 && !options[:dry_run]

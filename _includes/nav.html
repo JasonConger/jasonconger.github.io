@@ -6,7 +6,22 @@
   </button>
 
   <div class="collapse navbar-collapse" id="main-navbar">
-    <ul class="navbar-nav ml-auto">
+    <ul class="navbar-nav navbar-nav-left">
+      <li class="nav-item">
+        <a class="nav-link" href="/about-jason-conger/">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/videos/">Videos</a>
+      </li>
+      {% assign yt = site.data.social | where: "name", "YouTube" | first %}
+      {% if yt %}
+      <li class="nav-item nav-social">
+        <a class="nav-link" href="{{ yt.url }}" target="_blank" rel="noopener" title="YouTube channel" aria-label="YouTube channel"><i class="bi bi-youtube"></i></a>
+      </li>
+      {% endif %}
+    </ul>
+
+    <ul class="navbar-nav ml-auto navbar-nav-right">
       {% if site.post_search %}
         <li class="nav-item">
           <a class="nav-link" id="nav-search-link" href="#" title="Search">
@@ -15,21 +30,6 @@
           </a>
         </li>
       {%- endif -%}
-      <li class="nav-item">
-        <a class="nav-link" href="/about-jason-conger">About</a>
-      </li>
-      <li class="nav-item">
-          <a class="nav-link" href="https://linkedin.com/in/JasonConger" target="_blank"><i class="bi bi-linkedin"></i></a>
-      </li>
-      <li class="nav-item">
-          <a class="nav-link" href="https://twitter.com/JasonConger" target="_blank"><i class="bi bi-twitter-x"></i></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="https://www.youtube.com/JasonConger" target="_blank"><i class="bi bi-youtube"></i></a>
-      </li>
-      <li class="nav-item">
-          <a target="_blank" class="nav-link" href="https://github.com/JasonConger"><i class="bi bi-github"></i></a>
-      </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
           Splunk + Microsoft Cloud Resources
@@ -44,7 +44,7 @@
 
   <div class="avatar-container">
     <div class="avatar-img-border">
-      <a href="{{ '/about-jason-conger' | absolute_url }}">
+      <a href="{{ '/about-jason-conger/' | absolute_url }}">
         <img alt="JasonConger.com" class="avatar-img" src="{{ site.avatar | relative_url }}" />
       </a>
     </div>

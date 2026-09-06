@@ -1,0 +1,76 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+# publish-draft — move a reviewed draft into _posts/<year>/, dated from its
+# front matter (or today if none). Does not commit or push.
+#
+# Usage:
+#   bin/publish-draft _drafts/2026-06-09-splunk-edge-hub-in-the-data-center.md
+#   bin/publish-draft --all            # publish every draft
+#   bin/publish-draft --all --today    # ...and re-date them to today
+
+require "date"
+require "fileutils"
+
+Encoding.default_external = Encoding::UTF_8
+Encoding.default_internal = Encoding::UTF_8
+
+ROOT = File.expand_path("..", __dir__)
+
+args = ARGV.dup
+all    = args.delete("--all")
+today  = args.delete("--today")
+
+def front_matter(text)
+  text =~ /\A---\s*\n(.*?\n)---\s*\n?(.*)\z/m ? [$1, $2] : ["", text]
+end
+
+def fm_value(yaml, key)
+  yaml[/^#{Regexp.escape(key)}:\s*(.+)$/, 1]&.strip&.gsub(/\A["']|["']\z/, "")
+end
+
+files =
+  if all
+    Dir.glob(File.join(ROOT, "_drafts", "*.{md,markdown}"))
+  else
+    abort "Usage: bin/publish-draft _drafts/<file>.md  (or --all)" if args.empty?
+    args.map { |a| File.expand_path(a) }
+  end
+
+abort "No drafts to publish." if files.empty?
+
+files.sort.each do |src|
+  abort "Not found: #{src}" unless File.exist?(src)
+  text = File.read(src)
+  yaml, body = front_matter(text)
+
+  date =
+    if today
+      Date.today
+    else
+      begin
+        Date.parse(fm_value(yaml, "date").to_s)
+      rescue ArgumentError, TypeError
+        Date.today
+      end
+    end
+
+  base = File.basename(src).sub(/\A\d{4}-\d{2}-\d{2}-/, "")
+  new_name = "#{date.strftime('%Y-%m-%d')}-#{base}"
+  dest_dir = File.join(ROOT, "_posts", date.strftime("%Y"))
+  FileUtils.mkdir_p(dest_dir)
+  dest = File.join(dest_dir, new_name)
+  abort "Target exists: #{dest}" if File.exist?(dest)
+
+  # ensure a date: key so the filename and metadata agree
+  if fm_value(yaml, "date")
+    yaml = yaml.sub(/^date:.*$/, "date: #{date.strftime('%Y-%m-%d')}")
+  else
+    yaml = "date: #{date.strftime('%Y-%m-%d')}\n" + yaml
+  end
+  File.write(dest, "---\n#{yaml}---\n#{body}")
+  File.delete(src)
+  puts "published #{dest.sub(ROOT + '/', '')}"
+end
+
+puts "\nReview, then: git add -A && git commit && git push"

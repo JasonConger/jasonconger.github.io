@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+# serve — preview the site locally at http://127.0.0.1:4000 with drafts shown.
+#
+# Prefers `bundle exec jekyll` when the bundle is usable; otherwise falls back to
+# the system `jekyll` gem, which needs no Gemfile — so the Gemfile is moved aside
+# for the duration and restored on exit.
+#
+# Any extra args are passed through to `jekyll serve`.
+set -e
+cd "$(dirname "$0")/.."
+export LANG="${LANG:-en_US.UTF-8}"
+
+if bundle exec jekyll -v >/dev/null 2>&1; then
+  exec bundle exec jekyll serve --drafts --watch --livereload --host 127.0.0.1 "$@"
+fi
+
+echo "bundle unusable here — falling back to the system 'jekyll' gem."
+echo "(For the full toolchain, install a modern Ruby: 'brew install ruby' or rbenv, then 'bundle install'.)"
+
+restore() { [ -f Gemfile.hidden ] && mv Gemfile.hidden Gemfile; }
+trap restore EXIT INT TERM
+[ -f Gemfile ] && mv Gemfile Gemfile.hidden
+
+exec jekyll serve --drafts --watch --host 127.0.0.1 "$@"

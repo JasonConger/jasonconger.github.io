@@ -1,0 +1,368 @@
+/* ==========================================================================
+   theme.css — 2026 refresh layer for jasonconger.com
+   Loaded after beautifuljekyll.css + custom-styles.css; overrides the
+   presentation layer without touching structure, URLs, or plugins.
+   ========================================================================== */
+
+:root {
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  --font-serif: "Lora", Georgia, "Times New Roman", serif;
+  --font-mono: "SFMono-Regular", ui-monospace, "JetBrains Mono", Menlo, Consolas,
+    monospace;
+
+  --ink: #1f2328;
+  --ink-soft: #57606a;
+  --ink-faint: #8b949e;
+  --bg: #ffffff;
+  --bg-soft: #f6f8fa;
+  --bg-sunken: #eef1f4;
+  --border: #d8dee4;
+  --accent: #0969da;
+  --accent-hover: #0a5ec9;
+  --accent-contrast: #ffffff;
+
+  --radius: 12px;
+  --radius-sm: 8px;
+  --shadow: 0 1px 2px rgba(31, 35, 40, 0.06), 0 8px 24px rgba(31, 35, 40, 0.08);
+  --measure: 44rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ink: #e6edf3;
+    --ink-soft: #9da7b3;
+    --ink-faint: #768390;
+    --bg: #0d1117;
+    --bg-soft: #161b22;
+    --bg-sunken: #1c2128;
+    --border: #30363d;
+    --accent: #4493f8;
+    --accent-hover: #6cb0ff;
+    --accent-contrast: #0d1117;
+    --shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 8px 24px rgba(0, 0, 0, 0.5);
+  }
+}
+
+/* --- base ---------------------------------------------------------------- */
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  font-family: var(--font-sans);
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  color: var(--ink);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover, a:focus { color: var(--accent-hover); text-decoration: underline; }
+
+hr { border-top: 1px solid var(--border); }
+
+blockquote {
+  border-left: 3px solid var(--accent);
+  padding: 0.25rem 0 0.25rem 1.25rem;
+  margin-left: 0;
+  color: var(--ink-soft);
+  font-style: normal;
+}
+
+pre, code, kbd, samp { font-family: var(--font-mono); font-size: 0.9em; }
+code {
+  background: var(--bg-sunken);
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+  color: var(--ink);
+}
+pre {
+  background: var(--bg-sunken);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 1rem 1.15rem;
+  overflow-x: auto;
+}
+pre code { background: none; padding: 0; }
+
+table { border-collapse: collapse; width: 100%; margin: 1.5rem 0; }
+th, td { border: 1px solid var(--border); padding: 0.5rem 0.75rem; text-align: left; }
+th { background: var(--bg-soft); }
+
+img { border-radius: var(--radius-sm); }
+
+/* --- navbar ------------------------------------------------------------- */
+
+.navbar-custom {
+  background: color-mix(in srgb, var(--bg) 88%, transparent) !important;
+  backdrop-filter: saturate(180%) blur(10px);
+  border-bottom: 1px solid var(--border);
+  box-shadow: none;
+}
+/* collapsed mobile menu: opaque panel so page content doesn't show through */
+@media (max-width: 1199px) {
+  .navbar-custom .navbar-collapse {
+    background: var(--bg);
+    margin: 0 -1rem;
+    padding: 0.5rem 1rem 1rem;
+    border-bottom: 1px solid var(--border);
+  }
+}
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-nav .nav-link {
+  color: var(--ink-soft) !important;
+  font-weight: 500;
+}
+.navbar-custom .navbar-brand:hover,
+.navbar-custom .navbar-nav .nav-link:hover,
+.navbar-custom .navbar-nav .nav-link:focus {
+  color: var(--accent) !important;
+}
+.navbar-custom .nav-item.dropdown .dropdown-menu {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow);
+}
+.navbar-custom .nav-item.dropdown .dropdown-menu .dropdown-item {
+  color: var(--ink-soft);
+}
+/* floating avatar stays centred; About/Videos sit to its left, search + the
+   dropdown to its right (see _includes/nav.html) */
+.navbar-custom .avatar-container .avatar-img-border { box-shadow: var(--shadow); }
+.navbar-custom.top-nav-short .avatar-container,
+.navbar-custom.top-nav-expanded .avatar-container {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none;
+  transition: visibility linear 0.5s, opacity 0.5s ease-in-out;
+}
+@media (min-width: 1200px) {
+  .navbar-custom.top-nav-regular .navbar-nav-left { margin-left: 0.5rem; }
+}
+/* the single YouTube icon kept next to the Videos link */
+.navbar-custom .nav-item.nav-social .nav-link { font-size: 1.1rem; }
+@media (min-width: 1200px) {
+  .navbar-custom .nav-item.nav-social .nav-link { padding-left: 0.45rem; padding-right: 0.45rem; }
+}
+
+/* --- social icon row (home hero + About page) ----------------------- */
+
+.social-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  margin-top: 1rem;
+}
+.social-row a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.4rem;
+  height: 2.4rem;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  color: var(--ink-soft);
+  font-size: 1.15rem;
+  background: var(--bg);
+  transition: color 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
+}
+.social-row a:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  text-decoration: none;
+  transform: translateY(-2px);
+}
+
+/* --- footer social row -------------------------------------------- */
+
+.footer-links { padding-left: 0; margin-bottom: 0.75rem; }
+.footer-links .list-inline-item { margin: 0 0.55rem; }
+.footer-links a { color: var(--ink-soft); font-size: 1.15rem; }
+.footer-links a:hover { color: var(--accent); }
+
+/* --- intro / headers -------------------------------------------------- */
+
+.intro-header.no-img {
+  background: var(--bg-soft);
+  border-bottom: 1px solid var(--border);
+  padding: 7rem 0 2.25rem;   /* top pad clears the fixed navbar + floating avatar */
+  margin: 0 0 2.5rem;
+}
+.intro-header.no-img .page-heading h1,
+.intro-header.no-img .post-heading h1 { color: var(--ink); }
+.intro-header.no-img .page-subheading,
+.intro-header.no-img .post-subheading { color: var(--ink-soft); }
+.post-heading .post-meta,
+.page-heading .post-meta { color: var(--ink-faint); }
+
+.header-section.has-img .big-img { border-radius: 0; }
+.header-section.has-img .overlay {
+  background: linear-gradient(180deg, rgba(0,0,0,0.3), rgba(0,0,0,0.68));
+}
+/* keep cover-image headers legible (the global h1 colour would otherwise win) */
+.intro-header.big-img .post-heading h1,
+.intro-header.big-img .page-heading h1,
+.intro-header.big-img .post-heading .post-subheading,
+.intro-header.big-img .page-heading .page-subheading {
+  color: #fff;
+}
+
+/* --- post list / cards ---------------------------------------------- */
+
+.posts-list { margin: 0 auto; }
+.post-preview {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg);
+  padding: 1.5rem 1.6rem;
+  margin-bottom: 1.5rem;
+  transition: box-shadow 0.18s ease, transform 0.18s ease;
+}
+.post-preview:hover { box-shadow: var(--shadow); transform: translateY(-2px); }
+.post-preview .post-title {
+  font-size: 1.5rem;
+  margin: 0 0 0.2rem;
+  color: var(--ink);
+}
+.post-preview .post-subtitle { color: var(--ink-soft); font-size: 1.05rem; }
+.post-preview .post-meta {
+  color: var(--ink-faint);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.post-preview .post-image-short { height: auto; max-height: 260px; border-radius: var(--radius-sm); overflow: hidden; margin: 1rem 0; }
+.post-preview .post-image img { border-radius: var(--radius-sm); }
+.post-preview .post-entry { color: var(--ink-soft); }
+.post-read-more, .post-preview .post-read-more a { color: var(--accent); font-weight: 600; }
+
+.blog-tags { margin-top: 1rem; }
+.blog-tags span { color: var(--ink-faint); }
+.blog-tags a {
+  display: inline-block;
+  background: var(--bg-sunken);
+  color: var(--ink-soft);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.15rem 0.7rem;
+  margin: 0.15rem 0.25rem 0.15rem 0;
+  font-size: 0.8rem;
+  text-transform: lowercase;
+}
+.blog-tags a:hover { background: var(--accent); color: var(--accent-contrast); border-color: var(--accent); text-decoration: none; }
+
+/* --- featured strip ------------------------------------------------- */
+
+.featured-strip { margin-bottom: 3rem; }
+.featured-strip h2.section-label {
+  font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.08em;
+  color: var(--ink-faint); border: 0; margin-bottom: 1rem;
+}
+.featured-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 340px)); gap: 1.25rem; }
+@media (max-width: 575px) { .featured-cards { grid-template-columns: 1fr; } }
+.featured-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--bg);
+  display: flex; flex-direction: column;
+  transition: box-shadow 0.18s ease, transform 0.18s ease;
+}
+.featured-card:hover { box-shadow: var(--shadow); transform: translateY(-2px); }
+a.featured-card { color: inherit; text-decoration: none; }
+.featured-card .thumb { display: block; aspect-ratio: 16 / 9; background: var(--bg-sunken) center/cover no-repeat; }
+.featured-card .body { display: block; padding: 1rem 1.15rem 1.25rem; }
+.featured-card h3 { font-size: 1.15rem; margin: 0 0 0.35rem; }
+.featured-card p { color: var(--ink-soft); font-size: 0.95rem; margin: 0; }
+
+/* --- blog post body ----------------------------------------------- */
+
+.blog-post { font-size: 1.09rem; }
+.blog-post > p,
+.blog-post > ul,
+.blog-post > ol,
+.blog-post > h2,
+.blog-post > h3,
+.blog-post > blockquote { max-width: var(--measure); }
+.blog-post h2 { margin-top: 2.25rem; }
+.blog-post img { box-shadow: var(--shadow); }
+
+/* --- responsive video embed ------------------------------------- */
+
+.video-embed {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  margin: 1.75rem 0;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: #000;
+  box-shadow: var(--shadow);
+}
+.video-embed iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+
+/* --- /videos/ grid --------------------------------------------- */
+
+.videos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0 3rem;
+}
+.video-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--bg);
+  display: flex; flex-direction: column;
+  transition: box-shadow 0.18s ease, transform 0.18s ease;
+}
+.video-card:hover { box-shadow: var(--shadow); transform: translateY(-2px); }
+.video-card > a { color: inherit; text-decoration: none; display: flex; flex-direction: column; height: 100%; }
+.video-card .thumb {
+  display: block;
+  position: relative;
+  aspect-ratio: 16 / 9;
+  background: var(--bg-sunken) center/cover no-repeat;
+}
+.video-card .thumb .dur {
+  position: absolute; right: 0.5rem; bottom: 0.5rem;
+  background: rgba(0,0,0,0.8); color: #fff;
+  font-size: 0.75rem; padding: 0.1rem 0.4rem; border-radius: 4px;
+}
+.video-card .meta { padding: 0.85rem 1rem 1.1rem; }
+.video-card .meta h3 { font-size: 1.02rem; line-height: 1.35; margin: 0 0 0.3rem; }
+.video-card .meta time { color: var(--ink-faint); font-size: 0.82rem; }
+
+/* --- footer --------------------------------------------------- */
+
+footer, .footer-custom {
+  background: var(--bg-soft) !important;
+  border-top: 1px solid var(--border);
+  color: var(--ink-soft) !important;
+}
+footer a, .footer-custom a { color: var(--ink-soft) !important; }
+footer a:hover { color: var(--accent) !important; }
+
+/* --- misc --------------------------------------------------- */
+
+.pagination .page-link {
+  color: var(--accent);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  margin: 0 0.25rem;
+}
+.pagination .page-link:hover { background: var(--bg-soft); }
+
+::selection { background: color-mix(in srgb, var(--accent) 25%, transparent); }

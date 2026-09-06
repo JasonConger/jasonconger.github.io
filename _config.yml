@@ -114,9 +114,13 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - LICENSE
+  - LICENSE.txt
   - README.md
   - screenshot.png
   - docs/
+  - bin/
+  - vendor/
+  - beautiful-jekyll-theme.gemspec
 
 plugins:
   - jekyll-paginate

@@ -1,0 +1,12 @@
+{% comment %}
+Compact social icon row for the home hero and the About page.
+Platforms come from _data/social.yml.
+{% endcomment %}
+<div class="social-row" aria-label="Social links">
+  {% for item in site.data.social %}
+  <a href="{{ item.url }}" title="{{ item.name }}" target="_blank" rel="noopener">
+    <i class="bi bi-{{ item.icon }}"></i>
+    <span class="sr-only">{{ item.name }}</span>
+  </a>
+  {% endfor %}
+</div>
