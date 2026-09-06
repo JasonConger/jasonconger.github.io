@@ -127,8 +127,14 @@ img { border-radius: var(--radius-sm); }
 .navbar-custom .nav-item.dropdown .dropdown-menu .dropdown-item {
   color: var(--ink-soft);
 }
-/* redundant with the brand home icon + a lot of nav items already; drop it */
-.navbar-custom .avatar-container { display: none; }
+/* floating avatar: on desktop move it beside the brand (left) so it never
+   collides with the right-aligned nav links (the extra "Videos" item made the
+   stock centred position tight). Mobile keeps the stock centred placement. */
+.navbar-custom .avatar-container .avatar-img-border { box-shadow: var(--shadow); }
+@media (min-width: 1200px) {
+  .navbar-custom.top-nav-regular .avatar-container { left: 5.25rem; }
+  .navbar-custom.top-nav-regular .avatar-container .avatar-img-border { margin-left: 0; }
+}
 
 /* --- intro / headers -------------------------------------------------- */
 
