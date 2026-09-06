@@ -17,7 +17,7 @@ video-duration: "6:01"
 thumbnail-img: https://i.ytimg.com/vi/otWCMGJiU_I/hqdefault.jpg
 share-img: https://i.ytimg.com/vi/otWCMGJiU_I/hqdefault.jpg
 excerpt: "Interview with Annie Hardy at Cisco Live Amsterdam. Convergent thinking (logical, systematic, best-solution) is what AI is good at; divergent thinking (creative, non-linear, brainstorming) is what strategists are good at. Discusses the DIKW pyramid, the impact on convergent-thinker roles (engineers, mathematicians, project managers), and the leadership gap in helping people bridge to AI-era roles."
-featured: false
+featured: true
 ---
 Interview with Annie Hardy at Cisco Live Amsterdam. Convergent thinking (logical, systematic, best-solution) is what AI is good at; divergent thinking (creative, non-linear, brainstorming) is what strategists are good at. Discusses the DIKW pyramid, the impact on convergent-thinker roles (engineers, mathematicians, project managers), and the leadership gap in helping people bridge to AI-era roles.
 
