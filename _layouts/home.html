@@ -2,19 +2,7 @@
 layout: base
 ---
 
-<section class="home-hero">
-  <div class="container-md">
-    <div class="row"><div class="col">
-      <h1>{{ page.hero-title | default: site.title }}</h1>
-      {% if page.hero-tagline %}<p>{{ page.hero-tagline }}</p>{% endif %}
-      <div class="hero-links">
-        <a href="/videos/"><i class="bi bi-collection-play"></i> Videos</a>
-        <a href="/about-jason-conger/"><i class="bi bi-person"></i> About</a>
-      </div>
-      {% include social-row.html %}
-    </div></div>
-  </div>
-</section>
+{% include header.html type="page" %}
 
 <main class="container-md">
   <div class="row"><div class="col">

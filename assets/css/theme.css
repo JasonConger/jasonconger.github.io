@@ -217,32 +217,6 @@ img { border-radius: var(--radius-sm); }
   color: #fff;
 }
 
-/* --- home hero -------------------------------------------------------- */
-
-.home-hero {
-  padding: 7rem 0 2rem;   /* top pad clears the fixed navbar + floating avatar */
-  border-bottom: 1px solid var(--border);
-  margin-bottom: 2.5rem;
-  background: var(--bg-soft);
-}
-.home-hero h1 {
-  font-size: clamp(2rem, 5vw, 2.9rem);
-  margin: 0 0 0.5rem;
-}
-.home-hero p {
-  font-size: 1.2rem;
-  color: var(--ink-soft);
-  max-width: 40rem;
-  margin: 0 0 1.25rem;
-}
-.home-hero .hero-links a {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  margin-right: 1.1rem;
-  font-weight: 500;
-}
-
 /* --- post list / cards ---------------------------------------------- */
 
 .posts-list { margin: 0 auto; }
