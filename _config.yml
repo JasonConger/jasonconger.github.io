@@ -66,9 +66,6 @@ footer-link-col: "#404040"
 # Fill in your Google Analytics gtag.js ID to track your website using gtag
 gtag: "G-X85BPW0Z1W"
 
-# Google Tag Manager ID
-gtm: "G-X85BPW0Z1W"
-
 # To use Disqus comments, sign up to https://disqus.com and fill in your Disqus shortname (NOT the userid)
 disqus: "jasonconger"
 
