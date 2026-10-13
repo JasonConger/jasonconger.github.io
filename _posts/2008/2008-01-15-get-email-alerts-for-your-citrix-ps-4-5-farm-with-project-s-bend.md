@@ -41,4 +41,4 @@ The process is actually quite simple.
 <img src="http://www.jasonconger.com/images/articleImages/SBend/PhaseI/S-Bend_flow.gif" alt="Project S-Bend flow" />
 
 <span class="postHeading">What about Phase II?</span>
-I guess it is quite obvious that there is a Phase II in the works since I named this thing Phase I. Actually, Phase II is a provider. "A provider for what?" you may ask. Phase II is a provider for reports. Web Interface for Resource Manager will consume this provider as mentioned in the <a href="http://www.jasonconger.com/Web-Interface-for-Resource-Manager-Roadmap.aspx">Web Interface for Resource Manager Roadmap</a>.
+I guess it is quite obvious that there is a Phase II in the works since I named this thing Phase I. Actually, Phase II is a provider. "A provider for what?" you may ask. Phase II is a provider for reports. Web Interface for Resource Manager will consume this provider as mentioned in the <a href="{% post_url /2007/2007-12-10-web-interface-for-resource-manager-roadmap %}">Web Interface for Resource Manager Roadmap</a>.

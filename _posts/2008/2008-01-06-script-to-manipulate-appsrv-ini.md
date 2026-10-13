@@ -31,7 +31,7 @@ Reference: <a href="http://support.citrix.com/article/ctx368624" target="_blank"
 So, you try this and it fixes the issue for the user. What do you do now? Manually modify each user's APPSRV.INI? Tell your users to perform the modification themselves? Script the change? Tell your boss there is no fix for the issue?
 
 <span class="postHeading">The Solution</span>
-Script the change sounds good to me, but how do you do that? That is where this article comes in. I mentioned I had a script to manipulate APPSRV.INI in the comments of <a href="http://www.jasonconger.com/Deploying-a-Pre-Configured-Citrix-Client-using-Active-Directory.aspx">this article</a>. I have received many emails requesting the script. So, I decided to "spruce up" the script a little by adding more comments and logging and then share it. The script is written in such a way that you can add or modify any key/value pair to any section in APPSRV.INI (or any .INI file for that matter). Just modify the following section of the script to suit your needs:
+Script the change sounds good to me, but how do you do that? That is where this article comes in. I mentioned I had a script to manipulate APPSRV.INI in the comments of <a href="{% post_url /2006/2006-03-29-deploying-a-pre-configured-citrix-client-using-active-directory %}">this article</a>. I have received many emails requesting the script. So, I decided to "spruce up" the script a little by adding more comments and logging and then share it. The script is written in such a way that you can add or modify any key/value pair to any section in APPSRV.INI (or any .INI file for that matter). Just modify the following section of the script to suit your needs:
 
 ~~~
 '**********************************************************

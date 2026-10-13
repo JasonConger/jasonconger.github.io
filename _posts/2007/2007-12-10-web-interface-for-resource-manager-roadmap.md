@@ -40,7 +40,7 @@ Farm Level Reports – these reports will aggregate information to give more of 
 Citrix Presentation Server 4.5 Configuration Logging Integration – this will allow reporting on historical changes.
 
 <span class="heading">How do we get there from here?</span>
-Since Web Interface for Resource Manager is moving beyond the bounds of the <a href="http://www.jasonconger.com/Visio-Diagram-of-the-Citrix-Resource-Manager-Summary-Database.aspx">Resource Manager Summary Database</a>, a major architectural shift will occur. This shift will implement SOA (Service Oriented Architecture) principles. This will allow a loosely coupled layer approach. Why is this important? This will facilitate implementing a provider model where each provider is something you can turn on or off. Depending on what you have turned on, you will get more information in the reports. The providers currently in development are:
+Since Web Interface for Resource Manager is moving beyond the bounds of the <a href="{% post_url /2006/2006-03-01-visio-diagram-of-the-citrix-resource-manager-summary-database %}">Resource Manager Summary Database</a>, a major architectural shift will occur. This shift will implement SOA (Service Oriented Architecture) principles. This will allow a loosely coupled layer approach. Why is this important? This will facilitate implementing a provider model where each provider is something you can turn on or off. Depending on what you have turned on, you will get more information in the reports. The providers currently in development are:
 
 » Summary Database Provider
 » MFCOM Provider
