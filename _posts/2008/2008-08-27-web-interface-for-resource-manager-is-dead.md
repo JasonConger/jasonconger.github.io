@@ -16,7 +16,7 @@ tags:
 <img style="float: left; padding-right: 15px;" src="http://www.jasonconger.com/images/articleImages/WIRM/WIRM_RIP.jpg" alt="" /> I have gotten several comments (online and offline) and emails asking about future developments surrounding Web Interface for Resource Manager. Well, Web Interface for Resource Manager as you know today is officially dead. There are actually several reasons for this. Read on for more information...
 
 <span class="heading"><strong>MFCOM</strong></span>
-<a href="http://www.jasonconger.com/Web-Interface-for-Resource-Manager-3-0-Architecture-Update.aspx">The last update I gave on Web Interface for Resource Manager</a> indicated that MFCOM (MetaFrame COM – the Citrix XenApp <acronym title="Application Programming Interface">API</acronym>) support would be included in order to get real-time statistics. As it turns out, MFCOM is being re-architected with PowerShell technology. So, there will be some re-writes for this type of integration. This also means no remoting (for the time being).
+<a href="{% post_url /2008/2008-03-16-web-interface-for-resource-manager-3-0-architecture-update %}">The last update I gave on Web Interface for Resource Manager</a> indicated that MFCOM (MetaFrame COM – the Citrix XenApp <acronym title="Application Programming Interface">API</acronym>) support would be included in order to get real-time statistics. As it turns out, MFCOM is being re-architected with PowerShell technology. So, there will be some re-writes for this type of integration. This also means no remoting (for the time being).
 
 <span class="heading"><strong>EdgeSight</strong></span>
 Going forward, Citrix Resource Manager is being re-architected with EdgeSight technology. This means that the back-end database schema will be drastically different. The EdgeSight schema has a lot of the same information as the Resource Manager schema, but queries required to get that information will be a lot different. That means a lot of code re-writing.
@@ -42,6 +42,6 @@ Web Services currently under development are:
  
 
 <span class="heading"><strong>The inevitable question – "When is this going to be released?"</strong></span>
-The broad answer is – "this year". Using these <acronym title="Service Oriented Architecture">SOA</acronym> techniques has required quite a bit of ground-up work. But, on a positive note, I am able to knock out two projects at the same time. The Configuration Logging Web Service will be consumed by both Project Raley and <a href="http://www.jasonconger.com/Get-email-alerts-for-your-Citrix-PS-4-5-Farm-with-Project-S-Bend.aspx">Project S-Bend</a>. I will also try to post some videos of alpha code to let you see some of this in action as well.
+The broad answer is – "this year". Using these <acronym title="Service Oriented Architecture">SOA</acronym> techniques has required quite a bit of ground-up work. But, on a positive note, I am able to knock out two projects at the same time. The Configuration Logging Web Service will be consumed by both Project Raley and <a href="{% post_url /2008/2008-01-15-get-email-alerts-for-your-citrix-ps-4-5-farm-with-project-s-bend %}">Project S-Bend</a>. I will also try to post some videos of alpha code to let you see some of this in action as well.
 
 Please feel free to shoot me an email if you would like to beta test.

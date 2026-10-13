@@ -24,4 +24,4 @@ Thanks to <a href="http://www.grupoitpro.com.ar/" target="_blank">Gustavo Gurman
 
 If you are interested in providing a translation, feel free to send me an email.
 
-<a href="http://www.jasonconger.com/Web-Interface-for-Resource-Manager-2-2.aspx">Download Web Interface for Resource Manager version 2.2</a>
+<a href="{% post_url /2007/2007-02-12-web-interface-for-resource-manager-2-2 %}">Download Web Interface for Resource Manager version 2.2</a>

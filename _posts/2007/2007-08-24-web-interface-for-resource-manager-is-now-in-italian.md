@@ -28,4 +28,4 @@ If you are interested in providing a translation, feel free to send me an email.
 <span style="text-decoration: underline;">MFCOM integration</span> will provide real-time application and server statistics.
 <span style="text-decoration: underline;">Citrix Presentation Server 4.5 configuration logging database integration</span> will provide reports on historical farm changes.
 
-Hmm, I might have to rename this thing since it is starting to reach beyond Resource Manager. Until then, go get <a href="http://www.jasonconger.com/Web-Interface-for-Resource-Manager-2-2.aspx">Web Interface for Resource Manager version 2.2</a>
+Hmm, I might have to rename this thing since it is starting to reach beyond Resource Manager. Until then, go get <a href="{% post_url /2007/2007-02-12-web-interface-for-resource-manager-2-2 %}">Web Interface for Resource Manager version 2.2</a>

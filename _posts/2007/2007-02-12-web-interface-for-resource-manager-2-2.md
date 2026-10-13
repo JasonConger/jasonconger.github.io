@@ -23,7 +23,7 @@ Got Citrix Resource Manager?  Try out Web Interface for Resource Manager!
 Web Interface for Resource Manager is an ASP.NET 2.0 web application that contains several SQL queries to display useful information contained in the Citrix Resource Manager Summary Database.  Web Interface for Resource Manager displays this information in a drill-down graphical and tabular manner.
 
 <strong>What's new in version 2.2?</strong>
-Web Interface for Resource Manager version 2.2 includes everything in <a href="http://www.jasonconger.com/ShowPost.aspx?strID=f0d11211-b409-462b-83e7-db1c17020ce5">version 2.1</a>, plus the following new features:
+Web Interface for Resource Manager version 2.2 includes everything in <a href="{% post_url /2006/2006-12-07-web-interface-for-resource-manager-2-1 %}">version 2.1</a>, plus the following new features:
 <ul>
 	<li><strong>New information on the Client report</strong>
 <ul>
@@ -75,7 +75,7 @@ If all database tables are not owned by <strong>dbo</strong>, you will receive e
 
 If you do not properly set up your database authentication, you will not be able to view any reports. Please refer to <a href="http://msdn.microsoft.com/library/default.asp?url=/library/en-us/adminsql/ad_security_47u6.asp" target="_blank">this article</a> for database authentication guidelines.
 
-Note: Version 2.2 is only intended for Presentation Server 3.0 and above. This is due to the differences in the Resource Manager Summary Database schema.  The MetaFrame XP Summary Database schema does not include the tables necessary to generate these new reports. Please use <a href="http://www.jasonconger.com/ShowPost.aspx?strID=89d8e6a3-5e50-46b9-8a94-1f8f9793ae93">Web Interface for Resource Manager Version 1.1</a> for MetaFrame XP.
+Note: Version 2.2 is only intended for Presentation Server 3.0 and above. This is due to the differences in the Resource Manager Summary Database schema.  The MetaFrame XP Summary Database schema does not include the tables necessary to generate these new reports. Please use <a href="{% post_url /2006/2006-05-26-web-interface-for-resource-manager-1-1 %}">Web Interface for Resource Manager Version 1.1</a> for MetaFrame XP.
 
 <strong>Screen Shot of Web Interface for Resource Manager's GUI Configuration Tool</strong>
 
