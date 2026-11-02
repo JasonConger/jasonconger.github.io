@@ -13,7 +13,6 @@
   --ds-white:  #F2EFEA;
   --ds-pink:   #DA2F75;
   --ds-orange: #D08343;
-  --ds-cognac: #95643E;   /* from the fashion board; orange is too light for text on cream */
 
   --font-title: "Lexend Exa", "Lexend", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --font-sans: "Lexend", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
@@ -21,41 +20,25 @@
   --font-mono: "SFMono-Regular", ui-monospace, "JetBrains Mono", Menlo, Consolas,
     monospace;
 
-  /* light: cream paper, navy ink */
-  --ink: var(--ds-navy);
-  --ink-soft: #3b4660;
-  --ink-faint: #667087;
-  --bg: #faf8f4;
-  --bg-soft: var(--ds-white);
-  --bg-sunken: #e9e5dc;
-  --border: #d9d4c9;
-  --accent: var(--ds-blue);
-  --accent-hover: #1f4285;
-  --accent-contrast: #ffffff;
+  /* dark only: navy background, cream text */
+  color-scheme: dark;
+  --ink: var(--ds-white);
+  --ink-soft: var(--ds-gray);
+  --ink-faint: #8a91a3;
+  --bg: var(--ds-navy);
+  --bg-soft: #081636;
+  --bg-sunken: #0f1d42;
+  --border: #1d2b50;
+  --accent: var(--ds-orange);      /* blue fails as text on navy (2.8:1); orange is 6.4:1 */
+  --accent-hover: #e3a06a;
+  --accent-contrast: var(--ds-navy);
   --accent-2: var(--ds-pink);      /* decorative: rules, quote bars, selection */
-  --label: var(--ds-cognac);       /* eyebrow labels */
+  --label: var(--ds-orange);       /* eyebrow labels */
 
   --radius: 12px;
   --radius-sm: 8px;
-  --shadow: 0 1px 2px rgba(2, 13, 41, 0.06), 0 8px 24px rgba(2, 13, 41, 0.1);
+  --shadow: 0 1px 2px rgba(0, 0, 0, 0.45), 0 8px 24px rgba(0, 0, 0, 0.55);
   --measure: 44rem;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --ink: var(--ds-white);
-    --ink-soft: var(--ds-gray);
-    --ink-faint: #8a91a3;
-    --bg: var(--ds-navy);
-    --bg-soft: #081636;
-    --bg-sunken: #0f1d42;
-    --border: #1d2b50;
-    --accent: var(--ds-orange);    /* blue fails as text on navy (2.8:1); orange is 6.4:1 */
-    --accent-hover: #e3a06a;
-    --accent-contrast: var(--ds-navy);
-    --label: var(--ds-orange);
-    --shadow: 0 1px 2px rgba(0, 0, 0, 0.45), 0 8px 24px rgba(0, 0, 0, 0.55);
-  }
 }
 
 /* --- base ---------------------------------------------------------------- */
@@ -118,6 +101,8 @@ pre {
 pre code { background: none; padding: 0; }
 
 table { border-collapse: collapse; width: 100%; margin: 1.5rem 0; }
+table tr { background-color: transparent; border-top-color: var(--border); }
+table tr:nth-child(2n) { background-color: color-mix(in srgb, var(--ink) 4%, transparent); }
 th, td { border: 1px solid var(--border); padding: 0.5rem 0.75rem; text-align: left; }
 th { background: var(--bg-soft); }
 
@@ -173,11 +158,9 @@ img { border-radius: var(--radius-sm); }
   .navbar-custom.top-nav-regular .navbar-nav-left { margin-left: 0.5rem; }
 }
 /* hamburger: Bootstrap's icon is dark-on-light; flip it on navy */
-@media (prefers-color-scheme: dark) {
-  .navbar-custom .navbar-toggler { border-color: var(--border); }
-  .navbar-custom .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='%23AEB2BB' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-  }
+.navbar-custom .navbar-toggler { border-color: var(--border); }
+.navbar-custom .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='%23AEB2BB' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 /* the single YouTube icon kept next to the Videos link */
 .navbar-custom .nav-item.nav-social .nav-link { font-size: 1.1rem; }
@@ -267,10 +250,8 @@ img { border-radius: var(--radius-sm); }
 /* keep cover-image headers legible (the global h1 colour would otherwise win) */
 .intro-header.big-img .post-heading h1,
 .intro-header.big-img .page-heading h1,
-.intro-header.big-img .post-heading .post-subheading,
-.intro-header.big-img .page-heading .page-subheading {
-  color: #fff;
-}
+.intro-header.big-img .post-heading .post-subheading { color: #fff; }
+.intro-header.big-img .page-heading .page-subheading { color: var(--ds-orange); }
 
 /* --- post list / cards ---------------------------------------------- */
 
@@ -426,3 +407,50 @@ footer a:hover { color: var(--accent) !important; }
 .pagination .page-link:hover { background: var(--bg-soft); }
 
 ::selection { background: color-mix(in srgb, var(--accent-2) 30%, transparent); }
+
+/* --- tag index buttons ---------------------------------------------- */
+
+.btn-primary.tag-btn {
+  background: var(--bg-sunken);
+  border-color: var(--border);
+  color: var(--ink-soft);
+  font-weight: 400;
+}
+.btn-primary.tag-btn:hover,
+.btn-primary.tag-btn:focus {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--accent-contrast);
+}
+
+/* --- Bootstrap 5 pages (Splunk add-ons): dark tables, offcanvas, links ---- */
+
+:root:root { --bs-body-bg: var(--bg); --bs-body-color: var(--ink); --bs-border-color: var(--border); --bs-link-color: var(--accent); --bs-link-hover-color: var(--accent-hover); --bs-link-color-rgb: 208, 131, 67; }
+body .table {
+  --bs-table-color: var(--ink);
+  --bs-table-bg: transparent;
+  --bs-table-border-color: var(--border);
+  --bs-table-striped-color: var(--ink);
+  --bs-table-striped-bg: color-mix(in srgb, var(--ink) 4%, transparent);
+  --bs-table-hover-color: var(--ink);
+  --bs-table-hover-bg: color-mix(in srgb, var(--ink) 8%, transparent);
+  color: var(--ink);
+  border-color: var(--border);
+}
+body .table-light,
+body .table-dark {
+  --bs-table-color: var(--ink);
+  --bs-table-bg: var(--bg-sunken);
+  --bs-table-border-color: var(--border);
+  --bs-table-striped-bg: var(--bg-sunken);
+  --bs-table-hover-bg: var(--bg-sunken);
+}
+.link-dark { color: var(--ink-soft) !important; }
+.link-dark:hover { color: var(--accent) !important; }
+body .offcanvas {
+  --bs-offcanvas-bg: var(--bg-soft);
+  --bs-offcanvas-color: var(--ink);
+  background-color: var(--bg-soft);
+  color: var(--ink);
+}
+.btn-close { filter: invert(1) grayscale(100%) brightness(200%); }
