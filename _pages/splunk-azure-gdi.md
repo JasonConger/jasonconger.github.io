@@ -1,6 +1,7 @@
 ---
 layout: page
 permalink: /splunk-azure-gdi/
+theme: light
 comments: false
 ---
 

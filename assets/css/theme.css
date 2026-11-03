@@ -454,3 +454,30 @@ body .offcanvas {
   color: var(--ink);
 }
 .btn-close { filter: invert(1) grayscale(100%) brightness(200%); }
+
+/* --- light theme (opt in per page with `theme: light` in the front matter) ---
+   Cream paper, navy ink, blue links; same fonts and type. */
+
+html.theme-light {
+  color-scheme: light;
+  --ink: var(--ds-navy);
+  --ink-soft: #3b4660;
+  --ink-faint: #667087;
+  --bg: #faf8f4;
+  --bg-soft: var(--ds-white);
+  --bg-sunken: #e9e5dc;
+  --border: #d9d4c9;
+  --accent: var(--ds-blue);
+  --accent-hover: #1f4285;
+  --accent-contrast: #ffffff;
+  --label: #95643E;
+  --shadow: 0 1px 2px rgba(2, 13, 41, 0.06), 0 8px 24px rgba(2, 13, 41, 0.1);
+}
+html.theme-light:root { --bs-link-color-rgb: 45, 87, 171; }
+html.theme-light .btn-close { filter: none; }
+html.theme-light .navbar-custom .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='%23020D29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+html.theme-light .btn-toggle-jcc::before {
+  content: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23020D29' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 14l6-6-6-6'/%3e%3c/svg%3e");
+}
