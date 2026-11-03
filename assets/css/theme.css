@@ -205,8 +205,8 @@ img { border-radius: var(--radius-sm); }
 
 /* --- footer social row -------------------------------------------- */
 
-.footer-mark-link { display: block; width: 300px; max-width: 100%; margin: 0 auto 1.25rem; }
-.footer-mark { display: block; width: 100%; height: auto; border-radius: var(--radius); box-shadow: none; }
+.footer-mark-link { display: block; width: 200px; max-width: 100%; margin: 0 auto 1.25rem; }
+.footer-mark { display: block; width: 100%; height: auto; border-radius: 50%; box-shadow: none; }
 .footer-links { padding-left: 0; margin-bottom: 0.75rem; }
 .footer-links .list-inline-item { margin: 0 0.55rem; }
 .footer-links a { color: var(--ink-soft); font-size: 1.15rem; }
