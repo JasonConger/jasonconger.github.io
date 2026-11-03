@@ -142,7 +142,14 @@ img { border-radius: var(--radius-sm); }
   box-shadow: var(--shadow);
 }
 .navbar-custom .nav-item.dropdown .dropdown-menu .dropdown-item {
+  background-color: var(--bg);
+  border-color: var(--border);
   color: var(--ink-soft);
+}
+.navbar-custom .navbar-nav .dropdown-menu .dropdown-item:hover,
+.navbar-custom .navbar-nav .dropdown-menu .dropdown-item:focus {
+  background-color: var(--bg-soft);
+  color: var(--accent);
 }
 /* floating avatar stays centred; About/Videos sit to its left, search + the
    dropdown to its right (see _includes/nav.html) */
@@ -198,6 +205,8 @@ img { border-radius: var(--radius-sm); }
 
 /* --- footer social row -------------------------------------------- */
 
+.footer-mark-link { display: block; width: 200px; max-width: 100%; margin: 0 auto 1.25rem; }
+.footer-mark { display: block; width: 100%; height: auto; border-radius: 50%; box-shadow: none; }
 .footer-links { padding-left: 0; margin-bottom: 0.75rem; }
 .footer-links .list-inline-item { margin: 0 0.55rem; }
 .footer-links a { color: var(--ink-soft); font-size: 1.15rem; }
