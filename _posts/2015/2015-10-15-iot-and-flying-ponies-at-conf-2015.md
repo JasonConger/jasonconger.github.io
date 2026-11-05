@@ -17,7 +17,7 @@ Originally posted on the Splunk official blog: [https://www.splunk.com/en_us/blo
 One of the coolest demos I witnessed at Splunk .conf 2015 was the one by [Nate McKervy](https://www.splunk.com/en_us/blog/author/nmckervey.html){:target="_blank"}. The reasons this demo was so cool is 1) it was live, 2) it involved audience participation, and 3) it involved shooting stuffed ponies out of an air cannon. This article will explain a little more of what was going on under the covers.
 
 Skip to 19:18 for the demo
-<iframe class="youtube-player" type="text/html" width="640" height="390" src="//www.youtube.com/embed/hrWpTFYhTtk?version=3&amp;rel=1&amp;fs=1&amp;showsearch=0&amp;showinfo=1&amp;iv_load_policy=1&amp;wmode=transparent" frameborder="0" allowfullscreen="true"></iframe>
+{% include youtube.html id="hrWpTFYhTtk" %}
 
 ## Getting Data from the Audience
 

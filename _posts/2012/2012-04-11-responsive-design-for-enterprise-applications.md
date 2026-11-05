@@ -48,7 +48,7 @@ Now, if you launch the exact same application from the exact same server using a
 
 Check out this short video for a demo:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/bqEMjvjoi2A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{% include youtube.html id="bqEMjvjoi2A" %}
 
 <h2>Try It Out Yourself</h2>
 Want to try it out yourself?  I have made the program and the source available so you can beat it up and come up with some more ideas.  You can <a title="Responsive Design Prototype" href="http://www.jasonconger.com/enterprise-application-responsive-design-prototype">download it here</a>.

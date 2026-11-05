@@ -16,7 +16,7 @@ Originally posted on the Splunk official blog: [https://www.splunk.com/en_us/blo
 
 Many years ago, as a learning exercise, I created a Citrix web interface that took some boring static icons and made them spin around like a carousel.  Check out a video here:
 
-<iframe width="864" height="696" src="https://www.youtube.com/embed/C3pxtRmPOiI" title="Citrix Web Interface with Microsoft Silverlight and AJAX" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{% include youtube.html id="C3pxtRmPOiI" %}
 
 This interface was never meant to be particularly useful, but it worked and looked nice.
 

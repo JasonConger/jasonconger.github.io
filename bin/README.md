@@ -47,7 +47,7 @@ bin/videos-to-posts                  # full backfill (~one draft per video)
 
 Each draft gets: `layout: post`, `categories: [Videos]`, auto-derived `tags:`, the
 YouTube thumbnail, `video-id`, a blank `subtitle:` for you to fill, the video
-description as a lead-in, a `{% raw %}{% include youtube.html %}{% endraw %}` embed, and the full transcript
+description as a lead-in, a `{% raw %}{% include youtube.html %}{% endraw %}` thumbnail link to the video on YouTube, and the full transcript
 under `## Transcript`.
 
 Idempotency: a video is skipped if its ID already appears in any `_posts/**` file

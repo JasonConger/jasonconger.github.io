@@ -1,17 +1,15 @@
 {% comment %}
-Responsive 16:9 YouTube embed.
+Link card for a YouTube video: thumbnail with a play button that opens the video on YouTube.
 Usage: {% include youtube.html id="VIDEO_ID" title="Optional title" %}
 Falls back to page.video-id when no id is passed.
 {% endcomment %}
 {% assign yt_id = include.id | default: page.video-id %}
+{% assign yt_title = include.title | default: page.title | strip_html | escape %}
 {% if yt_id %}
-<div class="video-embed">
-  <iframe src="https://www.youtube-nocookie.com/embed/{{ yt_id }}"
-          title="{{ include.title | default: page.title | escape }}"
-          frameborder="0"
-          loading="lazy"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen></iframe>
-</div>
+<a class="video-link" href="https://www.youtube.com/watch?v={{ yt_id }}" target="_blank" rel="noopener"
+   style="background-image: url('https://i.ytimg.com/vi/{{ yt_id }}/hqdefault.jpg')"
+   aria-label="Watch {{ yt_title }} on YouTube">
+  <span class="play" aria-hidden="true"><i class="bi bi-play-fill"></i></span>
+  <span class="label"><i class="bi bi-youtube" aria-hidden="true"></i>&nbsp; Watch on YouTube</span>
+</a>
 {% endif %}
