@@ -1,0 +1,231 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+# linkedin-to-posts
+# -----------------
+# Turn the posts in a LinkedIn data export into draft blog posts, one per post.
+# Reads only; never modifies the export. Idempotent: skips posts that already
+# have a post/draft (matched on the original LinkedIn URL).
+#
+# Get the export: LinkedIn > Settings & Privacy > Data privacy > Get a copy of
+# your data > pick "Posts" (or the larger archive). LinkedIn emails a zip; the
+# file you want inside is Shares.csv.
+#
+# Usage:
+#   bin/linkedin-to-posts Shares.csv [options]
+#
+#   --out DIR            Output directory for drafts (default: _drafts)
+#   --limit N            Only process the first N rows
+#   --min-words N        Skip posts shorter than N words (default: 0)
+#   --include-nonpublic  Also import posts whose Visibility is not PUBLIC
+#   --dry-run            Print what would be created; write nothing
+#   -h, --help
+#
+# Posts with no text of their own (plain reshares) are skipped. Images and
+# videos are not imported: the export only has expiring LinkedIn CDN links.
+
+require "optparse"
+require "csv"
+require "date"
+require "time"
+require "fileutils"
+
+Encoding.default_external = Encoding::UTF_8
+Encoding.default_internal = Encoding::UTF_8
+
+ROOT = File.expand_path("..", __dir__)
+
+options = {
+  out: File.join(ROOT, "_drafts"),
+  limit: nil,
+  min_words: 0,
+  include_nonpublic: false,
+  dry_run: false,
+}
+
+parser = OptionParser.new do |o|
+  o.banner = "Usage: bin/linkedin-to-posts Shares.csv [options]"
+  o.on("--out DIR")           { |v| options[:out] = File.expand_path(v) }
+  o.on("--limit N", Integer)  { |v| options[:limit] = v }
+  o.on("--min-words N", Integer) { |v| options[:min_words] = v }
+  o.on("--include-nonpublic") { options[:include_nonpublic] = true }
+  o.on("--dry-run")           { options[:dry_run] = true }
+  o.on("-h", "--help")        { puts o; exit }
+end
+parser.parse!
+
+source = ARGV.shift
+if source.nil?
+  puts parser
+  exit 1
+end
+source = File.expand_path(source)
+abort "No such file: #{source}" unless File.file?(source)
+
+# --- helpers ---------------------------------------------------------------
+
+def yaml_quote(str)
+  %("#{str.to_s.gsub('\\', '\\\\\\\\').gsub('"', '\\"').gsub(/\s*\n\s*/, ' ')}")
+end
+
+def slugify(str, max = 60)
+  s = str.downcase.gsub(/&/, " and ").gsub(/[^a-z0-9]+/, "-").gsub(/\A-+|-+\z/, "")
+  s = s[0, max].sub(/-[^-]*\z/, "") if s.length > max && s[max] != "-"
+  s.empty? ? "linkedin-post" : s
+end
+
+def first_words(text, n)
+  words = text.split(/\s+/)
+  words.length <= n ? text.strip : "#{words[0, n].join(' ')}..."
+end
+
+# Title from the first line of the post: no URLs/hashtags, trimmed at a word
+# boundary. Falls back to a dated title when nothing usable is left.
+def derive_title(text, date)
+  line = text.lines.map(&:strip).find { |l| !l.empty? }.to_s
+  line = line.gsub(%r{https?://\S+}, "").gsub(/#\w+/, "").gsub(/\s+/, " ").strip
+  line = line.split(/(?<=[.!?])\s/).first.to_s.strip if line.length > 90
+  line = line.sub(/[.:;,\s]+\z/, "")
+  if line.length > 80
+    cut = line[0, 80].sub(/\s+\S*\z/, "")
+    line = "#{cut}..."
+  end
+  line.empty? ? "LinkedIn post, #{date.strftime('%B %-d, %Y')}" : line
+end
+
+def derive_tags(text)
+  text.scan(/#([A-Za-z][A-Za-z0-9]+)/).flatten.map { |t| t.sub(/\A(\p{Ll})/) { $1.upcase } }.uniq.first(5)
+end
+
+# Autolink bare URLs so they are clickable whatever the markdown settings.
+def linkify(text)
+  text.gsub(%r{(?<![<(\["'])(https?://[^\s<>)"']+[^\s<>)"'.,;:!?])}, '<\1>')
+end
+
+def parse_date(value)
+  Time.parse(value.to_s).to_date
+rescue ArgumentError, TypeError
+  nil
+end
+
+
+# --- existing posts (idempotency) -------------------------------------------
+
+existing = {}
+(Dir.glob(File.join(ROOT, "_posts", "**", "*.md")) + Dir.glob(File.join(options[:out], "*.md"))).each do |f|
+  File.foreach(f) do |line|
+    if line =~ /\Alinkedin-url:\s*"?([^"\s]+)"?\s*\z/
+      existing[$1] = f
+      break
+    end
+  end
+end
+
+# --- read the export ----------------------------------------------------------
+
+raw = File.read(source, encoding: "bom|utf-8")
+rows = CSV.parse(raw, headers: true)
+headers = rows.headers.compact.map { |h| [h.to_s.strip.downcase.gsub(/[^a-z]/, ""), h] }.to_h
+col = lambda do |row, *names|
+  names.each do |n|
+    h = headers[n]
+    return row[h].to_s.strip if h && row[h]
+  end
+  ""
+end
+
+abort "Could not find a ShareCommentary column in #{File.basename(source)} (found: #{rows.headers.join(', ')})" unless headers["sharecommentary"]
+
+FileUtils.mkdir_p(options[:out]) unless options[:dry_run]
+
+created = skipped_empty = skipped_have = skipped_short = skipped_private = skipped_nodate = 0
+used_names = {}
+
+rows.each_with_index do |row, i|
+  break if options[:limit] && i >= options[:limit]
+
+  text = col.call(row, "sharecommentary").gsub("\r\n", "\n").strip
+  link = col.call(row, "sharelink")
+  shared = col.call(row, "sharedurl")
+  visibility = col.call(row, "visibility")
+  date = parse_date(col.call(row, "date"))
+
+  if text.empty?
+    skipped_empty += 1
+    next
+  end
+  if headers["visibility"] && !options[:include_nonpublic] && !visibility.empty? && visibility.upcase != "PUBLIC"
+    skipped_private += 1
+    next
+  end
+  if date.nil?
+    warn "  ?  no usable date, skipping: #{text[0, 50].inspect}"
+    skipped_nodate += 1
+    next
+  end
+  if text.split(/\s+/).length < options[:min_words]
+    skipped_short += 1
+    next
+  end
+  if !link.empty? && existing[link]
+    puts "  =  skip #{link} (already in #{existing[link].sub(ROOT + '/', '')})"
+    skipped_have += 1
+    next
+  end
+
+  title = derive_title(text, date)
+  tags = derive_tags(text)
+  slug = slugify(title)
+  base = "#{date.strftime('%Y-%m-%d')}-#{slug}"
+  name = base
+  n = 2
+  while used_names[name] || File.exist?(File.join(options[:out], "#{name}.md")) ||
+        Dir.glob(File.join(ROOT, "_posts", "**", "#{name}.md")).any?
+    name = "#{base}-#{n}"
+    n += 1
+  end
+  used_names[name] = true
+
+  # A line starting with "#Hashtag" must not turn into a markdown heading.
+  body_text = linkify(text).gsub(/^#(?=\w)/, '\\#')
+  # Keep Liquid-looking text in the post from being evaluated.
+  body_text = "{% raw %}\n#{body_text}\n{% endraw %}" if body_text.include?("{{") || body_text.include?("{%")
+
+  excerpt = first_words(text.gsub(%r{https?://\S+}, "").gsub(/\s+/, " ").strip, 55)
+
+  front = +"---\n"
+  front << "layout: post\n"
+  front << "title: #{yaml_quote(title)}\n"
+  front << "date: #{date.strftime('%Y-%m-%d')}\n"
+  front << "categories:\n - LinkedIn\n"
+  unless tags.empty?
+    front << "tags:\n"
+    tags.each { |t| front << " - #{yaml_quote(t)}\n" }
+  end
+  front << "author: JasonConger\n"
+  front << "linkedin-url: #{link}\n" unless link.empty?
+  front << "excerpt: #{yaml_quote(excerpt)}\n"
+  front << "comments: false\n"
+  front << "featured: false\n"
+  front << "---\n"
+
+  post = +front
+  post << "\n" << body_text << "\n"
+  post << "\nLink shared in the post: <#{shared}>\n" unless shared.empty?
+  post << "\n*Originally posted on LinkedIn: [view the original post](#{link}).*\n" unless link.empty?
+  post << "\n*Originally posted on LinkedIn.*\n" if link.empty?
+
+  if options[:dry_run]
+    puts "  +  would create #{name}.md  [#{title}]"
+  else
+    File.write(File.join(options[:out], "#{name}.md"), post)
+    puts "  +  #{name}.md"
+  end
+  created += 1
+end
+
+puts
+puts "#{options[:dry_run] ? 'Would create' : 'Created'} #{created} post(s) in #{options[:out].sub(ROOT + '/', '')}"
+puts "Skipped: #{skipped_have} already imported, #{skipped_empty} with no text (plain reshares), " \
+     "#{skipped_private} not public, #{skipped_short} under #{options[:min_words]} words, #{skipped_nodate} without a date"
+puts "Review the drafts, then publish with: bin/publish-draft --all" unless options[:dry_run] || created.zero?

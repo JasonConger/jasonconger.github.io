@@ -7,6 +7,7 @@ Small stdlib-only Ruby/bash helpers for running and updating the site.
 | `bin/serve` | Preview locally with drafts shown. Uses `bundle exec jekyll` when the bundle works, otherwise the system `jekyll` gem (moves `Gemfile` aside temporarily, restores on exit). |
 | `bin/new-post "Title" [opts]` | Scaffold a post/draft with standard front matter. |
 | `bin/videos-to-posts [opts]` | Generate one **draft** post per YouTube video from the transcripts in the second-brain repo. Idempotent. |
+| `bin/linkedin-to-posts Shares.csv [opts]` | Generate one **draft** post per post in a LinkedIn data export. Public posts only by default. Idempotent. |
 | `bin/publish-draft <file> \| --all` | Move a reviewed draft into `_posts/<year>/`, dated from its front matter. |
 
 Commit + push publishes — GitHub Pages builds automatically. `_drafts/` is git-ignored.
@@ -67,3 +68,23 @@ Options: `--source DIR`, `--out DIR`, `--limit N`, `--only <id-or-slug>`,
 
 New video later: add its transcript to the second-brain repo, re-run
 `bin/videos-to-posts`, publish the one new draft.
+
+## LinkedIn posts → posts
+
+LinkedIn has no public API for personal posts, so this works from the data export:
+LinkedIn > Settings & Privacy > Data privacy > **Get a copy of your data** > pick **Posts**.
+LinkedIn emails a zip; the file you want is `Shares.csv`.
+
+```bash
+bin/linkedin-to-posts ~/Downloads/Shares.csv --dry-run   # see what would be created
+bin/linkedin-to-posts ~/Downloads/Shares.csv             # write drafts to _drafts/
+bin/publish-draft --all                                  # after reviewing them
+```
+
+Each post becomes a post in the **LinkedIn** category with the original text, hashtags as tags,
+a "view the original post" link, and comments off. Re-running skips posts already imported
+(matched on `linkedin-url`). Plain reshares with no text, and posts that are not public, are skipped
+(`--include-nonpublic` to override). Images and videos are not imported. Use `--min-words N` to
+skip very short posts.
+
+Don't commit `Shares.csv` itself: this repo is public and the export can include non-public posts.
