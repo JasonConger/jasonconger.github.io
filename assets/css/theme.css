@@ -361,38 +361,22 @@ a.featured-card { color: inherit; text-decoration: none; }
 }
 .video-embed iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
 
-/* --- /videos/ grid --------------------------------------------- */
+/* --- /videos/ page ------------------------------------------------- */
 
-.videos-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 1.5rem;
-  margin: 2rem 0 3rem;
+.watch-btn {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--accent-contrast);
+  font-weight: 500;
+  padding: 0.6rem 1.25rem;
+  border-radius: var(--radius-sm);
 }
-.video-card {
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  overflow: hidden;
-  background: var(--bg);
-  display: flex; flex-direction: column;
-  transition: box-shadow 0.18s ease, transform 0.18s ease;
+.watch-btn:hover, .watch-btn:focus {
+  background: var(--accent-hover);
+  border-color: var(--accent-hover);
+  color: var(--accent-contrast);
+  text-decoration: none;
 }
-.video-card:hover { box-shadow: var(--shadow); transform: translateY(-2px); }
-.video-card > a { color: inherit; text-decoration: none; display: flex; flex-direction: column; height: 100%; }
-.video-card .thumb {
-  display: block;
-  position: relative;
-  aspect-ratio: 16 / 9;
-  background: var(--bg-sunken) center/cover no-repeat;
-}
-.video-card .thumb .dur {
-  position: absolute; right: 0.5rem; bottom: 0.5rem;
-  background: rgba(0,0,0,0.8); color: #fff;
-  font-size: 0.75rem; padding: 0.1rem 0.4rem; border-radius: 4px;
-}
-.video-card .meta { padding: 0.85rem 1rem 1.1rem; }
-.video-card .meta h3 { font-size: 1.02rem; line-height: 1.35; margin: 0 0 0.3rem; }
-.video-card .meta time { color: var(--ink-faint); font-size: 0.82rem; }
 
 /* --- footer --------------------------------------------------- */
 

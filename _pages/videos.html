@@ -1,7 +1,7 @@
 ---
 layout: base
 title: Videos
-subtitle: Talks, demos, and interviews from the YouTube channel
+subtitle: Talks, demos, and interviews on YouTube
 permalink: /videos/
 ---
 
@@ -11,31 +11,14 @@ permalink: /videos/
   <div class="row"><div class="col">
 
     <p>
-      Every video from
-      <a href="https://www.youtube.com/@JasonConger" target="_blank" rel="noopener">youtube.com/@JasonConger</a>,
-      with a full transcript on each post.
+      My videos live on YouTube: conference interviews, demos, and talks.
     </p>
 
-    {% assign vids = site.categories.Videos %}
-    <div class="videos-grid">
-      {% for post in vids %}
-      <div class="video-card">
-        <a href="{{ post.url | relative_url }}">
-          <span class="thumb" style="background-image:url('{{ post.thumbnail-img | default: post.share-img }}')">
-            {% if post.video-duration and post.video-duration != "" %}<span class="dur">{{ post.video-duration }}</span>{% endif %}
-          </span>
-          <span class="meta">
-            <h3>{{ post.title }}</h3>
-            <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
-          </span>
-        </a>
-      </div>
-      {% endfor %}
-    </div>
-
-    {% if vids.size == 0 %}
-    <p><em>No video posts published yet.</em></p>
-    {% endif %}
+    <p>
+      <a class="btn btn-primary watch-btn" href="https://www.youtube.com/@JasonConger" target="_blank" rel="noopener">
+        <i class="bi bi-youtube"></i>&nbsp; Watch on YouTube
+      </a>
+    </p>
 
   </div></div>
 </main>
