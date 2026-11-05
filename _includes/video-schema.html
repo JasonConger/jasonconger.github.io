@@ -1,0 +1,31 @@
+{% comment %}
+VideoObject structured data for posts that embed a YouTube video (front matter: video-id, video-duration).
+Tells Google the post is a watch page for that video.
+{% endcomment %}
+{% if page.video-id %}
+  {%- assign dur_parts = page.video-duration | split: ":" -%}
+  {%- assign dur_iso = "" -%}
+  {%- if dur_parts.size == 3 -%}
+    {%- capture dur_iso %}PT{{ dur_parts[0] | plus: 0 }}H{{ dur_parts[1] | plus: 0 }}M{{ dur_parts[2] | plus: 0 }}S{% endcapture -%}
+  {%- elsif dur_parts.size == 2 -%}
+    {%- capture dur_iso %}PT{{ dur_parts[0] | plus: 0 }}M{{ dur_parts[1] | plus: 0 }}S{% endcapture -%}
+  {%- elsif dur_parts.size == 1 and page.video-duration != "" -%}
+    {%- capture dur_iso %}PT{{ dur_parts[0] | plus: 0 }}S{% endcapture -%}
+  {%- endif -%}
+  {%- assign vid_desc = page.excerpt | strip_html | strip_newlines | strip -%}
+  {%- if vid_desc == "" -%}{%- assign vid_desc = page.title -%}{%- endif -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": {{ page.title | strip_html | jsonify }},
+  "description": {{ vid_desc | jsonify }},
+  "thumbnailUrl": [{{ page.thumbnail-img | default: page.share-img | jsonify }}],
+  "uploadDate": {{ page.date | date_to_xmlschema | jsonify }},
+  {% if dur_iso != "" %}"duration": {{ dur_iso | jsonify }},{% endif %}
+  "embedUrl": "https://www.youtube.com/embed/{{ page.video-id }}",
+  "contentUrl": "https://www.youtube.com/watch?v={{ page.video-id }}",
+  "mainEntityOfPage": {{ page.url | absolute_url | jsonify }}
+}
+</script>
+{% endif %}
