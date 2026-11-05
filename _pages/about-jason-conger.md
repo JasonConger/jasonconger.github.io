@@ -6,7 +6,7 @@ comments: false
 ---
 
 
-I am a data and web nerd. In fact, this website started out with [showing you how to reverse engineer a SQL database]({% post_url /2006/2006-03-01-using-microsoft-visio-to-reverse-engineer-a-database %}). Shortly after, the open-source project <a href="http://jasonconger.com/tags/#WIRM">Web Interface for Resource Manager</a> was released. Over the years, there have been articles that have shown you how to <a href="http://jasonconger.com/tags/#Web%20Interface">modify Web Interface</a>, create and modify <a href="http://www.jasonconger.com/tags#mobility">mobile applications</a>, some random thoughts, and even a little <a href="http://jasonconger.com/tags/#IoT">IoT</a>.
+I am a data and web nerd. In fact, this website started out with [showing you how to reverse engineer a SQL database]({% post_url /2006/2006-03-01-using-microsoft-visio-to-reverse-engineer-a-database %}). Shortly after, the open-source project <a href="https://jasonconger.com/tags/#WIRM">Web Interface for Resource Manager</a> was released. Over the years, there have been articles that have shown you how to <a href="https://jasonconger.com/tags/#Web%20Interface">modify Web Interface</a>, create and modify <a href="https://jasonconger.com/tags#mobility">mobile applications</a>, some random thoughts, and even a little <a href="https://jasonconger.com/tags/#IoT">IoT</a>.
 
 
 Today, I work at <a rel="noreferrer noopener" href="http://www.splunk.com/" target="_blank">Splunk (a Cisco company)</a> as the Partner Field CTO leading efforts to drive and evangelize partner innovation.

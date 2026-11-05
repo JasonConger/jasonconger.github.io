@@ -11,7 +11,7 @@ layout: base
 
     {% if paginator.page == 1 or paginator.page == nil %}
       {% assign featured = site.posts | where: "featured", true %}
-      {% if featured.size > 0 %}
+      {% if featured.size > 0 and site.show_featured %}
       <section class="featured-strip">
         <h2 class="section-label">Featured</h2>
         <div class="featured-cards">

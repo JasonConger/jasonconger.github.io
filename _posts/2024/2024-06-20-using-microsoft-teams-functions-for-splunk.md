@@ -16,7 +16,7 @@ video-duration: "9:26"
 thumbnail-img: https://i.ytimg.com/vi/Et9OlFNErVI/hqdefault.jpg
 share-img: https://i.ytimg.com/vi/Et9OlFNErVI/hqdefault.jpg
 excerpt: "Learn how Microsoft makes Teams call record data available and how to get that data into Splunk with Azure Functions"
-featured: false
+featured: true
 ---
 Learn how Microsoft makes Teams call record data available and how to get that data into Splunk with Azure Functions
 

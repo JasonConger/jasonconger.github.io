@@ -16,7 +16,7 @@ video-duration: "8:33"
 thumbnail-img: https://i.ytimg.com/vi/XpQFBSB39k4/hqdefault.jpg
 share-img: https://i.ytimg.com/vi/XpQFBSB39k4/hqdefault.jpg
 excerpt: "Microsoft released an updated Teams API, and it makes getting call record data into Splunk much easier. In the past, you had to set up three separate pieces including a publicly-accessible and specialized HTTPS web hook, a subscription, and a REST client. Now, it is just one Splunk input. But wait, there’s more - you…"
-featured: false
+featured: true
 ---
 Microsoft released an updated Teams API, and it makes getting call record data into Splunk much easier. In the past, you had to set up three separate pieces including a publicly-accessible and specialized HTTPS web hook, a subscription, and a REST client.  Now, it is just one Splunk input. But wait, there’s more - you can now get historical call record data too!
 

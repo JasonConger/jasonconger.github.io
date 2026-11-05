@@ -15,7 +15,7 @@ video-duration: "10:11"
 thumbnail-img: https://i.ytimg.com/vi/I6fE-lE92m0/hqdefault.jpg
 share-img: https://i.ytimg.com/vi/I6fE-lE92m0/hqdefault.jpg
 excerpt: "Learn how Microsoft makes Teams call record data available and how to get that data into Splunk with an add-on."
-featured: false
+featured: true
 ---
 Learn how Microsoft makes Teams call record data available and how to get that data into Splunk with an add-on.
 

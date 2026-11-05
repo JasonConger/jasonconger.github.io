@@ -5,6 +5,12 @@
 # Name of website
 title: JasonConger.com
 
+# Canonical site URL (used by jekyll-seo-tag and jekyll-sitemap for canonicals, sitemap and robots.txt)
+url: "https://jasonconger.com"
+
+# Show the Featured strip on the home page (posts with featured: true)
+show_featured: false
+
 twitter:
   username: JasonConger
   card: summary_large_image
@@ -23,7 +29,7 @@ authors:
     display_name: Jason Conger
     gravatar: 405de84ebc6885c27b89c0fc35d222eb
     email: jason@jasonconger.com
-    web: http://www.jasonconger.com
+    web: https://jasonconger.com
     twitter: https://twitter.com/JasonConger
     description: "I know more of what you should not do than what you should do"
 
