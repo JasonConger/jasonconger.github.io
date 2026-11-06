@@ -22,22 +22,20 @@ permalink: /videos/
       </a>
     </p>
 
-    <ul class="video-list">
+    <ul class="video-grid">
       {% for v in videos %}
       {% assign watch = "https://www.youtube.com/watch?v=" | append: v.id %}
-      <li class="video-item">
+      <li class="video-card">
         <a class="video-thumb" href="{{ watch }}" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
           <img src="https://i.ytimg.com/vi/{{ v.id }}/mqdefault.jpg" width="320" height="180" loading="lazy" alt="">
           {% if v.duration %}<span class="dur">{{ v.duration }}</span>{% endif %}
+          <span class="play" aria-hidden="true"><i class="bi bi-play-fill"></i></span>
         </a>
         <div class="video-info">
           <h3><a href="{{ watch }}" target="_blank" rel="noopener">{{ v.title }}</a></h3>
-          <p class="video-meta">{{ v.date | date: "%B %-d, %Y" }}</p>
+          <p class="video-meta">{{ v.date | date: "%b %-d, %Y" }}</p>
           <div class="video-desc">{{ v.description | markdownify }}</div>
-          <p class="video-links">
-            <a href="{{ watch }}" target="_blank" rel="noopener"><i class="bi bi-youtube"></i>&nbsp; Watch on YouTube</a>
-            {% if v.post %}<a href="{{ v.post | relative_url }}"><i class="bi bi-journal-text"></i>&nbsp; Read the walkthrough</a>{% endif %}
-          </p>
+          {% if v.post %}<p class="video-links"><a href="{{ v.post | relative_url }}"><i class="bi bi-journal-text"></i>&nbsp; Read the walkthrough</a></p>{% endif %}
         </div>
       </li>
       {% endfor %}
