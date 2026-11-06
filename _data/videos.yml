@@ -1,0 +1,544 @@
+# Videos listed on /videos/. Newest first. Each links to YouTube; `post:` adds a link to the written post.
+- id: cFi43yfcI8g
+  title: "Cisco Live Agentic SOC"
+  date: 2026-06-11
+  duration: "8:42"
+  description: "Interview with Dan Christiansen (CISSP) about running a live SOC on the Cisco Live show floor network, using Splunk Enterprise Security, Attack Analyzer, and the Triage Agent to automate tier-1 detection and investigation."
+- id: ub1E4qSkfmg
+  title: "Cisco Data Fabric powered by Splunk"
+  date: 2026-06-11
+  duration: "3:37"
+  description: "Cisco Data Fabric, powered by Splunk, was a hot topic at Cisco Live. While at the conference, I had a chance to chat with Chris Crocco about what Cisco Data Fabric is, what it isn't, and how it is fundamentally shifting the way Splunk accesses and uses data.  Chris explains the platform, Machine Data Lake, and Federated Search. Cisco Data Fabric is being utilized across the Cisco portfolio, and the Native Splunk integration in Cisco Nexus One is a great example. Cisco Data Fabric opens up so man"
+- id: p-73S8YIHR8
+  title: "Splunk Edge Hub in the Data Center"
+  date: 2026-06-09
+  duration: "6:41"
+  description: "Every time I talk with Tony Vincent about use cases and possibilities with Splunk Edge Hub, I'm blown away by the creativity. The demo at #CiscoLive was no different. Tony walked us through how Edge Hub is being used with Power over Ethernet and how to get insight with Splunk dashboards via the Edge Hub data. Entire booths in the showcase were powered by this solution, and Splunk provided stunning visibility into the utilization."
+- id: GYIwF70mr00
+  title: "Red Sift Cisco Domain Protection"
+  date: 2026-06-09
+  duration: "2:23"
+  description: "We all use email on a daily basis, and attackers have gotten really clever with techniques including phishing, spear phishing, lookalike domains, etc. While at #CiscoLive, I had a chat with Brian Westnedge about Cisco Domain Protection (CDP) by Red Sift. CDP helps organizations stop phishing and fraud by combining domain authentication with real-time monitoring of lookalike threats to:"
+- id: oP2KdL3jKRg
+  title: "Operations as the new strategy for AI"
+  date: 2026-06-09
+  duration: "4:05"
+  description: "AI was a hot topic as expected at Cisco Live, but the need for a new operational strategy is emerging. I had a chance to chat with John Mymryk about his thoughts on using the lessons learned from the Cloud Computing days to apply operationalization (a word I apparently cannot say correctly) to AI usage.  From token usage to model selection, John details how operations is the new strategy for AI."
+- id: y-aC9HkW8Wo
+  title: "Splunk and HCL Business Centric Observability"
+  date: 2026-06-07
+  duration: "5:33"
+  description: "HCLSoftware provides a product called iControl that is all about bringing visibility into business processes, and it does that by leveraging the power of Splunk to gain insight to all the parts of the puzzle. While at Cisco Live, I had an opportunity to chat with Ian Philips and Nitin Sharma to dive deeper into something called the Order-to-Cash business process which leverages Splunk, AppDynamics, iControl, and BigFix.  Though this product customers are seeing:"
+- id: tBCUs8jnDQ8
+  title: "Cisco Cloud Control Investigation"
+  date: 2026-06-06
+  duration: "4:50"
+  description: "Cisco Cloud Control brings Cisco platforms together and advances Cisco's AgenticOps vision, allowing customers to build their own apps and agents in natural language, and extending to third-party tools. While at Cisco Live, I had a chance to get an investigation demo from Aqib Kazi that shows us how easy it is to jump from high-level notification to deep-dive analytics while using AI as a guide. This is a great way to get value across all the Cisco products, and it provides a platform for partne"
+- id: dDCvjG_H-cE
+  title: "Splunk TDIR (Threat Detection Investigation and Response)"
+  date: 2026-06-04
+  duration: "2:13"
+  description: "While at CiscoLive, I had an opportunity to chat with Jim McCarthy about TDIR (Threat Detection Investigation and Response) and how it is shifting the way we look at security. Jim gives us details on:"
+- id: O-ceWAX6rG0
+  title: "Cisco AI Defense  - Discover | Detect | Protect AI usage in your environment"
+  date: 2026-03-26
+  duration: "2:22"
+  description: "Cisco AI Defense discovers enterprise AI usage, detects risks, and protects against runtime threats with guardrails.  While at RSAC, I had a chance to chat with Julia Guenther about Cisco AI Defense and how it does model red teaming, discovers AI assets, and provides protection.  There are hundreds of tests for validation that feed seamlessly into Splunk for expanded correlation providing speed and efficiency for your organization."
+- id: Y1ToIz4JKvQ
+  title: "Splunk Enterprise Security - Premier Edition with AI features"
+  date: 2026-03-24
+  duration: "3:11"
+  description: "Splunk Enterprise Security Premier recently became Generally Available which simplifies analysts workflows, introduces new AI capabilities, and helps with speed and efficiency.  While at RSAC, I had a chance to chat with Dan Christiansen, CISSP about what's new and actionable today. Dan shares the expanded functionality and AI capabilities in the video below."
+- id: mrxYJoq3APQ
+  title: "Splunk Detection Studio in Splunk Enterprise Security"
+  date: 2026-03-24
+  duration: "2:39"
+  description: "One of the new features of Splunk Enterprise Security is Detection Studio. While at RSAC, I had an opportunity to chat with Tyson S. about all the capabilities. Detection Studio brings detection authoring and editing detections to the next level, provides visibility into detection effectiveness, and utilizes Enterprise Security versioning capabilities to iterate on your detections"
+- id: Q1UUOpV3hnM
+  title: "Splunk AI Tookit and Time Series Foundation Model"
+  date: 2026-03-02
+  duration: "7:28"
+  description: "Splunk can work with all kinds of data it can see, but did you know that Splunk can seamlessly utilize external Large Language Models - even directly in SPL? While at Cisco Live EMEA, I had a chance to talk with Philipp Drieger about advancements in the Splunk AI Toolkit that allow you to use domain expertise from LLMs directly in Splunk. Following are some of the resources Philipp mentioned during the video:"
+- id: otWCMGJiU_I
+  title: "Convergent and Divergent Thinking in the Age of AI"
+  date: 2026-03-02
+  duration: "6:01"
+  description: "Interview with Annie Hardy at Cisco Live Amsterdam. Convergent thinking (logical, systematic, best-solution) is what AI is good at; divergent thinking (creative, non-linear, brainstorming) is what strategists are good at. Discusses the DIKW pyramid, the impact on convergent-thinker roles (engineers, mathematicians, project managers), and the leadership gap in helping people bridge to AI-era roles."
+- id: hzSvH20X5fg
+  title: "Splunk Machine Data Lake and AI ML"
+  date: 2026-02-24
+  duration: "2:18"
+  description: "The introduction of the Machine Data Lake represents Splunk's answer to AI's insatiable appetite for machine data. This purpose-built solution is designed to handle massive scale while maintaining the performance and accessibility required for AI workloads in Splunk.  While at Cisco Live EMEA, I had an opportunity to chat with Greg Ainslie-Malik about Machine Data Lake and the thought process of how it complements Splunk in AI use cases. Stay tuned for more to come in this area..."
+- id: wuknivZ3KA8
+  title: "Splunk Factory of the Future"
+  date: 2026-02-24
+  duration: "3:13"
+  description: "Cisco, Splunk, Rock 'n' Roll, and the Factory of the Future was on display at Cisco Live EMEA in a fun and practical way by showcasing a physical guitar factory line testing for product defects, predictive maintenance, assembly line metrics, and more. Young Cho steps us through the demo and the technology behind the demo to show correlation from networking, compute, observability, AI, and business metrics."
+- id: oh07NokIaL8
+  title: "Right to be Forgotten and Ambient Consent Collaspe"
+  date: 2026-02-23
+  duration: "4:42"
+  description: "'Ambient Consent Collapse' and 'Right to be Forgotten' - these are two fascinating concepts in the realm of AI that I learned about at Cisco Live EMEA from Annie Hardy.  Annie contrasts the benefits and convenience of emerging technologies with the concerns of privacy in an 'always on' world.  It is an intriguing dichotomy to say the least."
+- id: bKv9MY_llQc
+  title: "HCLSoftware Splunk and BigFix"
+  date: 2026-02-23
+  duration: "3:54"
+  description: "Partners are innovating on top of the Splunk platform to bring data to everything. While at Cisco Live EMEA, I had an opportunity to chat with Stefan Sijswerda from HCLSoftware along with Sandeep Balani about HCL BigFix. HCL BigFix provides AI-powered endpoint visibility and automation that complements both Splunk Observability and HCL iControl.  This creates full-stack business resilience."
+- id: 1RuyzTDQd6s
+  title: "Cisco Unified Edge and Splunk"
+  date: 2026-02-23
+  duration: "1:58"
+  description: "Cisco Unified Edge offers breakthrough operational simplicity by bringing a full stack platform that delivers data center performance, modularity, centralized management, and built-in security to the edge! While at Cisco Live EMEA, I spoke with Lerry Wilson about why this is important and how the device can be used in manufacturing environments with Splunk - even in air-gapped locations."
+- id: 6zl6V1yU0NI
+  title: "Cisco Splunk Time Series Foundation Model"
+  date: 2026-02-23
+  duration: "2:58"
+  description: "LLMs are great at predicting the next word in a sentence such as 'I like my coffee with cream and (?)' because they are trained on language. But, what if you need something trained on time series machine data? That is where the Cisco Time Series Model comes in. Jeff Wiedemann breaks it down for us at Cisco Live EMEA and gives some practical ways the model can be used in Splunk.  The link Jeff mentions in the video is below:"
+- id: JEIBzl7lVqg
+  title: "HCL Software iControl and Splunk"
+  date: 2026-02-19
+  duration: "4:16"
+  description: "Partners are innovating on top of the Splunk platform to bring data to everything. While at Cisco Live EMEA, I had an opportunity to chat with Ian Philips and Robert Ettinger from HCLSoftware along with Sandeep Balani about HCL iControl.  HCL iControl is a business flow observability solution that brings together real-time business and IT metrics giving you clear business control and actionable insights to keep operations running smoothly. And, it extensively utilizes Splunk Observability to bri"
+- id: L1i6lgfaTgs
+  title: "Building a Modern Splunk Practice"
+  date: 2026-02-18
+  duration: "3:46"
+  description: "One message is clear for both traditional Cisco partners and traditional Splunk partners - it is time to build a modern Splunk practice.  But, what does that mean exactly?  Well, I recently had an opportunity to catch up with Amit Harjani to go over just that.  It is a three pillar approach including people, process, and business value.  In the video below, Amit briefly touches on all these points as well as giving some direction on where to learn more."
+- id: YRAgpkPRzT8
+  title: "Splunk o11y Cloud, OTel, K8s, and Doom"
+  date: 2026-02-17
+  duration: "2:25"
+  description: "At Cisco Live EMEA, I saw a really cool demo illustrating application instrumentation with OpenTelemetry, Splunk Observability Cloud, and Kubernetes. The cool factor came in when Heath Johnson showed us how quick Splunk Observability Cloud reacts to things like an unexpected Pod deletion. But, he didn't delete the Pod in any old-fashioned way. Instead, he wired up an implementation of Doom where taking out an enemy in the game took a Pod down in the E-commerce application. It was a fun way to in"
+- id: HCTNAHcZ2ME
+  title: "Splunk, Meraki, Edge Hub and the Cisco Store"
+  date: 2026-02-13
+  duration: "2:34"
+  description: "At Cisco Live EMEA, we used Splunk, Meraki, Edge Hubs, partner technologies, and more to bring real-time insights to the on-site Cisco Store.  Kyle Prins shared with us the underlying technology used in the store as well as the use cases being brought to life. It is a fascinating example of how Splunk can be used to ask questions, get answers, and take action on any type of machine data."
+- id: 55YdjP6lLIE
+  title: "Splunk Observability for AI and Cisco AI Defense"
+  date: 2026-02-12
+  duration: "2:38"
+  description: "Did you know Splunk can provide observability for AI - including prompt, response, performance, bias detection, hallucination detection, and so much more? I recently had the opportunity to chat with Chris Doebert while at Cisco Live EMEA about the innovations happening with Splunk AI and Cisco AI Defense."
+- id: 6Qo8-NHJ_nU
+  title: "NTT Data, Cisco, and Splunk"
+  date: 2026-02-12
+  duration: "2:13"
+  description: "While at Cisco Live EMEA, I had an opportunity to catch up with Albi van Zyl and Harald Liessmann about NTT Data's 35 year partnership with Cisco, and NTT Data becoming the first Global System Integrator to achieve Splunk Global Advise. There is a lot of great momentum, and the partnership is continuing to build momentum to deliver meaningful outcomes"
+- id: g96MYSQrmVo
+  title: "Splunk Observability with AI"
+  date: 2026-02-10
+  duration: "2:18"
+  description: "At Splunk, we are innovating with AI in our products as well as using our products to maximize your AI investments. While at Cisco Live, I had an opportunity to chat with Aqib Kazi about how Splunk Observability Cloud is using AI to take troubleshooting down from hours to minutes. We also had a quick chat about the Splunk MCP server and how using an MCP client can help aide in your workflows."
+- id: czHEDwu-J0c
+  title: "Isovalent, eBPF, Cilium, and Tetragon for low-level security and control"
+  date: 2026-02-10
+  duration: "5:35"
+  description: "There is some much great technology on display at Cisco Live, and one of the really deep ones, like in the kernel deep, is Isovalent.  I had the opportunity to chat with Duffie Cooley about Isovalent, eBPF, Cilium, and Tetragon.  You can do some amazing things at the packet and OS level with this technology, and Duffie gives us some insight into the capabilities in this video."
+- id: lgueHlf7Gc8
+  title: "Splunk Edge Hub and OTI"
+  date: 2025-11-24
+  duration: "10:12"
+  description: "Splunk Edge Hub makes physical data like vibration, power, light, air quality, etc. available for analysis and correlation with machine data. This previously uncorrelatable data makes so many potential use cases possible. I recently had a chance to chat with Tony Vincent about the particulars of Splunk Edge Hub, OTI, and applicability to healthcare including hospitals and home healthcare."
+- id: NOjxWKTeqhY
+  title: "Cisco Spaces   Smart Buildings and Splunk"
+  date: 2025-11-24
+  duration: "5:05"
+  description: "Cisco Spaces is really innovative technology that provides a link between the data available in your physical space and insights that can help create a workplace that is safe, smart, and seamless. It spans technologies such Access Points, Switching, Webex devices, and even Splunk. I recently had an opportunity to chat with Bharath Jayaram about all the capabilities as specific implementations in healthcare."
+- id: yoLVLlpi_ks
+  title: "Cisco Powered Services"
+  date: 2025-11-21
+  duration: "3:28"
+  description: "Cisco Powered Services is a framework for partners to build managed services. It includes proven blueprints and best practices that partners can use to put a managed service into the market. While at Cisco Partner Summit, I had an opportunity to chat with Steve Hasselbach about the in's and out's of the framework including requirements, the types of Cisco Powered Services, and criteria for partners. Learn more from the link and video below."
+- id: GundoJqACok
+  title: "Splunk and Netscout"
+  date: 2025-11-18
+  duration: "2:47"
+  description: "There are numerous integrations with the Splunk platform to get more insight and listen to your data. While at Cisco Partner Summit recently, I got an overview from Subarno Mukherjee about Splunk's integration with NETSCOUT and the added visibility from the products working together - from Deep Packet Inspection (DPI) for security to application implications for observability."
+- id: v5WjHIdFWMo
+  title: "Cisco Wi-Fi 7 and Spaces"
+  date: 2025-11-17
+  duration: "2:45"
+  description: "Technology advances are happening in wireless access points, but it goes beyond Wi-Fi with Cisco. While at Cisco Partner Summit, I had the opportunity to chat with Gino Corleto about advances in Wi-Fi 6, Wi-Fi 7, 5G, Cisco Spaces, and advancements in telemetry. There's so much more to these devices that are powering technology than I realized."
+- id: xkhmAh86GNs
+  title: "Cisco Splunk Partner Ecosystem"
+  date: 2025-11-17
+  duration: "1:47"
+  description: "At Cisco Partner Summit, it was abundantly clear that building a Splunk practice is paramount to partner success. I had a great opportunity to have a quick chat with D. Stacy Betts and Kevin Murphy about partner opportunities to really bring to life the One Cisco portfolio to drive greater success for customers. The stronger together story for Cisco and Splunk goes beyond product integrations. It's a chance for you to grow your practices and boost your skills. By engaging with both Cisco and Spl"
+- id: mXNafmm8ncI
+  title: "Cisco AI Defense"
+  date: 2025-11-13
+  duration: "5:49"
+  description: "Cisco AI Defense allows organizations to Discover the AI workloads and applications across your distributed cloud environments, detect misconfigurations and security vulnerabilities, and protect AI applications against rapidly evolving threats, including prompt injections, denial of service, and data leakage. While at Cisco Partner Summit, I had the opportunity to chat with Barry Yuan about the capabilities of AI Defense and get some more detail in how it enables and protects AI in your environm"
+- id: CtmU5rreu2c
+  title: "Cisco Future Proof Workplaces from Partner Summit 2025"
+  date: 2025-11-12
+  duration: "3:13"
+  description: "Cisco Future-Proof Workplaces bridges technologies for workplaces by bringing the right technology to the right place for the right persona. It encompasses secure networking and management, wireless access points with Cisco Spaces, asset tracking, Webex AI Agent Studio - it's all in the. Patrick Arguelles lays it all out in this quick video chat from Cisco Partner Summit."
+- id: BTQEssIO8GA
+  title: "Splunk for tourism with bitsIO at Cisco Partner Summit"
+  date: 2025-11-11
+  duration: "3:24"
+  description: "Splunk can be used for so many use cases because it allows you to ask questions of your data, get answers, and take action. Typically, the questions we ask as technology practitioners center around Security and Observability. But, data is data and can be used for more, and bitsIO Inc. is delivering on the 'more'. While at Cisco Partner Summit, I had an opportunity to chat with Kalpana Krishnamurthi about a really cool use case they are providing around using Splunk to optimize tourism for countr"
+- id: SWMUPhNPUdM
+  title: "Netnology Innovation with Cisco and Splunk"
+  date: 2025-11-11
+  duration: "6:09"
+  description: "Partners are driving incredible success for customers from implementation, to migrations, to services, and beyond. One of my favorite things to do at in-person events is chat with partners on the innovation they are driving. While at Cisco Partner Summit, I had the opportunity to chat with Salman Asadullah from Netnology about the innovative services they are delivering and the impact they are making for customers."
+- id: TJbrgtn1PHE
+  title: "OnStak, Cisco, and Splunk for Digital Resiliency with AI"
+  date: 2025-11-10
+  duration: "3:16"
+  description: "Partners are at the forefront of delivering innovative solutions and services to customers. While at Cisco Partner Summit, I had a great chat with Jason J. Fleagle from OnStak about all the great work they are doing with Observability, Cisco Unified Edge, OT, and AI. OnStak is a Cisco MINT innovating in cross-portfolio solutions especially in the realm of AI."
+- id: S29IPEIMyBo
+  title: "Cisco and Splunk partner innovation with Keos"
+  date: 2025-11-10
+  duration: "2:48"
+  description: "It was such a great time at Cisco Partner Summit learning about innovation, networking with peers, and most importantly engaging with partners. The depth and breadth of partner capabilities are astounding. I got the change to chat with Chip Stearns from Keos about there services and the synergies between 'traditional' Splunk partners and 'traditional' Cisco partners."
+- id: hJ5GeIgTNAw
+  title: "Orange Business Services, Splunk, Cisco and OT"
+  date: 2025-11-05
+  duration: "1:26"
+  description: "Partner innovation is in full swing at Cisco Partner Summit, and Orange Business is leaning in with cross-architecture offerings including Observability,  Security, and Operational Technology. I had a chance to have a quick chat with Samuel Nchinda about some of the innovation Orange Business Services is drive while at the conference."
+- id: nIBCkkpchHc
+  title: "AI Canvas at Cisco Partner Summit"
+  date: 2025-11-04
+  duration: "1:16"
+  description: "Cisco Partner Summit is in full swing, and the innovation is inspiring. I had a great opportunity to chat with David Jansen and Cisco's new collaborative tool called AI Canvas that allows you to use generative UI (that isn't a typo) via natural language to investigate the vast amounts of data Splunk can access. AI Canvas also facilitates collaboration and enhances flows with generative AI."
+- id: llu9RUBE_8I
+  title: "Splunk and AWS S3 Federated Search"
+  date: 2025-09-20
+  duration: "2:08"
+  description: "While at Cisco GSX, I ran into Travis Kane (a.k.a. Trav) over at the AWS booth. He has built a hands-on workshop that steps you through the technical bits of setting up Amazon S3 with Splunk Federated search so that you can search data in-place without bringing it to Splunk. In other words, we're bringing Splunk to the data rather than bringing the data to Splunk!"
+- id: 0gh9lRqWLDw
+  title: "Splunk and Kollective Technology for collaboration observability"
+  date: 2025-09-19
+  duration: "2:45"
+  description: "At Splunk .conf25, I had the opportunity to catch up with Garrett Gladden and Neal Lauther from Kollective Technology about what they have been up to in the collaboration space, observability, and Splunk. To quote Garrett, 'think of it like thermal imaging for the entire collaboration application'. Using Splunk, you can get the entire picture from user, to network, to application in order to ensure optimum user experience."
+- id: SM4DfLXi0xU
+  title: "Splunk and Crogl autonomous investigations"
+  date: 2025-09-19
+  duration: "2:39"
+  description: "While at Splunk .conf25, I unexpectedly ran into monzy merza! Monzy was at Splunk back when I started in 2012, and I learned a lot from him as he has a genuine and unique way of presenting information. Lately, Monzy had been busy as the Co-Founder and CEO of Crogl, Inc. which provides autonomous investigations on thousands of alerts per day, documents its work, and keeps everything private - from cloud, to on-premises, to air-gapped environments."
+- id: 3oJzjorsVkk
+  title: "Splunk and Accenture CCP"
+  date: 2025-09-19
+  duration: "3:52"
+  description: "While at Splunk .conf25, I had the opportunity to chat with Jason Allen and Tim Colpo from Accenture about their Continuum Control Plane solution (powered by Splunk) - a.k.a. CCP. CCP introduces an agentic approach by creating a data foundation that connects siloed, cross-domain data and provides a semantic layer on top. It also lays the foundation for AI agents that help users gain insights, inform decisions, and execute agentic actions. All of this is made possible by Splunk's ability to aggre"
+- id: NzME7b9JtVU
+  title: "Splunk Pods on Cisco UCS"
+  date: 2025-09-19
+  duration: "1:20"
+  description: "One of the tenets of Splunk is 'fun', and David Rea embodies that principle to the core. At Splunk .conf25, I had the opportunity to chat with him about Splunk PODS - which brings together Splunk software, Cisco UCS hardware, validated designs, and more to give customers turnkey solutions with confidence for small, medium, and large deployments."
+- id: omVdHebfgfo
+  title: "Splunk Partner Synergy"
+  date: 2025-09-19
+  duration: "1:24"
+  description: "While at Cisco GSX, I had a chance to have a quick chat with Amit Harjani about Splunk Partner synergy and cross-product portfolio for new use cases, including cybersecurity and observability."
+- id: zpLgCcKYlqE
+  title: "Splunk MCP Server"
+  date: 2025-09-19
+  duration: "6:42"
+  description: "MCP (Model Context Protocol) has been making waves as it provides a standard way of connecting AI applications to external systems. I caught up with Hal Rottenberg at Splunk .conf25 to discover more about the Splunk MCP Server release (for both Splunk Cloud and on-premises). To quote Hal, it is like '...watching the Science Fiction of our youth come into being...'. Hal walks us through what is possible and gives an example of seamlessly connecting Atlassian Confluence with Splunk from an MCP Cli"
+- id: mOmpzfFM2y8
+  title: "Splunk Laser Bananas and Edge Hub"
+  date: 2025-09-19
+  duration: "2:32"
+  description: "Laser Bananas and the power of Splunk! While at Splunk .conf25, I had the opportunity to chat with Simon Slade about how he brought together physical data with observability to demonstrate the breadth of Splunk solutions. By shooting a laser out of a banana (that is not a typo), receiving the signal, brokering the MQTT data with Splunk Edge Hub, and visualizing the results in a Splunk dashboard, Simon brought gamification to life. While this is a fun use case, think about all the other implicati"
+- id: JAS6X8Ifenk
+  title: "Splunk 10 and Edge Processor"
+  date: 2025-09-19
+  duration: "49"
+  description: "There are a lot of great things in the Splunk 10.0 release, and one of those things is Edge Processor which lets you filter, mask, transform, route, etc. data in motion with SPL2 at the edge. I caught up with Michelle Moreira at Splunk .conf25 to have a quick chat about this great feature - now available on Splunk Enterprise 10."
+- id: lnoKzReRvw8
+  title: "Cisco and Splunk Portfolio integration"
+  date: 2025-09-19
+  duration: "1:42"
+  description: "While at Cisco GSX, I ran into Hattie Dong on day 2. We had a quick conversation about the Cisco and Splunk product portfolios coming together, including Cisco Secure AI Factory, Digital Resilience, and the data platform Splunk brings to the broader portfolio. Hattie also shared about how the Splunk Partnerverse and Cisco 360 Partner Programs are starting to integrate."
+- id: 1oPH3PwJhs8
+  title: "Splunk and TekStream on Partner Innovation"
+  date: 2025-09-17
+  duration: "1:51"
+  description: "While at Splunk .conf25, I had the opportunity to have a chat with Will Leschber from TekStream Solutions (Splunk Global Joint Selling Partner of the Year) to get his perspectives on the latest announcements from the show and how they help drive innovation for joint customers of TekStream and Splunk. From the new Splunk Machine Data Lake, to AI Canvas, to Agentic SOC - the future is bright for customers!"
+- id: RGblNPqVVag
+  title: "AGNTCY and the Internet of Agents at Cisco"
+  date: 2025-09-16
+  duration: "4:17"
+  description: "AGNTCY is an open-source infrastructure project focused on creating the 'Internet of Agents' - a system that enables AI agents from different organizations to discover, connect, and collaborate seamlessly across boundaries."
+- id: v9uZSd2JFnQ
+  title: "Splunk and the Beer Brewing Process"
+  date: 2025-09-15
+  duration: "2:01"
+  description: "Do you like Splunk? Do you like beer? If so, I've got a video for you! While at Splunk .conf25, I had the opportunity to chat with Ryan Cramer about digital resilience in the beer brewing and serving process. Ryan's booth at the conference was a hit (of course), and the team had to ensure top quality while tracking the entire process as well as gathering stats on consumers directly into Splunk. At its core Splunk is a data platform, and use cases are only limited by your imagination."
+- id: lxKLC5P-QbA
+  title: "Splunk and Red Hat Ansible automate responses for improved AIOps"
+  date: 2025-07-23
+  duration: "1:21"
+  description: "Exciting developments in the AIOps space! Red Hat and Splunk are collaborating to enhance IT operations by automating responses to observability alerts, leading to more efficient and proactive incident management. I had an opportunity to chat with Robert Rossetti about this collaboration and how customers can accelerate remediation."
+- id: Xk2ckipULjs
+  title: "ThousandEyes Cloud Insights - Cisco Live US 2025"
+  date: 2025-06-17
+  duration: "2:07"
+  description: "Cisco ThousandEyes provides assurance for both the networks you own and those you do not own. If you are using cloud services, you now get visibility into the cloud provider, including how configuration changes impact availability. While at Cisco Live, I had the opportunity to talk with Chitra S. about these incredible capabilities."
+- id: h86ZrbsGoGE
+  title: "Splunk and Microsoft Integrations - Cisco Live US 2025"
+  date: 2025-06-17
+  duration: "2:13"
+  description: "Splunk Cloud officially launched in Azure last year at Microsoft Ignite, and the innovation has continued. While at Cisco Live, I had the opportunity to chat with Wayne Brown and Ryan Zielinski on some of the current integrations such as Security Copilot, AI, GRC, and some exciting things in the works. Stay tuned for more innovation between Splunk and Microsoft to make organizations more digitally resilient."
+- id: 6pWs8E3y76c
+  title: "Splunk and Kollective Technology - Cisco Live US 2025"
+  date: 2025-06-17
+  duration: "2:33"
+  description: "As businesses increasingly depend on digital collaboration platforms such as Microsoft Teams and Cisco Webex, ensuring an optimal user experience is crucial. Kollective Technology and Splunk play a vital role in providing digital assurance for future-proof workspaces."
+- id: vN4AsAt5A9M
+  title: "Splunk and Fabrix.ai IT Operations - Cisco Live US 2025"
+  date: 2025-06-17
+  duration: "1:49"
+  description: "Fabrix.ai combines data management & AI-powered analytics to enhance IT operations. They do this by leveraging the power of Splunk and Splunk IT Service Intelligence (ITSI). I had the opportunity to chat with Shailesh Manjrekar while at Cisco Live to get more details on the breadth of their solutions and use cases."
+- id: sz6zUb3ZYvo
+  title: "Splunk Operational Technology with bitsIO - Cisco Live US 2025"
+  date: 2025-06-17
+  duration: "1:54"
+  description: "Splunk is a platform for data, and it can be used in so many different use cases from observability, to security, to OT, and beyond. At Cisco Live, I had the opportunity to chat with Grey Dziuba about bitsIO Inc. and OT use cases. Grey shares his perspective on Splunk as an investigation platform in manufacturing and beyond."
+- id: s18HWyA0YJA
+  title: "Splunk Extended Use Cases - Cisco Live US 2025"
+  date: 2025-06-17
+  duration: "2:38"
+  description: "Splunk was used in so many facets at Cisco Live - from main stage announcements, to monitoring the NOC and SOC used for the show, to Splunking the Cisco merchandise store, to measuring therapy dog activity. One of the great minds behind all of this was Kyle Prins. I got a chance to chat with Kyle while at the conference to get a little more insight into all of these use cases and more."
+- id: VrFedaO8wVE
+  title: "Splunk Data Management and Federation - Cisco Live US 2025"
+  date: 2025-06-17
+  duration: "1:30"
+  description: "With data rapidly expanding, Splunk offers the flexibility to route lower-value data to object storage such as Amazon S3. This allows you to search the data in place using federation. I was able to chat with Joseph Kandatilparambil while at Cisco Live to elaborate on these capabilities."
+- id: YPNk_iyTHoI
+  title: "Splunk AI Assistants for SPL, Security, and Observability - Cisco Live US 2025"
+  date: 2025-06-17
+  duration: "3:17"
+  description: "Splunk AI Assistants help you write SPL, explain existing SPL, assist in your Observability and Security investigations, and even help with after-action reports. While at Cisco Live, I had a quick chat with Yan DeLucena and Matthew J Joseff, CFE about Splunk's AI Assistants and how they help lower the bar of entry, save time, and help organizations be more resilient."
+- id: E3EdLc66sFo
+  title: "Cisco on Cisco with Splunk, ThousandEyes, AI, and more - Cisco Live US 2025"
+  date: 2025-06-17
+  duration: "2:45"
+  description: "While at Cisco Live, I had a discussion with Jon Heaton regarding Cisco's utilization of technology such as Splunk, ThousandEyes, CMDB, and AI to manage Cisco's infrastructure for digital resilience. As a Cisco employee, it was a fun peek behind the curtain on the tools I use day-to-day."
+- id: XpQFBSB39k4
+  title: "Getting Microsoft Teams Call Records into Splunk (updated 2025)"
+  date: 2025-04-21
+  duration: "8:33"
+  post: /2025/04/21/getting-microsoft-teams-call-records-into-splunk-updated-2025/
+  description: "Microsoft released an updated Teams API, and it makes getting call record data into Splunk much easier. In the past, you had to set up three separate pieces including a publicly-accessible and specialized HTTPS web hook, a subscription, and a REST client.  Now, it is just one Splunk input. But wait, there’s more - you can now get historical call record data too!"
+- id: IaU8eW9TD0U
+  title: "Google Cloud Next - Splunk in the Marketplace"
+  date: 2025-04-14
+  duration: "33"
+  description: "At Splunk, we are continuing to innovate with Google to drive digital resilience for our customers. While at Google Cloud Next, I chatted with Eric Strauss about some of the innovations seen at the conference and Splunk's availability on the Google Cloud Marketplace."
+- id: rYtU0NkT9TE
+  title: "Google Cloud Next - Splunk AI"
+  date: 2025-04-14
+  duration: "45"
+  description: "At Google Cloud Next, the amount of AI innovation is impressive! While at the conference, I had a chance to chat with Jackie Smith about how Splunk is working with Google to drive innovation with partners for digital resilience."
+- id: dhj1fv_b3wM
+  title: "Security Copilot and Splunk - Natural Language AI Data Analytics"
+  date: 2025-04-07
+  duration: "7:35"
+  description: "Splunk provides many methods to gain insight into data, and we strive to meet customers where they are. Now, users of Microsoft Security Copilot can interact with Splunk via a natural language AI interface. I recently had a chance to talk with Wayne Brown about the Splunk plugin and get a demo of how it works. Security Copilot takes natural language, transforms it into Splunk Search Processing Language (SPL), dispatches searches, and displays results while keeping session context."
+- id: pG8fkYkomu0
+  title: "Splunk Observability Partners"
+  date: 2025-02-28
+  duration: "2:52"
+  description: "Splunk partners bring a breadth of solutions for customer success. I recently chatted with Subarno Mukherjee about some of the observability use cases partners implement ranging from GPU monitoring with OnStak, to automated remediation with Ansible by Red Hat, oil and gas solutions with SoftServe, network assurance with NETSCOUT - the list goes on..."
+- id: 2fVHxCdpPsc
+  title: "Splunk OnStak GPU Monitoring"
+  date: 2025-02-27
+  duration: "1:46"
+  description: "OnStak offers a GPU Analytics Application that harnesses the computational power of NVIDIA's Graphics Processing Units (GPUs) for high-performance computing tasks. I recently had the opportunity to chat with James Schneider about OnStak's recently released Splunk app that gives you insights into GPU utilization. James gives us more information about the data insights surfaced, correlation capabilities, alerting, and future capabilities such as network fabric."
+- id: -DNWhEUmXXM
+  title: "Splunk Chargeback"
+  date: 2025-02-27
+  duration: "3:29"
+  description: "Want to get insights into which business units are consuming your Splunk license? Look no further than the Splunk App for Chargeback. The Splunk App for Chargeback provides an easy-to-use experience to analyze how internal business units are leveraging Splunk. I had a chance to chat with AK Khamis, the original author of the app, at Splunk Tech Summit to give us more insight into the app's capabilities."
+- id: 9raorhfS5wE
+  title: "Insights Suite for Splunk"
+  date: 2025-02-27
+  duration: "3:29"
+  description: "Data can provide insights for multiple personas. Splunk is a unified security and observability platform, and customers can often gain additional value from the data they already have available to them within the platform. I recently had a chat with Kris Hutchinson about how Insights Suite for Splunk (IS4S) helps customers maximize value for their Splunk investment."
+- id: AtjSwubK-GA
+  title: "Splunk Flight Simulator"
+  date: 2025-02-26
+  duration: "1:43"
+  description: "With Splunk, you can pretty much ask any question of any data and take any action. To put this to the test Kendrick Tugwell and Paul Bannister were able to send Microsoft Flight Simulator data to Splunk via Splunk's HTTP Event Collector. They challenged fellow Splunkers to 'fly' planes in the Top Gun challenge where they received telemetry data to score the pilots. I had a chat with them to get the scoop on how they did it."
+- id: oHcGXeC7xRM
+  title: "Splunk Federation and Data Lakes"
+  date: 2025-02-26
+  duration: "2:58"
+  description: "Technical Splunkers from around the globe recently gathered for Splunk Global Tech Summit. While there, I had a chance to chat with Camille Gaspard about Federation and Data Lakes which allows you to use Splunk features you know and love on data wherever it is - even without ingesting it into Splunk."
+- id: NgkRlbgKAz0
+  title: "Splunk Edge Hub and the Edge Hub OS"
+  date: 2025-01-24
+  duration: "3:05"
+  description: "Exciting things are happening with Splunk Edge Hub and the Edge Hub OS. We are integrating with Cisco devices running at the edge to reach new data sources at greater speed for new use cases with the Splunk platform. While visiting the Cisco Innovation Center, I chatted with Simon Ric - Hansen about this innovation and more detail about use cases."
+- id: v3OJm2Hs4Go
+  title: "Splunk Edge Hub Partners and Protocols"
+  date: 2025-01-24
+  duration: "1:54"
+  description: "The Splunk Edge Hub supports several industry protocols out of the box, but there are partner opportunities to extend the device capabilities to satisfy additional IoT and manufacturing use cases. While visiting the Cisco Innovation Center, I chatted with Travis Champion-Fritz about some of the industry trends he is seeing and partner opportunities."
+- id: -nNYzkyKLWQ
+  title: "Machine Learning on the Edge using Splunk Edge Hub"
+  date: 2025-01-24
+  duration: "4:41"
+  description: "You have heard of Large Language Models, but what can we do with Small Language Models and edge computing? While visiting the Cisco Innovation Center, I had the opportunity to chat with Joel Jacob about innovative ways to bring Machine Learning to the edge with Splunk Edge Hub. Joel provides information about the technology and use cases"
+- id: 5j5fJZDIP0U
+  title: "bitsIO Data Sensi and Splunk"
+  date: 2024-12-21
+  duration: "3:12"
+  description: "Customers often start with Splunk for immediate use cases such as security. However, the same data can be useful for additional use cases such as observability. I recently chatted with Suman Gajavelly from bitsIO Inc. about how Data Sensi can help customers realize additional value from data already in Splunk."
+- id: 7QcPB6hSQJc
+  title: "bitsIO - IIoT, Oil & Gas, and Splunk"
+  date: 2024-12-21
+  duration: "1:47"
+  description: "Splunk can be used in a multitude of cases to get answers from data. Typically, these use cases fall into the security and observability categories. But, since Splunk is a unified data platform, other use cases for IoT or oil and gas industries are also possible. Kalpana Krishnamurthi from bitsIO Inc. shares some insight into how customers are getting value with additional Splunk use cases."
+- id: P8jonfu1-1Y
+  title: "Splunk and ThousandEyes network monitoring"
+  date: 2024-12-21
+  duration: "2:02"
+  description: "Cisco ThousandEyes gives you granular insight into your end-to-end network, covering both networks that you own as well as networks that you do not own. I recently had a chance to chat with Dre Garrison to learn more about ThousandEyes capabilities and get more information about use cases."
+- id: cwlVO8oCLKw
+  title: "Splunk and Cisco Product Launches at Microsoft Ignite 2024"
+  date: 2024-12-21
+  duration: "1:42"
+  description: "At Microsoft Ignite, Splunk officially launched in Microsoft Azure. Micaela Goytia and Amy Bahlo sat down to discuss the launch and customer benefits of the Splunk + Microsoft partnership including performance, Microsoft Azure Consumption Commitment, time to value, migration, and more!"
+- id: ASQAIE2WMYo
+  title: "Splunk and Cicso Partner Programs"
+  date: 2024-12-21
+  duration: "2:27"
+  description: "Cisco recently launched the Cisco 360 Partner Program to accelerate value and innovation. I recently spent some time with Ron Penna to chat about the program launch and how Splunk partners can leverage the full portfolio of both Splunk Partnerverse and the Cisco 360 Partner Program for access to valuable benefits."
+- id: zk1f2EkPtTE
+  title: "Splunk Partner Innovation at Microsoft Ignite 2024"
+  date: 2024-12-21
+  duration: "1:08"
+  description: "Splunk is now available in Microsoft Azure, allowing partners to deliver increased value and innovation to customers in the Microsoft ecosystem. Aly Shivji shares what partners are saying and his insights on the partnership between Microsoft and Splunk."
+- id: g_GNdcS26yA
+  title: "Splunk Launch on Microsoft Azure"
+  date: 2024-12-21
+  duration: "1:04"
+  description: "At Microsoft Ignite 2024, Splunk officially launched in Microsoft Azure. I had the opportunity to chat with Rory Ainsworth about this strategic partnership and how we're meeting customers where they are. Customers can leverage their investments and commitment in Azure to access the resiliency, security, and observability tools of Splunk."
+- id: p9X7RhdxmAs
+  title: "Splunk ISV Ecosystem"
+  date: 2024-12-21
+  duration: "1:24"
+  description: "Interested in becoming an ISV Splunk Partner? Gain valuable insights from Splunk's Global Director of Strategic Alliances & ISV Ecosystem, Tim Anderson, shared at Cisco GSX about the subject."
+- id: iKfMxY-Quqw
+  title: "Splunk ISV Ecosystem"
+  date: 2024-12-21
+  duration: "1:39"
+  description: "The Splunk product can address so many wonderful use cases with data. And, we have a vast ecosystem of partner integrations to accomplish this. I recently chatted with Anush Jayaraman about the ISV ecosystem at Splunk and how we're innovating with partner integrations."
+- id: GOJis21KbTQ
+  title: "Splunk Federated Analytics"
+  date: 2024-12-21
+  duration: "2:58"
+  description: "Had a great discussion with Tolga Tohumcu about a new integration at  Cisco GSX - Splunk Federated Analytics. This integration with Splunk and Amazon Security Lake enables the Splunk Platform to access and use data where it resides. Exciting times ahead!"
+- id: HHgjopyHfes
+  title: "Splunk Enterprise Security"
+  date: 2024-12-21
+  duration: "2:31"
+  description: "While at Cisco GSX, I had a great opportunity to discuss with Alexander Pilger the transformative capabilities of #Splunk Mission Control, Enterprise Security 8, and SOAR in shaping the SOC of the future."
+- id: ldV6YHm3EGI
+  title: "Splunk Edge Hub and IoT"
+  date: 2024-12-21
+  duration: "2:40"
+  description: "Splunk Edge Hub opens up new and exciting use cases to correlate physical data with digital data. I recently had the opportunity to chat with Lerry Wilson about IoT, industrial data, Edge Hub, data access, use cases, and more. There is a lot of opportunity in the partner-led space."
+- id: Ump6le5RUsI
+  title: "Splunk Edge Hub and Cisco Spaces"
+  date: 2024-12-21
+  duration: "2:15"
+  description: "Splunk Edge Hub allows you access to all sorts of physical and environmental data. Jason Shearer gives us some more detail about tying data from sensors in Cisco devices and utilizing Splunk Edge Hub to correlate the uncorrelated."
+- id: mwTVnEXNTYM
+  title: "Splunk Edge Hub"
+  date: 2024-12-21
+  duration: "5:50"
+  description: "The Splunk Edge Hub has a myriad of built-in sensors. It can run containers. It has an NPU built in. It talks common industrial protocols such as MQTT, Modbus, SNMP, and Modbus. And, the list goes on. I recently discussed the device, use cases, and capabilities with Tony Vincent."
+- id: HfvhLVNHt-o
+  title: "Splunk Digital Transformation"
+  date: 2024-12-21
+  duration: "2:02"
+  description: "Short interview with Craig Robin at Microsoft Ignite about how Splunk helps customers with digital transformation, bringing data together, and cloud-vs-on-prem decisions, with a retail example."
+- id: ocKCpnIZD1c
+  title: "Splunk Dashboard Studio Examples"
+  date: 2024-12-21
+  duration: "1:32"
+  description: "What is one of the best-kept secrets in Splunk? Hint: it has something to do with Dashboard Studio visualizations, and Kyle Prins tells us all about it so that it is no longer a secret and you can level up your data"
+- id: v_B8PQ9F1Gs
+  title: "Splunk Cloud in Microsoft Azure"
+  date: 2024-12-21
+  duration: "1:05"
+  description: "While at Microsoft Ignite 2024, I had an opportunity to chat with Jackie Smith about the launch of Splunk Cloud, Enterprise Security, and IT Service Intelligence in Microsoft Azure and meeting customers where they are on their cloud journey to power digital resilience."
+- id: TALD-kKdxyk
+  title: "Splunk Cloud & Digital Resilience"
+  date: 2024-12-21
+  duration: "1:12"
+  description: "While at Microsoft Ignite 2024, I had the opportunity to chat with Anand Hariharan about the Splunk Cloud launch on Microsoft Azure and how we're meeting customers where they are to enable digital resilience."
+- id: R0C6uTiO0RI
+  title: "Splunk AppDynamics"
+  date: 2024-12-21
+  duration: "1:48"
+  description: "Cisco's unified observability brings a seamless experience across AppDynamics and Splunk. I chatted with Wayne Brown at Cisco GSX to uncover some of the technical sides of this integration."
+- id: -JSqaXAX3lo
+  title: "NTS Netzwerk Telekom Service AG"
+  date: 2024-12-21
+  duration: "2:09"
+  description: "NTS Netzwerk Telekom Service AG is delivering a modular SIEM-in-a-box solution that combines the power of Cisco UCS and the analysis capabilities of Splunk and Enterprise Security. I had the chance to chat with Helmut Hoedl about this unique solution to get more details and information."
+- id: cUsbItfdCzU
+  title: "Evolutio and Splunk Observability"
+  date: 2024-12-21
+  duration: "1:43"
+  description: "I had the privilege to discuss the developments in the observability space with George Nassopoulos from Evolutio during Cisco GSX. We discussed their innovative work with Splunk, AppDynamics, and the broader Cisco portfolio."
+- id: 2Z8D2-Y3ZRU
+  title: "Cisco and Azure Local"
+  date: 2024-12-21
+  duration: "2:00"
+  description: "Microsoft Azure Stack HCI is now Azure Local, which extends Azure to customer-owned infrastructure. I recently had the opportunity to chat with John McAbel about how the Cisco product portfolio works with Azure Local, including Cisco UCS, Nexus switches, SD-WAN, and Splunk."
+- id: K4yaj7JPnNs
+  title: "Cisco SD-WAN and Microsoft 365"
+  date: 2024-12-21
+  duration: "1:30"
+  description: "While at Microsoft Ignite, I had a chance to learn more about Cisco SD-WAN from Steven Penland. Steven shared how SD-WAN can connect fabrics into Microsft Azure and extend customer networks into the cloud. Additionally, access to SaaS applications, like Microsoft 365, can be optimized by examining network traffic and automatically choosing the most optimum path."
+- id: cGc6nuQMvcI
+  title: "Splunk .conf24: exclusive interview with Recorded Future's Chris Coburn"
+  date: 2024-07-13
+  duration: "2:29"
+  description: "Recorded Future was recognized as Splunk's 2024 Global Technology Innovation Partner of the Year at .conf24. Chris Coburn delves into their Splunk integration and innovation in this video."
+- id: cnvXnZiG0x0
+  title: "Splunk .conf24: Splunking Race Cars with Fulcrum and Edge Hub"
+  date: 2024-07-13
+  duration: "1:01"
+  description: "What can you do with a Splunk Edge Hub? Many things, but John Owen from Fulcrum Technology Solutions let us know Splunk .conf24 how they gathered telemetry data from a race car using a Splunk Edge Hub."
+- id: HHnZdTXCmxI
+  title: "Splunk .conf24: exclusive interview with Tenable"
+  date: 2024-07-12
+  duration: "3:10"
+  description: "At Splunk .conf24, I had a great conversation with Nick Keuning about Tenable's Cyber Exposure capabilities and Splunk integrations."
+- id: WOLyjD_RiCg
+  title: "Splunk .conf24: exclusive interview with TekStream’s Bruce Johnson"
+  date: 2024-07-02
+  duration: "3:31"
+  description: "At Splunk .conf24, Bruce Johnson from TekStream shared details about security practices and tight Splunk integration. There was also a mention of a Splunk tattoo somewhere along the way."
+- id: byjOkX9mx9U
+  title: "Splunk .conf24: Unveiling SOAR’s Newest Innovations!"
+  date: 2024-06-29
+  duration: "2:12"
+  description: "At Splunk .conf24, an opportunity arose to chat with Daniel Federschmidt about new features and the latest advancements in Splunk SOAR! Be the first to learn about cutting-edge features, innovative updates, and how they can transform your security operations. Don’t miss out on this opportunity to stay ahead of the curve and enhance your SOAR capabilities. Tune in and elevate your security game with Splunk!"
+- id: yOGnWqOjR0U
+  title: "Splunk .conf24: Say Hello to Your New AI Assistant"
+  date: 2024-06-27
+  duration: "2:11"
+  description: "At Splunk .conf24, a great opportunity arose to discuss Splunk AI with Jeff Wiedemann. We chatted about Natural Language Processing, SPL Generative AI, and the AI assistants for Splunk."
+- id: Et9OlFNErVI
+  title: "Using Microsoft Teams Functions for Splunk"
+  date: 2024-06-20
+  duration: "9:26"
+  post: /2024/06/20/using-microsoft-teams-functions-for-splunk/
+  description: "Learn how Microsoft makes Teams call record data available and how to get that data into Splunk with Azure Functions"
+- id: I6fE-lE92m0
+  title: "Setting up the Microsoft Teams Add on for Splunk"
+  date: 2024-06-20
+  duration: "10:11"
+  post: /2024/06/20/setting-up-the-microsoft-teams-add-on-for-splunk/
+  description: "Learn how Microsoft makes Teams call record data available and how to get that data into Splunk with an add-on."

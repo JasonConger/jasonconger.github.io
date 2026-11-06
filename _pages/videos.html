@@ -10,15 +10,42 @@ permalink: /videos/
 <main class="container-md">
   <div class="row"><div class="col">
 
+    {% assign videos = site.data.videos %}
+
     <p>
-      My videos live on YouTube: conference interviews, demos, and talks.
+      Conference interviews, demos, and talks. Every video opens on YouTube.
     </p>
 
     <p>
       <a class="btn btn-primary watch-btn" href="https://www.youtube.com/@JasonConger" target="_blank" rel="noopener">
-        <i class="bi bi-youtube"></i>&nbsp; Watch on YouTube
+        <i class="bi bi-youtube"></i>&nbsp; Visit the channel
       </a>
     </p>
+
+    <ul class="video-list">
+      {% for v in videos %}
+      {% assign watch = "https://www.youtube.com/watch?v=" | append: v.id %}
+      <li class="video-item">
+        <a class="video-thumb" href="{{ watch }}" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <img src="https://i.ytimg.com/vi/{{ v.id }}/mqdefault.jpg" width="320" height="180" loading="lazy" alt="">
+          {% if v.duration %}<span class="dur">{{ v.duration }}</span>{% endif %}
+        </a>
+        <div class="video-info">
+          <h3><a href="{{ watch }}" target="_blank" rel="noopener">{{ v.title }}</a></h3>
+          <p class="video-meta">{{ v.date | date: "%B %-d, %Y" }}</p>
+          <div class="video-desc">{{ v.description | markdownify }}</div>
+          <p class="video-links">
+            <a href="{{ watch }}" target="_blank" rel="noopener"><i class="bi bi-youtube"></i>&nbsp; Watch on YouTube</a>
+            {% if v.post %}<a href="{{ v.post | relative_url }}"><i class="bi bi-journal-text"></i>&nbsp; Read the walkthrough</a>{% endif %}
+          </p>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+
+    {% if videos == nil or videos.size == 0 %}
+    <p><em>No videos listed yet.</em></p>
+    {% endif %}
 
   </div></div>
 </main>
