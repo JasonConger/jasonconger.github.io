@@ -3,20 +3,28 @@
 
 # videos-to-data
 # --------------
-# Add YouTube videos to _data/videos.yml, the list shown on /videos/. Reads the
-# same cleaned transcripts as bin/videos-to-posts (raw/yt-*.md in the "second
-# brain" repo) for each video's title, date, description and duration. Reads
-# only; never modifies the transcript source. Idempotent: videos already in
-# the list are left exactly as they are (so hand edits and `post:` links stay).
+# Add YouTube videos to _data/videos.yml, the list shown on /videos/. Reads
+# each video's title, date, description and duration from either:
+#   - the cleaned transcripts bin/videos-to-posts uses (raw/yt-*.md in the
+#     "second brain" repo), or
+#   - yt-dlp's *.info.json files (--info-dir), for scanning the channel itself.
+# Reads only. Idempotent: videos already in the list are left exactly as they
+# are (so hand edits and `post:` links stay).
 #
 # Usage:
 #   bin/videos-to-data [options]
 #
-#   --source DIR   Directory of yt-*.md transcripts
-#                  (default: ~/Documents/second-brain/raw)
+#   --source DIR     Directory of yt-*.md transcripts
+#                    (default: ~/Documents/second-brain/raw)
+#   --info-dir DIR   Read yt-dlp *.info.json files from DIR instead
 #   --data FILE    The list to update (default: _data/videos.yml)
-#   --dry-run      Print what would be added; write nothing
+#   --dry-run        Print what would be added; write nothing
 #   -h, --help
+#
+# Scanning the channel (Shorts are not on the /videos tab, so they are skipped):
+#   yt-dlp --flat-playlist -J https://www.youtube.com/@JasonConger/videos   # ids on the channel
+#   yt-dlp --skip-download --write-info-json -o '%(id)s' <watch urls of the new ids>
+#   bin/videos-to-data --info-dir . --dry-run
 
 require "optparse"
 require "date"
@@ -30,6 +38,7 @@ ROOT = File.expand_path("..", __dir__)
 
 options = {
   source: File.expand_path("~/Documents/second-brain/raw"),
+  info_dir: nil,
   data: File.join(ROOT, "_data", "videos.yml"),
   dry_run: false,
 }
@@ -37,6 +46,7 @@ options = {
 OptionParser.new do |o|
   o.banner = "Usage: bin/videos-to-data [options]"
   o.on("--source DIR") { |v| options[:source] = File.expand_path(v) }
+  o.on("--info-dir DIR") { |v| options[:info_dir] = File.expand_path(v) }
   o.on("--data FILE")  { |v| options[:data] = File.expand_path(v) }
   o.on("--dry-run")    { options[:dry_run] = true }
   o.on("-h", "--help") { puts o; exit }
@@ -89,42 +99,81 @@ if File.file?(options[:data])
 end
 have = existing.map { |v| v["id"] }
 
-# --- transcripts ----------------------------------------------------------------
+# --- candidates -------------------------------------------------------------------
 
-sources = Dir.glob(File.join(options[:source], "yt-*.md")).sort
-abort "No transcripts found in #{options[:source]}" if sources.empty?
+def duration_label(seconds)
+  s = seconds.to_i
+  h, rem = s.divmod(3600)
+  m, sec = rem.divmod(60)
+  h.positive? ? format("%d:%02d:%02d", h, m, sec) : format("%d:%02d", m, sec)
+end
+
+# First paragraph of a YouTube description, without hashtag-only lines.
+def summary_of(description)
+  para = description.to_s.gsub("\r\n", "\n").strip.split(/\n\s*\n/).first.to_s
+  para.lines.map(&:strip).reject { |l| l =~ /\A(#\w+\s*)+\z/ }.join(" ").strip
+end
+
+candidates = []
+if options[:info_dir]
+  infos = Dir.glob(File.join(options[:info_dir], "*.info.json")).sort
+  abort "No *.info.json files in #{options[:info_dir]}" if infos.empty?
+  infos.each do |path|
+    info = JSON.parse(File.read(path))
+    next unless info["id"]
+    if info["webpage_url"].to_s.include?("/shorts/")
+      puts "  -  skip Short #{info['id']}"
+      next
+    end
+    date = begin
+      Date.strptime(info["upload_date"].to_s, "%Y%m%d")
+    rescue ArgumentError
+      Date.today
+    end
+    candidates << {
+      "id" => info["id"],
+      "title" => info["title"].to_s.strip,
+      "date" => date,
+      "duration" => info["duration"] ? duration_label(info["duration"]) : "",
+      "description" => summary_of(info["description"]),
+    }
+  end
+else
+  sources = Dir.glob(File.join(options[:source], "yt-*.md")).sort
+  abort "No transcripts found in #{options[:source]}" if sources.empty?
+  sources.each do |path|
+    yaml, _body = split_front_matter(File.read(path))
+    vid = video_id_from(fm_value(yaml, "source"))
+    unless vid
+      warn "  ?  no video id: #{File.basename(path)}"
+      next
+    end
+    date = begin
+      Date.parse(fm_value(yaml, "published").to_s)
+    rescue ArgumentError, TypeError
+      Date.today
+    end
+    candidates << {
+      "id" => vid,
+      "title" => fm_value(yaml, "title") || File.basename(path, ".md").sub(/\Ayt-/, "").tr("-", " "),
+      "date" => date,
+      "duration" => fm_value(yaml, "duration").to_s.strip,
+      "description" => fm_value(yaml, "description").to_s.strip,
+    }
+  end
+end
 
 added = []
-skipped_have = skipped_noid = 0
-
-sources.each do |path|
-  yaml, _body = split_front_matter(File.read(path))
-  vid = video_id_from(fm_value(yaml, "source"))
-  unless vid
-    warn "  ?  no video id: #{File.basename(path)}"
-    skipped_noid += 1
-    next
-  end
-  if have.include?(vid) || added.any? { |v| v["id"] == vid }
+skipped_have = 0
+candidates.each do |v|
+  if have.include?(v["id"]) || added.any? { |a| a["id"] == v["id"] }
     skipped_have += 1
     next
   end
-
-  title = fm_value(yaml, "title") || File.basename(path, ".md").sub(/\Ayt-/, "").tr("-", " ")
-  date = begin
-    Date.parse(fm_value(yaml, "published").to_s)
-  rescue ArgumentError, TypeError
-    Date.today
-  end
-  added << {
-    "id" => vid,
-    "title" => title,
-    "date" => date,
-    "duration" => fm_value(yaml, "duration").to_s.strip,
-    "description" => fm_value(yaml, "description").to_s.strip,
-  }
-  puts "  +  #{vid}  #{title}"
+  added << v
+  puts "  +  #{v['id']}  #{v['date']}  #{v['title']}"
 end
+skipped_noid = 0
 
 all = (existing + added).sort_by { |v| [v["date"], v["title"].to_s] }.reverse
 

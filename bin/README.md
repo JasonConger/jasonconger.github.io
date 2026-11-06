@@ -8,7 +8,7 @@ Small stdlib-only Ruby/bash helpers for running and updating the site.
 | `bin/new-post "Title" [opts]` | Scaffold a post/draft with standard front matter. |
 | `bin/videos-to-posts [opts]` | Generate one **draft** post per YouTube video from the transcripts in the second-brain repo. Idempotent. |
 | `bin/linkedin-to-posts Shares.csv [opts]` | Generate one **draft** post per post in a LinkedIn data export. Public posts only by default. Idempotent. |
-| `bin/videos-to-data [opts]` | Add new YouTube videos to `_data/videos.yml`, the list on `/videos/`. Same transcripts as `videos-to-posts`; leaves existing entries alone. |
+| `bin/videos-to-data [opts]` | Add new YouTube videos to `_data/videos.yml`, the list on `/videos/`, from the `videos-to-posts` transcripts or from `yt-dlp` output (`--info-dir`). Leaves existing entries alone. |
 | `bin/publish-draft <file> \| --all` | Move a reviewed draft into `_posts/<year>/`, dated from its front matter. |
 
 Commit + push publishes — GitHub Pages builds automatically. `_drafts/` is git-ignored.
@@ -96,3 +96,14 @@ Don't commit `Shares.csv` itself: this repo is public and the export can include
 that opens the video on YouTube. Nothing plays on the site. To add videos, run
 `bin/videos-to-data --dry-run` and then `bin/videos-to-data`, or add an entry by hand (`id`, `title`, `date`,
 `description`; optional `duration`, and `post:` with a site path to link a written walkthrough).
+
+To pick up new uploads straight from the channel (Shorts are not on its Videos tab, so they never appear):
+
+```bash
+yt-dlp --flat-playlist -J https://www.youtube.com/@JasonConger/videos   # the ids on the channel
+yt-dlp --skip-download --write-info-json -o '%(id)s' <watch URL of each new id>
+bin/videos-to-data --info-dir . --dry-run                               # then again without --dry-run
+```
+
+Only the first paragraph of each YouTube description is used. YouTube may ask for a sign-in if you fetch many
+videos at once; slow down with `--sleep-requests 5` and retry later.

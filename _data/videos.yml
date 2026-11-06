@@ -1,4 +1,89 @@
 # Videos listed on /videos/. Newest first. Each links to YouTube; `post:` adds a link to the written post.
+- id: 75G-r5blg-o
+  title: "How Splunk and Cisco Stop an MFA Phishing Attack"
+  date: 2026-11-06
+  duration: "4:28"
+  description: "At Cisco Partner Summit, Jason Conger talks with Gino Corleto of Cisco about a demo of a real-world attack: a phished password and an approved MFA push let a hacker into the network and down the production line. Gino explains how Duo Proximity Verification stops the login at the device, and how firewalls, Secure Network Analytics and Cyber Vision feed Splunk and Cloud Control to isolate the user, reset passwords and revoke sessions in minutes, automatically if you want."
+- id: BNG0BhoTId4
+  title: "Patch Network Vulnerabilities with No Reboot | Cisco"
+  date: 2026-11-05
+  duration: "2:40"
+  description: "At Cisco Partner Summit, Jason Conger talks with Tyson Scott of Cisco about Cisco Live Protect, which delivers zero-day vulnerability protection by deploying shields to Cisco switches and routers. Tyson explains how customers can mitigate a newly announced vulnerability in minutes, with a small configuration and no reboot, software update or patch, instead of waiting months for upgrade windows."
+- id: 73VsdMm1W18
+  title: "How to Secure the AI-Ready Data Center | Cisco"
+  date: 2026-11-04
+  duration: "4:42"
+  description: "At Cisco Partner Summit, Jason Conger talks with Jerry Lin of Cisco about layering security into the AI-ready data center. Jerry covers three areas: protecting east-west traffic with modern firewalls, the Encrypted Visibility Engine, and Nexus smart switches that enforce segmentation at the switch; securing AI applications with AI Defense, including model validation and custom guardrails; and infrastructure resilience. He also points to where partners and customers can find more information and hands-on labs."
+- id: DD5DU64oB18
+  title: "Why Brakes Let You Go Faster: AI Safety | Splunk"
+  date: 2026-10-29
+  duration: "4:12"
+  description: "At Splunk's Data Strategy Workshop for partners in Singapore, Jason Conger talks with CJ Low, Field CTO at Splunk, about balancing speed and safety with AI. Using a car analogy, CJ explains why guardrails aren't an inhibitor, how safety mechanisms build the trust that lets businesses move faster and take more risk, and how automated controls help safety keep up with the speed of change."
+- id: ViToZsrKE78
+  title: "Your AI App Is Live. How Do You Monitor It? | Splunk"
+  date: 2026-10-27
+  duration: "2:41"
+  description: "At Splunk's Data Strategy Workshop for partners in Singapore, Jason Conger talks with Savitalaxmi Vishwanathan about monitoring AI applications once they're live. Savita explains why AI apps need a different kind of observability (agent behavior, end-to-end user interactions, tokenomics and guardrails), how 30+ out-of-the-box evaluators and LLM support handle evaluation, and how the Luna small language model saves cost and resources."
+- id: PyZBUXxe81I
+  title: "Activate, Not Enable: Splunk's New Partner Workshops"
+  date: 2026-10-25
+  duration: "2:44"
+  description: "From Splunk's Data Strategy Workshop in Singapore, Jason Conger talks with Amit Harjani about bringing a new kind of partner workshop to APJC. Amit explains why the two-day format is about activating partners rather than just enabling them, how partners apply what they learn to real customer scenarios, and which workshops are coming next, including Agent Observability and Agentic SOC."
+- id: ylNoyy328GM
+  title: "Splunk's 3 Pillars of Data Value: Cisco Data Fabric"
+  date: 2026-10-19
+  duration: "3:41"
+  description: "Live from Splunk's first Data Strategy Workshop for partners in Tokyo, I talk with Trav \"T-Rex\" Kane about why a data strategy matters as AI drives data growth. Trav walks through his three pillars of data value realization (streaming, landing, and analyzing data) and the Splunk technologies behind each one, from Ingest Processor and Edge Processor to Machine Data Lake and the new analytics tier. He also explains where to learn more about the Cisco Data Fabric."
+- id: 3aRzl6JUkG8
+  title: "The $937B AI Services Opportunity for GSIs, with Splunk"
+  date: 2026-10-01
+  duration: "3:31"
+  description: "The services opportunity analysts see from 2026 to 2031 is mind boggling, and it is mostly around AI (of course it is  🙃 ). And according to Ram Krishnamurthy, GSIs are just scratching the surface."
+- id: 1pBipxVXtR4
+  title: "Live F1 Telemetry in Splunk, with Dashboards Built by AI"
+  date: 2026-10-01
+  duration: "7:48"
+  description: "\"I haven't touched a line of code building any of these.\" - Robert Castley, on every dashboard at the Data Drivers F1 booth."
+- id: QdIIlG5Y4lU
+  title: "Free Splunk Training: Keep Learning After .conf26"
+  date: 2026-10-01
+  duration: "2:53"
+  description: "The busiest spot on the .conf26 floor? The hands-on labs."
+- id: OUPtusJmhhg
+  title: "Claude Code + Splunk MCP Found Hidden Home Energy Waste"
+  date: 2026-10-01
+  duration: "4:50"
+  description: "What happens when you point Claude Code to a Splunk index (via the Splunk MCP server) that has data about your house? You find out your TV is waking up in the middle of the night."
+- id: 0zJRW92hYlA
+  title: "Ciroos and Splunk - Meet Your New AI SRE Teammate"
+  date: 2026-09-25
+  duration: "4:12"
+  description: "While at .conf26, I had an opportunity to chat with Ronak Desai and Niall Murphy from Ciroos as well as get a demo of their product."
+- id: gg8aR1TDFr4
+  title: "To Err Is Not Just Human: AI Observability with bitsIO"
+  date: 2026-09-24
+  duration: "4:46"
+  description: "I caught up with Kalpana Krishnamurthi and Suman Gajavelly from bitsIO Inc. at .conf26 fresh off winning a Partner of the Year award for the fifth time!"
+- id: unPYJvUU728
+  title: "Dark Web Threat Intel in Splunk: 1.1M Sources with Dataminr"
+  date: 2026-09-23
+  duration: "7:24"
+  description: "I had an opportunity to chat with Mo Hasan from Dataminr at .conf26 about their Splunk integration analyzing over 1.1 million public data sources including deep web, dark web, code repositories, hacker forums, sensors, you name it. Mo talks about three modules:"
+- id: _ypZDCCVTdw
+  title: "The Spicy Truth About AI's Resources"
+  date: 2026-09-22
+  duration: "3:43"
+  description: "Ran into Annie Hardy at Cisco Live Amsterdam, and her talk on the future of the internet was, in her own words, \"spicy.\""
+- id: 6jdPRtO57qU
+  title: "From Cisco Distinguished Engineer to Observability Partner: Netnology"
+  date: 2026-09-22
+  duration: "2:55"
+  description: "I caught up with Salman Asadullah from Netnology at .conf26, and his path here says a lot about where this industry is heading."
+- id: f5VTfkg_vFo
+  title: "Splunk  .conf26 - Splunk Reimagined"
+  date: 2026-09-19
+  duration: "1:10"
+  description: "\"Splunk Reimagined\" was a prevalent theme of .conf26, and big part of that story is data strategy. With Cisco Data Fabric powered by the Splunk Platform, the pitch isn't \"move all your data into one place\" anymore. Instead, it's all about making data usable wherever it is. Federated search, a Machine Data Lake that keeps cost sane at massive scale, and AI experiences to get the right data to the right place to drive the right analytics are just the start. That shift alone changes how organizations plan their next five years of infrastructure."
 - id: cFi43yfcI8g
   title: "Cisco Live Agentic SOC"
   date: 2026-06-11
@@ -114,6 +199,11 @@
   date: 2026-02-13
   duration: "2:34"
   description: "At Cisco Live EMEA, we used Splunk, Meraki, Edge Hubs, partner technologies, and more to bring real-time insights to the on-site Cisco Store.  Kyle Prins shared with us the underlying technology used in the store as well as the use cases being brought to life. It is a fascinating example of how Splunk can be used to ask questions, get answers, and take action on any type of machine data."
+- id: GaL2N--E3Uw
+  title: "Cisco Live EMEA 2026 in 60 Seconds"
+  date: 2026-02-13
+  duration: "0:52"
+  description: "Cisco Live EMEA is a wrap. There were so many great moments and conversations with customers and partners, and innovation is advancing at a rapid pace.  From AI-Ready Data Centers, to Future-Proof Workspaces, to Digital Resilience, and everything in between, the possibilities are boundless. It is always great to see everyone with similar missions at the same time in the same place.  The energy at the event was palpable!"
 - id: 55YdjP6lLIE
   title: "Splunk Observability for AI and Cisco AI Defense"
   date: 2026-02-12
@@ -194,6 +284,11 @@
   date: 2025-11-10
   duration: "2:48"
   description: "It was such a great time at Cisco Partner Summit learning about innovation, networking with peers, and most importantly engaging with partners. The depth and breadth of partner capabilities are astounding. I got the change to chat with Chip Stearns from Keos about there services and the synergies between 'traditional' Splunk partners and 'traditional' Cisco partners."
+- id: yS_Q_lg3ufc
+  title: "Cisco Partner Summit 2025 Montage"
+  date: 2025-11-07
+  duration: "0:49"
+  description: "Cisco Partner Summit 2025 was all about innovation, and we are in an exciting time! The energy and feedback from partners was incredible. The solutions showcase really brought the One Cisco portfolio to life."
 - id: hJ5GeIgTNAw
   title: "Orange Business Services, Splunk, Cisco and OT"
   date: 2025-11-05
@@ -244,6 +339,11 @@
   date: 2025-09-19
   duration: "2:32"
   description: "Laser Bananas and the power of Splunk! While at Splunk .conf25, I had the opportunity to chat with Simon Slade about how he brought together physical data with observability to demonstrate the breadth of Splunk solutions. By shooting a laser out of a banana (that is not a typo), receiving the signal, brokering the MQTT data with Splunk Edge Hub, and visualizing the results in a Splunk dashboard, Simon brought gamification to life. While this is a fun use case, think about all the other implicati"
+- id: CmO4XdsZq-I
+  title: "Splunk Cloud Monitoring Console AI Assistant"
+  date: 2025-09-19
+  duration: "1:26"
+  description: "Splunk can be used in a plethora of AI use cases, but the Splunk product has been \"...sprinkled with AI all throughout the platform and our product portfolio...\". At Splunk .conf25, I got a chance to chat with Michelle Moreira and Ritika Saini about how AI is used in the Cloud Monitoring Console (a.k.a. CMC) to help admins keep things running smoothly from a natural language conversational assistant."
 - id: JAS6X8Ifenk
   title: "Splunk 10 and Edge Processor"
   date: 2025-09-19
@@ -319,6 +419,11 @@
   date: 2025-06-17
   duration: "2:45"
   description: "While at Cisco Live, I had a discussion with Jon Heaton regarding Cisco's utilization of technology such as Splunk, ThousandEyes, CMDB, and AI to manage Cisco's infrastructure for digital resilience. As a Cisco employee, it was a fun peek behind the curtain on the tools I use day-to-day."
+- id: qM6p9Gvv7j4
+  title: "Cisco Live US 2025"
+  date: 2025-06-12
+  duration: "0:45"
+  description: "The amount of innovation from Cisco and its partners is incredible! I'm looking forward to sharing some video footage shot about ThousandEyes, Cisco on Cisco, using Splunk for shopping data, Splunk data management, Splunk AI Assistants, and more!"
 - id: XpQFBSB39k4
   title: "Getting Microsoft Teams Call Records into Splunk (updated 2025)"
   date: 2025-04-21
@@ -420,16 +525,16 @@
   date: 2024-12-21
   duration: "1:04"
   description: "At Microsoft Ignite 2024, Splunk officially launched in Microsoft Azure. I had the opportunity to chat with Rory Ainsworth about this strategic partnership and how we're meeting customers where they are. Customers can leverage their investments and commitment in Azure to access the resiliency, security, and observability tools of Splunk."
-- id: p9X7RhdxmAs
-  title: "Splunk ISV Ecosystem"
-  date: 2024-12-21
-  duration: "1:24"
-  description: "Interested in becoming an ISV Splunk Partner? Gain valuable insights from Splunk's Global Director of Strategic Alliances & ISV Ecosystem, Tim Anderson, shared at Cisco GSX about the subject."
 - id: iKfMxY-Quqw
   title: "Splunk ISV Ecosystem"
   date: 2024-12-21
   duration: "1:39"
   description: "The Splunk product can address so many wonderful use cases with data. And, we have a vast ecosystem of partner integrations to accomplish this. I recently chatted with Anush Jayaraman about the ISV ecosystem at Splunk and how we're innovating with partner integrations."
+- id: p9X7RhdxmAs
+  title: "Splunk ISV Ecosystem"
+  date: 2024-12-21
+  duration: "1:24"
+  description: "Interested in becoming an ISV Splunk Partner? Gain valuable insights from Splunk's Global Director of Strategic Alliances & ISV Ecosystem, Tim Anderson, shared at Cisco GSX about the subject."
 - id: GOJis21KbTQ
   title: "Splunk Federated Analytics"
   date: 2024-12-21
@@ -480,11 +585,21 @@
   date: 2024-12-21
   duration: "1:48"
   description: "Cisco's unified observability brings a seamless experience across AppDynamics and Splunk. I chatted with Wayne Brown at Cisco GSX to uncover some of the technical sides of this integration."
+- id: 25i958oyCb8
+  title: "Splunk  .conf24 Sizzle Reel"
+  date: 2024-12-21
+  duration: "0:26"
+  description: "At Splunk .conf24, I had the chance to engage with several Splunkers and partners about technical topics such as #AI, #ML, SPL2, #VSCode, GDI, #SOAR, Search, MSSP, #Observability, Industrial IT, Visualizations, and so much more."
 - id: -JSqaXAX3lo
   title: "NTS Netzwerk Telekom Service AG"
   date: 2024-12-21
   duration: "2:09"
   description: "NTS Netzwerk Telekom Service AG is delivering a modular SIEM-in-a-box solution that combines the power of Cisco UCS and the analysis capabilities of Splunk and Enterprise Security. I had the chance to chat with Helmut Hoedl about this unique solution to get more details and information."
+- id: nARGL9oStWM
+  title: "Microsoft Ignite 2024 - Sizzle Reel"
+  date: 2024-12-21
+  duration: "0:53"
+  description: "That's a wrap for Microsoft Ignite, and what an incredible event it was! Splunk Cloud is now Generally Available in Azure, Cisco UCS + Azure Local accelerates access to data, SD-WAN integrates with Microsoft SSE, Cisco Spaces was on display, and so much more. It was great engaging with customers and partners about the opportunities ahead as well as gathering perspectives from colleagues, partners, and friends."
 - id: cUsbItfdCzU
   title: "Evolutio and Splunk Observability"
   date: 2024-12-21
@@ -500,6 +615,11 @@
   date: 2024-12-21
   duration: "1:30"
   description: "While at Microsoft Ignite, I had a chance to learn more about Cisco SD-WAN from Steven Penland. Steven shared how SD-WAN can connect fabrics into Microsft Azure and extend customer networks into the cloud. Additionally, access to SaaS applications, like Microsoft 365, can be optimized by examining network traffic and automatically choosing the most optimum path."
+- id: vnD9lYI5vdA
+  title: "Cisco Partner Summit  Sizzle Reel"
+  date: 2024-12-21
+  duration: "0:35"
+  description: "What an incredible time at Cisco Partner Summit! While there, I had an opportunity to chat with several partners about One Cisco and gather footage about several initiatives including MSP, ISV, Edge Hub, ThousandEyes, Security, and more."
 - id: cGc6nuQMvcI
   title: "Splunk .conf24: exclusive interview with Recorded Future's Chris Coburn"
   date: 2024-07-13
@@ -542,3 +662,33 @@
   duration: "10:11"
   post: /2024/06/20/setting-up-the-microsoft-teams-add-on-for-splunk/
   description: "Learn how Microsoft makes Teams call record data available and how to get that data into Splunk with an add-on."
+- id: bqEMjvjoi2A
+  title: "Responsive Design Prototype for Enterprise Applications"
+  date: 2017-09-24
+  duration: "1:57"
+  description: "Using the Citrix XenApp 6.5 Mobile Application SDK, we can apply Responsive Web Design principles to Enterprise Applications.  More information can be found at http://www.jasonconger.com/"
+- id: nW3tCtjbKAM
+  title: "Ponies fly at Splunk .conf 2015"
+  date: 2015-09-22
+  duration: "0:08"
+  description: ""
+- id: OF8oeuxlM-g
+  title: "Leostream at Citrix Synergy 2009"
+  date: 2009-05-14
+  duration: "5:56"
+  description: "Leostream demonstrates their connection broker web interface at Citrix Synergy 2009."
+- id: TXlO1HzcgtI
+  title: "Citrix Synergy \"Cloud\""
+  date: 2009-05-14
+  duration: "0:29"
+  description: "When I entered the Citrix Synergy 2009 Expo, I though something was on fire or that someone was cooking on a grill.  Turns out to be a marketing gimmick - the Citrix \"cloud\"."
+- id: YHseNSkJnkw
+  title: "Neocleus Demonstration at Citrix Synergy 2009"
+  date: 2009-05-13
+  duration: "3:29"
+  description: "Neocleus demonstrated their client side hypervisor at Citrix Synergy 2009."
+- id: C3pxtRmPOiI
+  title: "Citrix Web Interface with Microsoft Silverlight and AJAX"
+  date: 2008-05-18
+  duration: "1:01"
+  description: "Citrix Web Interface with Microsoft Silverlight and AJAX"
