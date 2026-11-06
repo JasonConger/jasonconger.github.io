@@ -423,6 +423,9 @@ a.featured-card { color: inherit; text-decoration: none; }
   gap: 1.25rem 1rem;
 }
 .video-card { display: flex; flex-direction: column; min-width: 0; }
+/* arriving from search: scroll clear of the fixed navbar and mark the card */
+.video-card { scroll-margin-top: 6rem; }
+.video-card:target .video-thumb { outline: 2px solid var(--accent-2); outline-offset: 3px; }
 .video-thumb {
   position: relative;
   display: block;

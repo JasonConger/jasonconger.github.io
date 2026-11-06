@@ -25,7 +25,7 @@ permalink: /videos/
     <ul class="video-grid">
       {% for v in videos %}
       {% assign watch = "https://www.youtube.com/watch?v=" | append: v.id %}
-      <li class="video-card">
+      <li class="video-card" id="v-{{ v.id }}">
         <a class="video-thumb" href="{{ watch }}" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
           <img src="https://i.ytimg.com/vi/{{ v.id }}/mqdefault.jpg" width="320" height="180" loading="lazy" alt="">
           {% if v.duration %}<span class="dur">{{ v.duration }}</span>{% endif %}
