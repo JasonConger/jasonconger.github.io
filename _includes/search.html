@@ -28,11 +28,26 @@
     ]';
     searchjson = JSON.parse(searchjson);
 
-    var sjs = SimpleJekyllSearch({
-      searchInput: document.getElementById('nav-search-input'),
-      resultsContainer: document.getElementById('search-results-container'),
-      json: searchjson
-    });
+    // Videos live in _data/videos.yml, not in posts, so they come from their own
+    // small file, fetched the first time search is used and added to the index.
+    var searchStarted = false;
+    function startSearch() {
+      if (searchStarted) return;
+      searchStarted = true;
+      fetch("{{ '/search-videos.json' | relative_url }}")
+        .then(function (r) { return r.ok ? r.json() : []; })
+        .catch(function () { return []; })
+        .then(function (videos) {
+          SimpleJekyllSearch({
+            searchInput: document.getElementById('nav-search-input'),
+            resultsContainer: document.getElementById('search-results-container'),
+            json: searchjson.concat(videos)
+          });
+        });
+    }
+    document.getElementById('nav-search-input').addEventListener('focus', startSearch);
+    var searchLink = document.getElementById('nav-search-link');
+    if (searchLink) searchLink.addEventListener('click', startSearch);
   </script>
 </div>
 

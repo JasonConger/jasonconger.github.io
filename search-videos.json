@@ -1,0 +1,16 @@
+---
+layout: null
+sitemap: false
+---
+{%- comment -%} Video entries for the site search (see _includes/search.html). Loaded on first use of search. {%- endcomment -%}
+[
+{%- for v in site.data.videos %}
+  {
+    "title": {{ v.title | append: " (video)" | jsonify }},
+    "category": "Video",
+    "url": {{ "/videos/#v-" | append: v.id | relative_url | jsonify }},
+    "date": {{ v.date | date: "%B %e, %Y" | jsonify }},
+    "description": {{ v.description | jsonify }}
+  }{% unless forloop.last %},{% endunless %}
+{%- endfor %}
+]
