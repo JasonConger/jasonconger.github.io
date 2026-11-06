@@ -14,6 +14,11 @@
   date: 2026-11-04
   duration: "4:42"
   description: "At Cisco Partner Summit, Jason Conger talks with Jerry Lin of Cisco about layering security into the AI-ready data center. Jerry covers three areas: protecting east-west traffic with modern firewalls, the Encrypted Visibility Engine, and Nexus smart switches that enforce segmentation at the switch; securing AI applications with AI Defense, including model validation and custom guardrails; and infrastructure resilience. He also points to where partners and customers can find more information and hands-on labs.\n\nGuests:\n- Jason Conger, Splunk Partner Field CTO\n- Jerry Lin, Global Principal Security Architect, Cisco\n\nChapters:\n0:00 Intro\n0:20 Security for the AI-ready data center\n0:41 Firewalls and the Encrypted Visibility Engine\n1:15 Segmentation with Nexus smart switches\n2:13 Securing AI apps with AI Defense\n3:00 Custom guardrails\n3:36 Infrastructure resilience\n4:08 Where to learn more\n\n#CiscoPartnerSummit #Splunk #Cisco #AISecurity #DataCenter"
+- id: Lsdd7YqFrK4
+  title: "How Telcos Can Reinvent Themselves for AI | Splunk"
+  date: 2026-11-03
+  duration: "2:47"
+  description: "At Splunk's Data Strategy Workshop for partners in Singapore, Jason Conger talks with Albert Kurnia of Cisco about how telcos are trying to reinvent themselves as AI opens up new opportunities. Albert explains why telco partners need to understand data and the \"why\" behind AI, which executives they should be talking to, and why proving measurable ROI and changing how they sell matters.\n\nGuests:\n- Jason Conger, Splunk Partner Field CTO\n- Albert Kurnia, Partner Account Executive, Cisco\n\nChapters:\n0:00 Intro\n0:12 What telco reinvention means\n0:48 Why understanding data comes first\n1:32 Where should a telco start?\n1:45 Talk to the CIOs, CISOs and CEOs\n2:20 Measurable ROI and a new way to sell\n\n#Splunk #Cisco #DataStrategy #Telco #SplunkPartners"
 - id: DD5DU64oB18
   title: "Why Brakes Let You Go Faster: AI Safety | Splunk"
   date: 2026-10-29
@@ -525,16 +530,16 @@
   date: 2024-12-21
   duration: "1:04"
   description: "At Microsoft Ignite 2024, Splunk officially launched in Microsoft Azure. I had the opportunity to chat with Rory Ainsworth about this strategic partnership and how we're meeting customers where they are. Customers can leverage their investments and commitment in Azure to access the resiliency, security, and observability tools of Splunk."
-- id: iKfMxY-Quqw
-  title: "Splunk ISV Ecosystem"
-  date: 2024-12-21
-  duration: "1:39"
-  description: "The Splunk product can address so many wonderful use cases with data. And, we have a vast ecosystem of partner integrations to accomplish this. I recently chatted with Anush Jayaraman about the ISV ecosystem at Splunk and how we're innovating with partner integrations."
 - id: p9X7RhdxmAs
   title: "Splunk ISV Ecosystem"
   date: 2024-12-21
   duration: "1:24"
   description: "Interested in becoming an ISV Splunk Partner? Gain valuable insights from Splunk's Global Director of Strategic Alliances & ISV Ecosystem, Tim Anderson, shared at Cisco GSX about the subject."
+- id: iKfMxY-Quqw
+  title: "Splunk ISV Ecosystem"
+  date: 2024-12-21
+  duration: "1:39"
+  description: "The Splunk product can address so many wonderful use cases with data. And, we have a vast ecosystem of partner integrations to accomplish this. I recently chatted with Anush Jayaraman about the ISV ecosystem at Splunk and how we're innovating with partner integrations."
 - id: GOJis21KbTQ
   title: "Splunk Federated Analytics"
   date: 2024-12-21
@@ -682,6 +687,11 @@
   date: 2009-05-14
   duration: "0:29"
   description: "When I entered the Citrix Synergy 2009 Expo, I though something was on fire or that someone was cooking on a grill.  Turns out to be a marketing gimmick - the Citrix \"cloud\"."
+- id: R7nShdt9xKU
+  title: "eG Innovations at Citrix Synergy 2009"
+  date: 2009-05-13
+  duration: "4:31"
+  description: "eG Innovations at Citrix Synergy 2009 demonstrating their virtualization monitoring platform."
 - id: YHseNSkJnkw
   title: "Neocleus Demonstration at Citrix Synergy 2009"
   date: 2009-05-13
