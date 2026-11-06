@@ -8,6 +8,7 @@ Small stdlib-only Ruby/bash helpers for running and updating the site.
 | `bin/new-post "Title" [opts]` | Scaffold a post/draft with standard front matter. |
 | `bin/videos-to-posts [opts]` | Generate one **draft** post per YouTube video from the transcripts in the second-brain repo. Idempotent. |
 | `bin/linkedin-to-posts Shares.csv [opts]` | Generate one **draft** post per post in a LinkedIn data export. Public posts only by default. Idempotent. |
+| `bin/videos-to-data [opts]` | Add new YouTube videos to `_data/videos.yml`, the list on `/videos/`. Same transcripts as `videos-to-posts`; leaves existing entries alone. |
 | `bin/publish-draft <file> \| --all` | Move a reviewed draft into `_posts/<year>/`, dated from its front matter. |
 
 Commit + push publishes — GitHub Pages builds automatically. `_drafts/` is git-ignored.
@@ -88,3 +89,10 @@ a "view the original post" link, and comments off. Re-running skips posts alread
 skip very short posts.
 
 Don't commit `Shares.csv` itself: this repo is public and the export can include non-public posts.
+
+## The /videos/ list
+
+`/videos/` is built from `_data/videos.yml` (newest first): thumbnail, title, date, description and a link
+that opens the video on YouTube. Nothing plays on the site. To add videos, run
+`bin/videos-to-data --dry-run` and then `bin/videos-to-data`, or add an entry by hand (`id`, `title`, `date`,
+`description`; optional `duration`, and `post:` with a site path to link a written walkthrough).

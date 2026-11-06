@@ -1,0 +1,146 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+# videos-to-data
+# --------------
+# Add YouTube videos to _data/videos.yml, the list shown on /videos/. Reads the
+# same cleaned transcripts as bin/videos-to-posts (raw/yt-*.md in the "second
+# brain" repo) for each video's title, date, description and duration. Reads
+# only; never modifies the transcript source. Idempotent: videos already in
+# the list are left exactly as they are (so hand edits and `post:` links stay).
+#
+# Usage:
+#   bin/videos-to-data [options]
+#
+#   --source DIR   Directory of yt-*.md transcripts
+#                  (default: ~/Documents/second-brain/raw)
+#   --data FILE    The list to update (default: _data/videos.yml)
+#   --dry-run      Print what would be added; write nothing
+#   -h, --help
+
+require "optparse"
+require "date"
+require "json"
+require "yaml"
+
+Encoding.default_external = Encoding::UTF_8
+Encoding.default_internal = Encoding::UTF_8
+
+ROOT = File.expand_path("..", __dir__)
+
+options = {
+  source: File.expand_path("~/Documents/second-brain/raw"),
+  data: File.join(ROOT, "_data", "videos.yml"),
+  dry_run: false,
+}
+
+OptionParser.new do |o|
+  o.banner = "Usage: bin/videos-to-data [options]"
+  o.on("--source DIR") { |v| options[:source] = File.expand_path(v) }
+  o.on("--data FILE")  { |v| options[:data] = File.expand_path(v) }
+  o.on("--dry-run")    { options[:dry_run] = true }
+  o.on("-h", "--help") { puts o; exit }
+end.parse!
+
+# --- helpers (same transcript format as bin/videos-to-posts) -----------------
+
+def split_front_matter(text)
+  if text =~ /\A---\s*\n(.*?\n)---\s*\n?(.*)\z/m
+    [$1, $2]
+  else
+    ["", text]
+  end
+end
+
+def fm_value(yaml, key)
+  yaml.each_line do |line|
+    if line =~ /\A#{Regexp.escape(key)}:\s*(.+?)\s*\z/
+      val = $1.strip
+      val = val[1..-2].gsub(/\\(["\\])/, '\1') if val.start_with?('"') && val.end_with?('"')
+      val = val[1..-2] if val.start_with?("'") && val.end_with?("'")
+      return val
+    end
+  end
+  nil
+end
+
+def video_id_from(url)
+  return nil unless url
+  case url
+  when /[?&]v=([A-Za-z0-9_-]{6,})/ then $1
+  when %r{youtu\.be/([A-Za-z0-9_-]{6,})} then $1
+  when %r{/embed/([A-Za-z0-9_-]{6,})} then $1
+  end
+end
+
+# JSON strings are valid YAML double-quoted strings.
+def q(str)
+  JSON.generate(str.to_s)
+end
+
+# --- existing list -------------------------------------------------------------
+
+existing = []
+if File.file?(options[:data])
+  loaded = YAML.safe_load(File.read(options[:data]), permitted_classes: [Date]) || []
+  existing = loaded.map do |v|
+    v.merge("date" => v["date"].is_a?(Date) ? v["date"] : Date.parse(v["date"].to_s))
+  end
+end
+have = existing.map { |v| v["id"] }
+
+# --- transcripts ----------------------------------------------------------------
+
+sources = Dir.glob(File.join(options[:source], "yt-*.md")).sort
+abort "No transcripts found in #{options[:source]}" if sources.empty?
+
+added = []
+skipped_have = skipped_noid = 0
+
+sources.each do |path|
+  yaml, _body = split_front_matter(File.read(path))
+  vid = video_id_from(fm_value(yaml, "source"))
+  unless vid
+    warn "  ?  no video id: #{File.basename(path)}"
+    skipped_noid += 1
+    next
+  end
+  if have.include?(vid) || added.any? { |v| v["id"] == vid }
+    skipped_have += 1
+    next
+  end
+
+  title = fm_value(yaml, "title") || File.basename(path, ".md").sub(/\Ayt-/, "").tr("-", " ")
+  date = begin
+    Date.parse(fm_value(yaml, "published").to_s)
+  rescue ArgumentError, TypeError
+    Date.today
+  end
+  added << {
+    "id" => vid,
+    "title" => title,
+    "date" => date,
+    "duration" => fm_value(yaml, "duration").to_s.strip,
+    "description" => fm_value(yaml, "description").to_s.strip,
+  }
+  puts "  +  #{vid}  #{title}"
+end
+
+all = (existing + added).sort_by { |v| [v["date"], v["title"].to_s] }.reverse
+
+out = +"# Videos listed on /videos/. Newest first. Each links to YouTube; `post:` adds a link to the written post.\n"
+all.each do |v|
+  out << "- id: #{v['id']}\n"
+  out << "  title: #{q(v['title'])}\n"
+  out << "  date: #{v['date'].strftime('%Y-%m-%d')}\n"
+  out << "  duration: #{q(v['duration'])}\n" unless v["duration"].to_s.empty?
+  out << "  post: #{v['post']}\n" unless v["post"].to_s.empty?
+  out << "  description: #{q(v['description'])}\n"
+end
+
+puts
+puts "#{options[:dry_run] ? 'Would add' : 'Added'} #{added.size} video(s); #{skipped_have} already listed, #{skipped_noid} without a video id."
+if !options[:dry_run] && !added.empty?
+  File.write(options[:data], out)
+  puts "Wrote #{options[:data].sub(ROOT + '/', '')} (#{all.size} videos)"
+end
