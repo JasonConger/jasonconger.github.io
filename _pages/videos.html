@@ -34,7 +34,8 @@ permalink: /videos/
         <div class="video-info">
           <h3><a href="{{ watch }}" target="_blank" rel="noopener">{{ v.title }}</a></h3>
           <p class="video-meta">{{ v.date | date: "%b %-d, %Y" }}</p>
-          <div class="video-desc">{{ v.description | markdownify }}</div>
+          {% comment %} Full description stays in the HTML (and in the hover tooltip); CSS shows only the first lines. {% endcomment %}
+          <p class="video-desc" title="{{ v.description | escape }}">{{ v.description | escape }}</p>
           {% if v.post %}<p class="video-links"><a href="{{ v.post | relative_url }}"><i class="bi bi-journal-text"></i>&nbsp; Read the walkthrough</a></p>{% endif %}
         </div>
       </li>

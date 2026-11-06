@@ -108,10 +108,10 @@ def duration_label(seconds)
   h.positive? ? format("%d:%02d:%02d", h, m, sec) : format("%d:%02d", m, sec)
 end
 
-# First paragraph of a YouTube description, without hashtag-only lines.
+# The whole YouTube description. /videos/ shows the first few lines and keeps
+# the rest in the page HTML (and in the hover tooltip).
 def summary_of(description)
-  para = description.to_s.gsub("\r\n", "\n").strip.split(/\n\s*\n/).first.to_s
-  para.lines.map(&:strip).reject { |l| l =~ /\A(#\w+\s*)+\z/ }.join(" ").strip
+  description.to_s.gsub("\r\n", "\n").gsub(/\n{3,}/, "\n\n").strip
 end
 
 candidates = []

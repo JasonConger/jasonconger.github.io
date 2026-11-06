@@ -105,5 +105,5 @@ yt-dlp --skip-download --write-info-json -o '%(id)s' <watch URL of each new id>
 bin/videos-to-data --info-dir . --dry-run                               # then again without --dry-run
 ```
 
-Only the first paragraph of each YouTube description is used. YouTube may ask for a sign-in if you fetch many
+The whole YouTube description is stored; the page shows the first lines and keeps all of it in the HTML. YouTube may ask for a sign-in if you fetch many
 videos at once; slow down with `--sleep-requests 5` and retry later.
