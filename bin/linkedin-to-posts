@@ -25,6 +25,9 @@
 #   --dry-run            Print what would be created; write nothing
 #   -h, --help
 #
+# Posts listed in bin/linkedin-skipped-urls.txt (one LinkedIn URL per line) are
+# never imported, so posts you removed by hand stay removed.
+#
 # Posts with no text of their own (plain reshares) are skipped. Images and
 # videos are not imported: the export only has expiring LinkedIn CDN links.
 
@@ -167,6 +170,9 @@ if options[:skip_video_duplicates]
   end
 end
 
+SKIP_FILE = File.join(__dir__, "linkedin-skipped-urls.txt")
+skip_urls = File.file?(SKIP_FILE) ? File.readlines(SKIP_FILE).map(&:strip).reject { |l| l.empty? || l.start_with?("#") } : []
+
 # --- read the export ----------------------------------------------------------
 
 raw = File.read(source, encoding: "bom|utf-8")
@@ -184,7 +190,7 @@ abort "Could not find a ShareCommentary column in #{File.basename(source)} (foun
 
 FileUtils.mkdir_p(options[:out]) unless options[:dry_run]
 
-created = skipped_empty = skipped_have = skipped_short = skipped_private = skipped_nodate = skipped_old = skipped_dupe = 0
+created = skipped_empty = skipped_have = skipped_short = skipped_private = skipped_nodate = skipped_old = skipped_dupe = skipped_listed = 0
 used_names = {}
 
 rows.each_with_index do |row, i|
@@ -222,6 +228,10 @@ rows.each_with_index do |row, i|
   end
   if text.split(/\s+/).length < options[:min_words]
     skipped_short += 1
+    next
+  end
+  if !link.empty? && skip_urls.include?(link)
+    skipped_listed += 1
     next
   end
   if !link.empty? && existing[link]
@@ -285,5 +295,5 @@ puts
 puts "#{options[:dry_run] ? 'Would create' : 'Created'} #{created} post(s) in #{options[:out].sub(ROOT + '/', '')}"
 puts "Skipped: #{skipped_have} already imported, #{skipped_empty} with no text (plain reshares), " \
      "#{skipped_private} not public, #{skipped_short} under #{options[:min_words]} words, #{skipped_nodate} without a date, " \
-     "#{skipped_old} before --since, #{skipped_dupe} repeating a video description"
+     "#{skipped_old} before --since, #{skipped_dupe} repeating a video description, #{skipped_listed} on the skip list"
 puts "Review the drafts, then publish with: bin/publish-draft --all" unless options[:dry_run] || created.zero?
