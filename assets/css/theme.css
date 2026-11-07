@@ -347,6 +347,11 @@ a.featured-card { color: inherit; text-decoration: none; }
 .blog-post h2 { margin-top: 2.25rem; }
 .blog-post img { box-shadow: var(--shadow); }
 
+/* a list whose items start with an emoji: one per line, no bullet or indent
+   (in a post, put {: .emoji-list} on the line after the list) */
+.emoji-list { list-style: none; padding-left: 0; }
+.emoji-list li { margin-bottom: 0.6rem; }
+
 /* --- video link card (opens the video on YouTube) ------------------ */
 
 .video-link {
