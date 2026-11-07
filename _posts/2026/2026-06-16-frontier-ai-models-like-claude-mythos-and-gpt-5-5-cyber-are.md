@@ -8,6 +8,8 @@ tags:
  - "SplunkBlogs"
 author: JasonConger
 linkedin-url: https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7472731616700784640
+thumbnail-img: /assets/img/linkedin/2026-06-16-frontier-ai-models-like.jpg
+share-img: /assets/img/linkedin/2026-06-16-frontier-ai-models-like.jpg
 excerpt: "Frontier AI models like Claude Mythos and GPT-5.5-Cyber are brining machine-speed to vulnerability discovery and exploits. How do you amp up your digital resilience in the post-Mythos era? ⏱️ Fast validation, prioritization, and action are more important than simply finding potential threats. ✅ Human expertise remains essential, with AI helping teams investigate, validate, and improve..."
 comments: false
 featured: false

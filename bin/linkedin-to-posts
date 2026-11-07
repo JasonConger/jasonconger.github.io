@@ -135,6 +135,12 @@ def unwrap_quoted_lines(text)
   end.join("\n")
 end
 
+# Some posts use \r"\n" (with quote marks) where a line break belongs, and others
+# a bare \r. Turn all of those into plain newlines before anything else.
+def normalize_breaks(text)
+  text.gsub(/\r"\n"\r"\n"/, "\n\n").gsub(/\r"\n"/, "\n").gsub(/\r\n?/, "\n")
+end
+
 def parse_date(value)
   Time.parse(value.to_s).to_date
 rescue ArgumentError, TypeError
@@ -196,7 +202,7 @@ used_names = {}
 rows.each_with_index do |row, i|
   break if options[:limit] && i >= options[:limit]
 
-  text = unwrap_quoted_lines(col.call(row, "sharecommentary").gsub("\r\n", "\n").strip).strip
+  text = unwrap_quoted_lines(normalize_breaks(col.call(row, "sharecommentary")).strip).strip
   link = col.call(row, "sharelink")
   shared = col.call(row, "sharedurl")
   visibility = col.call(row, "visibility")
