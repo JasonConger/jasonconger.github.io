@@ -379,6 +379,11 @@
   date: 2025-09-15
   duration: "2:01"
   description: "Do you like Splunk? Do you like beer? If so, I've got a video for you! While at Splunk .conf25, I had the opportunity to chat with Ryan Cramer about digital resilience in the beer brewing and serving process. Ryan's booth at the conference was a hit (of course), and the team had to ensure top quality while tracking the entire process as well as gathering stats on consumers directly into Splunk. At its core Splunk is a data platform, and use cases are only limited by your imagination."
+- id: 2rc8mxGNxgU
+  title: "Splunk .conf25 Innovation"
+  date: 2025-09-12
+  duration: "0:51"
+  description: "Another incredible Splunk .conf is in the books. New product announcements, hands-on learning, access to experts in real time, partner innovation, and so much more made this one of the best .conf's ever! So many people made this thing happen, and I'm in awe of the excitement around what's to come!\n\nhttps://conf.splunk.com/"
 - id: lxKLC5P-QbA
   title: "Splunk and Red Hat Ansible automate responses for improved AIOps"
   date: 2025-07-23
@@ -535,16 +540,16 @@
   date: 2024-12-21
   duration: "1:04"
   description: "At Microsoft Ignite 2024, Splunk officially launched in Microsoft Azure. I had the opportunity to chat with Rory Ainsworth about this strategic partnership and how we're meeting customers where they are. Customers can leverage their investments and commitment in Azure to access the resiliency, security, and observability tools of Splunk."
-- id: iKfMxY-Quqw
-  title: "Splunk ISV Ecosystem"
-  date: 2024-12-21
-  duration: "1:39"
-  description: "The Splunk product can address so many wonderful use cases with data. And, we have a vast ecosystem of partner integrations to accomplish this. I recently chatted with Anush Jayaraman about the ISV ecosystem at Splunk and how we're innovating with partner integrations."
 - id: p9X7RhdxmAs
   title: "Splunk ISV Ecosystem"
   date: 2024-12-21
   duration: "1:24"
   description: "Interested in becoming an ISV Splunk Partner? Gain valuable insights from Splunk's Global Director of Strategic Alliances & ISV Ecosystem, Tim Anderson, shared at Cisco GSX about the subject."
+- id: iKfMxY-Quqw
+  title: "Splunk ISV Ecosystem"
+  date: 2024-12-21
+  duration: "1:39"
+  description: "The Splunk product can address so many wonderful use cases with data. And, we have a vast ecosystem of partner integrations to accomplish this. I recently chatted with Anush Jayaraman about the ISV ecosystem at Splunk and how we're innovating with partner integrations."
 - id: GOJis21KbTQ
   title: "Splunk Federated Analytics"
   date: 2024-12-21
