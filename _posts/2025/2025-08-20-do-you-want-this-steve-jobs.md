@@ -36,6 +36,4 @@ Another example comes from a very different place: Extreme Makeover: Home Editio
 
 While working with partners, I'm always amazed by the outcomes they create.  Outcomes drive lasting partnership!
 
-\#Splunk #Partners #Security #Observability #AI #IIoT #Developer
-
 *Originally posted on LinkedIn: [view the original post](https://www.linkedin.com/feed/update/urn%3Ali%3AugcPost%3A7363981667797008384).*

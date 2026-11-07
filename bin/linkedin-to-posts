@@ -141,6 +141,27 @@ def normalize_breaks(text)
   text.gsub(/\r"\n"\r"\n"/, "\n\n").gsub(/\r"\n"/, "\n").gsub(/\r\n?/, "\n")
 end
 
+# A paragraph that is only hashtags (usually the last one): the hashtags already
+# become tags on the post, so drop the line instead of showing them twice.
+def drop_hashtag_only_lines(text)
+  text.split("\n", -1).reject { |l| l.strip =~ /\A(#\w+\s*)+\z/ }.join("\n").gsub(/\n{3,}/, "\n\n").strip
+end
+
+# LinkedIn @mentions come through the export as bare names. A paragraph that is
+# just a run of capitalized names (six or more words, no punctuation) is a block
+# of tagged people, which reads oddly on a website: drop it.
+NAME_PARTICLES = %w[de van von da di del la le el der den].freeze
+
+def mention_run?(paragraph)
+  return false if paragraph =~ /[.,;:!?()"\u201C\u201D\d\/@#<>\[\]*_-]/
+  words = paragraph.split
+  words.length >= 6 && words.all? { |w| NAME_PARTICLES.include?(w) || w =~ /\A\p{Lu}[\p{L}'\u2019]*\z/ }
+end
+
+def drop_mention_runs(text)
+  text.split(/\n{2,}/).reject { |p| mention_run?(p.strip) }.join("\n\n")
+end
+
 def parse_date(value)
   Time.parse(value.to_s).to_date
 rescue ArgumentError, TypeError
@@ -260,11 +281,11 @@ rows.each_with_index do |row, i|
   used_names[name] = true
 
   # A line starting with "#Hashtag" must not turn into a markdown heading.
-  body_text = linkify(text).gsub(/^#(?=\w)/, '\\#')
+  body_text = linkify(drop_mention_runs(drop_hashtag_only_lines(text))).gsub(/^#(?=\w)/, '\\#')
   # Keep Liquid-looking text in the post from being evaluated.
   body_text = "{% raw %}\n#{body_text}\n{% endraw %}" if body_text.include?("{{") || body_text.include?("{%")
 
-  excerpt = first_words(text.gsub(%r{https?://\S+}, "").gsub(/\s+/, " ").strip, 55)
+  excerpt = first_words(drop_mention_runs(drop_hashtag_only_lines(text)).gsub(%r{https?://\S+}, "").gsub(/\s+/, " ").strip, 55)
 
   front = +"---\n"
   front << "layout: post\n"

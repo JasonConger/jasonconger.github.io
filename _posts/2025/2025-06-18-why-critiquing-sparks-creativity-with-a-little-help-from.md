@@ -18,6 +18,8 @@ featured: false
 ---
 Why Critiquing Sparks Creativity (with a little help from Generative AI)
 
+![A split graphic: a magnifying glass over an eye labeled Critique, beside a hand painting a landscape labeled Create](/assets/img/linkedin/2025-06-18-why-critiquing-sparks-creativity.jpg)
+
 One of the most valuable lessons I've learned about collaboration is this: it is easier to ask for constructive feedback than to ask for brand-new ideas.
 
 Whether I'm working with a team or brainstorming solo, I've found that starting with something like a rough draft, a simple outline, or even a placeholder slide makes all the difference.  It gives people (myself included) something tangible to respond to, critique, and build upon.
@@ -29,7 +31,5 @@ Once I have something on the page, the critique process begins.  I refine, tweak
 Generative AI isn't replacing creativity - it is enhancing creativity.  It's like having a collaborator who always takes that daunting first step, so you can focus on refining and innovating.
 
 Next time you’re staring at a blank page, consider asking AI to help you get started. You might be surprised at how quickly the ideas start flowing.
-
-\#AI #GenAI #Creativity
 
 *Originally posted on LinkedIn: [view the original post](https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7341131129028038656).*
