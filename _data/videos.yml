@@ -1,4 +1,9 @@
 # Videos listed on /videos/. Newest first. Each links to YouTube; `post:` adds a link to the written post.
+- id: XgJHJqlpmSw
+  title: "Patching at Negative Two Days: VulnOps in the AI Era"
+  date: 2026-11-06
+  duration: "5:54"
+  description: "At Cisco Partner Summit, Jason Conger talks with Dre Garrison of Cisco about the Partner VulnOps Practice Maturity Model, a five-level framework that helps partners grow their vulnerability operations practice as frontier AI models shrink the time to patch. Dre explains the five-question self-assessment, the best practices and tools recommended at each level, and how Antares, Cisco's free open-weight small language model, scans configuration files from any vendor for vulnerabilities.\n\nGuests:\n- Jason Conger, Splunk Partner Field CTO\n- Dre Garrison, Solutions Engineer, Cisco\n\nChapters:\n0:00 Intro\n0:12 Why a VulnOps maturity model\n0:57 The five-question self-assessment\n1:05 From months to negative two days\n2:08 How to move up a level\n3:26 Antares, a free small language model\n4:18 Pro tip: build a UI in 30 minutes\n4:52 Where to learn more\n\n#CiscoPartnerSummit #Splunk #Cisco #VulnerabilityManagement #CyberSecurity"
 - id: 75G-r5blg-o
   title: "How Splunk and Cisco Stop an MFA Phishing Attack"
   date: 2026-11-06
@@ -374,6 +379,11 @@
   date: 2025-09-15
   duration: "2:01"
   description: "Do you like Splunk? Do you like beer? If so, I've got a video for you! While at Splunk .conf25, I had the opportunity to chat with Ryan Cramer about digital resilience in the beer brewing and serving process. Ryan's booth at the conference was a hit (of course), and the team had to ensure top quality while tracking the entire process as well as gathering stats on consumers directly into Splunk. At its core Splunk is a data platform, and use cases are only limited by your imagination."
+- id: 2rc8mxGNxgU
+  title: "Splunk .conf25 Innovation"
+  date: 2025-09-12
+  duration: "0:51"
+  description: "Another incredible Splunk .conf is in the books. New product announcements, hands-on learning, access to experts in real time, partner innovation, and so much more made this one of the best .conf's ever! So many people made this thing happen, and I'm in awe of the excitement around what's to come!\n\nhttps://conf.splunk.com/"
 - id: lxKLC5P-QbA
   title: "Splunk and Red Hat Ansible automate responses for improved AIOps"
   date: 2025-07-23
