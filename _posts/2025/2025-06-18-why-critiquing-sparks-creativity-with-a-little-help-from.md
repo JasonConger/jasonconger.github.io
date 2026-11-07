@@ -32,6 +32,4 @@ Generative AI isn't replacing creativity - it is enhancing creativity.  It's lik
 
 Next time you’re staring at a blank page, consider asking AI to help you get started. You might be surprised at how quickly the ideas start flowing.
 
-\#AI #GenAI #Creativity
-
 *Originally posted on LinkedIn: [view the original post](https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7341131129028038656).*

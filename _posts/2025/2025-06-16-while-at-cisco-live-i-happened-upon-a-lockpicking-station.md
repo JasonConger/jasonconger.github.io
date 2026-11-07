@@ -37,7 +37,4 @@ In both physical and digital security, humans are often the weakest link. Whethe
 
 This experience reaffirmed for me that security (whether physical or digital) isn't a one-time effort. It's an ongoing process of identifying risks, addressing vulnerabilities, and staying vigilant.
 
-
-\#CyberSecurity #PhysicalSecurity #Lockpicking #CiscoLive
-
 *Originally posted on LinkedIn: [view the original post](https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7340480956337745921).*

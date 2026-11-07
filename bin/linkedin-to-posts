@@ -141,6 +141,12 @@ def normalize_breaks(text)
   text.gsub(/\r"\n"\r"\n"/, "\n\n").gsub(/\r"\n"/, "\n").gsub(/\r\n?/, "\n")
 end
 
+# A paragraph that is only hashtags (usually the last one): the hashtags already
+# become tags on the post, so drop the line instead of showing them twice.
+def drop_hashtag_only_lines(text)
+  text.split("\n", -1).reject { |l| l.strip =~ /\A(#\w+\s*)+\z/ }.join("\n").gsub(/\n{3,}/, "\n\n").strip
+end
+
 def parse_date(value)
   Time.parse(value.to_s).to_date
 rescue ArgumentError, TypeError
@@ -260,11 +266,11 @@ rows.each_with_index do |row, i|
   used_names[name] = true
 
   # A line starting with "#Hashtag" must not turn into a markdown heading.
-  body_text = linkify(text).gsub(/^#(?=\w)/, '\\#')
+  body_text = linkify(drop_hashtag_only_lines(text)).gsub(/^#(?=\w)/, '\\#')
   # Keep Liquid-looking text in the post from being evaluated.
   body_text = "{% raw %}\n#{body_text}\n{% endraw %}" if body_text.include?("{{") || body_text.include?("{%")
 
-  excerpt = first_words(text.gsub(%r{https?://\S+}, "").gsub(/\s+/, " ").strip, 55)
+  excerpt = first_words(drop_hashtag_only_lines(text).gsub(%r{https?://\S+}, "").gsub(/\s+/, " ").strip, 55)
 
   front = +"---\n"
   front << "layout: post\n"

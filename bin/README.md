@@ -84,7 +84,7 @@ bin/publish-draft --all                                  # after reviewing them
 
 Useful options: `--since 2024` (only newer posts), `--skip-video-duplicates` (skip posts whose text repeats a
 description in `_data/videos.yml`), `--include-nonpublic` (exports often label every post `MEMBER_NETWORK`, which
-counts as non-public here). Newer exports wrap every line in stray quote marks; the importer undoes that.
+counts as non-public here). Newer exports wrap every line in stray quote marks; the importer undoes that. A line made only of hashtags is dropped (the hashtags still become tags).
 Posts you have removed on purpose go in `bin/linkedin-skipped-urls.txt` (one LinkedIn URL per line) so a re-run does not import them again.
 
 Each post becomes a post in the **LinkedIn** category with the original text, hashtags as tags,

@@ -34,6 +34,4 @@ So pick one real task this week and do it with AI. Then do it again next week.
 
 What's the first task you'd hand to AI?
 
-\#AI #LearningByDoing #CareerGrowth
-
 *Originally posted on LinkedIn: [view the original post](https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7523804875550552064).*
