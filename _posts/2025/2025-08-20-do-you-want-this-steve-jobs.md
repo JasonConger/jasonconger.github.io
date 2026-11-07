@@ -19,7 +19,12 @@ comments: false
 featured: false
 ---
 "Do you want this?" -Steve Jobs
+
+![Steve Jobs at the 1997 Apple Worldwide Developer Conference](/assets/img/linkedin/2025-08-20-do-you-want-this.jpg)
+
 "Move that bus!" -Extreme Makeover Home Edition
+
+![The Extreme Makeover: Home Edition bus, with a crowd cheering in front of it](/assets/img/linkedin/2025-08-20-extreme-makeover-bus.jpg)
 
 Too often, technology conversations start with features because features are cool! They showcase innovation, engineering excellence, and creativity. And, I've caught myself getting into the weeds of features on more than one occasion.
 
