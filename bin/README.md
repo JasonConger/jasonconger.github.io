@@ -82,6 +82,10 @@ bin/linkedin-to-posts ~/Downloads/Shares.csv             # write drafts to _draf
 bin/publish-draft --all                                  # after reviewing them
 ```
 
+Useful options: `--since 2024` (only newer posts), `--skip-video-duplicates` (skip posts whose text repeats a
+description in `_data/videos.yml`), `--include-nonpublic` (exports often label every post `MEMBER_NETWORK`, which
+counts as non-public here). Newer exports wrap every line in stray quote marks; the importer undoes that.
+
 Each post becomes a post in the **LinkedIn** category with the original text, hashtags as tags,
 a "view the original post" link, and comments off. Re-running skips posts already imported
 (matched on `linkedin-url`). Plain reshares with no text, and posts that are not public, are skipped
