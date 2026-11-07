@@ -18,6 +18,4 @@ Organizations operating in sovereign and disconnected environments need security
 
 <https://lnkd.in/d3uSfC5s>
 
-Aly Shivji Wendy Holmquist Carrie Secrett Eric Strauss April Boe Venugopal Balasubramanian Kelly Weadock Alexey Bokov Matt Hite Paul Frederiksen Amy Bahlo Jordan VonMoser John Mymryk Jolly Mishra Anne George
-
 *Originally posted on LinkedIn: [view the original post](https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7491572212810801152).*
