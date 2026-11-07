@@ -16,7 +16,8 @@ excerpt: "At Cisco Partner Summit, we are showcasing how Cisco and Splunk are st
 comments: false
 featured: false
 ---
-At Cisco Partner Summit, we are showcasing how Cisco and Splunk are stronger together.  Integrations with AppDynamics, ThousandEyes, Cisco XDR, Talos, and so much more - and we're just getting started.  Stay tuned for more to come."
-"#ciscops24 #Cisco #Splunk
+At Cisco Partner Summit, we are showcasing how Cisco and Splunk are stronger together.  Integrations with AppDynamics, ThousandEyes, Cisco XDR, Talos, and so much more - and we're just getting started.  Stay tuned for more to come.
+
+\#ciscops24 #Cisco #Splunk
 
 *Originally posted on LinkedIn: [view the original post](https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7257430650364833792).*
