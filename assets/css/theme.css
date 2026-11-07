@@ -38,7 +38,7 @@
   --radius: 12px;
   --radius-sm: 8px;
   --shadow: 0 1px 2px rgba(0, 0, 0, 0.45), 0 8px 24px rgba(0, 0, 0, 0.55);
-  --measure: 44rem;
+  --measure: 58rem;
 }
 
 /* --- base ---------------------------------------------------------------- */
@@ -338,6 +338,16 @@ a.featured-card { color: inherit; text-decoration: none; }
 /* --- blog post body ----------------------------------------------- */
 
 .blog-post { font-size: 1.09rem; }
+
+/* posts read in one centered column (header title and body share it) */
+.container-md.post-column { max-width: var(--measure); }
+@media (min-width: 992px) {
+  .blog-post { font-size: 1.15rem; }
+}
+@media (min-width: 1600px) {
+  :root { --measure: 66rem; }
+  .blog-post { font-size: 1.2rem; }
+}
 .blog-post > p,
 .blog-post > ul,
 .blog-post > ol,

@@ -22,7 +22,7 @@
 {% if page.cover-img %}
 <div class="big-img intro-header">
   <div class="overlay">
-    <div class="container-md">
+    <div class="container-md{% if include.type == "post" %} post-column{% endif %}">
       <div class="row">
         <div class="col">
           <div class="{{ include.type }}-heading">
@@ -65,7 +65,7 @@
 {% else %}
 
 <div class="intro-header no-img">
-  <div class="container-md">
+  <div class="container-md{% if include.type == "post" %} post-column{% endif %}">
     <div class="row">
       <div class="col">
         <div class="{{ include.type }}-heading">
