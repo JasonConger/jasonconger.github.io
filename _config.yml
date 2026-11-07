@@ -124,6 +124,9 @@ exclude:
   - bin/
   - vendor/
   - beautiful-jekyll-theme.gemspec
+  # 65 MB, not linked from any post or page. Kept in git, left out of the published site
+  # so the GitHub Pages artifact (and every deploy) stays small. Remove this line to publish it again.
+  - downloads/Sample_WIRM_DB.zip
 
 plugins:
   - jekyll-paginate
