@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "The Johari Window and the state of security"
+title: "What the Johari Window can teach us about the state of security"
 date: 2026-11-09
 categories:
  - LinkedIn
