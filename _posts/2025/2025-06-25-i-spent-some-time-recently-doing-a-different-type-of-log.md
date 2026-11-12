@@ -9,7 +9,6 @@ linkedin-url: https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7343696474
 thumbnail-img: /assets/img/linkedin/2025-06-25-i-spent-some-time.jpg
 share-img: /assets/img/linkedin/2025-06-25-i-spent-some-time.jpg
 excerpt: "I spent some time recently doing a different type of log management (okay - it was really tree pruning, but stick with me). But, the parallels to data management were too good to ignore. The same principles apply: collect, sort, optimize, route, etc. Different tools, similar thinking. Here's how tree work stacks up with data..."
-comments: false
 featured: false
 ---
 I spent some time recently doing a different type of log management (okay - it was really tree pruning, but stick with me). But, the parallels to data management were too good to ignore. The same principles apply: collect, sort, optimize, route, etc. Different tools, similar thinking.

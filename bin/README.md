@@ -88,7 +88,7 @@ counts as non-public here). Newer exports wrap every line in stray quote marks; 
 Posts you have removed on purpose go in `bin/linkedin-skipped-urls.txt` (one LinkedIn URL per line) so a re-run does not import them again.
 
 Each post becomes a post in the **LinkedIn** category with the original text, hashtags as tags,
-a "view the original post" link, and comments off. Re-running skips posts already imported
+a "view the original post" link; comments follow the site default (Disqus). Re-running skips posts already imported
 (matched on `linkedin-url`). Plain reshares with no text, and posts that are not public, are skipped
 (`--include-nonpublic` to override). Images and videos are not imported. Use `--min-words N` to
 skip very short posts.

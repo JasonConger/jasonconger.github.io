@@ -14,7 +14,6 @@ linkedin-url: https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7525625615
 thumbnail-img: /assets/img/linkedin/2026-11-09-johari-window.jpg
 share-img: /assets/img/linkedin/2026-11-09-johari-window.jpg
 excerpt: "In college, I took an elective called adventure-based counseling. The book we read introduced me to the Johari Window, a grid of four boxes: open, hidden, blind spot and unknown. Lately, a lot about the state of security has reminded me of it."
-comments: false
 featured: false
 ---
 In college, I took an elective called adventure-based counseling. I needed the hours, and it sounded fun.

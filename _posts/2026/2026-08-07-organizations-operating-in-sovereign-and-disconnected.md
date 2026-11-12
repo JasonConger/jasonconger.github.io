@@ -13,7 +13,6 @@ linkedin-url: https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7491572212
 thumbnail-img: /assets/img/linkedin/2026-08-07-azure-local-security-ecosystem.png
 share-img: /assets/img/linkedin/2026-08-07-azure-local-security-ecosystem.png
 excerpt: "Organizations operating in sovereign and disconnected environments need security operations that can adapt to constrained conditions without sacrificing visibility or agility. By working with Microsoft, Splunk is bringing its data platform and analytics capabilities to Azure Local, enabling security teams to gain operational insight, accelerate investigations, and respond more effectively within highly controlled environments. Together,..."
-comments: false
 featured: false
 ---
 > “Organizations operating in sovereign and disconnected environments need security operations that can adapt to constrained conditions without sacrificing visibility or agility. By working with Microsoft, Splunk is bringing its data platform and analytics capabilities to Azure Local, enabling security teams to gain operational insight, accelerate investigations, and respond more effectively within highly controlled environments. Together, we’re enabling a more flexible and resilient approach to security operations for organizations where connectivity, sovereignty, and operational continuity are equally critical.”

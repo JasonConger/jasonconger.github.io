@@ -14,7 +14,6 @@ linkedin-url: https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7340480956
 thumbnail-img: /assets/img/linkedin/2025-06-16-while-at-cisco-live.jpg
 share-img: /assets/img/linkedin/2025-06-16-while-at-cisco-live.jpg
 excerpt: "While at Cisco Live, I happened upon a lockpicking station 🔐. Yes, that's right, a lockpicking station where we learned how to pick various types of locks. It was fascinating to see how a small flaw in the lock's design, or even just a little too much trust in its complexity, could make it vulnerable...."
-comments: false
 featured: false
 ---
 While at Cisco Live, I happened upon a lockpicking station 🔐.  Yes, that's right, a lockpicking station where we learned how to pick various types of locks.  It was fascinating to see how a small flaw in the lock's design, or even just a little too much trust in its complexity, could make it vulnerable.  But as I worked to pick those locks, I couldn't help but draw parallels to cybersecurity and the broader challenges we face in protecting both physical and digital assets.
