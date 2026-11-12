@@ -13,7 +13,6 @@ linkedin-url: https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7341131129
 thumbnail-img: /assets/img/linkedin/2025-06-18-why-critiquing-sparks-creativity.jpg
 share-img: /assets/img/linkedin/2025-06-18-why-critiquing-sparks-creativity.jpg
 excerpt: "Why Critiquing Sparks Creativity (with a little help from Generative AI) One of the most valuable lessons I've learned about collaboration is this: it is easier to ask for constructive feedback than to ask for brand-new ideas. Whether I'm working with a team or brainstorming solo, I've found that starting with something like a rough..."
-comments: false
 featured: false
 ---
 Why Critiquing Sparks Creativity (with a little help from Generative AI)

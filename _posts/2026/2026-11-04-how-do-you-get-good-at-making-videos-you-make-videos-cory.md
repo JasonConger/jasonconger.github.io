@@ -13,7 +13,6 @@ linkedin-url: https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7523804875
 thumbnail-img: /assets/img/linkedin/2026-11-04-how-do-you-get.jpg
 share-img: /assets/img/linkedin/2026-11-04-how-do-you-get.jpg
 excerpt: "\"How do you get good at making videos? You make videos.\" - Cory Minton Cory is one of the best creators I know. When someone asks how to get comfortable in front of a camera, his answer is just as simple: get in front of the camera. I think the same goes for AI. The..."
-comments: false
 featured: false
 ---
 "How do you get good at making videos? You make videos." - Cory Minton

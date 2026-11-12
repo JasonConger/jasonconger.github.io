@@ -15,7 +15,6 @@ linkedin-url: https://www.linkedin.com/feed/update/urn%3Ali%3AugcPost%3A73639816
 thumbnail-img: /assets/img/linkedin/2025-08-20-do-you-want-this.jpg
 share-img: /assets/img/linkedin/2025-08-20-do-you-want-this.jpg
 excerpt: "\"Do you want this?\" -Steve Jobs \"Move that bus!\" -Extreme Makeover Home Edition Too often, technology conversations start with features because features are cool! They showcase innovation, engineering excellence, and creativity. And, I've caught myself getting into the weeds of features on more than one occasion. ➡️ But here's the reality: customers don't buy features,..."
-comments: false
 featured: false
 ---
 "Do you want this?" -Steve Jobs

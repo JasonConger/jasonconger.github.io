@@ -299,7 +299,6 @@ rows.each_with_index do |row, i|
   front << "author: JasonConger\n"
   front << "linkedin-url: #{link}\n" unless link.empty?
   front << "excerpt: #{yaml_quote(excerpt)}\n"
-  front << "comments: false\n"
   front << "featured: false\n"
   front << "---\n"
 
