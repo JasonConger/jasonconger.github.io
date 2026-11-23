@@ -12,10 +12,14 @@ tags:
  - "Cisco"
 author: JasonConger
 linkedin-url: https://www.linkedin.com/feed/update/urn:li:activity:7530737353611526144/
+thumbnail-img: /assets/img/linkedin/2026-11-23-detecting-an-attack.jpg
+share-img: /assets/img/linkedin/2026-11-23-detecting-an-attack.jpg
 excerpt: "Detecting an attack faster only gets you to the incident sooner. That's the catch with detect and defend. It assumes something already happened, and your job is to notice fast enough to matter. For a long time that was the whole game, and it still matters. But the clock changed. AI didn't invent new attacks. It made..."
 featured: false
 ---
 Detecting an attack faster only gets you to the incident sooner.
+
+![Graphic with the headline "Detecting an attack faster only gets you to the incident sooner." Below it: "Predict and Protect: the shift from Detect and Defend." A padlock on a circuit board fills the right side, and Jason Conger's headshot is in the bottom left.](/assets/img/linkedin/2026-11-23-detecting-an-attack.jpg){: width="640"}
 
 That's the catch with detect and defend. It assumes something already happened, and your job is to notice fast enough to matter. For a long time that was the whole game, and it still matters.
 
